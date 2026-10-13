@@ -340,3 +340,68 @@ test('intro part switches and bass performance preserve harmony, timing and play
  assert.ok(!api.toMarkdown(quiet).includes('undefined'));
  assert.equal(db.visualTheme.paper,'#f5f3ee');assert.equal(db.visualTheme.accent,'#d65537');assert.equal(db.visualTheme.green,'#607258');
 });
+
+test('theory interactions coordinate global form, real part candidates, orchestration and performance',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8'),context=vm.createContext({});
+ vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+ const api=context.MusicMaker,db=api.database;
+ assert.equal(api.validateDatabase(),true);assert.ok(db.knowledgeBase.sources.length>=24);assert.ok(db.knowledgeBase.rules.length>=25);
+ const common={...db.defaults,seed:'academic-interaction',form:'custom',customForm:[['chorus',8]],classical:0};
+ const narrative=api.generateGuide({...common,subgenre:'kpop',classical:75,bassStyle:'slap',bassGhost:100,bridgeDesign:'contrast',tonalPlan:'final-lift',customForm:[['intro',2],['verse',8],['pre',4],['chorus',8],['bridge',4],['chorus',8]]});
+ const rock=api.generateGuide({...common,subgenre:'pop-rock',style:'organic'});
+ const latin=api.generateGuide({...common,subgenre:'latin-pop'}),clave=api.generateGuide({...common,subgenre:'afro-latin-pop'});
+ const blues=api.generateGuide({...common,genre:'blues',subgenre:'shuffle-blues',jazzy:0,progression:'blues-12',form:'blues-form'});
+ const chamber=api.generateGuide({...common,genre:'classical',subgenre:'chamber-classical',classical:90,form:'aaba'});
+ const oddClave=api.generateGuide({...common,subgenre:'afro-latin-pop',customForm:[['verse',5],['chorus',5]]});
+ const lowSax=api.generateGuide({...common,genre:'jazz',vocalRange:'lower',customForm:[['verse',8]]});
+ const irregular=api.generateGuide({...common,complexity:100,customForm:[['verse',13]]});
+ assert.equal(narrative.sections[0].parts.topline.enabled,false);assert.equal(narrative.sections[0].parts.drums.enabled,false);assert.equal(narrative.sections[0].parts.bass.enabled,false);
+ assert.equal(narrative.sections[3].tonality.pc,0);assert.equal(narrative.sections.at(-1).tonality.pc,2);
+ assert.equal(new Set(narrative.sections.map(section=>section.parts.topline.theme.id)).size,1,'one shared theme spans the song');
+ assert.equal(narrative.sections[4].interaction.transform,'inversion');assert.equal(narrative.sections[0].parts.topline.theme.contour.length,2,'intro uses a real motif fragment');
+ assert.ok(narrative.sections[4].parts.topline.theme.contour.slice(2).some((value,index)=>value===-narrative.story.kernel.contour[index+2]));
+ assert.equal(latin.sections[0].parts.drums.family,'dembow');assert.ok(latin.sections[0].parts.drums.events.some(event=>event.kind==='backbeat'&&event.start===6));
+ assert.equal(clave.sections[0].parts.drums.family,'son-23');assert.ok(clave.sections[0].parts.drums.events.some(event=>event.voice==='claves'&&event.start===4));
+ assert.ok(clave.sections[0].parts.drums.events.some(event=>event.voice==='claves'&&event.start===16));
+ assert.equal(blues.progressionPlan.bars,12);assert.equal(blues.sections[0].phraseBars,12);
+ assert.ok(blues.sections[0].phrase.filter(chord=>['I','IV','V'].includes(chord.id)).every(chord=>chord.quality==='dominant'&&chord.level>=.24));
+ assert.equal(blues.sections[0].phrase[0].fn,'T','I7 is a blues tonic and does not inherit dominant function');
+ const guitar=rock.sections[0].orchestration.tracks.find(track=>track.profile.family==='plucked');assert.ok(guitar);
+ for(const event of guitar.events){
+  assert.ok(event.fingering.length>=3);assert.equal(new Set(event.fingering.map(note=>note.string)).size,event.fingering.length);
+  const fretted=event.fingering.filter(note=>note.fret>0).map(note=>note.fret);
+  assert.ok(!fretted.length||Math.max(...fretted)-Math.min(...fretted)<=db.knowledgeBase.fretted.maxSpan);
+ }
+ assert.ok(chamber.sections.some(section=>section.orchestration.counter.enabled),'counterpoint produces actual response notes');
+ assert.ok(chamber.sections.every(section=>!section.parts.drums.enabled),'a chamber setting does not receive a compulsory drum kit');
+ assert.ok(chamber.sections.some(section=>section.parts.bass.styleId==='arco'));
+ assert.ok(chamber.sections[0].orchestration.tracks.find(track=>track.role==='harmony').events.length>chamber.sections[0].phrase.length,'classical accompaniment has an actual rhythmic realization');
+ assert.ok(oddClave.sections[1].parts.drums.events.some(hit=>hit.voice==='claves'&&hit.start===0),'clave phase continues across an odd section boundary');
+ assert.ok(lowSax.sections[0].parts.topline.notes.every(note=>note.pitch>=49),'the selected instrument constrains the requested vocal range');
+ assert.equal(irregular.sections[0].parts.bars,13);assert.equal(irregular.sections[0].repeats,1);
+ for(const guide of[narrative,rock,latin,clave,blues,chamber,oddClave,lowSax,irregular])for(const section of guide.sections){
+  assert.ok(section.interaction.validCandidates>=1&&section.interaction.candidateCount<=3);
+  assert.ok(section.interaction.rules.valid);assert.ok(section.interaction.rules.checked.includes('ornament-resolution'));
+  assert.ok(!section.interaction.rules.violations.some(violation=>violation.severity==='hard'));
+  assert.ok(section.attention.available<=db.knowledgeBase.search.maxDensity);
+  assert.ok(Object.values(section.attention.allocation).reduce((sum,value)=>sum+value,0)<=section.attention.available+1e-9);
+  for(const track of section.orchestration.tracks)for(const event of track.events)for(const pitch of event.pitches??(Number.isFinite(event.pitch)?[event.pitch]:[]))if(track.profile.range)assert.ok(pitch>=track.profile.range[0]&&pitch<=track.profile.range.at(-1));
+  for(const note of section.orchestration.counter.notes){
+   const chord=section.phrase.find(chord=>note.start>=chord.bar*section.parts.barTicks&&note.start<(chord.bar+chord.duration)*section.parts.barTicks);
+   assert.ok(chord.tones.includes(note.pitch%12));
+  }
+  for(const plan of Object.values(section.parts))for(const event of plan?.events??[])if(event.performance){assert.ok(event.performance.releaseMs>=event.performance.startMs);assert.ok(event.velocity>=1&&event.velocity<=127);}
+  for(const note of section.parts.bass.events.filter(note=>note.kick&&note.performance)){
+   const hit=section.parts.drums.events.find(hit=>hit.kind==='kick'&&hit.start===note.start);
+   assert.equal(note.performance.offsetMs,hit.performance.offsetMs,'kick and bass share their timing');
+  }
+  const channels=section.dawTracks.tracks.filter(track=>track.role!=='rhythm').map(track=>track.channel);assert.ok(channels.every(channel=>channel>=1&&channel<=16&&channel!==10));
+  assert.ok(section.dawTracks.drums.every(voice=>Number.isInteger(voice.midi)));
+ }
+ assert.ok(narrative.sections.some(section=>section.performance.parts.topline.maximumOffset>0));
+ const broken=vm.runInContext('evaluateMusicRules({rootCoverage:0})',context);assert.equal(broken.valid,false,'academic references are connected to executable hard checks');
+ context.guide=narrative;const report={innerHTML:''};context.document={getElementById:()=>report};vm.runInContext('renderGuide(guide)',context);
+ assert.ok(report.innerHTML.includes(db.interactionUI.title));assert.ok(report.innerHTML.includes(db.interactionUI.daw));assert.ok(report.innerHTML.includes(db.knowledgeBase.asOf));assert.ok(!report.innerHTML.includes('undefined'));
+ assert.ok(api.toMarkdown(narrative).includes(db.interactionUI.title));assert.ok(api.toMarkdown(chamber).includes(db.interactionUI.channel));
+ context.guide=chamber;const print=vm.runInContext('renderPrintableGuide(guide)',context);const response=chamber.sections.flatMap(section=>section.orchestration.counter.notes)[0];assert.ok(print.includes(response.note));
+});
