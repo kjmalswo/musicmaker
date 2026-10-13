@@ -7,6 +7,8 @@
 @media(min-width:1300px){.sidebar{padding:30px}.workspace{grid-template-columns:360px minmax(0,1fr)}}@media(max-width:1000px){.workspace{grid-template-columns:300px minmax(0,1fr)}.sidebar{padding:24px 18px}.main{padding:30px 24px}.overview-grid{grid-template-columns:1fr}.brief-stats{gap:12px}.intro-mark,.section-meta{display:none}}@media(max-width:720px){.topbar{height:64px;padding:0 20px}.topnote{display:none}.workspace{display:block}.sidebar{border:0;border-bottom:1px solid var(--line);padding:25px 20px}.main{padding:28px 20px}.intro{margin-bottom:22px}.intro p{font-size:12px}.brief{padding:16px;gap:12px;align-items:flex-start}.brief-stats{gap:14px}.stat strong{font-size:16px}.stat:last-child{display:none}.panel{padding:18px}.section summary{padding:16px}.section-content{padding:0 16px 16px}.section-info{grid-template-columns:1fr}.timeline-label{font-size:8px}.engine-grid{grid-template-columns:repeat(2,1fr)}.badge{font-size:10px}footer{padding:20px;gap:14px;flex-wrap:wrap}}
 @media print{body{background:white;font-size:11px}.topbar,.sidebar,.intro,.actions,.engine-details,footer,.status{display:none!important}.workspace{display:block}.main{padding:0}.panel,.section,.brief{break-inside:avoid;background:white}.section-content{display:block!important}.section-arrow{display:none}.overview-grid{grid-template-columns:1fr 1fr}.chord-row{grid-template-columns:repeat(4,1fr)}.section{margin:10px 0}.table-wrap{overflow:visible}table{white-space:normal}.footnote{font-size:9px}}
 .part-block{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}.part-block h3{margin-bottom:12px}.part-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.part-summary p{font-size:11px;color:var(--muted);margin-top:6px}.part-summary strong{font-size:12px}.part-grid td{vertical-align:top;white-space:normal;min-width:220px;max-width:420px}.part-grid td:first-child{min-width:55px}.part-event{display:block;margin:3px 0}.part-event small{font-size:9px;color:var(--muted)}.part-theory{margin-top:12px;font-size:11px;color:var(--muted)}.part-theory summary{cursor:pointer}.part-theory p{margin:8px 0}@media(max-width:1000px){.part-summary{grid-template-columns:1fr}}@media print{.part-grid td{min-width:0;max-width:none;font-size:9px}.part-theory{display:none}.part-summary{grid-template-columns:1fr 1fr 1fr}}
+.songform-editor{border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:var(--surface);min-width:0}.songform-editor legend{font-size:12px;font-weight:650;padding:0 5px}.form-row{border-top:1px solid var(--line);padding:10px 0}.form-row-main{display:grid;grid-template-columns:20px minmax(0,1fr) 68px;gap:6px;align-items:center}.form-row-main input,.form-row-main select{padding:7px 5px;font-size:11px}.form-row-actions{display:flex;gap:5px;margin-top:7px;justify-content:flex-end}.form-row-actions button{font-size:10px;padding:4px 8px}.form-add{display:flex;gap:6px;margin:12px 0}.form-add select{min-width:0;font-size:11px}.form-add button{white-space:nowrap;font-size:11px}.form-import{margin:12px 0}.form-import button{width:100%;margin-top:6px;font-size:11px}.form-total{font-size:11px;color:var(--accent)}.form-row-main span{font-size:10px;color:var(--muted)}
+.setting-preview{margin-top:22px;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}.setting-preview h3{font-size:12px;margin-bottom:8px}.setting-preview p{font-size:11px;color:var(--muted);margin:7px 0}.setting-preview strong{color:var(--ink);font-weight:600}
 </style></head>
 <body>
 <header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">♮</span><span data-text="brand"></span></div><span class="topnote" data-text="topnote"></span><span class="badge"><span class="dot"></span><span data-text="localBadge"></span></span></header>
@@ -17,26 +19,26 @@
 // ======================== GAME DATABASE ========================
 // All selectable content, musical policies, engine weights and UI copy live here.
 const GAME_DATABASE={
-version:'1.1.0',storage:{key:'musicmaker.settings.v1'},
+version:'1.2.0',storage:{key:'musicmaker.settings.v1'},
 ui:{
- brand:'musicmaker',title:'musicmaker — 나만의 작곡 설계',description:'장르, 분위기, 송폼과 음악적 취향을 조합해 코드·보이싱·편곡·DAW 작업 가이드를 설계하세요.',topnote:'YOUR IDEAS. A CLEARER START.',localBadge:'브라우저에서 계산',settings:'작곡 설정',reset:'초기화',generate:'나만의 가이드 설계하기',generating:'음악적 후보를 평가하고 있습니다…',heroEyebrow:'COMPOSITION WORKSPACE',hero:'막막한 시작을, 명확한 설계로.',heroDescription:'취향을 정하면, 음악적 연결을 계산합니다. 코드부터 편곡까지 DAW에서 직접 완성할 나만의 작곡 청사진.',footer:'musicmaker · 아이디어를 음악으로 이어주는 작곡 가이드',versionLabel:'COMPOSITION ENGINE / v1.1',steps:['출발점 정하기','음악적 색채 조절','곡의 구조 설계'],advanced:'세부 설정 · 진행과 재현 시드',presets:'빠른 출발',
+ brand:'musicmaker',title:'musicmaker — 나만의 작곡 설계',description:'장르, 분위기, 송폼과 음악적 취향을 조합해 코드·보이싱·편곡·DAW 작업 가이드를 설계하세요.',topnote:'YOUR IDEAS. A CLEARER START.',localBadge:'브라우저에서 계산',settings:'작곡 설정',reset:'초기화',generate:'나만의 가이드 설계하기',generating:'음악적 후보를 평가하고 있습니다…',heroEyebrow:'COMPOSITION WORKSPACE',hero:'막막한 시작을, 명확한 설계로.',heroDescription:'취향을 정하면, 음악적 연결을 계산합니다. 코드부터 편곡까지 DAW에서 직접 완성할 나만의 작곡 청사진.',footer:'musicmaker · 아이디어를 음악으로 이어주는 작곡 가이드',versionLabel:'COMPOSITION ENGINE / v1.2',steps:['출발점 정하기','음악적 색채 조절','곡의 구조 설계'],advanced:'보컬 음역 · 베이스 · 드럼 · 재현 시드',presets:'빠른 출발',
  briefEyebrow:'YOUR COMPOSITION BRIEF',briefTitle:'{mood} {genre}',briefSubtitle:'{key} {mode} · {style} · {meter} · {form}',bpm:'BPM',bars:'마디',duration:'예상 길이',reportTitle:'작곡 청사진',copy:'가이드 복사',markdown:'Markdown',json:'JSON',print:'인쇄 / PDF',copied:'작곡 가이드를 클립보드에 복사했습니다.',copyFailed:'클립보드를 사용할 수 없어 Markdown 파일로 저장했습니다.',exported:'가이드 파일을 저장했습니다.',ready:'설정에 맞는 가이드를 설계했습니다. 시드 {seed}',changed:'설정이 바뀌었습니다. 다시 설계하면 반영됩니다.',restored:'이전 설정으로 설계했습니다.',sample:'현재 설정으로 계산한 첫 가이드입니다. 설정을 바꿔 나만의 방향을 잡아보세요.',genericError:'가이드 설계에 실패했습니다. 설정을 확인하고 다시 시도하세요.',dbError:'데이터베이스 연결을 확인하세요: {detail}',seedError:'시드는 1~64자의 영문, 숫자, 한글 또는 기호를 입력하세요.',progressionError:'현재 모드의 코드 2, 4, 8개를 쉼표 또는 공백으로 구분해 입력하세요. 가능한 코드: {tokens}',appliedError:'세컨더리 도미넌트 다음에는 해당 목표 코드를 배치하세요: {pairs}',noPath:'이 설정에서 해결 가능한 코드 연결을 찾지 못했습니다. 직접 입력한 진행을 확인하세요.',
- energyTitle:'송폼 & 에너지 흐름',energyHint:'막대 높이 = 편곡 에너지',energyLegend:'{bars}마디 · {seconds}초 · 반복 구간은 핵심 진행을 유지하며 질감을 확장합니다.',harmonyTitle:'화성 설계 방향',melodyTitle:'리듬 & 멜로디 출발점',sectionsTitle:'구간별 작곡 가이드',sectionSubtitle:'{start}–{end}마디 · 에너지 {energy}% · 목표 긴장도 {targetTension}%',phraseHint:'{phraseBars}마디 진행 × {repeats}회. 코드당 {hold}마디. {cadence}',chord:'코드',roman:'도수',bass:'베이스',voicing:'건반 상성부 (과학적 음높이)',source:'출처',barRange:'마디',arrangement:'악기 & 레이어',rhythm:'리듬 적용',melody:'멜로디 적용',transition:'다음 구간 연결',sectionTrace:'평가한 연결 {evaluations}개 · 채택 경로 점수 {score} · 상성부 이동 {motion}반음',
+ energyTitle:'송폼 & 에너지 흐름',energyHint:'막대 높이 = 편곡 에너지',energyLegend:'{bars}마디 · {seconds}초 · 반복 구간은 핵심 진행을 유지하며 질감을 확장합니다.',harmonyTitle:'화성 설계 방향',melodyTitle:'리듬 & 멜로디 출발점',sectionsTitle:'구간별 작곡 가이드',sectionSubtitle:'{start}–{end}마디 · 에너지 {energy}% · 목표 긴장도 {targetTension}%',phraseHint:'{phraseBars}마디 진행 × {repeats}회. {timing}. {cadence}',chordTimingUniform:'코드당 {hold}마디',chordTimingMixed:'코드별 {pattern}마디',chord:'코드',roman:'도수',bass:'베이스',voicing:'건반 상성부 (과학적 음높이)',source:'출처',barRange:'마디',arrangement:'악기 & 레이어',rhythm:'리듬 적용',melody:'멜로디 적용',transition:'다음 구간 연결',sectionTrace:'평가한 연결 {evaluations}개 · 채택 경로 점수 {score} · 상성부 이동 {motion}반음',
  dawTitle:'DAW에서 이렇게 시작하세요',methodTitle:'설계 근거 보기',methodDescription:'규칙 기반 휴리스틱 엔진입니다. 여러 화성 경로를 제한된 빔 탐색으로 비교하고 실제 음높이의 보이싱은 동적 계획법으로 고릅니다. 점수는 후보 간 내부 비교값이며 음악의 품질이나 정답을 보장하는 지표는 아닙니다.',evaluations:'평가한 코드 연결',borrowed:'차용화음 비율',applied:'세컨더리 도미넌트 비율',extension:'확장음 사용 비율',swing:'스윙 목표',orchestra:'오케스트라 레이어',seedTag:'시드 {seed}',versionTag:'엔진 v{version}',sourcesTitle:'음악 이론 참고',footnote:'오디오나 MIDI를 생성하지 않습니다. 제안된 보이싱은 건반과 편곡의 출발점입니다. 실제 연주·성부 진행과 음역은 선택한 악기에 맞춰 조정하세요. BPM은 6/8에서 점4분음표, 그 외에는 4분음표 기준입니다.',fixedNotice:'선택한 진행의 도수와 순서를 유지하고 확장음과 보이싱을 최적화합니다.',autoNotice:'기능 연결·긴장도 곡선·장르 성향·성부 이동·반복성을 함께 평가해 진행을 탐색합니다.',
  harmonicDirection:'화성 어휘',harmonicDirectionBody:'Jazzy {jazz}% → 확장 강도 목표 {extension}% · 차용화음 상한 {borrowBudget}% · 세컨더리 도미넌트 상한 {appliedBudget}%. 목표는 검색 가중치이며 실제 사용량은 구간과 종지에 따라 달라집니다.',voiceDirection:'보이싱 & 종지',voiceDirectionBody:'Classical {classical}% → 성부 이동·완전5도/8도 병행 억제와 기능적 종지의 가중치를 높입니다. 베이스와 4개 상성부를 분리해 입력하세요.',densityDirection:'반복과 대비',densityDirectionBody:'기본 코드 교체 주기 {hold}마디 · 반복 변형 {variation}%. 짧은 구간은 길이에 맞춰 교체 주기를 조정합니다. 같은 구간의 핵심 진행을 유지하며 후반부의 화성 색채와 악기 수를 조절합니다.',rhythmDirection:'그루브',rhythmDirectionBody:'{groove} · 스윙 비중 {swing}% · 음표 밀도 {density}%. {meterAdvice}',motifDirection:'모티프',motifDirectionBody:'{motif} {styleMelody}',blueDirection:'블루노트 & 텐션',blueLow:'선택한 모드의 음과 코드톤으로 시작하세요. 강박은 3도·5도에 두고 비화성음은 다음 코드톤으로 해결하세요.',blueHigh:'블루스 색채 비중 {blue}%. {blueNotes}를 짧은 경과음으로 쓰고 반음 위·아래의 코드톤에 해결하세요. 강박의 긴 지속음은 현재 코드의 구성음을 우선하세요.',orchestralLow:'리듬 섹션 중심의 편곡입니다. 긴 패드보다 악기 사이의 빈 공간을 먼저 확보하세요.',orchestralHigh:'현악은 코드톤을 긴 음으로 나누고 목관은 모티프를 응답하세요. 저음 현악과 베이스는 같은 역할을 중복하지 않도록 조절하세요.',instrumentsLine:'{instruments} · 권장 {tracks}트랙',rhythmLine:'{groove} / {pattern} · 밀도 {density}% · 강세 {accents}',melodyLine:'{scale} ({notes}). {contour} {motif} 각 코드의 강박에는 표의 3도 또는 7도에서 출발하세요.',lastTransition:'마지막 코드를 유지하며 상성부를 줄이고 잔향을 정리하세요.',transitionLine:'다음 {next}로 갈 때 {transition} 에너지 {energy}% → {nextEnergy}%로 레이어를 조절하세요.',cadenceResolved:'토닉으로 마무리해 조성을 확인합니다.',cadenceDominant:'도미넌트에 머물러 다음 구간을 기대하게 합니다.',cadenceOpen:'루프의 마지막 코드에서 첫 코드로 연결합니다.',
  dawSteps:['프로젝트를 {bpm} BPM, {meter}로 설정하고 총 {bars}마디의 구간 마커를 만드세요.','건반 트랙에 구간별 코드와 표의 상성부를 입력하세요. 표의 베이스 음은 별도 트랙에 두세요.','{groove} 그루브를 만들고 구간별 표의 길이에 맞춰 베이스를 바꾸세요.','{motif} 먼저 짧은 모티프 하나를 직접 작성하고 구간마다 변형하세요.','송폼의 에너지 높이에 맞춰 악기 레이어를 더하고 빼세요. 오케스트라 목표 {orchestra}레이어를 참고하세요.','진행을 반복해 듣고 비화성음 해결, 베이스와 킥의 충돌, 후렴의 대비를 직접 확인하세요.'],exportTitle:'musicmaker 작곡 가이드',exportConfig:'설정',exportHarmony:'화성 방향',exportMelody:'리듬 / 멜로디',exportSections:'구간',exportDaw:'DAW 작업 순서',exportMethod:'설계 근거',exportFile:'musicmaker',noteSeparator:' · ',listSeparator:', ',rangeSeparator:'–',percentage:'%',minuteFormat:'{minutes}:{seconds}',octaveHint:'C4 = MIDI 60',noscript:'이 작곡 가이드는 JavaScript를 사용하는 브라우저에서 실행됩니다.'
 },
 fields:[
- {id:'genre',type:'select',table:'genres',step:0,label:'장르'},{id:'mood',type:'select',table:'moods',step:0,label:'분위기'},{id:'style',type:'select',table:'styles',step:0,label:'스타일 / 연주 질감'},{id:'key',type:'select',table:'keys',step:0,label:'조성 중심음',pair:'tonality'},{id:'mode',type:'select',table:'modes',step:0,label:'모드',pair:'tonality'},{id:'bpm',type:'number',step:0,label:'템포 · BPM',min:40,max:220,increment:1,pair:'time'},{id:'meter',type:'select',table:'meters',step:0,label:'박자',pair:'time'},
+ {id:'genre',type:'select',table:'genres',step:0,label:'상위 장르'},{id:'subgenre',type:'select',table:'subgenres',step:0,label:'세부 장르 / 작곡 방향',help:'상위 장르 안의 음악적 방향을 고르세요. 분위기·스타일과 함께 계산합니다.',parent:{field:'genre',key:'parent'}},{id:'mood',type:'select',table:'moods',step:0,label:'분위기 · 선율과 에너지',help:'선율의 방향과 긴장도, 에너지에 영향을 줍니다.'},{id:'style',type:'select',table:'styles',step:0,label:'스타일 · 반주와 연주 질감',help:'악기 성향, 반주 밀도, 프레이징과 여백에 영향을 줍니다.'},{id:'key',type:'select',table:'keys',step:0,label:'조성 중심음',pair:'tonality'},{id:'mode',type:'select',table:'modes',step:0,label:'모드',pair:'tonality'},{id:'bpm',type:'number',step:0,label:'템포 · BPM',min:40,max:220,increment:1,pair:'time'},{id:'meter',type:'select',table:'meters',step:0,label:'박자',pair:'time'},
  {id:'jazzy',type:'range',step:1,label:'Jazzy',help:'확장음, 블루노트, 차용화음과 세컨더리 도미넌트의 사용 성향',min:0,max:100,increment:1,ends:['담백한 화성','풍부한 화성']},{id:'classical',type:'range',step:1,label:'Classical',help:'오케스트라 레이어, 기능적 종지와 성부 진행의 비중',min:0,max:100,increment:1,ends:['리듬 섹션 중심','클래식 요소 중심']},{id:'energy',type:'range',step:1,label:'에너지',help:'악기 밀도, 리듬 강도와 구간별 대비',min:0,max:100,increment:1,ends:['차분하게','역동적으로']},{id:'complexity',type:'range',step:1,label:'화성 / 리듬 복잡도',help:'코드 교체 속도와 긴장도 곡선, 리듬 밀도',min:0,max:100,increment:1,ends:['간결하게','정교하게']},{id:'variation',type:'range',step:1,label:'반복 변형',help:'같은 구간이 다시 등장할 때 화성 색채와 레이어를 변형',min:0,max:100,increment:1,ends:['익숙한 반복','변주와 대비']},
- {id:'form',type:'select',table:'forms',step:2,label:'송폼'},{id:'progression',type:'select',table:'progressions',step:'advanced',label:'코드 진행 방향'},{id:'customProgression',type:'text',step:'advanced',label:'직접 입력할 진행',placeholder:'예: I, vi, IV, V',help:'현재 모드의 Roman numeral을 2, 4, 8개 입력하세요. 차용화음·세컨더리 도미넌트도 아래 목록에서 선택할 수 있습니다.',maxLength:120,when:{field:'progression',value:'custom'}},{id:'seed',type:'text',step:'advanced',label:'재현 시드',help:'같은 설정 + 같은 시드 = 같은 가이드. 다른 가능성을 탐색하려면 시드를 바꾸세요.',maxLength:64}
+ {id:'form',type:'select',table:'forms',step:2,label:'송폼'},{id:'customForm',type:'songform',step:2,label:'나만의 송폼',when:{field:'form',value:'custom'}},{id:'progression',type:'select',table:'progressions',step:2,label:'코드 진행 방향',help:'선택한 조성에서 도수와 실제 코드를 확인하세요.'},{id:'customProgression',type:'text',step:2,label:'직접 입력할 진행',placeholder:'예: I, vi, IV, V',help:'현재 모드의 Roman numeral을 2, 4, 8개 입력하세요. 차용화음·세컨더리 도미넌트도 아래 목록에서 선택할 수 있습니다.',maxLength:120,when:{field:'progression',value:'custom'}},{id:'seed',type:'text',step:'advanced',label:'재현 시드',help:'프로젝트명-번호로 정하세요. 예: my-song-01. 같은 엔진 버전·모든 설정·시드이면 같은 결과가 나옵니다.',maxLength:64}
  ,{id:'vocalRange',type:'select',table:'vocalRanges',step:'advanced',label:'보컬 음역 · 실제 가수에 맞게 선택'},
  {id:'toplineNovelty',type:'range',step:1,label:'탑라인 개성 목표',help:'단순 스케일·등간격 아르페지오·한 음 반복을 억제하고, 모티프의 리듬과 윤곽에 변형을 줍니다.',min:0,max:100,increment:1,ends:['모티프를 익숙하게','모티프를 대담하게']},
  {id:'bassMotion',type:'range',step:'advanced',label:'베이스 움직임',help:'코드톤 중심의 저음 지지에서, 킥 연동과 순차 접근이 있는 움직이는 라인까지',min:0,max:100,increment:1,ends:['길게 지지','연결하며 이동']},
  {id:'drumDetail',type:'range',step:'advanced',label:'드럼 디테일',help:'백비트와 펄스를 유지하며 싱코페이션·고스트 노트·전환 필을 조절',min:0,max:100,increment:1,ends:['핵심 그루브','세밀한 전환']}
 ],
-defaults:{genre:'pop',mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea',vocalRange:'middle',toplineNovelty:90,bassMotion:55,drumDetail:50},
-presets:[{id:'late',label:'늦은 밤 R&B',values:{genre:'rnb',mood:'dreamy',style:'intimate',mode:'minor',bpm:78,jazzy:75,classical:10,energy:35,complexity:55,form:'pop',meter:'4-4',progression:'auto'}},{id:'film',label:'시네마틱',values:{genre:'cinematic',mood:'wistful',style:'orchestral',mode:'minor',bpm:72,jazzy:20,classical:90,energy:60,complexity:50,form:'cinematic',meter:'4-4',progression:'auto'}},{id:'indie',label:'인디 팝',values:{genre:'indie',mood:'bright',style:'organic',mode:'major',bpm:112,jazzy:25,classical:15,energy:65,complexity:35,form:'pop',meter:'4-4',progression:'auto'}}],
+defaults:{genre:'pop',subgenre:'contemporary-pop',customForm:[['intro',4],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]],mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea',vocalRange:'middle',toplineNovelty:90,bassMotion:55,drumDetail:50},
+presets:[{id:'late',label:'늦은 밤 R&B',values:{genre:'pop',subgenre:'rnb-pop',mood:'dreamy',style:'intimate',mode:'minor',bpm:78,jazzy:75,classical:10,energy:35,complexity:55,form:'pop',meter:'4-4',progression:'auto'}},{id:'film',label:'시네마틱',values:{genre:'cinematic',subgenre:'orchestral-score',mood:'wistful',style:'orchestral',mode:'minor',bpm:72,jazzy:20,classical:90,energy:60,complexity:50,form:'cinematic',meter:'4-4',progression:'auto'}},{id:'indie',label:'인디 팝',values:{genre:'pop',subgenre:'indie-pop',mood:'bright',style:'organic',mode:'major',bpm:112,jazzy:25,classical:15,energy:65,complexity:35,form:'pop',meter:'4-4',progression:'auto'}}],
 keys:[{id:'C',label:'C',pc:0,flat:false},{id:'Db',label:'D♭',pc:1,flat:true},{id:'D',label:'D',pc:2,flat:false},{id:'Eb',label:'E♭',pc:3,flat:true},{id:'E',label:'E',pc:4,flat:false},{id:'F',label:'F',pc:5,flat:true},{id:'Gb',label:'G♭',pc:6,flat:true},{id:'G',label:'G',pc:7,flat:false},{id:'Ab',label:'A♭',pc:8,flat:true},{id:'A',label:'A',pc:9,flat:false},{id:'Bb',label:'B♭',pc:10,flat:true},{id:'B',label:'B',pc:11,flat:false}],
 pitchNames:{sharp:['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'],flat:['C','D♭','D','E♭','E','F','G♭','G','A♭','A','B♭','B']},
 modes:[
@@ -45,6 +47,49 @@ modes:[
 ],
 functions:{T:'토닉',P:'프리도미넌트',D:'도미넌트'},sources:{diatonic:'조성 내 화음 (단조 V는 리딩톤 사용)',borrowed:'동주조 / 모드 차용',applied:'세컨더리 도미넌트'},
 qualities:{major:[{level:0,suffix:'',tones:[0,4,7],voices:[0,4,7,12],extra:0},{level:.3,suffix:'maj7',tones:[0,4,7,11],voices:[0,4,7,11],extra:.09},{level:.62,suffix:'maj9',tones:[0,4,7,11,14],voices:[4,7,11,14],extra:.16}],minor:[{level:0,suffix:'m',tones:[0,3,7],voices:[0,3,7,12],extra:0},{level:.3,suffix:'m7',tones:[0,3,7,10],voices:[0,3,7,10],extra:.07},{level:.62,suffix:'m9',tones:[0,3,7,10,14],voices:[3,7,10,14],extra:.14}],dominant:[{level:0,suffix:'',tones:[0,4,7],voices:[0,4,7,12],extra:0},{level:.24,suffix:'7',tones:[0,4,7,10],voices:[0,4,7,10],extra:.09},{level:.58,suffix:'9',tones:[0,4,7,10,14],voices:[4,7,10,14],extra:.16},{level:.86,suffix:'13',tones:[0,4,7,10,14,21],voices:[4,10,14,21],extra:.2}],diminished:[{level:0,suffix:'dim',tones:[0,3,6],voices:[0,3,6,12],extra:0},{level:.45,suffix:'m7♭5',tones:[0,3,6,10],voices:[0,3,6,10],extra:.08}]},
+// A subgenre is a production direction; the search still obeys the shared theory constraints.
+subgenres:[
+ {id:'contemporary-pop',parent:'pop',default:true,label:'컨템포러리 팝',description:'명료한 훅과 균형 잡힌 백비트, 간결한 화성 전개',bpm:[88,124],sourceMix:{pop:1},voice:{density:.6,syncopation:.45,contour:.5,sustain:.5,hook:.65,lift:.55}},
+ {id:'rnb-pop',parent:'pop',label:'R&B 팝',description:'확장 화성과 약박 프레이징, 킥에 연결되는 베이스',bpm:[68,105],sourceMix:{pop:.3,rnb:.7},harmony:{extension:.82,swing:.62,hold:1},voice:{density:.65,syncopation:.85,contour:.6,sustain:.45,hook:.55,lift:.45},drums:{detail:.7,syncopation:.9,timeDensity:.65},bass:{motion:.8},kitWeights:{electronic:.5},transitions:{'ii>V':.5,'IV>vi':.25,'iv>V':.25}},
+ {id:'pop-rock',parent:'pop',label:'팝 록',description:'기타 중심의 선명한 리듬과 넓은 후렴, 루트·5도의 저음',bpm:[100,155],sourceMix:{pop:.3,rock:.7},harmony:{extension:.22,swing:.03,hold:1},voice:{density:.65,syncopation:.3,contour:.7,sustain:.5,hook:.75,lift:.8},drums:{detail:.6,syncopation:.35,timeDensity:.9},bass:{motion:.4},kitWeights:{acoustic:.4},sections:{chorus:{energy:1.12,density:1.1}},transitions:{'IV>I':.35,'bVII>IV':.45,'I>IV':.3}},
+ {id:'kpop',parent:'pop',label:'K-pop · 댄스 / 하이브리드',description:'전자 리듬의 층과 짧은 훅, 프리코러스와 후렴의 뚜렷한 대비',bpm:[95,135],sourceMix:{pop:.5,electronic:.3,rnb:.2},harmony:{complexity:.6,extension:.6,hold:1},voice:{density:.85,syncopation:.8,contour:.45,sustain:.3,hook:.95,lift:.75},drums:{detail:.85,syncopation:.85,timeDensity:.85},bass:{motion:.75},kitWeights:{electronic:.8},sections:{pre:{energy:.9,tension:.08,density:.9},chorus:{energy:1.2,density:1.18}},transitions:{'vi>IV':.3,'ii>V':.3}},
+ {id:'jpop',parent:'pop',label:'J-pop · 선율 전개 중심',description:'선율 윤곽과 기능 화성의 연결, 후렴에서 넓어지는 음역',bpm:[90,160],sourceMix:{pop:.55,rock:.25,jazz:.2},harmony:{complexity:.7,extension:.65,applied:.95,swing:.05,hold:1},voice:{density:.9,syncopation:.4,contour:.95,sustain:.45,hook:.55,lift:.9},drums:{detail:.7,syncopation:.45,timeDensity:.8},bass:{motion:.75},sections:{pre:{tension:.08},chorus:{energy:1.1,density:1.12}},transitions:{'IV>V':.6,'V>iii':.55,'iii>vi':.6,'ii>V':.35}},
+ {id:'ballad',parent:'pop',label:'팝 발라드',description:'긴 음과 호흡, 피아노의 공간, 후반에 확장되는 감정선',bpm:[58,88],sourceMix:{pop:.5,indie:.2,cinematic:.3},harmony:{energy:.25,complexity:.32,extension:.45,swing:.05,hold:2},voice:{density:.25,syncopation:.15,contour:.4,sustain:.95,hook:.5,lift:.65},drums:{detail:.15,syncopation:.2,timeDensity:.2},bass:{motion:.2},instruments:{piano:1.5},sections:{verse:{energy:.85,density:.8},chorus:{energy:1.15}},transitions:{'IV>V':.35,'V>I':.35,'iv>I':.3}},
+ {id:'indie-pop',parent:'pop',label:'인디 팝',description:'기타와 건반의 자연스러운 질감, 여백이 있는 짧은 모티프',bpm:[85,125],sourceMix:{pop:.4,indie:.6},voice:{density:.5,syncopation:.4,contour:.55,sustain:.65,hook:.6,lift:.4},drums:{detail:.35,syncopation:.45,timeDensity:.45},bass:{motion:.45},instruments:{guitar:.4}},
+ {id:'synth-pop',parent:'pop',label:'신스 팝',description:'신스의 지속음과 반복 펄스, 베이스 리듬이 만드는 추진력',bpm:[95,130],sourceMix:{pop:.4,electronic:.6},harmony:{hold:2,swing:.05},voice:{density:.6,syncopation:.6,contour:.4,sustain:.7,hook:.85,lift:.6},drums:{detail:.55,syncopation:.6,timeDensity:.8},bass:{motion:.65},kitWeights:{electronic:.7},instruments:{synth:.4}},
+ {id:'dance-pop',parent:'pop',label:'댄스 팝',description:'매 박의 킥 펄스와 짧은 훅, 반복 구간의 레이어 확장',bpm:[110,132],sourceMix:{pop:.4,electronic:.6},harmony:{energy:.85,swing:0,hold:2},voice:{density:.75,syncopation:.7,contour:.4,sustain:.35,hook:.9,lift:.65},drums:{pulse:1,detail:.65,syncopation:.65,timeDensity:.95},bass:{motion:.75},kitWeights:{electronic:.7}},
+ {id:'acoustic-pop',parent:'pop',label:'어쿠스틱 팝',description:'분산화음과 호흡 중심의 선율, 절제된 저음과 리듬',bpm:[70,112],sourceMix:{pop:.35,indie:.65},harmony:{energy:.35,extension:.3,hold:2},voice:{density:.4,syncopation:.25,contour:.5,sustain:.8,hook:.55,lift:.35},drums:{detail:.25,syncopation:.3,timeDensity:.3},bass:{motion:.3},instruments:{guitar:.8}},
+ {id:'contemporary-rnb',parent:'rnb',default:true,label:'컨템포러리 R&B',description:'레이드백 리듬과 확장음, 약박에서 시작하는 보컬',bpm:[65,105],sourceMix:{rnb:1},voice:{density:.65,syncopation:.85,contour:.6,sustain:.55,hook:.55,lift:.45},drums:{detail:.7,syncopation:.9,timeDensity:.65},bass:{motion:.8}},
+ {id:'neo-soul',parent:'rnb',label:'네오 소울',description:'보이싱 색채와 유연한 싱코페이션, 코드톤을 연결하는 베이스',bpm:[65,98],sourceMix:{rnb:.65,jazz:.35},harmony:{extension:.95,swing:.8},voice:{density:.65,syncopation:.9,contour:.7,sustain:.5,hook:.45,lift:.4},drums:{detail:.75,syncopation:.9,timeDensity:.65},bass:{motion:.95},instruments:{rhodes:.5}},
+ {id:'alternative-rnb',parent:'rnb',label:'얼터너티브 R&B',description:'공간감 있는 전자 질감과 낮은 리듬 밀도, 긴 여운',bpm:[60,100],sourceMix:{rnb:.5,lofi:.3,electronic:.2},harmony:{energy:.3,hold:2},voice:{density:.4,syncopation:.7,contour:.5,sustain:.85,hook:.5,lift:.3},drums:{detail:.4,syncopation:.75,timeDensity:.35},bass:{motion:.45},instruments:{synth:.6}},
+ {id:'swing-jazz',parent:'jazz',default:true,label:'스윙 / 스탠더드',description:'스윙 펄스와 기능적 화성, 순차 연결하는 저음',bpm:[90,170],sourceMix:{jazz:1},voice:{density:.65,syncopation:.8,contour:.7,sustain:.4,hook:.45,lift:.5},drums:{detail:.65,syncopation:.8,timeDensity:.8},bass:{motion:1}},
+ {id:'bossa-jazz',parent:'jazz',label:'보사노바 방향',description:'스트레이트 분할과 싱코페이션, 기타·건반의 가벼운 컴핑',bpm:[90,135],sourceMix:{jazz:.7,indie:.3},harmony:{swing:0,hold:1},voice:{density:.55,syncopation:.8,contour:.45,sustain:.6,hook:.5,lift:.3},drums:{detail:.45,syncopation:.8,timeDensity:.55},bass:{motion:.5},instruments:{guitar:1}},
+ {id:'jazz-fusion',parent:'jazz',label:'재즈 퓨전',description:'전자 악기와 적극적인 리듬, 확장 화성의 선율 연결',bpm:[90,150],sourceMix:{jazz:.5,rnb:.25,electronic:.25},harmony:{energy:.7},voice:{density:.85,syncopation:.8,contour:.85,sustain:.3,hook:.5,lift:.65},drums:{detail:.85,syncopation:.85,timeDensity:.9},bass:{motion:.95},instruments:{rhodes:.4,electricBass:.5}},
+ {id:'indie-folk',parent:'indie',default:true,label:'인디 포크',description:'어쿠스틱 질감과 이야기하듯 흐르는 프레이징',bpm:[70,120],sourceMix:{indie:1},voice:{density:.45,syncopation:.25,contour:.5,sustain:.7,hook:.55,lift:.3},drums:{detail:.3,timeDensity:.4},bass:{motion:.35}},
+ {id:'dream-indie',parent:'indie',label:'드림 / 앰비언트 인디',description:'지속되는 신스·기타와 긴 음, 낮은 리듬 밀도',bpm:[65,108],sourceMix:{indie:.5,lofi:.25,electronic:.25},harmony:{energy:.3,hold:2},voice:{density:.35,syncopation:.4,contour:.4,sustain:.9,hook:.5,lift:.25},drums:{detail:.25,timeDensity:.3},bass:{motion:.25},instruments:{synth:.5}},
+ {id:'indie-rock',parent:'indie',label:'인디 록',description:'기타의 반복 동기와 드라이빙 리듬, 절과 후렴의 대비',bpm:[95,150],sourceMix:{indie:.4,rock:.6},voice:{density:.65,syncopation:.35,contour:.65,sustain:.5,hook:.7,lift:.65},drums:{detail:.6,timeDensity:.8},bass:{motion:.55}},
+ {id:'chillhop',parent:'lofi',default:true,label:'칠합 / 비트',description:'느슨한 킥·스네어와 건반 루프, 짧은 선율 응답',bpm:[65,95],sourceMix:{lofi:1},voice:{density:.4,syncopation:.7,contour:.4,sustain:.7,hook:.75,lift:.2},drums:{detail:.5,syncopation:.8,timeDensity:.55},bass:{motion:.45}},
+ {id:'lofi-jazz',parent:'lofi',label:'재즈 로파이',description:'재즈 보이싱과 부드러운 비트, 순차적인 베이스 연결',bpm:[60,92],sourceMix:{lofi:.6,jazz:.4},voice:{density:.5,syncopation:.7,contour:.6,sustain:.65,hook:.55,lift:.25},drums:{detail:.55,syncopation:.8,timeDensity:.55},bass:{motion:.75}},
+ {id:'house',parent:'electronic',default:true,label:'하우스 방향',description:'매 박의 킥과 오프비트 리듬, 지속되는 화성 루프',bpm:[115,130],sourceMix:{electronic:1},harmony:{swing:.1},voice:{density:.65,syncopation:.85,contour:.4,sustain:.5,hook:.9,lift:.5},drums:{pulse:1,detail:.65,syncopation:.9,timeDensity:.95},bass:{motion:.75}},
+ {id:'synthwave',parent:'electronic',label:'신스웨이브',description:'신스 베이스와 반복 펄스, 긴 음과 선명한 후렴',bpm:[85,120],sourceMix:{electronic:.75,pop:.25},voice:{density:.55,syncopation:.5,contour:.4,sustain:.8,hook:.8,lift:.55},drums:{detail:.55,timeDensity:.8},bass:{motion:.65}},
+ {id:'ambient-electronic',parent:'electronic',label:'앰비언트 일렉트로닉',description:'적은 타격과 지속음, 점진적인 화성·음색 변화',bpm:[45,90],sourceMix:{electronic:.5,cinematic:.5},harmony:{energy:.2,hold:2},voice:{density:.25,syncopation:.2,contour:.4,sustain:1,hook:.4,lift:.2},drums:{detail:0,timeDensity:.15},bass:{motion:.15},instruments:{synth:.8}},
+ {id:'alternative-rock',parent:'rock',default:true,label:'얼터너티브 록',description:'기타 중심의 강한 대비와 반복 리프, 직선적인 백비트',bpm:[95,160],sourceMix:{rock:1},voice:{density:.65,syncopation:.35,contour:.7,sustain:.5,hook:.7,lift:.8},drums:{detail:.7,timeDensity:.9},bass:{motion:.5}},
+ {id:'classic-rock',parent:'rock',label:'클래식 록 방향',description:'블루스 색채와 기타 응답, 루트·5도 기반의 추진력',bpm:[85,140],sourceMix:{rock:.8,rnb:.2},voice:{density:.6,syncopation:.5,contour:.75,sustain:.6,hook:.65,lift:.65},drums:{detail:.65,timeDensity:.85},bass:{motion:.55}},
+ {id:'jrock',parent:'rock',label:'J-rock · 선율 중심',description:'촘촘한 선율 전개와 기능적 연결, 넓어지는 후렴',bpm:[110,175],sourceMix:{rock:.6,pop:.25,jazz:.15},harmony:{complexity:.7,applied:.85},voice:{density:.9,syncopation:.4,contour:.95,sustain:.4,hook:.55,lift:.9},drums:{detail:.85,timeDensity:.95},bass:{motion:.85},transitions:{'IV>V':.5,'V>iii':.45,'iii>vi':.5}},
+ {id:'orchestral-score',parent:'cinematic',default:true,label:'오케스트라 스코어',description:'공통음과 성부 진행, 오스티나토와 점진적인 절정',bpm:[55,110],sourceMix:{cinematic:1},voice:{density:.5,syncopation:.25,contour:.7,sustain:.8,hook:.45,lift:.75},drums:{detail:.4,timeDensity:.35},bass:{motion:.45}},
+ {id:'minimal-score',parent:'cinematic',label:'미니멀 스코어',description:'소수 모티프의 반복과 긴 화성, 작은 레이어 변화',bpm:[50,95],sourceMix:{cinematic:.7,indie:.3},harmony:{energy:.25,complexity:.25,hold:2},voice:{density:.25,syncopation:.2,contour:.3,sustain:1,hook:.9,lift:.2},drums:{detail:.1,timeDensity:.2},bass:{motion:.2},instruments:{piano:.5}},
+ {id:'tension-score',parent:'cinematic',label:'서스펜스 / 텐션 스코어',description:'반복 펄스와 긴장도 대비, 절정 직전의 밀도 증가',bpm:[70,135],sourceMix:{cinematic:.6,electronic:.4},harmony:{energy:.7,complexity:.7},voice:{density:.6,syncopation:.55,contour:.65,sustain:.6,hook:.7,lift:.7},drums:{detail:.75,timeDensity:.75},bass:{motion:.65},sections:{development:{tension:.12,density:1.1},climax:{energy:1.15,density:1.15}}}
+],
+subgenreUI:{fieldLabel:'세부 장르 / 작곡 방향',fieldHelp:'상위 장르 안의 음악적 방향을 고르세요. 선택한 분위기·스타일과 함께 계산합니다.',choiceHelp:'{description} · 참고 템포 {min}–{max} BPM. 현재 BPM과 송폼은 유지합니다.',report:'{genre} / {subgenre} — {description}',influenceTitle:'세부 장르 설계 방향',influenceBody:'{description}. 화성·리듬·악기·탑라인 성향을 조합하며, 선택한 Jazzy·Classical·템포·송폼 조건 안에서 탐색합니다.',definition:'음악적 설계 프로필이며 해당 세부 장르의 모든 곡을 규정하는 공식은 아닙니다.'},
+songformUI:{label:'나만의 송폼',description:'구간을 원하는 순서로 조합하세요. Intro·Outro를 포함해 필수 구간은 없습니다.',add:'구간 추가',import:'기본형 불러오기',moveUp:'위로',moveDown:'아래로',duplicate:'복제',remove:'삭제',bars:'마디',total:'{count}구간 · 총 {bars}마디',row:'{label} ({bars}마디)',separator:' → ',actionLabel:'{action} · {index}번째 {label}',invalid:'송폼은 {minSections}–{maxSections}개 구간, 구간당 {minBars}–{maxBars} 정수 마디로 구성하고 전체 {maxTotalBars}마디 이내로 정하세요.',maxReached:'추가 가능한 구간 수를 모두 사용했습니다.',tooDense:'{label} {bars}마디에 선택한 진행을 배치하면 템포 대비 코드 교체가 너무 빠릅니다. 구간 마디 수를 늘리거나 더 짧은 진행을 선택하세요.'},
+songformRules:{minSections:1,maxSections:20,minBars:1,maxBars:64,barStep:1,maxTotalBars:384,defaultType:'verse',defaultBars:8,typeOrder:['intro','verse','pre','chorus','bridge','outro','theme','development','climax'],patternChoices:[8,4,6,7,5]},
+progressionUI:{"preview":"{roman} → 기본 코드 {chords}. {description}","automatic":"세부 장르·분위기·스타일을 함께 평가해 진행을 탐색합니다.","custom":"직접 입력한 도수와 순서를 유지합니다.","modeNote":"단조를 선택하면 표시된 기능적 변형 도수를 사용합니다.","fallback":"도수 순서를 유지하며 확장음과 보이싱을 최적화합니다."},
+seedUI:{"newSeed":"새 시드 만들기","help":"예: my-song-01. 같은 엔진 버전·모든 설정·시드는 같은 결과를 만듭니다. 번호를 바꾸면 다른 후보를 탐색합니다.","prefix":"idea-","words":2,"hexWidth":8},
+previewUI:{"title":"지금 설정의 예상 설계","sound":"주 악기 {instruments}","movement":"{section} 기준 · 코드 교체 {hold}마디 · 반주 밀도 {density}% · 스윙 비중 {swing}%","vocal":"보컬 음역 {range} · {description}","structure":"{count}구간 · {bars}마디 · 약 {duration}","note":"예상 방향입니다. 최종 음높이·보이싱·타격 위치는 가이드 설계에서 계산합니다.","pending":"설정을 마무리하면 예상 방향을 보여드립니다."},
+subgenreRules:{
+ scalarFields:['energy','complexity','extension','borrow','applied','swing'],mapFields:['degrees','instruments'],mapDefaults:{degrees:1,instruments:0},holds:[.5,1,2],voice:{density:.6,syncopation:.45,contour:.5,sustain:.5,hook:.55,lift:.5},drums:{pulse:0,detail:.5,syncopation:.5,timeDensity:.5},bass:{motion:.55},section:{energy:1,density:1,tension:0},
+ blend:{control:.8,profile:.2,drumControl:.65,drumProfile:.35,timeControl:.65,timeProfile:.35},weights:{transition:1,rhythm:2.1,contour:1.3,hook:.4,jitter:.35,instrument:1,kit:1},vocal:{densityBase:.45,densityScale:.55,offbeatEntry:.45,contourBase:.65,contourScale:.7,minContour:1,maxContour:3,registerLift:4,sustainThin:.7,minCellNotes:2},drumsPolicy:{pulseThreshold:.75,syncBase:.5,syncScale:1,ghostBase:.5,ghostScale:.75,fillBase:.55,fillScale:.65,timeThreshold:.5},profileMeta:{type:'composition-direction',controls:'user-settings-remain-authoritative'}
+},
 genres:[
  {id:'pop',label:'Pop',energy:.6,complexity:.35,extension:.35,borrow:.6,applied:.45,swing:.05,hold:1,groove:'팝 백비트',degrees:{I:1.3,vi:1.2,IV:1.1,V:1.15,i:1.3,bVI:1.15,bIII:1.1,bVII:1.1},instruments:{piano:1,synth:.85,electricBass:.9,drums:1,vocal:1}},
  {id:'rnb',label:'R&B / Soul',energy:.48,complexity:.65,extension:.9,borrow:.8,applied:.85,swing:.65,hold:1,groove:'레이드백 소울',degrees:{ii:1.4,IV:1.1,vi:1.25,i:1.25,iv:1.3,V:1.15},instruments:{rhodes:1.5,electricBass:1.2,drums:1.2,vocal:1.3,piano:.8}},
@@ -55,24 +100,25 @@ genres:[
  {id:'rock',label:'Rock',energy:.9,complexity:.35,extension:.2,borrow:.9,applied:.3,swing:.05,hold:1,groove:'드라이빙 백비트',degrees:{I:1.4,IV:1.4,V:1.3,bVII:1.5,i:1.3},instruments:{electricGuitar:1.7,electricBass:1.3,drums:1.5,vocal:1.2}},
  {id:'cinematic',label:'Cinematic',energy:.55,complexity:.55,extension:.5,borrow:1,applied:.8,swing:0,hold:2,groove:'시네마틱 오스티나토',degrees:{i:1.5,iv:1.3,bVI:1.3,I:1.3,IV:1.25},instruments:{piano:1.4,synth:1,strings:1.3,cello:1.25,woodwinds:1.1}}
 ],
-moods:[{id:'warm',label:'따뜻한',valence:.7,energy:.4,tension:.3,contour:'중음역에서 부드러운 순차 진행을 유지하고 후렴에서만 음역을 넓히세요.'},{id:'bright',label:'밝고 경쾌한',valence:.95,energy:.8,tension:.35,contour:'짧은 상행 동기를 만들고 프레이즈 끝을 하행하며 안정시키세요.'},{id:'wistful',label:'아련한',valence:.3,energy:.3,tension:.45,contour:'완만한 하행 동기를 반복하고 해결음을 한 박 늦춰 여운을 만드세요.'},{id:'dreamy',label:'몽환적인',valence:.5,energy:.2,tension:.55,contour:'음역을 좁게 유지하고 긴 음과 짧은 응답 사이에 공간을 두세요.'},{id:'dark',label:'어둡고 긴장된',valence:.12,energy:.55,tension:.8,contour:'좁은 음역의 반복음으로 시작하고 절정 직전에 상행 도약을 한 번 사용하세요.'},{id:'epic',label:'웅장한',valence:.65,energy:1,tension:.7,contour:'낮은 음역의 동기를 옥타브로 확장하고 절정에서 가장 높은 음을 사용하세요.'}],
+moods:[{id:'warm',label:'편안한 중음역 · 부드러운 흐름',description:'중음역에서 완만하게 이어지는 선율과 낮은 긴장도. 세부 장르의 리듬 위에 부드러운 연결을 더합니다.',valence:.7,energy:.4,tension:.3,contour:'중음역에서 부드러운 순차 진행을 유지하고 후렴에서만 음역을 넓히세요.'},{id:'bright',label:'밝은 에너지 · 짧은 상행 동기',description:'짧게 올라가는 모티프와 높은 편곡 에너지. BPM을 자동으로 높이지 않으며 같은 템포에서도 리듬의 존재감을 키웁니다.',valence:.95,energy:.8,tension:.35,contour:'짧은 상행 동기를 만들고 프레이즈 끝을 하행하며 안정시키세요.'},{id:'wistful',label:'아련한 여운 · 하행하는 선율',description:'완만한 하행과 늦춘 해결의 느낌. 짧은 응답 뒤에 여백을 두며 선택한 조성을 유지합니다.',valence:.3,energy:.3,tension:.45,contour:'완만한 하행 동기를 반복하고 해결음을 한 박 늦춰 여운을 만드세요.'},{id:'dreamy',label:'떠 있는 느낌 · 긴 음과 쉼',description:'좁은 음역의 긴 음과 짧은 응답, 낮은 에너지와 중간 긴장도. 실제 잔향은 DAW에서 조절하세요.',valence:.5,energy:.2,tension:.55,contour:'음역을 좁게 유지하고 긴 음과 짧은 응답 사이에 공간을 두세요.'},{id:'dark',label:'긴장감 · 좁은 음역의 반복',description:'반복 동기와 높은 화성 긴장도. 비화성음은 해결 규칙을 지키면서 사용합니다.',valence:.12,energy:.55,tension:.8,contour:'좁은 음역의 반복음으로 시작하고 절정 직전에 상행 도약을 한 번 사용하세요.'},{id:'epic',label:'점진적 상승 · 넓어지는 절정',description:'후반에 올라가는 음역과 높은 편곡 에너지. 실제 보컬 음역 제한은 유지합니다.',valence:.65,energy:1,tension:.7,contour:'낮은 음역의 동기를 옥타브로 확장하고 절정에서 가장 높은 음을 사용하세요.'}],
 styles:[
- {id:'intimate',label:'미니멀 / 친밀한',density:.35,swing:.3,orchestra:.3,melody:'긴 음 뒤에 짧은 응답을 두고 악기 사이에 한 박 이상의 여백을 남기세요.',motif:'두 마디 질문과 두 마디 응답을 만들고 응답의 마지막 음만 바꾸세요.',transition:'마지막 박의 악기를 줄이고 다음 구간 첫 박에 중심 악기를 다시 넣으세요.',instrument:{rhodes:.4,piano:.4,vocal:.3}},
- {id:'organic',label:'어쿠스틱 / 자연스러운',density:.5,swing:.2,orchestra:.5,melody:'멜로디의 강세를 가사나 프레이즈의 호흡에 맞추세요.',motif:'두 마디 모티프의 리듬을 유지하고 다음 두 마디의 음높이만 바꾸세요.',transition:'마지막 마디에 짧은 리듬 응답을 넣고 다음 첫 박의 베이스를 명확히 하세요.',instrument:{guitar:.7,piano:.3,upright:.2}},
- {id:'groovy',label:'싱코페이션 / 그루비',density:.8,swing:.8,orchestra:.25,melody:'약박에 시작하되 프레이즈 끝의 강박에서는 코드톤으로 해결하세요.',motif:'한 마디 리듬 모티프를 반복하고 매 네 번째 마디에 쉼표를 넣으세요.',transition:'리듬 악기 한 파트를 한 마디 먼저 바꾸어 다음 구간을 예고하세요.',instrument:{rhodes:.5,electricBass:.4,drums:.4}},
- {id:'wide',label:'공간감 / 앰비언트',density:.25,swing:.05,orchestra:.6,melody:'음의 수보다 지속 길이와 잔향의 변화를 먼저 정하세요.',motif:'두세 음의 짧은 동기를 길게 늘이고 후반에 옥타브를 바꾸세요.',transition:'공통음을 유지하는 패드 위에서 리듬과 저음 레이어를 교체하세요.',instrument:{synth:.7,piano:.3,strings:.2}},
- {id:'orchestral',label:'대위적 / 오케스트럴',density:.65,swing:0,orchestra:1,melody:'주선율이 쉴 때 응답 선율을 넣고 강박의 불협화음은 순차 해결하세요.',motif:'두 마디 모티프를 순차 이행하고 응답에서 방향을 반대로 바꾸세요.',transition:'목관의 짧은 응답으로 구간을 연결하고 현악의 공통음을 유지하세요.',instrument:{piano:.4,strings:.6,woodwinds:.6}}
+ {id:'intimate',label:'가까운 보컬 · 적은 반주',description:'선택 장르의 주 악기로 적은 음을 연주하고 보컬 응답 사이에 여백을 둡니다. 밀도 낮은 피아노·일렉트릭 피아노 방향입니다.',density:.35,swing:.3,orchestra:.3,melody:'긴 음 뒤에 짧은 응답을 두고 악기 사이에 한 박 이상의 여백을 남기세요.',motif:'두 마디 질문과 두 마디 응답을 만들고 응답의 마지막 음만 바꾸세요.',transition:'마지막 박의 악기를 줄이고 다음 구간 첫 박에 중심 악기를 다시 넣으세요.',instrument:{rhodes:.4,piano:.4,vocal:.3}},
+ {id:'organic',label:'어쿠스틱 질감 · 자연스러운 호흡',description:'기타·피아노 성향을 더하고 가사와 프레이즈의 호흡에 강세를 맞춥니다. 손으로 연주하는 질감의 반주를 출발점으로 삼습니다.',density:.5,swing:.2,orchestra:.5,melody:'멜로디의 강세를 가사나 프레이즈의 호흡에 맞추세요.',motif:'두 마디 모티프의 리듬을 유지하고 다음 두 마디의 음높이만 바꾸세요.',transition:'마지막 마디에 짧은 리듬 응답을 넣고 다음 첫 박의 베이스를 명확히 하세요.',instrument:{guitar:.7,piano:.3,upright:.2}},
+ {id:'groovy',label:'약박 강세 · 드럼과 베이스의 맞물림',description:'반주 밀도를 높이고 약박에서 시작하는 프레이징을 더합니다. 킥과 베이스가 같은 위치에서 연결되는 그루브가 중심입니다.',density:.8,swing:.8,orchestra:.25,melody:'약박에 시작하되 프레이즈 끝의 강박에서는 코드톤으로 해결하세요.',motif:'한 마디 리듬 모티프를 반복하고 매 네 번째 마디에 쉼표를 넣으세요.',transition:'리듬 악기 한 파트를 한 마디 먼저 바꾸어 다음 구간을 예고하세요.',instrument:{rhodes:.5,electricBass:.4,drums:.4}},
+ {id:'wide',label:'긴 패드 · 넓은 여백',description:'음의 수보다 지속 길이와 악기 사이의 공간을 강조합니다. 선택 장르의 주 악기에 신스·지속음 성향을 더합니다.',density:.25,swing:.05,orchestra:.6,melody:'음의 수보다 지속 길이와 잔향의 변화를 먼저 정하세요.',motif:'두세 음의 짧은 동기를 길게 늘이고 후반에 옥타브를 바꾸세요.',transition:'공통음을 유지하는 패드 위에서 리듬과 저음 레이어를 교체하세요.',instrument:{synth:.7,piano:.3,strings:.2}},
+ {id:'orchestral',label:'현악 층 · 선율의 질문과 응답',description:'주선율이 쉴 때 응답을 배치합니다. Classical을 높이면 현악·목관 레이어가 늘어나고 기능적 종지와 성부 진행의 비중이 커집니다.',density:.65,swing:0,orchestra:1,melody:'주선율이 쉴 때 응답 선율을 넣고 강박의 불협화음은 순차 해결하세요.',motif:'두 마디 모티프를 순차 이행하고 응답에서 방향을 반대로 바꾸세요.',transition:'목관의 짧은 응답으로 구간을 연결하고 현악의 공통음을 유지하세요.',instrument:{piano:.4,strings:.6,woodwinds:.6}}
 ],
 meters:[
  {id:'4-4',label:'4/4',quarters:4,pulseQuarters:1,accents:'1 · 3박',advice:'2·4박의 백비트와 8분음표 약박을 구분하세요.',patterns:{sparse:'1박에 킥, 3박에 스네어; 하이햇은 4분음표',medium:'킥 1·3박, 스네어 2·4박; 8분음표 하이햇',dense:'킥 1박·3박 앞 약박, 스네어 2·4박; 16분음표 일부를 비우기'},classical:'한 마디를 4분음표 베이스와 8분음표 분산화음으로 나누기'},
  {id:'3-4',label:'3/4',quarters:3,pulseQuarters:1,accents:'1박',advice:'첫 박의 저음과 2·3박의 가벼운 응답을 구분하세요.',patterns:{sparse:'1박 저음, 2·3박의 응답은 번갈아 생략',medium:'1박 저음, 2·3박 코드 응답',dense:'1박 저음과 8분음표 분산화음, 마지막 박 약박에 응답'},classical:'1박 저음, 2·3박의 가벼운 화음으로 왈츠 펄스 만들기'},
  {id:'6-8',label:'6/8',quarters:3,pulseQuarters:1.5,accents:'1 · 4번째 8분음표',advice:'점4분음표 두 박으로 느끼세요. 별도의 스윙은 적용하지 않습니다.',patterns:{sparse:'첫 점4분음표에 저음, 두 번째에 부드러운 응답',medium:'8분음표 1·4에 강세, 나머지는 가벼운 분산화음',dense:'6개의 8분음표를 흐르게 두고 3·6에서 일부 악기를 쉬기'},classical:'두 점4분음표 펄스 위에 8분음표 분산화음 배치하기',noSwing:true}
 ],
-progressions:[{id:'auto',label:'엔진 추천 · 자유롭게 탐색'},{id:'pop',label:'토닉 → 상대화음 → 서브도미넌트 → 도미넌트',modes:{major:['I','vi','IV','V'],minor:['i','bIII','iv','V']}},{id:'fifths',label:'프리도미넌트 → 도미넌트 → 토닉 → 확장',modes:{major:['ii','V','I','vi'],minor:['ii°','V','i','bVI']}},{id:'descending',label:'하행형 4코드 루프',modes:{major:['vi','IV','I','V'],minor:['i','bVII','bVI','V']}},{id:'custom',label:'직접 진행 입력'}],
+progressions:[{id:'auto',label:'엔진 추천 · 자유롭게 탐색'},{id:'pop',label:'토닉 → 상대화음 → 서브도미넌트 → 도미넌트',modes:{major:['I','vi','IV','V'],minor:['i','bIII','iv','V']}},{id:'fifths',label:'프리도미넌트 → 도미넌트 → 토닉 → 확장',modes:{major:['ii','V','I','vi'],minor:['ii°','V','i','bVI']}},{id:'descending',label:'하행형 4코드 루프',modes:{major:['vi','IV','I','V'],minor:['i','bVII','bVI','V']}},{"id":"money","label":"머니코드 · I–V–vi–IV","description":"같은 루프의 반복 안에서 멜로디·베이스·레이어로 대비를 만듭니다.","modes":{"major":["I","V","vi","IV"],"minor":["i","V","bVI","iv"]}},{"id":"royal","label":"왕도진행 · IV–V–iii–vi","description":"서브도미넌트에서 출발해 상대화음으로 이어지는 연결입니다.","modes":{"major":["IV","V","iii","vi"],"minor":["iv","V","bIII","bVI"]}},{"id":"251","label":"재즈 2–5–1 · 8마디 전개","grammar":"jazz-251","description":"ii–V–I로 조성을 확립한 뒤 턴어라운드와 목표화음으로 해결되는 세컨더리 도미넌트를 탐색합니다. 기본 7화음은 포함하며 Jazzy로 추가 텐션과 차용화음의 비중을 조절합니다."},{"id":"canon","label":"캐논형 · 8코드 연결","description":"하행 베이스의 느낌과 반복되는 기능 화성을 긴 프레이즈로 연결합니다.","modes":{"major":["I","V","vi","iii","IV","I","IV","V"],"minor":["i","V","bVI","bIII","iv","i","iv","V"]}},{"id":"1625","label":"1–6–2–5 · 턴어라운드","description":"토닉에서 프리도미넌트와 도미넌트로 이어지는 반복 연결입니다.","modes":{"major":["I","vi","ii","V"],"minor":["i","bVI","ii°","V"]}},{"id":"fifth-cycle","label":"5도권 연결 · vi–ii–V–I","description":"근음의 5도 관계를 따라 기능적 해결을 만듭니다.","modes":{"major":["vi","ii","V","I"],"minor":["i","iv","bVII","bIII"]}},{"id":"soft-borrow","label":"차용화음 · I–IV–iv–I","description":"동주조에서 빌린 화음으로 색채를 바꾸고 토닉으로 돌아옵니다.","modes":{"major":["I","IV","iv","I"],"minor":["i","IV","iv","i"]}},{"id":"secondary-color","label":"세컨더리 도미넌트 · 목표화음 연결","description":"변화된 도미넌트가 다음 목표화음으로 실제 해결되도록 연결합니다.","modes":{"major":["I","V/vi","vi","IV"],"minor":["i","V/bVI","bVI","iv"]}},{"id":"plagal","label":"1–4–1 · 플라갈 종지","description":"서브도미넌트에서 토닉으로 돌아오며 마지막 토닉을 길게 유지합니다.","weights":[1,1,2],"modes":{"major":["I","IV","I"],"minor":["i","iv","i"]}},{id:'custom',label:'직접 진행 입력'}],
+progressionGrammars:{"jazz-251":{"referenceBars":8,"hold":1,"extensionTarget":0.3,"seventhLevels":{"major":0.3,"minor":0.3,"dominant":0.24,"diminished":0.45},"minimumApplied":1,"appliedDeadline":5,"referenceKind":"chorus","seedKey":"jazz-reference","title":"재즈 2–5–1에서 파생된 8마디 설계","notice":"8마디 기준안입니다. 8마디 이상 구간은 이 문법으로 전개하고, 짧은 구간은 마디 수와 종지에 맞춰 축약합니다. 직접 조합한 송폼에는 구간을 추가하지 않습니다.","event":"{bar}마디: {symbol} ({roman})","separator":" → ","direction":"기본 7화음과 최소 {applied}회의 목표화음 해결을 포함합니다. Jazzy는 추가 텐션·차용화음·도미넌트 색채를 늘립니다.","slots":{"major":[["ii"],["V"],["I"],["vi","iii","IV","V/vi","V/ii"],["vi","ii","V/ii","V/V","V/vi"],["ii","vi","V/V","V/vi","V/ii"],["V","vi","ii","iv"],["I","V","vi"]],"minor":[["ii°"],["V"],["i"],["iv","bVI","bIII","V/iv","V/bVI"],["iv","bVI","V/iv","V/V","V/bVI"],["ii°","iv","bVI","V/V","V/iv","V/bVI"],["V","iv","bVI","ii°"],["i","V","bVI"]]}}},
 sectionTypes:{intro:{label:'Intro',energy:.3,tension:.18,closure:'open',density:.45},verse:{label:'Verse',energy:.58,tension:.35,closure:'open',density:.7},pre:{label:'Pre-chorus',energy:.75,tension:.62,closure:'D',density:.85},chorus:{label:'Chorus',energy:1,tension:.5,closure:'T',density:1},bridge:{label:'Bridge',energy:.68,tension:.73,closure:'D',density:.8},outro:{label:'Outro',energy:.27,tension:.17,closure:'T',density:.4},theme:{label:'Theme A',energy:.55,tension:.3,closure:'T',density:.65},development:{label:'Development',energy:.78,tension:.72,closure:'D',density:.85},climax:{label:'Climax',energy:1,tension:.65,closure:'T',density:1}},
-forms:[{id:'pop',label:'팝 · Verse / Chorus',sections:[['intro',4],['verse',16],['pre',8],['chorus',16],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]]},{id:'compact',label:'컴팩트 · 짧은 곡',sections:[['intro',4],['verse',8],['chorus',8],['verse',8],['chorus',8],['outro',4]]},{id:'aaba',label:'AABA · 테마와 대비',sections:[['theme',8],['theme',8],['bridge',8],['theme',8]]},{id:'cinematic',label:'시네마틱 · 점진적 전개',sections:[['intro',8],['theme',16],['development',16],['climax',16],['outro',8]]}],
+forms:[{id:'custom',label:'직접 조합 · 구간 편집',builder:true},{id:'pop',label:'팝 · Verse / Chorus',sections:[['intro',4],['verse',16],['pre',8],['chorus',16],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]]},{id:'compact',label:'컴팩트 · 짧은 곡',sections:[['intro',4],['verse',8],['chorus',8],['verse',8],['chorus',8],['outro',4]]},{id:'aaba',label:'AABA · 테마와 대비',sections:[['theme',8],['theme',8],['bridge',8],['theme',8]]},{id:'cinematic',label:'시네마틱 · 점진적 전개',sections:[['intro',8],['theme',16],['development',16],['climax',16],['outro',8]]}],
 instruments:[{id:'piano',label:'피아노',role:'harmony',base:.7,jazz:.35,classical:.5},{id:'rhodes',label:'일렉트릭 피아노',role:'harmony',base:.6,jazz:.8,classical:0},{id:'guitar',label:'어쿠스틱 기타',role:'harmony',base:.5,jazz:.15,classical:0},{id:'electricGuitar',label:'일렉트릭 기타',role:'harmony',base:.3,jazz:.1,classical:0},{id:'synth',label:'신스 패드',role:'harmony',base:.6,jazz:.2,classical:.15},{id:'electricBass',label:'일렉트릭 베이스',role:'bass',base:.8,jazz:.5,classical:0},{id:'upright',label:'콘트라베이스',role:'bass',base:.45,jazz:.9,classical:.5},{id:'drums',label:'드럼 / 전자 드럼',role:'rhythm',base:.8,jazz:.3,classical:0},{id:'brushes',label:'브러시 드럼',role:'rhythm',base:.3,jazz:1,classical:0},{id:'vocal',label:'보컬 / 주선율 악기',role:'melody',base:.8,jazz:.35,classical:.1},{id:'sax',label:'색소폰',role:'melody',base:.2,jazz:1,classical:0},{id:'leadSynth',label:'리드 신스',role:'melody',base:.3,jazz:.1,classical:0},{id:'strings',label:'현악 앙상블',role:'texture',base:.35,jazz:.15,classical:1},{id:'cello',label:'첼로',role:'texture',base:.3,jazz:.15,classical:.9},{id:'woodwinds',label:'목관 응답 선율',role:'texture',base:.25,jazz:.3,classical:.85},{id:'horns',label:'호른 / 브라스',role:'texture',base:.2,jazz:.35,classical:.85}],
-theoryReferences:[{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'},{label:'Open Music Theory · Embellishing Tones',url:'https://openmusictheory.github.io/embellishingTones.html'},{label:'Open Music Theory · Swing & Syncopation',url:'https://viva.pressbooks.pub/openmusictheory/chapter/swing-rhythms/'}],
+theoryReferences:[{label:'Open Music Theory · ii–V–I / Turnaround',url:'https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/'},{label:'Open Music Theory · Jazz Substitutions',url:'https://viva.pressbooks.pub/openmusictheory/chapter/substitutions/'},{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'},{label:'Open Music Theory · Embellishing Tones',url:'https://openmusictheory.github.io/embellishingTones.html'},{label:'Open Music Theory · Swing & Syncopation',url:'https://viva.pressbooks.pub/openmusictheory/chapter/swing-rhythms/'}],
 vocalRanges:[{id:'lower',label:'낮은 음역 · C3–E4',lower:48,upper:64,center:57},{id:'middle',label:'중간 음역 · G3–D5',lower:55,upper:74,center:64},{id:'higher',label:'높은 음역 · C4–G5',lower:60,upper:79,center:69}],
 partUI:{
  title:'보컬 · 드럼 · 베이스 설계',topline:'보컬 탑라인',drums:'드럼 그루브',bass:'베이스 라인',rest:'쉼',position:'시작 / 길이',pitchRole:'음의 역할',lineBar:'프레이즈 내 마디',vocalColumn:'보컬 · 음높이@시작[길이]',drumColumn:'드럼 · 타격 위치',bassColumn:'베이스 · 음높이@시작[길이]',
@@ -118,11 +164,11 @@ parts:{
  colors:{borrowedScale:'parallel'},display:{decimals:2,restSymbol:'—',at:'@',lengthOpen:'[',lengthClose:']',eventSeparator:' · '}
 },
 engine:{
- numeric:{unit:1,percent:100,octave:12,midiOctaveOffset:1,secondsPerMinute:60,padding:2},seed:{offset:2166136261,prime:16777619,step:1831565813,shiftA:15,shiftB:7,shiftC:14,mix:61,denominator:4294967296},limits:{beamWidth:28,minPattern:4,maxPattern:8,customLengths:[2,4,8],seedMax:64},blend:{energyUser:.6,energyGenre:.2,energyMood:.2,complexUser:.65,complexGenre:.35,extensionGenre:.65,extensionComplex:.35,tensionMood:.35,tensionSection:.45,tensionComplex:.2},harmonicRhythm:{fastThreshold:.72,slowThreshold:.3,fastTempo:150,slowTempo:70,fastHold:.5,normalHold:1,slowHold:2},chromatic:{borrowMax:.32,appliedMax:.25,extensionSlack:.13,blueMax:.5},weights:{function:1.4,tension:3.4,genre:1.1,root:.25,voice:.07,classicalVoice:.09,parallel:.7,classicalParallel:2.2,repeat:1.9,run:3.5,color:1.2,cadence:2.7,novelty:.8,extension:1.8,borrow:1.2,applied:1.3,diversity:.35,jitter:.8,motif:2.2,brightness:.4,startTonic:1},functionTransitions:{T:{T:.2,P:1,D:.55},P:{T:.1,P:.25,D:1.2},D:{T:1.35,P:-.6,D:-.35}},rootMotion:{0:-.3,1:.65,2:.5,3:.3,4:.15,5:.9,6:-.1},tensionCurve:{start:-.12,middle:.08,end:-.16,frequency:Math.PI,repeatLift:.035},voicing:{lower:48,upper:84,bassBase:36,center:64,octaveShifts:[-1,0,1],centerWeight:.045,perfectIntervals:[0,7],upperStepPenalty:.15,largeLeap:7},density:{style:.5,energy:.35,complexity:.15,sparse:.35,dense:.7},swing:{genre:.7,style:.3,base:.5},orchestra:{max:4,styleBase:.65,styleWeight:.35,threshold:.08},arrangement:{roles:['harmony','bass','rhythm','melody'],genre:1,style:.5,jazz:.6,classical:.6,base:.2,jitter:.1,textureEnergy:.7,repeatTracks:1,extraTracks:3},thresholds:{blue:.35,classicalRhythm:.6,borrowNeighborPenalty:.8,repeatLock:.5},timing:{renderYield:24},export:{markdownExtension:'.md',jsonExtension:'.json',markdownMime:'text/markdown;charset=utf-8',jsonMime:'application/json;charset=utf-8',revokeDelay:1000},validation:{customSplit:'[\\s,→–-]+',seedPattern:'^[\\s\\S]{1,64}$'},display:{scoreDigits:2,diagramBase:.5,diagramEnergy:.5}
+ numeric:{unit:1,percent:100,octave:12,midiOctaveOffset:1,secondsPerMinute:60,padding:2,seedRadix:16},seed:{offset:2166136261,prime:16777619,step:1831565813,shiftA:15,shiftB:7,shiftC:14,mix:61,denominator:4294967296},limits:{beamWidth:28,minPattern:4,maxPattern:8,customLengths:[2,4,8],seedMax:64},blend:{energyUser:.6,energyGenre:.2,energyMood:.2,complexUser:.65,complexGenre:.35,extensionGenre:.65,extensionComplex:.35,tensionMood:.35,tensionSection:.45,tensionComplex:.2},harmonicRhythm:{fastThreshold:.72,slowThreshold:.3,fastTempo:150,slowTempo:70,fastHold:.5,normalHold:1,slowHold:2},chromatic:{borrowMax:.32,appliedMax:.25,extensionSlack:.13,blueMax:.5},weights:{function:1.4,tension:3.4,genre:1.1,root:.25,voice:.07,classicalVoice:.09,parallel:.7,classicalParallel:2.2,repeat:1.9,run:3.5,color:1.2,cadence:2.7,novelty:.8,extension:1.8,borrow:1.2,applied:1.3,diversity:.35,jitter:.8,motif:2.2,brightness:.4,startTonic:1},functionTransitions:{T:{T:.2,P:1,D:.55},P:{T:.1,P:.25,D:1.2},D:{T:1.35,P:-.6,D:-.35}},rootMotion:{0:-.3,1:.65,2:.5,3:.3,4:.15,5:.9,6:-.1},tensionCurve:{start:-.12,middle:.08,end:-.16,frequency:Math.PI,repeatLift:.035},voicing:{lower:48,upper:84,bassBase:36,center:64,octaveShifts:[-1,0,1],centerWeight:.045,perfectIntervals:[0,7],upperStepPenalty:.15,largeLeap:7},density:{style:.5,energy:.35,complexity:.15,sparse:.35,dense:.7},swing:{genre:.7,style:.3,base:.5},orchestra:{max:4,styleBase:.65,styleWeight:.35,threshold:.08},arrangement:{roles:['harmony','bass','rhythm','melody'],genre:1,style:.5,jazz:.6,classical:.6,base:.2,jitter:.1,textureEnergy:.7,repeatTracks:1,extraTracks:3},thresholds:{blue:.35,classicalRhythm:.6,borrowNeighborPenalty:.8,repeatLock:.5},timing:{renderYield:24},export:{markdownExtension:'.md',jsonExtension:'.json',markdownMime:'text/markdown;charset=utf-8',jsonMime:'application/json;charset=utf-8',revokeDelay:1000},validation:{customSplit:'[\\s,→–-]+',seedPattern:'^[\\s\\S]{1,64}$'},display:{scoreDigits:2,diagramBase:.5,diagramEnergy:.5}
 }
 };
 // ====================== END GAME DATABASE ======================
-const DB=GAME_DATABASE,E=DB.engine,U=DB.ui,P=DB.parts,PU=DB.partUI;
+const DB=GAME_DATABASE,E=DB.engine,U=DB.ui,P=DB.parts,PU=DB.partUI,SG=DB.subgenreRules,SUI=DB.subgenreUI;
 const byId=(table,id)=>DB[table].find(item=>item.id===id);
 const clamp=(value,min=0,max=E.numeric.unit)=>Math.min(max,Math.max(min,value));
 const percent=value=>Math.round(value*E.numeric.percent);
@@ -134,14 +180,28 @@ const sum=values=>values.reduce((a,b)=>a+b,0);
 const average=values=>sum(values)/values.length;
 const pitchName=(value,key,octave=false)=>DB.pitchNames[key.flat?'flat':'sharp'][pc(value)]+(octave?Math.floor(value/E.numeric.octave)-E.numeric.midiOctaveOffset:'');
 
+function selectOptions(field,config){return DB[field.table].filter(option=>!field.parent||option[field.parent.key]===config[field.parent.field]);}
+function selectFallback(field,options){return(options.find(option=>option.default)||options.find(option=>option.id===DB.defaults[field.id])||options[0])?.id;}
+function normalizeSongform(value){
+ let sequence=value;
+ if(typeof value==='string'){try{sequence=JSON.parse(value);}catch{throw new Error(fmt(DB.songformUI.invalid,DB.songformRules));}}
+ const rules=DB.songformRules;
+ if(!Array.isArray(sequence)||sequence.length<rules.minSections||sequence.length>rules.maxSections)throw new Error(fmt(DB.songformUI.invalid,rules));
+ for(const row of sequence)if(!Array.isArray(row)||row.length!==E.numeric.padding||!DB.sectionTypes[row[0]]||!Number.isInteger(row[1])||row[1]<rules.minBars||row[1]>rules.maxBars)throw new Error(fmt(DB.songformUI.invalid,rules));
+ if(sum(sequence.map(row=>row[1]))>rules.maxTotalBars)throw new Error(fmt(DB.songformUI.invalid,rules));
+ return sequence.map(([kind,bars])=>[kind,bars]);
+}
+function resolveForm(config){const form=byId('forms',config.form);return form.builder?{...form,sections:normalizeSongform(config.customForm)}:form;}
 function normalizeConfig(input={}){
  const config={};
  for(const field of DB.fields){
   const value=input[field.id]??DB.defaults[field.id];
-  if(field.type==='select')config[field.id]=byId(field.table,value)?value:DB.defaults[field.id];
+  if(field.type==='select'){const options=selectOptions(field,config);config[field.id]=options.some(option=>option.id===value)?value:selectFallback(field,options);}
   else if(field.type==='number'||field.type==='range'){
    const number=Number(value);
    config[field.id]=Number.isFinite(number)?clamp(Math.round(number/field.increment)*field.increment,field.min,field.max):DB.defaults[field.id];
+  }else if(field.type==='songform'){
+   try{config[field.id]=normalizeSongform(value);}catch(reason){if(config[field.when.field]===field.when.value)throw reason;config[field.id]=normalizeSongform(DB.defaults[field.id]);}
   }else config[field.id]=String(value).trim().slice(0,field.maxLength);
  }
  if(!new RegExp(E.validation.seedPattern).test(config.seed))throw error('seedError');
@@ -160,12 +220,30 @@ function seededRandom(seed){
  };
 }
 
+function resolveGenre(config){
+ const parent=byId('genres',config.genre),subgenre=byId('subgenres',config.subgenre),total=sum(Object.values(subgenre.sourceMix));
+ const mix=Object.entries(subgenre.sourceMix).map(([id,weight])=>({genre:byId('genres',id),weight:weight/total})),genre={...parent};
+ for(const field of SG.scalarFields)genre[field]=subgenre.harmony?.[field]??sum(mix.map(source=>source.genre[field]*source.weight));
+ for(const field of SG.mapFields){
+  const keys=new Set([...mix.flatMap(source=>Object.keys(source.genre[field])),...Object.keys(subgenre[field]??{})]);
+  genre[field]=Object.fromEntries([...keys].map(key=>[key,sum(mix.map(source=>(source.genre[field][key]??SG.mapDefaults[field])*source.weight))+(subgenre[field]?.[key]??0)]));
+ }
+ const preferredHold=subgenre.harmony?.hold??sum(mix.map(source=>source.genre.hold*source.weight));
+ genre.hold=SG.holds.toSorted((a,b)=>Math.abs(a-preferredHold)-Math.abs(b-preferredHold))[0];
+ genre.groove=subgenre.label+U.noteSeparator+parent.groove;
+ return{genre,subgenre,mix,voiceProfile:{...SG.voice,...subgenre.voice},drumProfile:{...SG.drums,...subgenre.drums},bassProfile:{...SG.bass,...subgenre.bass}};
+}
+function sectionProfile(ctx,kind){
+ const type=DB.sectionTypes[kind],direction={...SG.section,...ctx.subgenre.sections?.[kind]};
+ return{...type,energy:Math.max(0,type.energy*direction.energy),density:Math.max(0,type.density*direction.density),tension:clamp(type.tension+direction.tension)};
+}
 function makeContext(config){
- const genre=byId('genres',config.genre),mood=byId('moods',config.mood),style=byId('styles',config.style),meter=byId('meters',config.meter),mode=byId('modes',config.mode),key=byId('keys',config.key);
+ const resolved=resolveGenre(config),{genre}=resolved,mood=byId('moods',config.mood),style=byId('styles',config.style),meter=byId('meters',config.meter),mode=byId('modes',config.mode),key=byId('keys',config.key);
  const jazz=config.jazzy/E.numeric.percent,classical=config.classical/E.numeric.percent,complexity=config.complexity/E.numeric.percent,variation=config.variation/E.numeric.percent;
  const energy=clamp(config.energy/E.numeric.percent*E.blend.energyUser+genre.energy*E.blend.energyGenre+mood.energy*E.blend.energyMood);
  const complexityTarget=complexity*E.blend.complexUser+genre.complexity*E.blend.complexGenre;
- const extensionTarget=jazz*(genre.extension*E.blend.extensionGenre+complexityTarget*E.blend.extensionComplex);
+ const progression=byId('progressions',config.progression),grammar=DB.progressionGrammars[progression.grammar]??null;
+ const extensionTarget=Math.max(grammar?.extensionTarget??0,jazz*(genre.extension*E.blend.extensionGenre+complexityTarget*E.blend.extensionComplex));
  let hold=genre.hold;
  if(complexityTarget>E.harmonicRhythm.fastThreshold&&config.bpm<E.harmonicRhythm.fastTempo)hold=E.harmonicRhythm.fastHold;
  else if(complexityTarget<E.harmonicRhythm.slowThreshold||config.bpm>E.harmonicRhythm.fastTempo)hold=E.harmonicRhythm.slowHold;
@@ -173,7 +251,6 @@ function makeContext(config){
  const swing=meter.noSwing?0:jazz*(genre.swing*E.swing.genre+style.swing*E.swing.style);
  const orchestra=Math.round(classical*E.orchestra.max*(E.orchestra.styleBase+style.orchestra*E.orchestra.styleWeight));
  const baseChords=[...mode.chords.map(chord=>({...chord,source:'diatonic'})),...mode.borrowed.map(chord=>({...chord,source:'borrowed'})),...mode.applied.map(chord=>({...chord,source:'applied'}))];
- const progression=byId('progressions',config.progression);
  let forced=progression.modes?.[mode.id]??null;
  if(config.progression==='custom'){
   forced=config.customProgression.split(new RegExp(E.validation.customSplit)).filter(Boolean);
@@ -181,12 +258,14 @@ function makeContext(config){
   const unresolved=forced.filter((id,index)=>{const chord=baseChords.find(item=>item.id===id);return chord.target&&forced[(index+E.numeric.unit)%forced.length]!==chord.target;});
   if(unresolved.length)throw error('appliedError',{pairs:unresolved.map(id=>`${id} → ${baseChords.find(chord=>chord.id===id).target}`).join(U.listSeparator)});
  }
- return{config,genre,mood,style,meter,mode,key,jazz,classical,variation,energy,complexityTarget,extensionTarget,hold,swing,orchestra,baseChords,forced,borrowRate:jazz*E.chromatic.borrowMax*genre.borrow,appliedRate:jazz*E.chromatic.appliedMax*genre.applied};
+ const forcedWeights=forced?(progression.weights??forced.map(()=>E.numeric.unit)):null;
+ return{config,...resolved,mood,style,meter,mode,key,jazz,classical,variation,energy,complexityTarget,extensionTarget,hold:grammar?.hold??hold,swing,orchestra,baseChords,forced,forcedWeights,grammar,borrowRate:jazz*E.chromatic.borrowMax*genre.borrow,appliedRate:jazz*E.chromatic.appliedMax*genre.applied};
 }
 
 function candidateChords(ctx){
  return ctx.baseChords.flatMap(chord=>DB.qualities[chord.quality].filter(quality=>{
-  if(quality.level>ctx.jazz+E.chromatic.extensionSlack&&quality.level!==0)return false;
+  const minimum=ctx.grammar?.seventhLevels[chord.quality]??0;
+  if(quality.level<minimum||quality.level>Math.max(minimum,ctx.jazz+E.chromatic.extensionSlack))return false;
   // Extensions of a diatonic chord must fit the scale or its existing altered triad.
   const allowed=new Set([...ctx.mode.scale,...DB.qualities[chord.quality][0].tones.map(interval=>pc(chord.degree+interval))]);
   return chord.source!=='diatonic'||quality.tones.every(interval=>allowed.has(pc(chord.degree+interval)));
@@ -244,18 +323,25 @@ function optimizeVoicings(chords,ctx,previous=null){
 }
 
 function targetTension(ctx,type,index,length,occurrence){
- const progress=index/(length-E.numeric.unit);
+ const progress=length>E.numeric.unit?index/(length-E.numeric.unit):0;
  return clamp(ctx.mood.tension*E.blend.tensionMood+type.tension*E.blend.tensionSection+ctx.complexityTarget*E.blend.tensionComplex+Math.sin(progress*E.tensionCurve.frequency)*E.tensionCurve.middle+E.tensionCurve.start*(E.numeric.unit-progress)+E.tensionCurve.end*progress+occurrence*ctx.variation*E.tensionCurve.repeatLift);
 }
 
 function searchProgression(ctx,type,length,random,candidates,previousMotif,pairCache,occurrence){
- const forced=ctx.forced,borrowBudget=Math.floor(length*ctx.borrowRate),appliedBudget=Math.floor(length*ctx.appliedRate);
+ const forced=ctx.forced,grammar=length>=(ctx.grammar?.referenceBars??Infinity)?ctx.grammar:null;
+ const minimumApplied=grammar?.minimumApplied??0,borrowBudget=Math.floor(length*ctx.borrowRate),appliedBudget=Math.max(minimumApplied,Math.floor(length*ctx.appliedRate));
  let beam=[{path:[],score:0,borrowed:0,applied:0,run:0}],evaluations=0;
  const noise=Array.from({length},()=>new Map(candidates.map(chord=>[chord.uid,(random()-E.swing.base)*E.weights.jitter])));
  for(let index=0;index<length;index++){
   const next=[],last=index===length-E.numeric.unit,penultimate=index===length-E.numeric.unit-E.numeric.unit,target=targetTension(ctx,type,index,length,occurrence);
   for(const state of beam)for(const chord of candidates){
    if(forced&&chord.id!==forced[index%forced.length])continue;
+   if(grammar){
+    const cadenceSlot=(last&&type.closure!=='open')||(penultimate&&type.closure==='T'&&ctx.classical>=E.thresholds.classicalRhythm);
+    if(!cadenceSlot&&!grammar.slots[ctx.mode.id][index%grammar.referenceBars].includes(chord.id))continue;
+    if(index===grammar.appliedDeadline&&state.applied<minimumApplied&&chord.source!=='applied')continue;
+    if(last&&state.applied+(chord.source==='applied'?E.numeric.unit:0)<minimumApplied)continue;
+   }
    if(!forced&&chord.source==='borrowed'&&state.borrowed>=borrowBudget)continue;
    if(!forced&&chord.source==='applied'&&state.applied>=appliedBudget)continue;
    const before=state.path.at(-1);
@@ -274,6 +360,7 @@ function searchProgression(ctx,type,length,random,candidates,previousMotif,pairC
    let run=0;
    if(before){
     score+=E.functionTransitions[before.fn][chord.fn]*E.weights.function*(E.numeric.unit+ctx.classical);
+    score+=(ctx.subgenre.transitions?.[`${before.id}>${chord.id}`]??0)*SG.weights.transition;
     const interval=pc(chord.root-before.root),distance=Math.min(interval,E.numeric.octave-interval);
     score+=E.rootMotion[distance]*E.weights.root;
     score-=pairVoiceCost(before,chord,ctx,pairCache);
@@ -305,14 +392,22 @@ function chooseInstruments(ctx,energy,occurrence,random){
 }
 
 function makeSection(ctx,definition,index,occurrences,motifs,random,candidates,pairCache,previousVoice){
- const[kind,bars]=definition,type=DB.sectionTypes[kind],occurrence=occurrences[kind]??0;
+ const[kind,bars]=definition,type=sectionProfile(ctx,kind),occurrence=occurrences[kind]??0;
  occurrences[kind]=occurrence+E.numeric.unit;
  let hold=ctx.hold,length;
- if(ctx.forced){length=ctx.forced.length;hold=Math.min(hold,bars/length);}
- else{length=Math.min(E.limits.maxPattern,bars/hold);if(length<E.limits.minPattern){length=E.limits.minPattern;hold=bars/length;}}
+ if(ctx.grammar){length=bars<ctx.grammar.referenceBars||bars%ctx.grammar.referenceBars?bars:ctx.grammar.referenceBars;hold=ctx.grammar.hold;}
+ else if(ctx.forced){length=ctx.forced.length;hold=Math.min(hold,bars/length);}
+ else{
+  const events=bars/hold;
+  length=DB.songformRules.patternChoices.find(count=>count<=events&&Number.isInteger(events/count))??Math.min(E.limits.maxPattern,Math.floor(events));
+  if(length<E.limits.minPattern){length=Math.min(E.limits.minPattern,bars);hold=bars/length;}
+ }
  // Keep a whole number of complete phrases even when DB song forms gain new lengths.
- const repeats=Math.max(E.numeric.unit,Math.floor(bars/(length*hold)));
- hold=bars/(length*repeats);
+ const weights=ctx.forcedWeights??Array.from({length},()=>E.numeric.unit),units=sum(weights);
+ const repeats=Math.max(E.numeric.unit,Math.floor(bars/(units*hold)));
+ hold=bars/(units*repeats);
+ const minimum=Math.max(minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),minLineTicks(ctx,P.vocal.maxSyllablesPerSecond,P.vocal.minTicks));
+ if(Math.min(...weights)*hold*P.meters[ctx.meter.id].barTicks<minimum)throw new Error(fmt(DB.songformUI.tooDense,{label:type.label,bars}));
  const search=searchProgression(ctx,type,length,random,candidates,motifs[kind],pairCache,occurrence);
  if(!motifs[kind])motifs[kind]=search.path;
  const fullPath=Array.from({length:repeats},()=>search.path).flat(),voicings=optimizeVoicings(fullPath,ctx,previousVoice);
@@ -321,12 +416,15 @@ function makeSection(ctx,definition,index,occurrences,motifs,random,candidates,p
  const pattern=ctx.classical>=E.thresholds.classicalRhythm?ctx.meter.classical:ctx.meter.patterns[density<E.density.sparse?'sparse':density>E.density.dense?'dense':'medium'];
  const arrangement=chooseInstruments(ctx,energy,occurrence,random),label=type.label+(occurrence?` ${occurrence+E.numeric.unit}`:'');
  const cadence=ctx.forced||type.closure==='open'?U.cadenceOpen:type.closure==='T'?U.cadenceResolved:U.cadenceDominant;
+ let offset=0;
  const events=fullPath.map((chord,eventIndex)=>{
   const notes=voicings.notes[eventIndex],bass=E.voicing.bassBase+chord.root;
-  return{id:chord.id,symbol:chord.symbol,source:chord.source,fn:chord.fn,quality:chord.quality,intervals:chord.tones,level:chord.level,tension:chord.tension,target:chord.target??null,root:chord.root,tones:chord.tones.map(interval=>pc(chord.root+interval)),notes,bass,voicing:notes.map(note=>pitchName(note,ctx.key,true)).join(U.noteSeparator),bassName:pitchName(bass,ctx.key,true),bar:eventIndex*hold,duration:hold};
+  const duration=weights[eventIndex%length]*hold,bar=offset;offset+=duration;
+  return{id:chord.id,symbol:chord.symbol,source:chord.source,fn:chord.fn,quality:chord.quality,intervals:chord.tones,level:chord.level,tension:chord.tension,target:chord.target??null,root:chord.root,tones:chord.tones.map(interval=>pc(chord.root+interval)),notes,bass,voicing:notes.map(note=>pitchName(note,ctx.key,true)).join(U.noteSeparator),bassName:pitchName(bass,ctx.key,true),bar,duration};
  });
  const notes=ctx.mode.scale.map(interval=>pitchName(ctx.key.pc+interval,ctx.key)).join(U.listSeparator);
- return{kind,label,index,bars,hold,repeats,phraseBars:length*hold,patternLength:length,occurrence,energy:percent(energy),density:percent(density),targetTension:percent(average(search.path.map((_,i)=>targetTension(ctx,type,i,length,occurrence)))),events,phrase:events.slice(0,length),cadence,arrangement,rhythm:fmt(U.rhythmLine,{groove:ctx.genre.groove,pattern,density:percent(density),accents:ctx.meter.accents}),melody:fmt(U.melodyLine,{scale:ctx.mode.scaleLabel,notes,contour:ctx.mood.contour,motif:ctx.style.motif}),evaluations:search.evaluations,score:Number(search.score.toFixed(E.display.scoreDigits)),motion:voicings.motion,lastVoice:voicings.last};
+ const timing=new Set(weights).size===E.numeric.unit?fmt(U.chordTimingUniform,{hold}):fmt(U.chordTimingMixed,{pattern:weights.map(weight=>weight*hold).join(U.listSeparator)});
+ return{kind,label,index,bars,hold,timing,repeats,phraseBars:units*hold,patternLength:length,occurrence,energy:percent(energy),density:percent(density),targetTension:percent(average(search.path.map((_,i)=>targetTension(ctx,type,i,length,occurrence)))),events,phrase:events.slice(0,length),cadence,arrangement,rhythm:fmt(U.rhythmLine,{groove:ctx.genre.groove,pattern,density:percent(density),accents:ctx.meter.accents}),melody:fmt(U.melodyLine,{scale:ctx.mode.scaleLabel,notes,contour:ctx.mood.contour,motif:ctx.style.motif}),evaluations:search.evaluations,score:Number(search.score.toFixed(E.display.scoreDigits)),motion:voicings.motion,lastVoice:voicings.last};
 }
 
 // All three line planners use the SAME harmonic events and metrical coordinates.
@@ -346,11 +444,13 @@ function vocalRhythm(ctx,section,grid,motif){
  for(let bar=0;bar<section.phraseBars;bar++){
   const phase=bar%P.vocal.cellTransformPeriod;
   const cell=grid.vocalCells[motif.cell];
-  const shift=phase===P.vocal.cellTransformPeriod-E.numeric.unit&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock?P.vocal.displacementTicks:0;
+  const shift=phase===P.vocal.cellTransformPeriod-E.numeric.unit&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock&&ctx.voiceProfile.syncopation>=SG.vocal.offbeatEntry?P.vocal.displacementTicks:0;
   let points=cell.map(point=>point+shift).filter(point=>point<grid.barTicks);
   if(phase===P.vocal.cellTransformPeriod-E.numeric.unit)points=points.slice(0,-E.numeric.unit);
   // An offbeat entry is a phrase decision, not an arbitrary timing jitter.
-  if(bar===0&&points[0]===0&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock)points=points.slice(E.numeric.unit);
+  if(bar===0&&points[0]===0&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock&&ctx.voiceProfile.syncopation>=SG.vocal.offbeatEntry)points=points.slice(E.numeric.unit);
+  const count=Math.max(SG.vocal.minCellNotes,Math.ceil(points.length*(SG.vocal.densityBase+ctx.voiceProfile.density*SG.vocal.densityScale))-(ctx.voiceProfile.sustain>SG.vocal.sustainThin?E.numeric.unit:0));
+  while(points.length>count&&points.length>SG.vocal.minCellNotes)points.splice(Math.floor(points.length/E.numeric.padding),E.numeric.unit);
   const phraseEnd=(bar+E.numeric.unit)%P.phraseBars===0||bar===section.phraseBars-E.numeric.unit;
   const end=grid.barTicks-(phraseEnd?breathTicks:0);
   points=points.filter((point,index,array)=>point+minimum<=end&&(index===0||point-array[index-E.numeric.unit]>=minimum));
@@ -435,10 +535,11 @@ function searchTopline(ctx,section,grid,motif,previousLine=null){
    if(novelty>=P.vocal.strictNovelty&&stock>0)continue;
    const desired=motif.contour[(index-E.numeric.unit+motif.contour.length)%motif.contour.length]*(event.phase===P.phraseBars?-E.numeric.unit:E.numeric.unit);
    const phase=event.start/(section.phraseBars*grid.barTicks);
-   const center=range.center+section.energy/E.numeric.percent*P.vocal.centerLift+Math.sin(phase*E.tensionCurve.frequency)*P.vocal.peakLift;
+   const center=range.center+section.energy/E.numeric.percent*P.vocal.centerLift+Math.sin(phase*E.tensionCurve.frequency)*P.vocal.peakLift+(ctx.voiceProfile.lift-SG.voice.lift)*SG.vocal.registerLift*section.energy/E.numeric.percent;
    let score=state.score-Math.abs(pitch-center)*P.vocal.registerWeight-Math.abs(interval)*P.vocal.stepWeight;
    if(pending)score+=P.vocal.ornamentWeight*novelty*ctx.complexityTarget;
-   if(previous)score-=Math.abs(interval-desired)*P.vocal.contourWeight*(E.numeric.unit+novelty);
+   if(previous)score-=Math.abs(interval-desired)*P.vocal.contourWeight*(E.numeric.unit+novelty)*(SG.vocal.contourBase+ctx.voiceProfile.contour*SG.vocal.contourScale);
+   if(previous&&interval===0&&!event.anchor)score+=ctx.voiceProfile.hook*SG.weights.hook;
    if(previous&&!state.intervals.includes(interval))score+=novelty*P.vocal.noveltyWeight;
    score-=stock*P.vocal.stockWeight*(E.numeric.unit+novelty)+Math.max(0,run-P.vocal.maxDirectionRun)*P.vocal.runWeight*(E.numeric.unit+novelty);
    const degree=pc(pitch-event.chord.root);
@@ -464,8 +565,8 @@ function searchTopline(ctx,section,grid,motif,previousLine=null){
 }
 
 function planDrums(ctx,section,grid,topline){
- const detail=ctx.config.drumDetail/E.numeric.percent,density=section.density/E.numeric.percent;
- const kit=DB.parts.drumKits.map(kit=>({...kit,score:(kit.genres[ctx.genre.id]??0)+kit.classical*ctx.classical+kit.jazz*ctx.jazz})).sort((a,b)=>b.score-a.score)[0];
+ const detail=ctx.config.drumDetail/E.numeric.percent*SG.blend.drumControl+ctx.drumProfile.detail*SG.blend.drumProfile,density=section.density/E.numeric.percent;
+ const kit=DB.parts.drumKits.map(kit=>({...kit,score:sum(ctx.mix.map(source=>(kit.genres[source.genre.id]??0)*source.weight))+(ctx.subgenre.kitWeights?.[kit.id]??0)*SG.weights.kit+kit.classical*ctx.classical+kit.jazz*ctx.jazz})).sort((a,b)=>b.score-a.score)[0];
  const minGap=minLineTicks(ctx,P.drums.maxHandHitsPerSecond,E.numeric.unit),events=[];
  let fills=0;
  const velocity=(accent,ghost=false)=>Math.round((ghost?P.drums.ghostVelocity:accent?P.drums.accentVelocity:P.drums.normalVelocity)*(P.drums.velocityFloor+section.energy/E.numeric.percent*P.drums.velocityEnergy));
@@ -473,22 +574,24 @@ function planDrums(ctx,section,grid,topline){
  for(let bar=0;bar<section.phraseBars;bar++){
   const offset=bar*grid.barTicks;
   const changes=section.phrase.filter(chord=>chord.bar*grid.barTicks>=offset&&chord.bar*grid.barTicks<offset+grid.barTicks).map(chord=>chord.bar*grid.barTicks-offset);
-  const mandatory=[...new Set([0,...changes])];
+  const pulse=ctx.drumProfile.pulse>=SG.drumsPolicy.pulseThreshold?grid.timeGrid.filter(tick=>tick%grid.pulseTicks===0):[];
+  const mandatory=[...new Set([0,...changes,...pulse])];
   const candidates=grid.timeGrid.map(tick=>{
    const vocalStart=topline.notes.some(note=>Math.abs(note.start-offset-tick)<minGap);
-   return{tick,score:(grid.strong.includes(tick)?P.drums.strongWeight:0)+(changes.includes(tick)?P.drums.chordWeight:0)+(tick%grid.pulseTicks!==0?detail*P.drums.syncWeight:0)+(!vocalStart?P.drums.vocalSpaceWeight:0)-(grid.backbeat.includes(tick)?P.drums.backbeatPenalty:0)};
+   return{tick,score:(grid.strong.includes(tick)?P.drums.strongWeight:0)+(changes.includes(tick)?P.drums.chordWeight:0)+(tick%grid.pulseTicks!==0?detail*P.drums.syncWeight*(SG.drumsPolicy.syncBase+ctx.drumProfile.syncopation*SG.drumsPolicy.syncScale):0)+(!vocalStart?P.drums.vocalSpaceWeight:0)-(grid.backbeat.includes(tick)?P.drums.backbeatPenalty:0)};
   }).filter(candidate=>!mandatory.includes(candidate.tick)).sort((a,b)=>b.score-a.score);
   const count=Math.max(mandatory.length,P.drums.baseKicks+Math.round((section.energy/E.numeric.percent+density*detail)*P.drums.extraKicks/E.numeric.padding));
   const kicks=[...mandatory,...candidates.slice(0,Math.max(0,count-mandatory.length)).map(candidate=>candidate.tick)].sort((a,b)=>a-b);
   for(const tick of kicks)add(kit.kick,offset+tick,'kick',grid.strong.includes(tick),P.drums.chordWeight);
   for(const tick of grid.backbeat)add(kit.snare,offset+tick,'backbeat',true,P.drums.strongWeight);
-  const timeGrid=kit.id==='orchestral'?grid.strong:density<P.drums.timeDensityThreshold?grid.timeGrid.filter(tick=>tick%grid.pulseTicks===0):grid.timeGrid;
+  const timeDensity=density*SG.blend.timeControl+ctx.drumProfile.timeDensity*SG.blend.timeProfile;
+  const timeGrid=kit.id==='orchestral'?grid.strong:timeDensity<SG.drumsPolicy.timeThreshold?grid.timeGrid.filter(tick=>tick%grid.pulseTicks===0):grid.timeGrid;
   for(const tick of timeGrid)add(kit.time,offset+tick,'time',grid.strong.includes(tick),E.numeric.unit);
-  if(detail>P.drums.ghostThreshold&&bar%P.phraseBars===P.phraseBars-E.numeric.unit){
+  if(detail*(SG.drumsPolicy.ghostBase+ctx.drumProfile.syncopation*SG.drumsPolicy.ghostScale)>P.drums.ghostThreshold&&bar%P.phraseBars===P.phraseBars-E.numeric.unit){
    const tick=grid.backbeat.at(-1)-minGap;
    if(tick>=0&&!topline.notes.some(note=>note.start===offset+tick))add(kit.snare,offset+tick,'ghost',false,E.swing.base);
   }
-  if(bar===section.phraseBars-E.numeric.unit&&detail>P.drums.fillThreshold){
+  if(bar===section.phraseBars-E.numeric.unit&&detail*(SG.drumsPolicy.fillBase+ctx.drumProfile.detail*SG.drumsPolicy.fillScale)>P.drums.fillThreshold){
    const begin=grid.barTicks-grid.pulseTicks;
    for(let index=events.length-E.numeric.unit;index>=0;index--)if(events[index].start>=offset+begin&&events[index].kind==='time')events.splice(index,E.numeric.unit);
    let index=0;
@@ -511,7 +614,7 @@ function planDrums(ctx,section,grid,topline){
 
 function bassFingerings(pitch){return P.bass.tuning.map(string=>({string:string.string,fret:pitch-string.midi})).filter(option=>option.fret>=0&&option.fret<=P.bass.frets);}
 function searchBass(ctx,section,grid,drums,topline){
- const motion=ctx.config.bassMotion/E.numeric.percent,minimum=minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),total=section.phraseBars*grid.barTicks;
+ const motion=ctx.config.bassMotion/E.numeric.percent*SG.blend.control+ctx.bassProfile.motion*SG.blend.profile,minimum=minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),total=section.phraseBars*grid.barTicks;
  const onsets=new Set(drums.events.filter(event=>event.kind==='kick').map(event=>event.start));
  for(const chord of section.phrase)onsets.add(chord.bar*grid.barTicks);
  if(motion>P.bass.walkThreshold)for(let start=0;start<total;start+=grid.pulseTicks)onsets.add(start);
@@ -568,7 +671,7 @@ function searchBass(ctx,section,grid,drums,topline){
  return{events:selected.notes,evaluations,score:Number(selected.score.toFixed(E.display.scoreDigits)),lock:kickEvents.length?percent(kickEvents.filter(kick=>selected.notes.some(note=>note.start===kick.start)).length/kickEvents.length):0,approaches:selected.notes.filter(note=>note.role==='approach').length,range:{low:pitchName(Math.min(...selected.notes.map(note=>note.pitch)),ctx.key,true),high:pitchName(Math.max(...selected.notes.map(note=>note.pitch)),ctx.key,true)}};
 }
 
-function createMotif(grid,random){
+function createMotif(ctx,grid,random){
  const candidates=[],grammar=P.motifGrammar;
  function extend(contour){
   if(contour.length===grammar.length){
@@ -584,14 +687,17 @@ function createMotif(grid,random){
   }
  }
  extend([]);
- return{cell:Math.floor(random()*grid.vocalCells.length),contour:candidates[Math.floor(random()*candidates.length)]};
+ const rhythms=grid.vocalCells.map((cell,index)=>({index,score:-Math.abs(cell.filter(tick=>tick%grid.pulseTicks!==0).length/cell.length-ctx.voiceProfile.syncopation)*SG.weights.rhythm+random()*SG.weights.jitter})).sort((a,b)=>b.score-a.score);
+ const targetContour=SG.vocal.minContour+(SG.vocal.maxContour-SG.vocal.minContour)*ctx.voiceProfile.contour;
+ const contours=candidates.map(contour=>({contour,score:-Math.abs(average(contour.map(Math.abs))-targetContour)*SG.weights.contour+contour.filter(interval=>interval===0).length*ctx.voiceProfile.hook*SG.weights.hook+random()*SG.weights.jitter})).sort((a,b)=>b.score-a.score);
+ return{cell:rhythms[0].index,contour:contours[0].contour};
 }
 function buildPartPlans(ctx,sections){
  const grid=P.meters[ctx.meter.id],motifs={};
  let previousLine=null;
  for(const section of sections){
   const random=lineRandom(ctx,section,'motif');
-  if(!motifs[section.kind])motifs[section.kind]=createMotif(grid,random);
+  if(!motifs[section.kind])motifs[section.kind]=createMotif(ctx,grid,random);
   const topline=searchTopline(ctx,section,grid,motifs[section.kind],previousLine),drums=planDrums(ctx,section,grid,topline),bass=searchBass(ctx,section,grid,drums,topline);
   previousLine=topline.notes.at(-1);
   section.parts={bars:section.phraseBars,barTicks:grid.barTicks,displayTicks:grid.displayTicks,topline,drums,bass};
@@ -599,7 +705,7 @@ function buildPartPlans(ctx,sections){
 }
 
 function generateGuide(input){
- const config=normalizeConfig(input),ctx=makeContext(config),random=seededRandom(config.seed),candidates=candidateChords(ctx),form=byId('forms',config.form);
+ const config=normalizeConfig(input),ctx=makeContext(config),random=seededRandom(config.seed),candidates=candidateChords(ctx),form=resolveForm(config);
  const occurrences={},motifs={},pairCache=new Map(),sections=[];
  let start=E.numeric.unit,previousVoice=null;
  for(const[index,definition]of form.sections.entries()){
@@ -610,26 +716,47 @@ function generateGuide(input){
   const next=sections[index+E.numeric.unit];
   section.transition=next?fmt(U.transitionLine,{next:next.label,transition:ctx.style.transition,energy:section.energy,nextEnergy:next.energy}):U.lastTransition;
  }
+ let progressionPlan=null;
+ if(ctx.grammar){
+  const reference=sections.find(section=>section.phraseBars===ctx.grammar.referenceBars)??makeSection(ctx,[ctx.grammar.referenceKind,ctx.grammar.referenceBars],0,{},{},seededRandom(config.seed+ctx.grammar.seedKey),candidates,pairCache,null);
+  progressionPlan={title:ctx.grammar.title,bars:ctx.grammar.referenceBars,notice:ctx.grammar.notice,events:reference.phrase};
+ }
  buildPartPlans(ctx,sections);
  const bars=sum(sections.map(section=>section.bars)),seconds=Math.round(bars*ctx.meter.quarters/ctx.meter.pulseQuarters*E.numeric.secondsPerMinute/config.bpm),events=sections.flatMap(section=>section.events);
  const diagnostics={evaluations:sum(sections.map(section=>section.evaluations)),borrowed:percent(events.filter(event=>event.source==='borrowed').length/events.length),applied:percent(events.filter(event=>event.source==='applied').length/events.length),extension:percent(events.filter(event=>event.level>0).length/events.length),swing:percent(ctx.swing),orchestra:ctx.orchestra};
- const harmony=[{title:U.harmonicDirection,body:fmt(U.harmonicDirectionBody,{jazz:config.jazzy,extension:percent(ctx.extensionTarget),borrowBudget:percent(ctx.borrowRate),appliedBudget:percent(ctx.appliedRate)})},{title:U.voiceDirection,body:fmt(U.voiceDirectionBody,{classical:config.classical})},{title:U.densityDirection,body:fmt(U.densityDirectionBody,{hold:ctx.hold,variation:config.variation})}];
+ const harmony=[{title:SUI.influenceTitle,body:fmt(SUI.influenceBody,{description:ctx.subgenre.description})},{title:U.harmonicDirection,body:fmt(U.harmonicDirectionBody,{jazz:config.jazzy,extension:percent(ctx.extensionTarget),borrowBudget:percent(ctx.borrowRate),appliedBudget:percent(ctx.appliedRate)})},{title:U.voiceDirection,body:fmt(U.voiceDirectionBody,{classical:config.classical})},{title:U.densityDirection,body:fmt(U.densityDirectionBody,{hold:ctx.hold,variation:config.variation})}];
+ if(progressionPlan)harmony.unshift({title:progressionPlan.title,body:progressionPlan.events.map(event=>fmt(ctx.grammar.event,{bar:event.bar+E.numeric.unit,symbol:event.symbol,roman:event.id})).join(ctx.grammar.separator)+U.noteSeparator+progressionPlan.notice});
+ if(ctx.grammar)harmony.splice(E.numeric.unit+E.numeric.unit,E.numeric.unit,{title:U.harmonicDirection,body:fmt(ctx.grammar.direction,{applied:ctx.grammar.minimumApplied})});
  const melody=[{title:U.rhythmDirection,body:fmt(U.rhythmDirectionBody,{groove:ctx.genre.groove,swing:percent(ctx.swing),density:percent(ctx.style.density*E.density.style+ctx.energy*E.density.energy+ctx.complexityTarget*E.density.complexity),meterAdvice:ctx.meter.advice})},{title:U.motifDirection,body:fmt(U.motifDirectionBody,{motif:ctx.style.motif,styleMelody:ctx.style.melody})},{title:U.blueDirection,body:ctx.jazz>E.thresholds.blue?fmt(U.blueHigh,{blue:percent(ctx.jazz*E.chromatic.blueMax),blueNotes:`${ctx.mode.blueLabel} (${ctx.mode.blue.map(interval=>pitchName(ctx.key.pc+interval,ctx.key)).join(U.listSeparator)})`}):U.blueLow}];
  const daw=[...U.dawSteps.map(template=>fmt(template,{bpm:config.bpm,meter:ctx.meter.label,bars,groove:ctx.genre.groove,hold:ctx.hold,motif:ctx.style.motif,orchestra:ctx.orchestra})),...PU.dawSteps];
- return{version:DB.version,config,bars,seconds,sections,diagnostics,harmony,melody,daw,summary:{title:fmt(U.briefTitle,{mood:ctx.mood.label,genre:ctx.genre.label}),subtitle:fmt(U.briefSubtitle,{key:ctx.key.label,mode:ctx.mode.label,style:ctx.style.label,meter:ctx.meter.label,form:form.label}),notice:ctx.forced?U.fixedNotice:U.autoNotice,orchestral:ctx.orchestra?U.orchestralHigh:U.orchestralLow}};
+ return{version:DB.version,config,bars,seconds,sections,progressionPlan,diagnostics,harmony,melody,daw,profile:{...SG.profileMeta,id:ctx.subgenre.id,parent:config.genre,label:ctx.subgenre.label,sourceMix:ctx.mix.map(source=>({id:source.genre.id,weight:source.weight})),voice:ctx.voiceProfile,drums:ctx.drumProfile,bass:ctx.bassProfile},summary:{title:fmt(U.briefTitle,{mood:ctx.mood.label,genre:ctx.subgenre.label}),subtitle:fmt(U.briefSubtitle,{key:ctx.key.label,mode:ctx.mode.label,style:ctx.style.label,meter:ctx.meter.label,form:form.label}),subgenre:fmt(SUI.report,{genre:ctx.genre.label,subgenre:ctx.subgenre.label,description:ctx.subgenre.description}),notice:ctx.forced?U.fixedNotice:U.autoNotice,orchestral:ctx.orchestra?U.orchestralHigh:U.orchestralLow}};
 }
 
 function validateDatabase(){
- for(const table of['fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments','vocalRanges']){
+ for(const table of['fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments','vocalRanges','subgenres']){
   const ids=DB[table].map(entry=>entry.id);if(new Set(ids).size!==ids.length)throw error('dbError',{detail:table});
  }
  for(const field of DB.fields)if(field.type==='select'&&!byId(field.table,DB.defaults[field.id]))throw error('dbError',{detail:field.id});
- for(const form of DB.forms)for(const[kind,bars]of form.sections)if(!DB.sectionTypes[kind]||bars<E.limits.minPattern||!Number.isInteger(bars))throw error('dbError',{detail:form.id});
+ for(const genre of DB.genres)if(DB.subgenres.filter(item=>item.parent===genre.id&&item.default).length!==E.numeric.unit)throw error('dbError',{detail:genre.id});
+ for(const child of DB.subgenres){
+  if(!byId('genres',child.parent)||!Object.keys(child.sourceMix).length||Object.entries(child.sourceMix).some(([id,weight])=>!byId('genres',id)||!Number.isFinite(weight)||weight<=0))throw error('dbError',{detail:child.id});
+  if(child.bpm.length!==E.numeric.padding||child.bpm[0]>child.bpm.at(-1))throw error('dbError',{detail:child.id});
+  for(const id of Object.keys(child.instruments??{}))if(!byId('instruments',id))throw error('dbError',{detail:id});
+  for(const id of Object.keys(child.kitWeights??{}))if(!P.drumKits.some(kit=>kit.id===id))throw error('dbError',{detail:id});
+  for(const kind of Object.keys(child.sections??{}))if(!DB.sectionTypes[kind])throw error('dbError',{detail:kind});
+ }
+ normalizeSongform(DB.defaults.customForm);
+ for(const form of DB.forms.filter(form=>!form.builder))for(const[kind,bars]of form.sections)if(!DB.sectionTypes[kind]||bars<E.limits.minPattern||!Number.isInteger(bars))throw error('dbError',{detail:form.id});
  for(const mode of DB.modes){
   const chords=[...mode.chords,...mode.borrowed,...mode.applied];
   if(new Set(chords.map(chord=>chord.id)).size!==chords.length)throw error('dbError',{detail:mode.id});
   for(const chord of chords)if(!DB.qualities[chord.quality]||!DB.functions[chord.fn]||(chord.target&&!chords.some(item=>item.id===chord.target)))throw error('dbError',{detail:chord.id});
+  for(const progression of DB.progressions)if(progression.grammar){
+   const grammar=DB.progressionGrammars[progression.grammar];
+   if(!grammar||grammar.slots[mode.id]?.length!==grammar.referenceBars||grammar.slots[mode.id].some(slot=>!slot.length||slot.some(id=>!chords.some(chord=>chord.id===id))))throw error('dbError',{detail:progression.id});
+  }
   for(const progression of DB.progressions)if(progression.modes&&(!progression.modes[mode.id]||progression.modes[mode.id].some(id=>!chords.some(chord=>chord.id===id))))throw error('dbError',{detail:progression.id});
+  for(const progression of DB.progressions)if(progression.weights&&(progression.weights.length!==progression.modes[mode.id].length||progression.weights.some(weight=>!Number.isFinite(weight)||weight<=0)))throw error('dbError',{detail:progression.id});
  }
  for(const role of E.arrangement.roles)if(!DB.instruments.some(item=>item.role===role))throw error('dbError',{detail:role});
  for(const meter of DB.meters)if(!P.meters[meter.id]||P.meters[meter.id].barTicks!==meter.quarters*P.ticksPerQuarter)throw error('dbError',{detail:meter.id});
@@ -676,14 +803,86 @@ function toMarkdown(guide){
   const table=section.events.map(event=>`| ${eventRange(section,event)} | ${event.symbol} | ${event.id} | ${event.bassName} | ${event.voicing} | ${DB.sources[event.source]} |`).join('\n');
   return`### ${section.label} (${section.start}${U.rangeSeparator}${section.end} ${U.bars})\n\n${fmt(U.phraseHint,section)}\n\n| ${U.barRange} | ${U.chord} | ${U.roman} | ${U.bass} | ${U.voicing} | ${U.source} |\n| --- | --- | --- | --- | --- | --- |\n${table}\n\n- ${U.arrangement}: ${section.arrangement.instruments.map(item=>item.label).join(U.listSeparator)}\n- ${U.rhythm}: ${section.rhythm}\n- ${U.melody}: ${section.melody}\n- ${U.transition}: ${section.transition}\n\n${partMarkdown(section)}`;
  });
- return`# ${U.exportTitle}\n\n${guide.summary.title}\n\n${guide.summary.subtitle} · ${guide.config.bpm} ${U.bpm} · ${guide.bars} ${U.bars} · ${formatDuration(guide.seconds)}\n\n${fmt(U.seedTag,{seed:guide.config.seed})} · ${fmt(U.versionTag,{version:guide.version})}\n\n## ${U.exportConfig}\n\n${DB.fields.filter(field=>field.id!=='customProgression'||guide.config.progression==='custom').map(field=>`- ${field.label}: ${field.type==='select'?byId(field.table,guide.config[field.id]).label:guide.config[field.id]}`).join('\n')}\n\n## ${U.exportHarmony}\n\n${guide.harmony.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n${guide.summary.notice}\n\n## ${U.exportMelody}\n\n${guide.melody.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n## ${U.exportSections}\n\n${rows.join('\n\n')}\n\n## ${U.exportDaw}\n\n${guide.daw.map((step,index)=>`${index+E.numeric.unit}. ${step}`).join('\n')}\n\n## ${U.exportMethod}\n\n${PU.method}\n\n${PU.theoryRules.map(rule=>`- ${rule}`).join('\n')}\n\n${Object.entries(guide.diagnostics).map(([key,value])=>`- ${U[key]}: ${value}`).join('\n')}\n\n${U.footnote}\n\n${DB.theoryReferences.map(source=>`[${source.label}](${source.url})`).join('\n')}`;
+ return`# ${U.exportTitle}\n\n${guide.summary.title}\n\n${guide.summary.subtitle} · ${guide.config.bpm} ${U.bpm} · ${guide.bars} ${U.bars} · ${formatDuration(guide.seconds)}\n\n${fmt(U.seedTag,{seed:guide.config.seed})} · ${fmt(U.versionTag,{version:guide.version})}\n\n## ${U.exportConfig}\n\n${DB.fields.filter(field=>!field.when||guide.config[field.when.field]===field.when.value).map(field=>`- ${field.label}: ${field.type==='select'?byId(field.table,guide.config[field.id]).label:field.type==='songform'?formatSongform(guide.config[field.id]):guide.config[field.id]}`).join('\n')}\n\n## ${U.exportHarmony}\n\n${guide.harmony.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n${guide.summary.notice}\n\n${guide.summary.subgenre}\n\n## ${U.exportMelody}\n\n${guide.melody.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n## ${U.exportSections}\n\n${rows.join('\n\n')}\n\n## ${U.exportDaw}\n\n${guide.daw.map((step,index)=>`${index+E.numeric.unit}. ${step}`).join('\n')}\n\n## ${U.exportMethod}\n\n${PU.method}\n\n${PU.theoryRules.map(rule=>`- ${rule}`).join('\n')}\n\n${Object.entries(guide.diagnostics).map(([key,value])=>`- ${U[key]}: ${value}`).join('\n')}\n\n${U.footnote}\n\n${DB.theoryReferences.map(source=>`[${source.label}](${source.url})`).join('\n')}`;
 }
 // Public boundary for the focused, dependency-free engine check.
-globalThis.MusicMaker={database:DB,normalizeConfig,generateGuide,toMarkdown,validateDatabase};
+globalThis.MusicMaker={database:DB,normalizeConfig,normalizeSongform,selectOptions,generateGuide,toMarkdown,validateDatabase,predictSettings};
+function predictSettings(input){
+ const config=normalizeConfig(input),ctx=makeContext(config),form=resolveForm(config),bars=sum(form.sections.map(row=>row[1]));
+ const direction=form.sections.map(([kind])=>sectionProfile(ctx,kind)).sort((a,b)=>b.energy-a.energy)[0],energy=clamp(ctx.energy*direction.energy);
+ const density=clamp((ctx.style.density*E.density.style+energy*E.density.energy+ctx.complexityTarget*E.density.complexity)*direction.density);
+ const arrangement=chooseInstruments(ctx,energy,0,()=>0);
+ const seconds=Math.round(bars*ctx.meter.quarters/ctx.meter.pulseQuarters*E.numeric.secondsPerMinute/config.bpm);
+ return{config,subgenre:ctx.subgenre.label,section:direction.label,instruments:arrangement.instruments.map(item=>item.label),hold:ctx.hold,density:percent(density),swing:percent(ctx.swing),range:byId('vocalRanges',config.vocalRange).label,description:ctx.mood.description,style:ctx.style.description,count:form.sections.length,bars,duration:formatDuration(seconds)};
+}
+function renderSettingPreview(config){
+ const panel=document.getElementById('setting-preview'),ui=DB.previewUI;
+ try{
+  const preview=predictSettings(config);
+  panel.innerHTML=`<h3>${escapeHtml(ui.title)}</h3><p><strong>${escapeHtml(preview.subgenre)}</strong></p><p>${escapeHtml(fmt(ui.sound,{instruments:preview.instruments.join(U.listSeparator)}))}</p><p>${escapeHtml(fmt(ui.movement,preview))}</p><p>${escapeHtml(fmt(ui.vocal,preview))}</p><p>${escapeHtml(preview.style)}</p><p>${escapeHtml(fmt(ui.structure,preview))}</p><p>${escapeHtml(ui.note)}</p>`;
+ }catch{panel.innerHTML=`<h3>${escapeHtml(ui.title)}</h3><p>${escapeHtml(ui.pending)}</p>`;}
+}
+function progressionHint(input){
+ const ui=DB.progressionUI;
+ try{
+  const config=normalizeConfig(input),ctx=makeContext(config),progression=byId('progressions',config.progression);
+  if(ctx.grammar)return progression.description+U.noteSeparator+ctx.grammar.notice;
+  if(!ctx.forced)return ui.automatic;
+  const symbols=ctx.forced.map(id=>{const chord=ctx.baseChords.find(chord=>chord.id===id);return pitchName(ctx.key.pc+chord.degree,ctx.key)+DB.qualities[chord.quality][0].suffix;});
+  return fmt(ui.preview,{roman:ctx.forced.join(DB.songformUI.separator),chords:symbols.join(DB.songformUI.separator),description:progression.description??ui.fallback})+U.noteSeparator+ui.modeNote;
+ }catch{return ui.custom;}
+}
+function makeNewSeed(){
+ const words=new Uint32Array(DB.seedUI.words);crypto.getRandomValues(words);
+ document.getElementById('field-seed').value=DB.seedUI.prefix+[...words].map(word=>word.toString(E.numeric.seedRadix).padStart(DB.seedUI.hexWidth,'0')).join('');
+ document.getElementById('report').classList.add('pending');setStatus(U.changed);refreshFields();
+}
+function optionsMarkup(options,selected=null){return options.map(option=>`<option value="${escapeHtml(option.id)}"${option.id===selected?' selected':''}>${escapeHtml(option.label)}</option>`).join('');}
+function setSelectInput(field,config){
+ const input=document.getElementById(`field-${field.id}`),options=selectOptions(field,config),value=config[field.id]??DB.defaults[field.id];
+ if(field.parent){input.innerHTML=optionsMarkup(options);input.dataset.parentChoice=config[field.parent.field];}
+ input.value=options.some(option=>option.id===value)?value:selectFallback(field,options);
+ return input.value;
+}
+function formatSongform(sequence){return sequence.map(([kind,bars])=>fmt(DB.songformUI.row,{label:DB.sectionTypes[kind].label,bars})).join(DB.songformUI.separator);}
+function songformEditorMarkup(sequence){
+ const rules=DB.songformRules,ui=DB.songformUI,types=rules.typeOrder.map(id=>({id,label:DB.sectionTypes[id].label})),max=sequence.length>=rules.maxSections;
+ const rows=sequence.map(([kind,bars],index)=>{
+  const buttons=[['up',ui.moveUp,index===0],['down',ui.moveDown,index===sequence.length-E.numeric.unit],['duplicate',ui.duplicate,max],['remove',ui.remove,sequence.length<=rules.minSections]].map(([op,label,disabled])=>`<button type="button" data-form-op="${op}" data-index="${index}" aria-label="${escapeHtml(fmt(ui.actionLabel,{action:label,index:index+E.numeric.unit,label:DB.sectionTypes[kind].label}))}"${disabled?' disabled':''}>${escapeHtml(label)}</button>`).join('');
+  return`<div class="form-row"><div class="form-row-main"><span>${index+E.numeric.unit}</span><select data-form-index="${index}" data-form-part="kind" aria-label="${escapeHtml(ui.label)} ${index+E.numeric.unit}">${optionsMarkup(types,kind)}</select><input type="number" data-form-index="${index}" data-form-part="bars" value="${bars}" min="${rules.minBars}" max="${rules.maxBars}" step="${rules.barStep}" required aria-label="${escapeHtml(ui.bars)} ${index+E.numeric.unit}"></div><div class="form-row-actions">${buttons}</div></div>`;
+ }).join('');
+ return`<p class="field-help">${escapeHtml(ui.description)}</p><div class="form-import"><select id="form-import-source" aria-label="${escapeHtml(ui.import)}">${optionsMarkup(DB.forms.filter(form=>!form.builder),DB.defaults.form)}</select><button type="button" data-form-op="import">${escapeHtml(ui.import)}</button></div>${rows}<div class="form-add"><select id="form-add-type" aria-label="${escapeHtml(ui.add)}">${optionsMarkup(types,rules.defaultType)}</select><button type="button" data-form-op="add"${max?' disabled':''}>+ ${escapeHtml(ui.add)}</button></div><p id="form-total" class="form-total">${escapeHtml(fmt(ui.total,{count:sequence.length,bars:sum(sequence.map(row=>row[1]))}))}</p>`;
+}
+function readSongformDraft(){try{const value=JSON.parse(document.getElementById('field-customForm').value);if(Array.isArray(value))return value;}catch{}return DB.defaults.customForm.map(row=>[...row]);}
+function renderSongformEditor(){document.getElementById('songform-rows').innerHTML=songformEditorMarkup(readSongformDraft());}
+function updateSongformDraft(event){
+ const input=event.target;
+ if(input.dataset.formIndex===undefined)return;
+ const sequence=readSongformDraft(),index=Number(input.dataset.formIndex);
+ if(!sequence[index])return;
+ if(input.dataset.formPart==='kind')sequence[index][0]=input.value;
+ if(input.dataset.formPart==='bars')sequence[index][1]=Number(input.value);
+ document.getElementById('field-customForm').value=JSON.stringify(sequence);
+ document.getElementById('form-total').textContent=fmt(DB.songformUI.total,{count:sequence.length,bars:sum(sequence.map(row=>row[1]))});
+}
+function handleSongformAction(event){
+ const button=event.target.closest('[data-form-op]');
+ if(!button)return false;
+ const sequence=readSongformDraft(),index=Number(button.dataset.index),op=button.dataset.formOp,rules=DB.songformRules;
+ if(op==='import'){const form=byId('forms',document.getElementById('form-import-source').value);sequence.splice(0,sequence.length,...form.sections.map(row=>[...row]));}
+ if(op==='add'&&sequence.length<rules.maxSections)sequence.push([document.getElementById('form-add-type').value,rules.defaultBars]);
+ if(op==='duplicate'&&sequence[index]&&sequence.length<rules.maxSections)sequence.splice(index+E.numeric.unit,0,[...sequence[index]]);
+ if(op==='remove'&&sequence.length>rules.minSections)sequence.splice(index,E.numeric.unit);
+ if(op==='up'&&index>0)[sequence[index-E.numeric.unit],sequence[index]]=[sequence[index],sequence[index-E.numeric.unit]];
+ if(op==='down'&&index<sequence.length-E.numeric.unit)[sequence[index+E.numeric.unit],sequence[index]]=[sequence[index],sequence[index+E.numeric.unit]];
+ document.getElementById('field-customForm').value=JSON.stringify(sequence);renderSongformEditor();document.getElementById('report').classList.add('pending');setStatus(U.changed);refreshFields();
+ return true;
+}
 function buildControls(){
  const fieldHtml=field=>{
   const id=`field-${field.id}`,label=`<span class="field-label">${escapeHtml(field.label)}</span>`,help=field.help?`<small class="field-help" id="help-${field.id}">${escapeHtml(field.help)}</small>`:'',description=field.help?` aria-describedby="help-${field.id}"`:'';
-  if(field.type==='select')return`<label class="field" for="${id}">${label}<select id="${id}" name="${field.id}"${description}>${DB[field.table].map(option=>`<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)}</option>`).join('')}</select>${help}</label>`;
+  if(field.type==='songform')return`<fieldset class="songform-editor" id="wrap-${field.id}"><legend>${escapeHtml(field.label)}</legend><input type="hidden" id="${id}" name="${field.id}" value="${escapeHtml(JSON.stringify(DB.defaults[field.id]))}"><div id="songform-rows">${songformEditorMarkup(DB.defaults[field.id])}</div></fieldset>`;
+  if(field.type==='select')return`<label class="field" for="${id}">${label}<select id="${id}" name="${field.id}"${description}>${selectOptions(field,DB.defaults).map(option=>`<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)}</option>`).join('')}</select>${help}</label>`;
   if(field.type==='range')return`<div class="range-field"><div class="range-head"><label for="${id}">${escapeHtml(field.label)}</label><output for="${id}" id="output-${field.id}"></output></div><input type="range" id="${id}" name="${field.id}" min="${field.min}" max="${field.max}" step="${field.increment}"${description}>${help}<div class="range-ends"><span>${escapeHtml(field.ends[0])}</span><span>${escapeHtml(field.ends[1])}</span></div></div>`;
   return`<label class="field" for="${id}" id="wrap-${field.id}">${label}<input type="${field.type}" id="${id}" name="${field.id}"${field.type==='number'?` min="${field.min}" max="${field.max}" step="${field.increment}"`:` maxlength="${field.maxLength}"`}${field.placeholder?` placeholder="${escapeHtml(field.placeholder)}"`:''}${description} required>${help}</label>`;
  };
@@ -695,26 +894,45 @@ function buildControls(){
    return fieldHtml(field);
   }).join('');
  };
- document.getElementById('controls').innerHTML=`<div class="field-label">${escapeHtml(U.presets)}</div><div class="preset-row">${DB.presets.map(preset=>`<button class="preset" type="button" data-preset="${escapeHtml(preset.id)}">${escapeHtml(preset.label)}</button>`).join('')}</div>${U.steps.map((step,index)=>`<div class="step"><span>${String(index+E.numeric.unit).padStart(E.numeric.padding,'0')}</span>${escapeHtml(step)}</div>${groupHtml(index)}`).join('')}<details class="advanced"><summary>${escapeHtml(U.advanced)}</summary>${groupHtml('advanced')}</details>`;
+ document.getElementById('controls').innerHTML=`<div class="field-label">${escapeHtml(U.presets)}</div><div class="preset-row">${DB.presets.map(preset=>`<button class="preset" type="button" data-preset="${escapeHtml(preset.id)}">${escapeHtml(preset.label)}</button>`).join('')}</div>${U.steps.map((step,index)=>`<div class="step"><span>${String(index+E.numeric.unit).padStart(E.numeric.padding,'0')}</span>${escapeHtml(step)}</div>${groupHtml(index)}`).join('')}<details class="advanced"><summary>${escapeHtml(U.advanced)}</summary>${groupHtml('advanced')}<button type="button" data-new-seed>${escapeHtml(DB.seedUI.newSeed)}</button></details><section class="setting-preview" id="setting-preview" aria-live="polite"></section>`;
 }
 
-function writeConfig(config){for(const field of DB.fields)document.getElementById(`field-${field.id}`).value=config[field.id];refreshFields();}
+function writeConfig(config){
+ const values={...DB.defaults,...config};
+ for(const field of DB.fields){
+  if(field.type==='select')values[field.id]=setSelectInput(field,values);
+  else document.getElementById(`field-${field.id}`).value=field.type==='songform'?JSON.stringify(typeof values[field.id]==='string'?JSON.parse(values[field.id]):values[field.id]):values[field.id];
+ }
+ renderSongformEditor();refreshFields();
+}
 function readConfig(){return Object.fromEntries(DB.fields.map(field=>[field.id,document.getElementById(`field-${field.id}`).value]));}
 function refreshFields(){
+ const config=readConfig();
+ for(const field of DB.fields.filter(field=>field.parent)){
+  const input=document.getElementById(`field-${field.id}`);
+  if(input.dataset.parentChoice!==config[field.parent.field])config[field.id]=setSelectInput(field,config);
+ }
  for(const field of DB.fields){
   const input=document.getElementById(`field-${field.id}`);
   if(field.type==='range'){document.getElementById(`output-${field.id}`).value=input.value+U.percentage;input.setAttribute('aria-valuetext',input.value+U.percentage);}
   if(field.when){const show=document.getElementById(`field-${field.when.field}`).value===field.when.value;document.getElementById(`wrap-${field.id}`).hidden=!show;input.disabled=!show;}
+  if(field.type==='songform')document.getElementById(`wrap-${field.id}`).disabled=input.disabled;
  }
  const mode=byId('modes',document.getElementById('field-mode').value);
  document.getElementById('help-customProgression').textContent=DB.fields.find(field=>field.id==='customProgression').help+' '+[...mode.chords,...mode.borrowed,...mode.applied].map(chord=>chord.id).join(U.listSeparator);
+ const selected=byId('subgenres',config.subgenre);
+ document.getElementById('help-subgenre').textContent=fmt(SUI.choiceHelp,{description:selected.description,min:selected.bpm[0],max:selected.bpm.at(-1)});
+ document.getElementById('help-mood').textContent=byId('moods',config.mood).description;
+ document.getElementById('help-style').textContent=byId('styles',config.style).description;
+ document.getElementById('help-progression').textContent=progressionHint(config);
+ renderSettingPreview(config);
 }
 
 function renderGuide(guide){
  const list=items=>`<ul class="guidance-list">${items.map(item=>`<li><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.body)}</p></li>`).join('')}</ul>`;
  const diagnostic=Object.entries(guide.diagnostics).map(([key,value])=>`<div><strong>${value}${['borrowed','applied','extension','swing'].includes(key)?U.percentage:''}</strong><small>${escapeHtml(U[key])}</small></div>`).join('');
  const sections=guide.sections.map(section=>`<details class="section"${section.index===0?' open':''}><summary><span class="section-index">${String(section.index+E.numeric.unit).padStart(E.numeric.padding,'0')}</span><span class="section-title">${escapeHtml(section.label)}<small>${escapeHtml(fmt(U.sectionSubtitle,section))}</small></span><span class="section-meta">${section.bars} ${escapeHtml(U.bars)}</span><span class="section-arrow" aria-hidden="true">›</span></summary><div class="section-content"><div class="chord-row">${section.phrase.map(event=>`<div class="chord ${event.source}"><strong>${escapeHtml(event.symbol)}</strong><small>${escapeHtml(event.id)} · ${escapeHtml(DB.functions[event.fn])}</small></div>`).join('')}</div><p class="section-note">${escapeHtml(fmt(U.phraseHint,section))}</p><div class="section-info"><div><strong>${escapeHtml(U.arrangement)}</strong><p>${escapeHtml(fmt(U.instrumentsLine,{instruments:section.arrangement.instruments.map(item=>item.label).join(U.listSeparator),tracks:section.arrangement.tracks}))}</p></div><div><strong>${escapeHtml(U.rhythm)}</strong><p>${escapeHtml(section.rhythm)}</p></div><div><strong>${escapeHtml(U.melody)}</strong><p>${escapeHtml(section.melody)}</p></div><div><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div>${renderPartPlans(section)}<div class="table-wrap"><table><caption class="sr-only">${escapeHtml(section.label+' '+U.voicing)}</caption><thead><tr>${['barRange','chord','roman','bass','voicing','source'].map(key=>`<th scope="col">${escapeHtml(U[key])}</th>`).join('')}</tr></thead><tbody>${section.events.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td>${escapeHtml(event.id)}</td><td class="mono">${escapeHtml(event.bassName)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td>${escapeHtml(DB.sources[event.source])}</td></tr>`).join('')}</tbody></table></div><p class="trace">${escapeHtml(fmt(U.sectionTrace,section))} · ${escapeHtml(U.octaveHint)}</p></div></details>`).join('');
- document.getElementById('report').innerHTML=`<section class="brief"><div><div class="eyebrow">${escapeHtml(U.briefEyebrow)}</div><h2>${escapeHtml(guide.summary.title)}</h2><small>${escapeHtml(guide.summary.subtitle)}</small></div><div class="brief-stats"><div class="stat"><strong class="mono">${guide.config.bpm}</strong><span>${escapeHtml(U.bpm)}</span></div><div class="stat"><strong class="mono">${formatDuration(guide.seconds)}</strong><span>${escapeHtml(U.duration)}</span></div><div class="stat"><strong class="mono">${guide.bars}</strong><span>${escapeHtml(U.bars)}</span></div></div></section><div class="report-header"><div><h2>${escapeHtml(U.reportTitle)}</h2><div class="tags"><span class="tag accent">${escapeHtml(fmt(U.seedTag,{seed:guide.config.seed}))}</span><span class="tag">${escapeHtml(fmt(U.versionTag,{version:guide.version}))}</span></div></div><div class="actions">${['copy','markdown','json','print'].map(action=>`<button type="button" data-action="${action}">${escapeHtml(U[action])}</button>`).join('')}</div></div><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.energyTitle)}</h3><small>${escapeHtml(U.energyHint)}</small></div><div class="timeline">${guide.sections.map(section=>`<div class="timeline-cell" style="--bars:${section.bars};--energy:${section.energy};--opacity:${E.display.diagramBase+section.energy/E.numeric.percent*E.display.diagramEnergy}" title="${escapeHtml(fmt(U.sectionSubtitle,section))}"><div class="timeline-bar"></div><div class="timeline-label">${escapeHtml(section.label)}</div><div class="timeline-number">${section.start}${U.rangeSeparator}${section.end}</div></div>`).join('')}</div><p class="timeline-legend">${escapeHtml(fmt(U.energyLegend,{bars:guide.bars,seconds:guide.seconds}))}</p></section><div class="overview-grid"><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.harmonyTitle)}</h3></div>${list(guide.harmony)}<p class="trace">${escapeHtml(guide.summary.notice)}</p></section><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.melodyTitle)}</h3></div>${list(guide.melody)}</section></div><div class="report-header"><h2>${escapeHtml(U.sectionsTitle)}</h2></div>${sections}<section class="panel"><div class="panel-top"><h3>${escapeHtml(U.dawTitle)}</h3></div><ol class="checklist">${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol><p class="trace">${escapeHtml(guide.summary.orchestral)}</p></section><details class="engine-details"><summary>${escapeHtml(U.methodTitle)}</summary><p class="trace">${escapeHtml(PU.method)}</p><div class="engine-grid">${diagnostic}</div><div class="sources"><span>${escapeHtml(U.sourcesTitle)} · </span>${DB.theoryReferences.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`).join('')}</div></details><p class="footnote">${escapeHtml(U.footnote)}</p>`;
+ document.getElementById('report').innerHTML=`<section class="brief"><div><div class="eyebrow">${escapeHtml(U.briefEyebrow)}</div><h2>${escapeHtml(guide.summary.title)}</h2><small>${escapeHtml(guide.summary.subtitle)}</small><small>${escapeHtml(guide.summary.subgenre)}</small></div><div class="brief-stats"><div class="stat"><strong class="mono">${guide.config.bpm}</strong><span>${escapeHtml(U.bpm)}</span></div><div class="stat"><strong class="mono">${formatDuration(guide.seconds)}</strong><span>${escapeHtml(U.duration)}</span></div><div class="stat"><strong class="mono">${guide.bars}</strong><span>${escapeHtml(U.bars)}</span></div></div></section><div class="report-header"><div><h2>${escapeHtml(U.reportTitle)}</h2><div class="tags"><span class="tag accent">${escapeHtml(fmt(U.seedTag,{seed:guide.config.seed}))}</span><span class="tag">${escapeHtml(fmt(U.versionTag,{version:guide.version}))}</span></div></div><div class="actions">${['copy','markdown','json','print'].map(action=>`<button type="button" data-action="${action}">${escapeHtml(U[action])}</button>`).join('')}</div></div><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.energyTitle)}</h3><small>${escapeHtml(U.energyHint)}</small></div><div class="timeline">${guide.sections.map(section=>`<div class="timeline-cell" style="--bars:${section.bars};--energy:${section.energy};--opacity:${E.display.diagramBase+section.energy/E.numeric.percent*E.display.diagramEnergy}" title="${escapeHtml(fmt(U.sectionSubtitle,section))}"><div class="timeline-bar"></div><div class="timeline-label">${escapeHtml(section.label)}</div><div class="timeline-number">${section.start}${U.rangeSeparator}${section.end}</div></div>`).join('')}</div><p class="timeline-legend">${escapeHtml(fmt(U.energyLegend,{bars:guide.bars,seconds:guide.seconds}))}</p></section><div class="overview-grid"><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.harmonyTitle)}</h3></div>${list(guide.harmony)}<p class="trace">${escapeHtml(guide.summary.notice)}</p></section><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.melodyTitle)}</h3></div>${list(guide.melody)}</section></div><div class="report-header"><h2>${escapeHtml(U.sectionsTitle)}</h2></div>${sections}<section class="panel"><div class="panel-top"><h3>${escapeHtml(U.dawTitle)}</h3></div><ol class="checklist">${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol><p class="trace">${escapeHtml(guide.summary.orchestral)}</p></section><details class="engine-details"><summary>${escapeHtml(U.methodTitle)}</summary><p class="trace">${escapeHtml(PU.method)}</p><div class="engine-grid">${diagnostic}</div><div class="sources"><span>${escapeHtml(U.sourcesTitle)} · </span>${DB.theoryReferences.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`).join('')}</div></details><p class="footnote">${escapeHtml(U.footnote)}</p>`;
 }
 
 function setStatus(message,isError=false){const status=document.getElementById('status');status.textContent=message;status.dataset.error=String(isError);}
@@ -749,9 +967,9 @@ function init(){
  try{const saved=JSON.parse(localStorage.getItem(DB.storage.key));if(saved&&typeof saved==='object'){config=normalizeConfig(saved);restored=true;}}catch{}
  writeConfig(config);
  document.getElementById('composer-form').addEventListener('submit',event=>{event.preventDefault();runGeneration();});
- document.getElementById('composer-form').addEventListener('input',()=>{refreshFields();document.getElementById('report').classList.add('pending');setStatus(U.changed);});
+ document.getElementById('composer-form').addEventListener('input',event=>{updateSongformDraft(event);refreshFields();document.getElementById('report').classList.add('pending');setStatus(U.changed);});
  document.getElementById('reset').addEventListener('click',()=>{writeConfig({...DB.defaults});runGeneration();});
- document.getElementById('controls').addEventListener('click',event=>{const button=event.target.closest('[data-preset]');if(button){writeConfig({...readConfig(),...DB.presets.find(preset=>preset.id===button.dataset.preset).values});runGeneration();}});
+ document.getElementById('controls').addEventListener('click',event=>{if(handleSongformAction(event))return;if(event.target.closest('[data-new-seed]')){makeNewSeed();return;}const button=event.target.closest('[data-preset]');if(button){writeConfig({...readConfig(),...DB.presets.find(preset=>preset.id===button.dataset.preset).values});runGeneration();}});
  document.getElementById('report').addEventListener('click',async event=>{
   const button=event.target.closest('[data-action]');if(!button||!currentGuide)return;
   const action=button.dataset.action;
