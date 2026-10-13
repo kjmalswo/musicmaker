@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6d28ff"><title></title><meta name="description" content="">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ee"><title></title><meta name="description" content="">
 <style>
 :root{--radius:18px}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Pretendard,"Noto Sans KR",system-ui,sans-serif;font-size:14px;line-height:1.65}button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--surface);padding:9px 14px}button:disabled{cursor:wait;opacity:.6}a{color:inherit}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button,input,select{border-radius:8px}button:hover{border-color:var(--ink)}input,select{width:100%;border:1px solid var(--line);background:var(--surface);padding:10px 11px;min-height:44px}input[type=range]{padding:0;accent-color:var(--accent);min-height:24px;cursor:pointer}h1,h2,h3,p{margin:0}h1{font-size:clamp(28px,3.6vw,46px);line-height:1.25;letter-spacing:-.055em;font-weight:650}h2{font-size:21px;letter-spacing:-.035em}h3{font-size:15px}small{font-size:12px}.muted{color:var(--muted)}.mono{font-family:Consolas,monospace;font-variant-numeric:tabular-nums}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--muted);font-weight:650}.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4%;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:750;letter-spacing:-.05em}.brand-icon{height:32px;width:32px;display:grid;place-items:center;background:var(--ink);border-radius:9px;color:var(--surface);font-size:22px}.topnote{font-size:12px;color:var(--muted)}.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:30px;padding:5px 11px;font-size:11px}.dot{width:6px;height:6px;background:var(--green);border-radius:50%}.workspace{max-width:1550px;margin:auto;display:grid;grid-template-columns:340px minmax(0,1fr);min-height:calc(100vh - 76px)}.sidebar{border-right:1px solid var(--line);padding:28px 25px}.sidebar-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.step{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:650;margin:25px 0 14px}.step span{width:24px;height:24px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:10px;color:var(--muted)}.field{display:block;margin-bottom:15px}.field-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;margin-bottom:7px}.field-help{display:block;margin-top:5px;color:var(--muted);font-size:11px;line-height:1.6}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.range-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}.range-head output{font-family:Consolas,monospace;color:var(--accent);font-size:12px}.range-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.range-field{margin:17px 0}.preset-row{display:flex;gap:6px;flex-wrap:wrap}.preset{font-size:11px;padding:6px 10px;border-radius:30px}.generate{width:100%;background:var(--ink);color:var(--surface);border-color:var(--ink);padding:13px;margin-top:20px;font-weight:650;display:flex;justify-content:space-between;align-items:center}.generate:hover{background:var(--accent);border-color:var(--accent)}.status{font-size:12px;margin-top:12px;min-height:20px;white-space:pre-line}.status[data-error=true]{color:var(--danger)}.advanced{margin:20px 0 0;border-top:1px solid var(--line);padding-top:14px}.advanced summary{font-size:12px;cursor:pointer;font-weight:600}.advanced .field{margin-top:15px}.main{padding:38px 4.5%;min-width:0}.intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}.intro p{margin-top:12px;max-width:580px;color:var(--muted);font-size:13px}.intro-mark{font-family:Georgia,serif;font-size:72px;line-height:1;color:var(--accent);font-style:italic;opacity:.75}.brief{display:flex;justify-content:space-between;gap:20px;padding:19px 22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);align-items:center;margin-bottom:24px}.brief h2{font-size:17px;margin-top:4px}.brief small{display:block;color:var(--muted);margin-top:4px}.brief-stats{display:flex;gap:22px;text-align:right}.stat strong{display:block;font-size:20px;font-weight:500;line-height:1.3}.stat span{font-size:10px;color:var(--muted)}.report-header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:28px 0 17px}.report-header h2{font-size:19px}.actions{display:flex;gap:6px;flex-wrap:wrap}.actions button{font-size:11px;padding:6px 10px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.tag{font-size:10px;border:1px solid var(--line);padding:3px 9px;border-radius:30px;background:var(--surface)}.tag.accent{border-color:var(--line);color:var(--accent);background:var(--tint)}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}.panel-top{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:16px}.panel-top h3{font-size:14px}.panel-top small{color:var(--muted)}.timeline{display:flex;gap:4px;min-height:92px}.timeline-cell{min-width:0;display:flex;flex-direction:column;justify-content:flex-end;flex:var(--bars)}.timeline-bar{height:calc(var(--energy)*.64px + 8px);background:var(--green);border-radius:5px 5px 0 0;opacity:var(--opacity)}.timeline-label{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:6px}.timeline-number{font-family:Consolas,monospace;color:var(--muted);font-size:9px}.timeline-legend{margin-top:14px;font-size:11px;color:var(--muted)}.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.overview-grid .panel{margin:0}.guidance-list{margin:0;padding:0;list-style:none}.guidance-list li{padding:10px 0;border-top:1px solid var(--line);font-size:12px}.guidance-list li:first-child{border-top:0;padding-top:0}.guidance-list strong{display:block;margin-bottom:3px;font-size:12px}.guidance-list p{color:var(--muted)}.section{border:1px solid var(--line);border-radius:var(--radius);margin:12px 0;background:var(--surface);overflow:hidden}.section summary{padding:18px 20px;cursor:pointer;list-style:none;display:flex;align-items:center;gap:15px}.section summary::-webkit-details-marker{display:none}.section-index{font-family:Consolas,monospace;color:var(--accent);font-size:13px}.section-title{flex:1;font-weight:650}.section-title small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:2px}.section-meta{font-size:11px;color:var(--muted)}.section-arrow{font-size:18px;transition:transform .2s}.section[open] .section-arrow{transform:rotate(90deg)}.section-content{padding:0 20px 20px}.chord-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(85px,1fr));gap:7px;margin-bottom:14px}.chord{border:1px solid var(--line);border-radius:9px;padding:11px 8px;text-align:center;background:var(--paper)}.chord.borrowed,.chord.applied{background:var(--tint);border-color:var(--line)}.chord strong{display:block;font-size:16px;font-family:Consolas,monospace;letter-spacing:-.04em}.chord small{font-size:10px;color:var(--muted)}.section-note{font-size:12px;color:var(--muted);padding:11px 0}.section-info{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:13px}.section-info strong{font-size:11px;display:block;margin-bottom:4px}.section-info p{font-size:12px;color:var(--muted)}.table-wrap{overflow:auto;margin-top:15px;border-top:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:11px;white-space:nowrap}th{text-align:left;color:var(--muted);font-weight:500;padding:10px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid var(--line)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}.trace{font-size:11px;color:var(--muted);margin-top:14px}.checklist{list-style:none;counter-reset:task;padding:0;margin:0}.checklist li{counter-increment:task;display:flex;gap:12px;padding:10px 0;font-size:12px;border-bottom:1px solid var(--line)}.checklist li:last-child{border:0}.checklist li:before{content:counter(task,decimal-leading-zero);color:var(--accent);font-family:Consolas,monospace;font-size:11px;padding-top:2px}.footnote{font-size:11px;line-height:1.8;color:var(--muted);margin:20px 0}.engine-details{margin-top:20px}.engine-details summary{cursor:pointer;font-size:12px;color:var(--muted)}.engine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.engine-grid div{border-top:1px solid var(--line);padding-top:10px}.engine-grid strong{display:block;font-family:Consolas,monospace;font-size:17px;font-weight:500}.engine-grid small{color:var(--muted);font-size:10px}.sources{font-size:11px;margin-top:12px}.sources a{margin-right:14px;text-underline-offset:3px}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}.pending{opacity:.65}[hidden]{display:none!important}footer{border-top:1px solid var(--line);padding:20px 4%;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}noscript{display:block;margin:24px}
 @media(min-width:1300px){.sidebar{padding:30px}.workspace{grid-template-columns:360px minmax(0,1fr)}}@media(max-width:1000px){.workspace{grid-template-columns:300px minmax(0,1fr)}.sidebar{padding:24px 18px}.main{padding:30px 24px}.overview-grid{grid-template-columns:1fr}.brief-stats{gap:12px}.intro-mark,.section-meta{display:none}}@media(max-width:720px){.topbar{height:64px;padding:0 20px}.topnote{display:none}.workspace{display:block}.sidebar{border:0;border-bottom:1px solid var(--line);padding:25px 20px}.main{padding:28px 20px}.intro{margin-bottom:22px}.intro p{font-size:12px}.brief{padding:16px;gap:12px;align-items:flex-start}.brief-stats{gap:14px}.stat strong{font-size:16px}.stat:last-child{display:none}.panel{padding:18px}.section summary{padding:16px}.section-content{padding:0 16px 16px}.section-info{grid-template-columns:1fr}.timeline-label{font-size:8px}.engine-grid{grid-template-columns:repeat(2,1fr)}.badge{font-size:10px}footer{padding:20px;gap:14px;flex-wrap:wrap}}
@@ -17,6 +17,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}body{font-size:15px;line-hei
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{#report{display:none!important}.print-report{display:block}.print-report h1{font-size:24px}.print-report h2{font-size:18px;margin:14px 0 8px}.print-report .section{padding:14px;break-inside:auto}.print-report .chord-row{grid-template-columns:repeat(4,1fr)}.print-report .chord{background:white;border-color:var(--line);padding:8px}.print-report .chord strong{font-size:16px;color:var(--ink)}.print-report .part-grid td{font-size:9px}.print-report .table-wrap{overflow:visible}.print-report .part-grid td:not(:first-child){width:30%}.print-report .part-event{break-inside:avoid}.print-report .chord-duration{font-size:9px}}
 
+.intro-parts{border:1px solid var(--line);border-radius:10px;padding:12px;margin:16px 0}.intro-parts legend{font-size:12px;font-weight:650;padding:0 5px}.part-check{display:flex;align-items:center;gap:8px;font-size:13px;margin:8px 0}.part-check input{width:18px;height:18px;min-height:0;padding:0;accent-color:var(--accent)}
 </style></head>
 <body>
 <header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">♮</span><span data-text="brand"></span></div><span class="topnote" data-text="topnote"></span><span class="badge"><span class="dot"></span><span data-text="localBadge"></span></span></header>
@@ -27,8 +28,8 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}body{font-size:15px;line-hei
 // ======================== GAME DATABASE ========================
 // All selectable content, musical policies, engine weights and UI copy live here.
 const GAME_DATABASE={
-version:'1.3.0',storage:{key:'musicmaker.settings.v1'},
-visualTheme:{"paper":"#eef0ff","surface":"#ffffff","ink":"#191337","muted":"#61587c","line":"#d9d4ed","accent":"#6d28ff","accentDeep":"#36107b","tint":"#eee5ff","green":"#007e73","chords":"#6d28ff","drums":"#cf3c07","bass":"#007aa3","topline":"#ba0877","cyan":"#10d9e8","colorInk":"#ffffff","grid":"#f6f3ff","danger":"#bd1740"},
+version:'1.4.0',storage:{key:'musicmaker.settings.v1'},
+visualTheme:{"paper":"#f5f3ee","surface":"#fffefa","ink":"#252820","muted":"#777970","line":"#ddded4","accent":"#d65537","accentDeep":"#252820","tint":"#f8e9e1","green":"#607258","chords":"#d65537","drums":"#607258","bass":"#252820","topline":"#d65537","cyan":"#f8e9e1","colorInk":"#fffefa","grid":"#f5f3ee","danger":"#af3029"},
 resultUI:{"title":"구간별 작곡 가이드","startKind":"chorus","sectionLabel":"작업할 구간","partLabel":"입력할 파트","barLabel":"확인할 마디","selected":"선택됨","steps":[{"title":"곡의 흐름","body":"송폼을 확인하고 구간을 고르세요.","target":"result-structure"},{"title":"구간 작업","body":"코드와 각 파트를 순서대로 입력하세요.","target":"result-section"},{"title":"DAW에 옮기기","body":"반복하고 연결 부분을 다듬으세요.","target":"result-daw"}],"tabs":[{"id":"chords","label":"코드","hint":"코드 블록을 순서대로 배치하세요.","color":"chords"},{"id":"drums","label":"드럼","hint":"색이 채워진 칸에 타격을 입력하세요.","color":"drums"},{"id":"bass","label":"베이스","hint":"음높이·시작·길이를 입력하고 킥과 맞추세요.","color":"bass"},{"id":"topline","label":"보컬","hint":"쉼을 포함해 입력하고 가사의 음절을 맞추세요.","color":"topline"}],"sectionColors":{"intro":"bass","verse":"chords","pre":"drums","chorus":"topline","bridge":"drums","outro":"bass","theme":"chords","development":"drums","climax":"topline"},"previous":"이전 구간","next":"다음 구간","range":"{start}–{end}마디","phrase":"{bars}마디 진행 × {repeats}회","chordDuration":"{duration}마디 유지","chordPosition":"{bar}마디","barTitle":"프레이즈 {bar}마디","absoluteBar":"곡의 {bar}마디부터 · 반복마다 같은 위치","keyboard":"건반에 입력할 음","pitch":"음높이","start":"시작","length":"길이","role":"역할","voice":"드럼","velocity":"세기","unit":"{value}박","eighthUnit":"{value}칸","timing":"1 = 첫 박 · 소수점은 박 안의 위치","compoundTiming":"1 = 첫 8분음표 · 0.5 = 16분음표 길이","noteExample":"예: {note} · {start}에 시작 · {length} 유지","carry":"앞 마디에서 이어짐","empty":"이 마디는 쉬세요.","rest":"쉼","visualTitle":"음표 위치와 길이","drumTitle":"드럼 타격 위치","hit":"{voice} · {start} · 세기 {velocity}","hitSymbol":"●","tableView":"타격 표로 보기","playingDetails":"연주 참고","voices":"건반 오른손","root":"코드 루트","details":"설계 요약","reference":"8마디 기준 진행","referenceHelp":"구간 작업은 선택한 송폼의 길이를 따릅니다.","repeatHelp":"위 프레이즈를 {repeats}번 반복해 {bars}마디를 채우세요.","printTitle":"작곡 가이드","saved":"재현 정보","pattern":"입력 패턴","tracks":"파트별 입력","timekeeper":"타임키퍼","total":"{count}구간 · {bars}마디","subdivisions":{"2":["","&"],"4":["","e","&","a"]}},
 ui:{
  "brand": "musicmaker",
@@ -44,13 +45,13 @@ ui:{
  "hero": "다음 곡, 여기서 시작하세요.",
  "heroDescription": "설정을 고르고, 구간별 코드와 연주 패턴을 DAW에 옮기세요.",
  "footer": "musicmaker · DAW에 직접 입력하는 작곡 가이드",
- "versionLabel": "GUIDE / v1.3",
+ "versionLabel": "GUIDE / v1.4",
  "steps": [
   "장르와 느낌",
   "음악적 요소",
   "송폼과 코드"
  ],
- "advanced": "음역 · 리듬 · 시드",
+ "advanced": "음역 · 베이스 연주법 · 드럼 · 시드",
  "presets": "빠른 설정",
  "briefEyebrow": "YOUR GUIDE",
  "briefTitle": "{genre}",
@@ -157,7 +158,12 @@ ui:{
  "octaveHint": "C4 = MIDI 60",
  "noscript": "이 작곡 가이드는 JavaScript를 사용하는 브라우저에서 실행됩니다."
 },
-fields:[
+fields:[{"id":"introVocal","type":"checkbox","step":2,"label":"인트로 보컬"},
+{"id":"introDrums","type":"checkbox","step":2,"label":"인트로 드럼"},
+{"id":"introBass","type":"checkbox","step":2,"label":"인트로 베이스"},
+{"id":"bassStyle","type":"select","table":"bassStyles","step":"advanced","label":"베이스 연주법","help":"핑거·피크·슬랩·뮤트의 어택과 음 길이를 반영합니다."},
+{"id":"bassGhost","type":"range","step":"advanced","label":"베이스 고스트 노트","help":"음정을 죽인 약박 타격. 박자와 연주 속도에 맞게 넣습니다.","min":0,"max":100,"increment":1,"ends":["사용 안 함","적극적으로"]},
+
  {
   "id": "genre",
   "type": "select",
@@ -393,7 +399,7 @@ fields:[
   ]
  }
 ],
-defaults:{genre:'pop',subgenre:'contemporary-pop',customForm:[['intro',4],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]],mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea',vocalRange:'middle',toplineNovelty:90,bassMotion:55,drumDetail:50},
+defaults:{introVocal:false,introDrums:false,introBass:false,bassStyle:'auto',bassGhost:35,genre:'pop',subgenre:'contemporary-pop',customForm:[['intro',4],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]],mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea',vocalRange:'middle',toplineNovelty:90,bassMotion:55,drumDetail:50},
 presets:[{id:'late',label:'늦은 밤 R&B',values:{genre:'pop',subgenre:'rnb-pop',mood:'dreamy',style:'intimate',mode:'minor',bpm:78,jazzy:75,classical:10,energy:35,complexity:55,form:'pop',meter:'4-4',progression:'auto'}},{id:'film',label:'시네마틱',values:{genre:'cinematic',subgenre:'orchestral-score',mood:'wistful',style:'orchestral',mode:'minor',bpm:72,jazzy:20,classical:90,energy:60,complexity:50,form:'cinematic',meter:'4-4',progression:'auto'}},{id:'indie',label:'인디 팝',values:{genre:'pop',subgenre:'indie-pop',mood:'bright',style:'organic',mode:'major',bpm:112,jazzy:25,classical:15,energy:65,complexity:35,form:'pop',meter:'4-4',progression:'auto'}}],
 keys:[{id:'C',label:'C',pc:0,flat:false},{id:'Db',label:'D♭',pc:1,flat:true},{id:'D',label:'D',pc:2,flat:false},{id:'Eb',label:'E♭',pc:3,flat:true},{id:'E',label:'E',pc:4,flat:false},{id:'F',label:'F',pc:5,flat:true},{id:'Gb',label:'G♭',pc:6,flat:true},{id:'G',label:'G',pc:7,flat:false},{id:'Ab',label:'A♭',pc:8,flat:true},{id:'A',label:'A',pc:9,flat:false},{id:'Bb',label:'B♭',pc:10,flat:true},{id:'B',label:'B',pc:11,flat:false}],
 pitchNames:{sharp:['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'],flat:['C','D♭','D','E♭','E','F','G♭','G','A♭','A','B♭','B']},
@@ -988,10 +994,13 @@ progressionGrammars:{
   }
  }
 },
+bassStyles:[{"id":"auto","label":"장르에 맞게 추천"},{"id":"finger","label":"핑거 · 자연스러운 연결","attack":"finger","gate":0.9,"ghost":0.65,"sync":0.25,"legato":true,"maxAttacks":8,"genres":{"pop":1,"rnb":1.2,"jazz":1.5,"indie":1,"cinematic":1},"styles":{"intimate":0.8,"organic":0.7},"strings":{"1":0,"2":0,"3":0.1,"4":0.1}},{"id":"pick","label":"피크 · 선명한 어택","attack":"pick","gate":0.72,"ghost":0.35,"sync":0.25,"legato":false,"maxAttacks":8,"genres":{"rock":1.6,"pop":0.6,"electronic":0.4},"styles":{"organic":0.2},"strings":{"1":0,"2":0,"3":0.25,"4":0.3}},{"id":"slap","label":"슬랩 / 팝 · 리듬 강조","attack":"slap","gate":0.55,"ghost":1,"sync":0.85,"legato":true,"maxAttacks":7,"genres":{"rnb":0.65,"pop":0.4,"electronic":0.5},"styles":{"groovy":1.25},"strings":{"1":0.1,"2":0.15,"3":0.15,"4":0.1}},{"id":"muted","label":"뮤트 · 짧고 둥근 음","attack":"muted","gate":0.45,"ghost":0.55,"sync":0.2,"legato":false,"maxAttacks":7,"genres":{"lofi":1.6,"indie":0.6,"rnb":0.5},"styles":{"intimate":0.5,"wide":0.5},"strings":{"1":0,"2":0,"3":0.2,"4":0.25}}],
+partPolicy:{"intro":{"topline":"introVocal","drums":"introDrums","bass":"introBass"},"roles":{"topline":"melody","drums":"rhythm","bass":"bass"},"checkboxes":["introVocal","introDrums","introBass"],"introTitle":"인트로에 사용할 파트","off":"이 구간에서는 {part}을 쉬세요.","offSummary":"제외","offHelp":"인트로 파트는 송폼 설정에서 켜고 끌 수 있습니다.","silent":"—"},
+bassPerformance:{"ghostThreshold":0.25,"maxGhostsPerBar":2,"ghostMinTicks":1,"ghostGapTicks":1,"legatoFrets":2,"popStrings":[1,2],"syncThreshold":0.4,"ghostWeakWeight":1,"ghostBackbeatWeight":0.7,"velocity":{"strong":100,"normal":76,"ghost":32,"minimum":24,"maximum":112,"base":0.72,"energy":0.28},"techniques":{"finger":{"label":"핑거","help":"손가락으로 뜯고 다음 음까지 자연스럽게 연결하세요."},"pick":{"label":"피크","help":"피크 어택을 일정하게 맞추세요."},"slap":{"label":"슬랩","help":"낮은 줄은 엄지로 타격하세요."},"pop":{"label":"팝","help":"높은 줄은 당겨 튕기세요."},"muted":{"label":"뮤트","help":"음정은 유지하고 울림을 짧게 끊으세요."},"hammer":{"label":"해머온","help":"같은 줄에서 다음 높은 프렛을 눌러 연결하세요."},"pull":{"label":"풀오프","help":"같은 줄에서 낮은 프렛으로 손가락을 떼며 연결하세요."},"ghost":{"label":"고스트 ×","help":"줄을 눌러 음정을 죽인 뒤 짧게 타격하세요."}},"ghostSymbol":"×","column":"연주","strength":"세기","styleSummary":"{style} · {low}–{high}","ghostHelp":"×는 음정 없는 고스트 노트입니다. DAW에서는 뮤트/고스트 아티큘레이션을 사용하세요.","performance":"베이스 연주법","emptyMotif":{"cell":"","contour":"","transform":""}},
 sectionTypes:{intro:{label:'Intro',energy:.3,tension:.18,closure:'open',density:.45},verse:{label:'Verse',energy:.58,tension:.35,closure:'open',density:.7},pre:{label:'Pre-chorus',energy:.75,tension:.62,closure:'D',density:.85},chorus:{label:'Chorus',energy:1,tension:.5,closure:'T',density:1},bridge:{label:'Bridge',energy:.68,tension:.73,closure:'D',density:.8},outro:{label:'Outro',energy:.27,tension:.17,closure:'T',density:.4},theme:{label:'Theme A',energy:.55,tension:.3,closure:'T',density:.65},development:{label:'Development',energy:.78,tension:.72,closure:'D',density:.85},climax:{label:'Climax',energy:1,tension:.65,closure:'T',density:1}},
 forms:[{id:'custom',label:'직접 조합 · 구간 편집',builder:true},{id:'pop',label:'팝 · Verse / Chorus',sections:[['intro',4],['verse',16],['pre',8],['chorus',16],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]]},{id:'compact',label:'컴팩트 · 짧은 곡',sections:[['intro',4],['verse',8],['chorus',8],['verse',8],['chorus',8],['outro',4]]},{id:'aaba',label:'AABA · 테마와 대비',sections:[['theme',8],['theme',8],['bridge',8],['theme',8]]},{id:'cinematic',label:'시네마틱 · 점진적 전개',sections:[['intro',8],['theme',16],['development',16],['climax',16],['outro',8]]}],
 instruments:[{id:'piano',label:'피아노',role:'harmony',base:.7,jazz:.35,classical:.5},{id:'rhodes',label:'일렉트릭 피아노',role:'harmony',base:.6,jazz:.8,classical:0},{id:'guitar',label:'어쿠스틱 기타',role:'harmony',base:.5,jazz:.15,classical:0},{id:'electricGuitar',label:'일렉트릭 기타',role:'harmony',base:.3,jazz:.1,classical:0},{id:'synth',label:'신스 패드',role:'harmony',base:.6,jazz:.2,classical:.15},{id:'electricBass',label:'일렉트릭 베이스',role:'bass',base:.8,jazz:.5,classical:0},{id:'upright',label:'콘트라베이스',role:'bass',base:.45,jazz:.9,classical:.5},{id:'drums',label:'드럼 / 전자 드럼',role:'rhythm',base:.8,jazz:.3,classical:0},{id:'brushes',label:'브러시 드럼',role:'rhythm',base:.3,jazz:1,classical:0},{id:'vocal',label:'보컬 / 주선율 악기',role:'melody',base:.8,jazz:.35,classical:.1},{id:'sax',label:'색소폰',role:'melody',base:.2,jazz:1,classical:0},{id:'leadSynth',label:'리드 신스',role:'melody',base:.3,jazz:.1,classical:0},{id:'strings',label:'현악 앙상블',role:'texture',base:.35,jazz:.15,classical:1},{id:'cello',label:'첼로',role:'texture',base:.3,jazz:.15,classical:.9},{id:'woodwinds',label:'목관 응답 선율',role:'texture',base:.25,jazz:.3,classical:.85},{id:'horns',label:'호른 / 브라스',role:'texture',base:.2,jazz:.35,classical:.85}],
-theoryReferences:[{label:'Open Music Theory · ii–V–I / Turnaround',url:'https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/'},{label:'Open Music Theory · Jazz Substitutions',url:'https://viva.pressbooks.pub/openmusictheory/chapter/substitutions/'},{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'},{label:'Open Music Theory · Embellishing Tones',url:'https://openmusictheory.github.io/embellishingTones.html'},{label:'Open Music Theory · Swing & Syncopation',url:'https://viva.pressbooks.pub/openmusictheory/chapter/swing-rhythms/'}],
+theoryReferences:[{label:'Fender · Bass Technique',url:'https://www.fender.com/articles/techniques/how-to-play-bass-guitar'},{label:'StudyBass · Bass Articulations',url:'https://www.studybass.com/study-guide/studybass-fundamentals-three/bass-articulations/'},{label:'Open Music Theory · ii–V–I / Turnaround',url:'https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/'},{label:'Open Music Theory · Jazz Substitutions',url:'https://viva.pressbooks.pub/openmusictheory/chapter/substitutions/'},{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'},{label:'Open Music Theory · Embellishing Tones',url:'https://openmusictheory.github.io/embellishingTones.html'},{label:'Open Music Theory · Swing & Syncopation',url:'https://viva.pressbooks.pub/openmusictheory/chapter/swing-rhythms/'}],
 vocalRanges:[{id:'lower',label:'낮은 음역 · C3–E4',lower:48,upper:64,center:57},{id:'middle',label:'중간 음역 · G3–D5',lower:55,upper:74,center:64},{id:'higher',label:'높은 음역 · C4–G5',lower:60,upper:79,center:69}],
 partUI:{
  "title": "파트 입력",
@@ -1106,6 +1115,7 @@ function normalizeConfig(input={}){
  for(const field of DB.fields){
   const value=input[field.id]??DB.defaults[field.id];
   if(field.type==='select'){const options=selectOptions(field,config);config[field.id]=options.some(option=>option.id===value)?value:selectFallback(field,options);}
+  else if(field.type==='checkbox')config[field.id]=value===true||value==='true';
   else if(field.type==='number'||field.type==='range'){
    const number=Number(value);
    config[field.id]=Number.isFinite(number)?clamp(Math.round(number/field.increment)*field.increment,field.min,field.max):DB.defaults[field.id];
@@ -1293,7 +1303,7 @@ function searchProgression(ctx,type,length,random,candidates,previousMotif,pairC
 
 function chooseInstruments(ctx,energy,occurrence,random){
  const score=item=>(ctx.genre.instruments[item.id]??0)*E.arrangement.genre+(ctx.style.instrument[item.id]??0)*E.arrangement.style+item.jazz*ctx.jazz*E.arrangement.jazz+item.classical*ctx.classical*E.arrangement.classical+item.base*E.arrangement.base+random()*E.arrangement.jitter;
- const ranked=DB.instruments.map(item=>({...item,score:score(item)})).sort((a,b)=>b.score-a.score);
+ const ranked=DB.instruments.filter(item=>ctx.config.bassStyle==='auto'||item.role!=='bass'||item.id==='electricBass').map(item=>({...item,score:score(item)})).sort((a,b)=>b.score-a.score);
  const core=E.arrangement.roles.map(role=>ranked.find(item=>item.role===role)).filter(Boolean);
  const textureCount=ctx.classical<E.orchestra.threshold?0:Math.min(ctx.orchestra,Math.max(E.numeric.unit,Math.round(ctx.orchestra*(E.numeric.unit-E.arrangement.textureEnergy+energy*E.arrangement.textureEnergy))));
  const textures=ranked.filter(item=>item.role==='texture').slice(0,textureCount);
@@ -1315,7 +1325,7 @@ function makeSection(ctx,definition,index,occurrences,motifs,random,candidates,p
  const weights=ctx.forcedWeights??Array.from({length},()=>E.numeric.unit),units=sum(weights);
  const repeats=Math.max(E.numeric.unit,Math.floor(bars/(units*hold)));
  hold=bars/(units*repeats);
- const minimum=Math.max(minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),minLineTicks(ctx,P.vocal.maxSyllablesPerSecond,P.vocal.minTicks));
+ const minimum=Math.max(partEnabled(ctx,kind,'bass')?minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks):E.numeric.unit,partEnabled(ctx,kind,'topline')?minLineTicks(ctx,P.vocal.maxSyllablesPerSecond,P.vocal.minTicks):E.numeric.unit);
  if(Math.min(...weights)*hold*P.meters[ctx.meter.id].barTicks<minimum)throw new Error(fmt(DB.songformUI.tooDense,{label:type.label,bars}));
  const search=searchProgression(ctx,type,length,random,candidates,motifs[kind],pairCache,occurrence);
  if(!motifs[kind])motifs[kind]=search.path;
@@ -1523,11 +1533,14 @@ function planDrums(ctx,section,grid,topline){
 
 function bassFingerings(pitch){return P.bass.tuning.map(string=>({string:string.string,fret:pitch-string.midi})).filter(option=>option.fret>=0&&option.fret<=P.bass.frets);}
 function searchBass(ctx,section,grid,drums,topline){
- const motion=ctx.config.bassMotion/E.numeric.percent*SG.blend.control+ctx.bassProfile.motion*SG.blend.profile,minimum=minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),total=section.phraseBars*grid.barTicks;
+ const style=resolveBassStyle(ctx),motion=ctx.config.bassMotion/E.numeric.percent*SG.blend.control+ctx.bassProfile.motion*SG.blend.profile,minimum=minLineTicks(ctx,Math.min(style.maxAttacks,P.bass.maxNotesPerSecond),P.bass.minTicks),total=section.phraseBars*grid.barTicks;
  const onsets=new Set(drums.events.filter(event=>event.kind==='kick').map(event=>event.start));
  for(const chord of section.phrase)onsets.add(chord.bar*grid.barTicks);
  if(motion>P.bass.walkThreshold)for(let start=0;start<total;start+=grid.pulseTicks)onsets.add(start);
  if(motion>P.bass.approachThreshold)for(const chord of section.phrase){const tick=chord.bar*grid.barTicks;if(tick>=minimum)onsets.add(tick-minimum);}
+ if(style.sync*motion>DB.bassPerformance.syncThreshold)for(let bar=0;bar<section.phraseBars;bar++){
+  const weak=grid.timeGrid.find(tick=>tick%grid.pulseTicks!==0);if(weak!==undefined)onsets.add(bar*grid.barTicks+weak);
+ }
  const roots=new Set(section.phrase.map(chord=>chord.bar*grid.barTicks)),points=[];
  for(const point of [...onsets].sort((a,b)=>a-b)){
   if(!roots.has(point)&&point+minimum>total)continue;
@@ -1558,6 +1571,7 @@ function searchBass(ctx,section,grid,drums,topline){
    const position=shift?Math.max(0,finger.fret-P.bass.window+E.numeric.unit):state.position;
    evaluations++;
    let score=state.score-Math.abs(interval)*P.bass.motionWeight-Math.abs(pitch-P.bass.center)*P.bass.registerWeight-Math.abs(position-state.position)*P.bass.positionWeight;
+   score+=style.strings[finger.string]??0;
    if(previous&&finger.string!==previous.string)score-=P.bass.stringChangeWeight;
    if(pc(pitch)===chord.root)score+=P.bass.rootWeight*(E.numeric.unit-motion+E.swing.base);
    if(pc(pitch)===fifth)score+=P.bass.fifthWeight*motion;
@@ -1577,7 +1591,7 @@ function searchBass(ctx,section,grid,drums,topline){
  const selected=beam.filter(state=>!state.pending).sort((a,b)=>b.score-a.score)[0];
  if(!selected)throw new Error(PU.noBass);
  const kickEvents=drums.events.filter(event=>event.kind==='kick');
- return{events:selected.notes,evaluations,score:Number(selected.score.toFixed(E.display.scoreDigits)),lock:kickEvents.length?percent(kickEvents.filter(kick=>selected.notes.some(note=>note.start===kick.start)).length/kickEvents.length):0,approaches:selected.notes.filter(note=>note.role==='approach').length,range:{low:pitchName(Math.min(...selected.notes.map(note=>note.pitch)),ctx.key,true),high:pitchName(Math.max(...selected.notes.map(note=>note.pitch)),ctx.key,true)}};
+ return{events:planBassPerformance(ctx,section,grid,drums,selected.notes,style),style:style.label,styleId:style.id,enabled:true,evaluations,score:Number(selected.score.toFixed(E.display.scoreDigits)),lock:kickEvents.length?percent(kickEvents.filter(kick=>selected.notes.some(note=>note.start===kick.start)).length/kickEvents.length):0,approaches:selected.notes.filter(note=>note.role==='approach').length,range:{low:pitchName(Math.min(...selected.notes.map(note=>note.pitch)),ctx.key,true),high:pitchName(Math.max(...selected.notes.map(note=>note.pitch)),ctx.key,true)}};
 }
 
 function createMotif(ctx,grid,random){
@@ -1601,17 +1615,74 @@ function createMotif(ctx,grid,random){
  const contours=candidates.map(contour=>({contour,score:-Math.abs(average(contour.map(Math.abs))-targetContour)*SG.weights.contour+contour.filter(interval=>interval===0).length*ctx.voiceProfile.hook*SG.weights.hook+random()*SG.weights.jitter})).sort((a,b)=>b.score-a.score);
  return{cell:rhythms[0].index,contour:contours[0].contour};
 }
+function partEnabled(ctx,kind,part){
+ const field=DB.partPolicy[kind]?.[part];return field?ctx.config[field]:true;
+}
+function resolveBassStyle(ctx){
+ const selected=byId('bassStyles',ctx.config.bassStyle);if(selected.id!=='auto')return selected;
+ return DB.bassStyles.filter(style=>style.id!=='auto').map(style=>({...style,score:sum(ctx.mix.map(source=>(style.genres[source.genre.id]??0)*source.weight))+(style.styles[ctx.config.style]??0)})).sort((a,b)=>b.score-a.score)[0];
+}
+function planBassPerformance(ctx,section,grid,drums,notes,style){
+ const rule=DB.bassPerformance,total=section.phraseBars*grid.barTicks,minAttack=minLineTicks(ctx,style.maxAttacks,rule.ghostMinTicks);
+ const detail=ctx.config.bassGhost/E.numeric.percent*style.ghost,budget=detail>=rule.ghostThreshold?Math.max(E.numeric.unit,Math.floor(detail*rule.maxGhostsPerBar)):0;
+ const counts=new Map(),events=[];
+ const velocity=(base)=>Math.round(clamp(base*(rule.velocity.base+section.energy/E.numeric.percent*rule.velocity.energy),rule.velocity.minimum,rule.velocity.maximum));
+ const annotated=notes.map((note,index)=>{
+  const previous=notes[index-E.numeric.unit];let technique=style.attack;
+  if(style.attack==='slap'&&rule.popStrings.includes(note.string))technique='pop';
+  if(style.legato&&previous&&previous.string===note.string&&previous.fret!==note.fret&&Math.abs(previous.fret-note.fret)<=rule.legatoFrets&&previous.position===note.position)technique=note.fret>previous.fret?'hammer':'pull';
+  return{...note,technique,velocity:velocity(note.strong||note.kick?rule.velocity.strong:rule.velocity.normal)};
+ });
+ const rest=(start,duration)=>({start,duration,pitch:null,note:PU.rest,role:'rest'});
+ for(const[index,note]of annotated.entries()){
+  const next=annotated[index+E.numeric.unit],end=next?.start??total;
+  const linked=next&&['hammer','pull'].includes(next.technique),protectedNote=note.role==='approach'||linked;
+  const hold=protectedNote?note.duration:Math.min(note.duration,Math.max(P.bass.minTicks,Math.floor(note.duration*style.gate)));
+  events.push({...note,duration:hold});let cursor=note.start+hold;
+  const candidates=[];
+  if(!protectedNote&&budget)for(let tick=cursor+rule.ghostGapTicks;tick+minAttack<=end;tick++){
+   const bar=Math.floor(tick/grid.barTicks);
+   if(isStrongTick(tick,grid)||tick%grid.pulseTicks===0||(counts.get(bar)??0)>=budget||tick-note.start<minAttack)continue;
+   const neighbors=drums.events.filter(hit=>hit.kind==='backbeat');
+   const distance=neighbors.length?Math.min(...neighbors.map(hit=>Math.abs(hit.start-tick))):grid.barTicks;
+   const score=(grid.timeGrid.includes(tick%grid.barTicks)?rule.ghostWeakWeight:0)+rule.ghostBackbeatWeight/(E.numeric.unit+distance);
+   candidates.push({tick,bar,score});
+  }
+  const ghost=candidates.sort((a,b)=>b.score-a.score||a.tick-b.tick)[0];
+  if(ghost){
+   if(ghost.tick>cursor)events.push(rest(cursor,ghost.tick-cursor));
+   events.push({start:ghost.tick,duration:rule.ghostMinTicks,pitch:null,note:rule.ghostSymbol,role:'ghost',technique:'ghost',velocity:velocity(rule.velocity.ghost),strong:false});
+   cursor=ghost.tick+rule.ghostMinTicks;counts.set(ghost.bar,(counts.get(ghost.bar)??0)+E.numeric.unit);
+  }
+  if(end>cursor)events.push(rest(cursor,end-cursor));
+ }
+ return events;
+}
+function silentTopline(total){
+ return{enabled:false,events:[{start:0,duration:total,pitch:null,note:PU.rest,role:'rest'}],notes:[],evaluations:0,score:0,stock:0,intervalKinds:0,rhythmKinds:0,breathTicks:P.breathTicks,breaths:E.numeric.unit,range:{low:DB.partPolicy.silent,high:DB.partPolicy.silent},motif:DB.bassPerformance.emptyMotif};
+}
 function buildPartPlans(ctx,sections){
- const grid=P.meters[ctx.meter.id],motifs={};
- let previousLine=null;
+ const grid=P.meters[ctx.meter.id],motifs={};let previousLine=null;
  for(const section of sections){
-  const random=lineRandom(ctx,section,'motif');
-  if(!motifs[section.kind])motifs[section.kind]=createMotif(ctx,grid,random);
-  const topline=searchTopline(ctx,section,grid,motifs[section.kind],previousLine),drums=planDrums(ctx,section,grid,topline),bass=searchBass(ctx,section,grid,drums,topline);
-  previousLine=topline.notes.at(-1);
+  const total=section.phraseBars*grid.barTicks,enabled=Object.fromEntries(Object.keys(DB.partPolicy.roles).map(part=>[part,partEnabled(ctx,section.kind,part)]));
+  section.enabled=enabled;
+  let topline=silentTopline(total);
+  if(enabled.topline){
+   const random=lineRandom(ctx,section,'motif');if(!motifs[section.kind])motifs[section.kind]=createMotif(ctx,grid,random);
+   topline={...searchTopline(ctx,section,grid,motifs[section.kind],previousLine),enabled:true};
+  }
+  const drums={...planDrums(ctx,section,grid,topline),enabled:enabled.drums};
+  if(!enabled.drums){drums.events=[];drums.kicks=0;drums.snares=0;drums.fills=0;section.rhythm=fmt(DB.partPolicy.off,{part:PU.drums});}
+  const bass=enabled.bass?searchBass(ctx,section,grid,drums,topline):{enabled:false,events:[{start:0,duration:total,pitch:null,note:PU.rest,role:'rest'}],style:resolveBassStyle(ctx).label,styleId:resolveBassStyle(ctx).id,evaluations:0,score:0,lock:0,approaches:0,range:{low:DB.partPolicy.silent,high:DB.partPolicy.silent}};
+  if(!enabled.topline)section.melody=fmt(DB.partPolicy.off,{part:PU.topline});
+  previousLine=topline.notes.at(-1)??null;
+  const before=section.arrangement.instruments.length;
+  section.arrangement.instruments=section.arrangement.instruments.filter(item=>!Object.entries(enabled).some(([part,on])=>!on&&item.role===DB.partPolicy.roles[part]));
+  section.arrangement.tracks-=before-section.arrangement.instruments.length;
   section.parts={bars:section.phraseBars,barTicks:grid.barTicks,displayTicks:grid.displayTicks,topline,drums,bass};
  }
 }
+
 
 function generateGuide(input){
  const config=normalizeConfig(input),ctx=makeContext(config),random=seededRandom(config.seed),candidates=candidateChords(ctx),form=resolveForm(config);
@@ -1642,7 +1713,7 @@ function generateGuide(input){
 }
 
 function validateDatabase(){
- for(const table of['fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments','vocalRanges','subgenres']){
+ for(const table of['bassStyles','fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments','vocalRanges','subgenres']){
   const ids=DB[table].map(entry=>entry.id);if(new Set(ids).size!==ids.length)throw error('dbError',{detail:table});
  }
  for(const field of DB.fields)if(field.type==='select'&&!byId(field.table,DB.defaults[field.id]))throw error('dbError',{detail:field.id});
@@ -1680,7 +1751,7 @@ function partFacts(section){
  const part=section.parts,top=part.topline,drums=part.drums,bass=part.bass;
  return{
   top:fmt(PU.toplineSummary,{...top.range,notes:top.notes.length,ornaments:top.notes.filter(note=>note.role!=='chord').length,breaths:top.breaths}),
-  motif:fmt(PU.motifSummary,{...top.motif,cell:top.motif.cell.split(',').map(value=>Number(value)/part.displayTicks+E.numeric.unit).join(U.listSeparator)}),
+  motif:fmt(PU.motifSummary,{...top.motif,cell:(top.motif?.cell??'').split(',').map(value=>Number(value)/part.displayTicks+E.numeric.unit).join(U.listSeparator)}),
   novelty:fmt(PU.noveltySummary,{stock:top.stock,intervals:top.intervalKinds,rhythms:top.rhythmKinds}),
   drums:fmt(PU.drumSummary,drums),bass:fmt(PU.bassSummary,{...bass,...bass.range}),swing:fmt(PU.swing,{ratio:drums.swingRatio})
  };
@@ -1692,7 +1763,7 @@ function eventsInBar(events,bar,part){
 function formatPartEvent(event,part,drum=false){
  const offset=event.start%part.barTicks,position=Number((offset/part.displayTicks+E.numeric.unit).toFixed(P.display.decimals)),duration=Number((event.duration/part.displayTicks).toFixed(P.display.decimals));
  if(drum)return`${P.drumVoices[event.voice].label}${P.display.at}${position} (${fmt(PU.velocity,event)})`;
- return`${event.note}${P.display.at}${position}${P.display.lengthOpen}${duration}${P.display.lengthClose} · ${PU.roles[event.role]}${event.fret!==undefined?U.noteSeparator+fmt(PU.fingering,event):''}`;
+ return`${event.note}${P.display.at}${position}${P.display.lengthOpen}${duration}${P.display.lengthClose} · ${PU.roles[event.role]??DB.bassPerformance.techniques[event.technique]?.label??PU.rest}${event.technique?U.noteSeparator+DB.bassPerformance.techniques[event.technique].label+U.noteSeparator+fmt(PU.velocity,event):''}${event.fret!==undefined?U.noteSeparator+fmt(PU.fingering,event):''}`;
 }
 function renderFullPartPlans(section){
  const part=section.parts,facts=partFacts(section);
@@ -1790,6 +1861,7 @@ function handleSongformAction(event){
 function buildControls(){
  const fieldHtml=field=>{
   const id=`field-${field.id}`,label=`<span class="field-label">${escapeHtml(field.label)}</span>`,help=field.help?`<small class="field-help" id="help-${field.id}">${escapeHtml(field.help)}</small>`:'',description=field.help?` aria-describedby="help-${field.id}"`:'';
+  if(field.type==='checkbox')return`<label class="part-check" for="${id}"><input type="checkbox" id="${id}" name="${field.id}">${escapeHtml(field.label)}</label>`;
   if(field.type==='songform')return`<fieldset class="songform-editor" id="wrap-${field.id}"><legend>${escapeHtml(field.label)}</legend><input type="hidden" id="${id}" name="${field.id}" value="${escapeHtml(JSON.stringify(DB.defaults[field.id]))}"><div id="songform-rows">${songformEditorMarkup(DB.defaults[field.id])}</div></fieldset>`;
   if(field.type==='select')return`<label class="field" for="${id}">${label}<select id="${id}" name="${field.id}"${description}>${selectOptions(field,DB.defaults).map(option=>`<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)}</option>`).join('')}</select>${help}</label>`;
   if(field.type==='range')return`<div class="range-field"><div class="range-head"><label for="${id}">${escapeHtml(field.label)}</label><output for="${id}" id="output-${field.id}"></output></div><input type="range" id="${id}" name="${field.id}" min="${field.min}" max="${field.max}" step="${field.increment}"${description}>${help}<div class="range-ends"><span>${escapeHtml(field.ends[0])}</span><span>${escapeHtml(field.ends[1])}</span></div></div>`;
@@ -1799,6 +1871,10 @@ function buildControls(){
   const fields=DB.fields.filter(field=>field.step===step),rendered=new Set();
   return fields.map(field=>{
    if(rendered.has(field.id))return'';
+   if(field.type==='checkbox'){
+    const checks=fields.filter(item=>item.type==='checkbox');checks.forEach(item=>rendered.add(item.id));
+    return`<fieldset class="intro-parts" id="intro-part-controls"><legend>${escapeHtml(DB.partPolicy.introTitle)}</legend>${checks.map(fieldHtml).join('')}</fieldset>`;
+   }
    if(field.pair){const pair=fields.filter(item=>item.pair===field.pair);pair.forEach(item=>rendered.add(item.id));return`<div class="pair">${pair.map(fieldHtml).join('')}</div>`;}
    return fieldHtml(field);
   }).join('');
@@ -1809,12 +1885,13 @@ function buildControls(){
 function writeConfig(config){
  const values={...DB.defaults,...config};
  for(const field of DB.fields){
-  if(field.type==='select')values[field.id]=setSelectInput(field,values);
+  if(field.type==='checkbox')document.getElementById(`field-${field.id}`).checked=values[field.id]===true;
+  else if(field.type==='select')values[field.id]=setSelectInput(field,values);
   else document.getElementById(`field-${field.id}`).value=field.type==='songform'?JSON.stringify(typeof values[field.id]==='string'?JSON.parse(values[field.id]):values[field.id]):values[field.id];
  }
  renderSongformEditor();refreshFields();
 }
-function readConfig(){return Object.fromEntries(DB.fields.map(field=>[field.id,document.getElementById(`field-${field.id}`).value]));}
+function readConfig(){return Object.fromEntries(DB.fields.map(field=>[field.id,field.type==='checkbox'?document.getElementById(`field-${field.id}`).checked:document.getElementById(`field-${field.id}`).value]));}
 function refreshFields(){
  const config=readConfig();
  for(const field of DB.fields.filter(field=>field.parent)){
@@ -1829,6 +1906,9 @@ function refreshFields(){
  }
  const mode=byId('modes',document.getElementById('field-mode').value);
  document.getElementById('help-customProgression').textContent=DB.fields.find(field=>field.id==='customProgression').help+' '+[...mode.chords,...mode.borrowed,...mode.applied].map(chord=>chord.id).join(U.listSeparator);
+ let hasIntro=true;try{hasIntro=resolveForm(normalizeConfig(config)).sections.some(([kind])=>kind==='intro');}catch{}
+ document.getElementById('intro-part-controls').hidden=!hasIntro;
+ for(const id of DB.partPolicy.checkboxes)document.getElementById(`field-${id}`).disabled=!hasIntro;
  const selected=byId('subgenres',config.subgenre);
  document.getElementById('help-subgenre').textContent=fmt(SUI.choiceHelp,{description:selected.description,min:selected.bpm[0],max:selected.bpm.at(-1)});
  document.getElementById('help-mood').textContent=byId('moods',config.mood).description;
@@ -1857,8 +1937,9 @@ function renderChordTable(section){
  return`<div class="table-wrap"><table><thead><tr>${['barRange','chord','voicing','bass'].map(key=>`<th scope="col">${escapeHtml(key==='bass'?DB.resultUI.root:U[key])}</th>`).join('')}</tr></thead><tbody>${section.phrase.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td class="mono">${escapeHtml(event.bassName)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function renderNotePattern(events,part){
- const ui=DB.resultUI,pitches=[...new Set(events.filter(event=>event.role!=='rest').map(event=>event.pitch))].sort((a,b)=>b-a);
+ const ui=DB.resultUI,pitches=[...new Set(events.filter(event=>Number.isFinite(event.pitch)).map(event=>event.pitch))].sort((a,b)=>b-a);
  const lanes=pitches.map(pitch=>({label:events.find(event=>event.pitch===pitch).note,events:events.filter(event=>event.pitch===pitch),rest:false}));
+ if(events.some(event=>event.role==='ghost'))lanes.push({label:DB.bassPerformance.ghostSymbol,events:events.filter(event=>event.role==='ghost'),rest:false});
  if(events.some(event=>event.role==='rest'))lanes.push({label:ui.rest,events:events.filter(event=>event.role==='rest'),rest:true});
  return`<div class="note-pattern" style="--ticks:${part.barTicks}"><div class="note-ruler"><span></span><div class="beat-grid" style="--ticks:${part.barTicks}">${beatLabels(part)}</div></div>${lanes.map(lane=>`<div class="note-row"><span class="note-label mono">${escapeHtml(lane.label)}</span><div class="note-lane">${lane.events.map(event=>{const timing=noteTiming(event,part),left=(event.start%part.barTicks)/part.barTicks*E.numeric.percent,width=event.duration/part.barTicks*E.numeric.percent;return`<span class="piano-note${lane.rest?' note-rest':''}" style="left:${left}%;width:${width}%" title="${escapeHtml(fmt(ui.noteExample,{note:lane.label,...timing}))}">${lane.rest?'':escapeHtml(lane.label)}</span>`;}).join('')}</div></div>`).join('')}</div>`;
 }
@@ -1868,16 +1949,17 @@ function renderDrumPattern(events,part){
 }
 function renderPartPlans(section,track=resultState.part,bar=resultState.bar){
  const ui=DB.resultUI,part=section.parts,tab=ui.tabs.find(tab=>tab.id===track),drum=track==='drums';
+ if(part[track].enabled===false)return`<div class="track-workspace" style="--track:var(--${tab.color})"><h3>${escapeHtml(tab.label)}</h3><p class="instruction">${escapeHtml(fmt(DB.partPolicy.off,{part:tab.label}))}</p><p class="timing-help">${escapeHtml(DB.partPolicy.offHelp)}</p></div>`;
  const events=eventsInBar(part[track].events,bar,part);
  const nav=Array.from({length:part.bars},(_,index)=>resultButton('bar',index,String(index+E.numeric.unit),`aria-pressed="${index===bar}" aria-label="${escapeHtml(fmt(ui.barTitle,{bar:index+E.numeric.unit}))}"`)).join('');
- const facts=partFacts(section),range=part[track].range,summary=drum?part.drums.kit:range.low+U.rangeSeparator+range.high;
- const table=`<div class="table-wrap"><table class="part-grid"><thead><tr>${(drum?[ui.voice,ui.start,ui.velocity]:[ui.pitch,ui.start,ui.length]).map(label=>`<th scope="col">${escapeHtml(label)}</th>`).join('')}</tr></thead><tbody>${events.map(event=>{const timing=noteTiming(event,part);return`<tr><td class="mono">${escapeHtml(drum?P.drumVoices[event.voice].label:event.role==='rest'?ui.rest:event.note)}${event.sourceStart<bar*part.barTicks?`<small class="carry">${escapeHtml(ui.carry)}</small>`:''}</td><td class="mono">${escapeHtml(timing.start)}</td><td class="mono">${drum?event.velocity:escapeHtml(timing.length)}</td></tr>`;}).join('')}</tbody></table></div>`;
- return`<div class="track-workspace" style="--track:var(--${tab.color})"><div class="track-heading"><h3>${escapeHtml(tab.label)}</h3><span class="track-facts">${escapeHtml(summary)}</span></div><p class="instruction">${escapeHtml(tab.hint)}</p><nav class="bar-nav" aria-label="${escapeHtml(ui.barLabel)}">${nav}</nav><div class="bar-heading"><strong>${escapeHtml(fmt(ui.barTitle,{bar:bar+E.numeric.unit}))}</strong><span>${escapeHtml(fmt(ui.absoluteBar,{bar:section.start+bar}))}</span></div><p class="timing-help">${escapeHtml(part.displayTicks===P.ticksPerQuarter?ui.timing:ui.compoundTiming)}</p>${drum?renderDrumPattern(events,part):renderNotePattern(events,part)}<p class="timing-help">${escapeHtml(facts.swing)}</p>${events.length?(drum?`<details class="input-details"><summary>${escapeHtml(ui.tableView)}</summary>${table}</details>`:table):`<p class="instruction">${escapeHtml(ui.empty)}</p>`}<p class="repeat-note">${escapeHtml(fmt(ui.repeatHelp,{repeats:section.repeats,bars:section.bars}))}</p><details class="input-details"><summary>${escapeHtml(ui.playingDetails)}</summary><p>${escapeHtml(drum?PU.drumRules:track==='bass'?PU.bassRules:PU.melodyRules)}</p>${track==='topline'?`<p>${escapeHtml(facts.motif)}</p>`:''}</details></div>`;
+ const facts=partFacts(section),range=part[track].range,summary=drum?part.drums.kit:track==='bass'?fmt(DB.bassPerformance.styleSummary,{style:part.bass.style,...range}):range.low+U.rangeSeparator+range.high;
+ const table=`<div class="table-wrap"><table class="part-grid"><thead><tr>${(drum?[ui.voice,ui.start,ui.velocity]:[ui.pitch,ui.start,ui.length,...(track==='bass'?[DB.bassPerformance.column,DB.bassPerformance.strength]:[])]).map(label=>`<th scope="col">${escapeHtml(label)}</th>`).join('')}</tr></thead><tbody>${events.map(event=>{const timing=noteTiming(event,part);return`<tr><td class="mono">${escapeHtml(drum?P.drumVoices[event.voice].label:event.role==='rest'?ui.rest:event.note)}${event.sourceStart<bar*part.barTicks?`<small class="carry">${escapeHtml(ui.carry)}</small>`:''}</td><td class="mono">${escapeHtml(timing.start)}</td><td class="mono">${drum?event.velocity:escapeHtml(timing.length)}</td>${track==='bass'?`<td>${escapeHtml(event.technique?DB.bassPerformance.techniques[event.technique].label:ui.rest)}</td><td class="mono">${event.velocity??''}</td>`:''}</tr>`;}).join('')}</tbody></table></div>`;
+ return`<div class="track-workspace" style="--track:var(--${tab.color})"><div class="track-heading"><h3>${escapeHtml(tab.label)}</h3><span class="track-facts">${escapeHtml(summary)}</span></div><p class="instruction">${escapeHtml(tab.hint)}</p><nav class="bar-nav" aria-label="${escapeHtml(ui.barLabel)}">${nav}</nav><div class="bar-heading"><strong>${escapeHtml(fmt(ui.barTitle,{bar:bar+E.numeric.unit}))}</strong><span>${escapeHtml(fmt(ui.absoluteBar,{bar:section.start+bar}))}</span></div><p class="timing-help">${escapeHtml(part.displayTicks===P.ticksPerQuarter?ui.timing:ui.compoundTiming)}</p>${drum?renderDrumPattern(events,part):renderNotePattern(events,part)}<p class="timing-help">${escapeHtml(facts.swing)}</p>${events.length?(drum?`<details class="input-details"><summary>${escapeHtml(ui.tableView)}</summary>${table}</details>`:table):`<p class="instruction">${escapeHtml(ui.empty)}</p>`}<p class="repeat-note">${escapeHtml(fmt(ui.repeatHelp,{repeats:section.repeats,bars:section.bars}))}</p><details class="input-details"><summary>${escapeHtml(ui.playingDetails)}</summary><p>${escapeHtml(drum?PU.drumRules:track==='bass'?PU.bassRules:PU.melodyRules)}</p>${track==='topline'?`<p>${escapeHtml(facts.motif)}</p>`:track==='bass'?`<p>${escapeHtml(DB.bassPerformance.ghostHelp)}</p>${[...new Set(part.bass.events.filter(event=>event.technique).map(event=>event.technique))].map(id=>`<p><strong>${escapeHtml(DB.bassPerformance.techniques[id].label)}</strong> · ${escapeHtml(DB.bassPerformance.techniques[id].help)}</p>`).join('')}`:''}</details></div>`;
 }
 function renderSectionWorkspace(guide){
  const ui=DB.resultUI,section=guide.sections[resultState.section],tab=ui.tabs.find(tab=>tab.id===resultState.part);
  const navigation=resultButton('section',section.index-E.numeric.unit,escapeHtml(ui.previous),section.index===0?'disabled':'')+resultButton('section',section.index+E.numeric.unit,escapeHtml(ui.next),section.index===guide.sections.length-E.numeric.unit?'disabled':'');
- const tabs=ui.tabs.map((item,index)=>resultButton('part',item.id,`<span>${index+E.numeric.unit}</span>${escapeHtml(item.label)}`,`aria-pressed="${item.id===resultState.part}" style="--track:var(--${item.color})"`)).join('');
+ const tabs=ui.tabs.map((item,index)=>resultButton('part',item.id,`<span>${index+E.numeric.unit}</span>${escapeHtml(item.label)}${section.enabled?.[item.id]===false?`<small>${escapeHtml(DB.partPolicy.offSummary)}</small>`:''}`,`aria-pressed="${item.id===resultState.part}" style="--track:var(--${item.color})"`)).join('');
  const content=tab.id==='chords'?`<div class="chord-workspace"><p class="instruction">${escapeHtml(tab.hint)} <strong>${escapeHtml(fmt(ui.phrase,{bars:section.phraseBars,repeats:section.repeats}))}</strong></p>${renderChordCards(section.phrase)}<div class="instrument-strip"><span>${escapeHtml(U.arrangement)}</span>${section.arrangement.instruments.map(item=>`<span class="instrument-chip">${escapeHtml(item.label)}</span>`).join('')}</div><details class="input-details"><summary>${escapeHtml(ui.keyboard)}</summary>${renderChordTable(section)}<p class="timing-help">${escapeHtml(U.octaveHint)}</p></details><div class="transition-note"><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div>`:renderPartPlans(section);
  return`<section class="panel section-workspace" id="result-section" aria-label="${escapeHtml(ui.sectionLabel)}"><div class="section-workspace-head"><div><span class="eyebrow">${escapeHtml(U.sectionsTitle)}</span><h2>${escapeHtml(section.label)} <span>${escapeHtml(fmt(ui.range,section))}</span></h2></div><div class="section-paging">${navigation}</div></div><nav class="result-tabs" aria-label="${escapeHtml(ui.partLabel)}">${tabs}</nav><div class="section-task" aria-live="polite">${content}</div></section>`;
 }

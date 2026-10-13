@@ -42,7 +42,8 @@ test('shared harmony, vocal resolution, drum limbs, playable bass and guide expo
    const parts=section.parts,grid=db.parts.meters[guide.config.meter],range=db.vocalRanges.find(range=>range.id===guide.config.vocalRange),total=section.phraseBars*grid.barTicks;
    const chordAt=start=>section.phrase.find(chord=>start>=chord.bar*grid.barTicks&&start<(chord.bar+chord.duration)*grid.barTicks);
    assert.equal(parts.topline.events.reduce((sum,event)=>sum+event.duration,0),total,'notes and rests must cover the full harmonic phrase');
-   assert.ok(parts.topline.evaluations>0&&parts.bass.evaluations>0);
+   assert.ok(!parts.topline.enabled||parts.topline.evaluations>0);
+   assert.ok(!parts.bass.enabled||parts.bass.evaluations>0);
    assert.equal(parts.topline.stock,0,'default high novelty excludes the known stock contours');
    for(let start=0;start<total;start+=grid.barTicks*db.parts.phraseBars){
     const end=Math.min(total,start+grid.barTicks*db.parts.phraseBars);
@@ -76,18 +77,20 @@ test('shared harmony, vocal resolution, drum limbs, playable bass and guide expo
     assert.ok(!together.some(event=>event.voice==='ride')||!together.some(event=>event.voice==='closedHat'),'one hand timekeeper');
    }
    for(const chord of section.phrase){
+    if(!parts.bass.enabled)continue;
     const root=parts.bass.events.find(note=>note.start===chord.bar*grid.barTicks);
     assert.ok(root,'each chord change must retain a bass onset, including fast tempos');assert.equal(root.pitch%12,chord.root);
    }
-   for(const[index,note]of parts.bass.events.entries()){
+   const bassNotes=parts.bass.events.filter(note=>Number.isFinite(note.pitch));
+   for(const[index,note]of bassNotes.entries()){
     const meter=db.meters.find(meter=>meter.id===guide.config.meter);
-    assert.ok(note.duration>=Math.ceil(guide.config.bpm*meter.pulseQuarters*db.parts.ticksPerQuarter/(60*db.parts.bass.maxNotesPerSecond)),'bass speed includes the compound BPM pulse');
+    if(index)assert.ok(note.start-bassNotes[index-1].start>=Math.ceil(guide.config.bpm*meter.pulseQuarters*db.parts.ticksPerQuarter/(60*db.parts.bass.maxNotesPerSecond)),'bass attack speed includes the compound BPM pulse');
     assert.ok(note.pitch>=db.parts.bass.lower&&note.pitch<=db.parts.bass.upper);
     assert.equal(db.parts.bass.tuning.find(string=>string.string===note.string).midi+note.fret,note.pitch);
     assert.ok(note.fret>=0&&note.fret<=db.parts.bass.frets);
-    if(index)assert.ok(Math.abs(note.pitch-parts.bass.events[index-1].pitch)<=db.parts.bass.maxLeap);
+    if(index)assert.ok(Math.abs(note.pitch-bassNotes[index-1].pitch)<=db.parts.bass.maxLeap);
     if(note.role==='approach'){
-     const next=parts.bass.events[index+1];assert.equal(next.pitch,note.resolvesTo.pitch);assert.equal(Math.abs(next.pitch-note.pitch),1);assert.ok(!note.strong);
+     const next=bassNotes[index+1];assert.equal(next.pitch,note.resolvesTo.pitch);assert.equal(Math.abs(next.pitch-note.pitch),1);assert.ok(!note.strong);
     }else assert.ok(chordAt(note.start).tones.includes(note.pitch%12));
    }
    for(const[index,event]of section.events.entries()){
@@ -109,7 +112,7 @@ test('shared harmony, vocal resolution, drum limbs, playable bass and guide expo
   assert.ok(markdown.includes(guide.sections[0].events[0].symbol));
   assert.ok(markdown.includes(guide.config.seed));
   assert.ok(markdown.includes(db.partUI.title));
-  assert.ok(markdown.includes(guide.sections[0].parts.topline.notes[0].note));
+  assert.ok(markdown.includes(guide.sections.flatMap(section=>section.parts.topline.notes)[0].note));
   assert.ok(markdown.includes(db.partUI.unitHelp));
   assert.ok(!markdown.includes('undefined'));
   const report={innerHTML:''};
@@ -270,4 +273,70 @@ test('hierarchical genres, editable song form, chord recipes and setting preview
  assert.ok(element('report').innerHTML.includes(jazz.progressionPlan.title));
  assert.ok(element('report').innerHTML.includes('8마디:'));
  assert.ok(api.toMarkdown(custom).includes('Verse (12마디)'));
+});
+
+test('intro part switches and bass performance preserve harmony, timing and playable articulation',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8'),context=vm.createContext({});
+ vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+ const api=context.MusicMaker,db=api.database;
+ assert.equal(api.validateDatabase(),true);
+ const input={...db.defaults,form:'custom',customForm:[['intro',4],['chorus',8]],seed:'intro-bass-performance',bassMotion:75};
+ const quiet=api.generateGuide(input),slap=api.generateGuide({...input,introVocal:true,introDrums:true,introBass:true,bassStyle:'slap',bassGhost:100});
+ const pick=api.generateGuide({...input,introVocal:false,introDrums:false,introBass:true,bassStyle:'pick',bassGhost:0});
+ for(const part of['topline','drums','bass'])assert.equal(quiet.sections[0].parts[part].enabled,false);
+ assert.equal(quiet.sections[0].parts.topline.notes.length,0);assert.equal(quiet.sections[0].parts.drums.events.length,0);
+ assert.ok(quiet.sections[0].parts.bass.events.every(event=>event.role==='rest'));
+ assert.ok(!quiet.sections[0].arrangement.instruments.some(item=>['bass','rhythm','melody'].includes(item.role)));
+ assert.ok(quiet.sections[1].parts.topline.notes.length>0,'the chorus keeps its vocal part');
+ for(const part of['topline','drums','bass'])assert.equal(slap.sections[0].parts[part].enabled,true);
+ assert.ok(slap.sections[0].parts.topline.notes.length>0);assert.ok(slap.sections[0].parts.drums.events.length>0);
+ assert.equal(pick.sections[0].parts.drums.events.length,0);assert.ok(pick.sections[0].parts.bass.events.some(event=>Number.isFinite(event.pitch)));
+ assert.ok(pick.sections.every(section=>section.parts.bass.events.filter(event=>Number.isFinite(event.pitch)).every(event=>event.technique==='pick')));
+ assert.ok(!pick.sections.flatMap(section=>section.parts.bass.events).some(event=>event.role==='ghost'));
+ const slapEvents=slap.sections.flatMap(section=>section.parts.bass.events);
+ assert.ok(slapEvents.some(event=>event.technique==='slap'));assert.ok(slapEvents.some(event=>event.role==='ghost'));
+ for(const guide of[quiet,slap,pick])for(const section of guide.sections){
+  const part=section.parts,total=part.bars*part.barTicks,events=part.bass.events;
+  assert.equal(events.reduce((sum,event)=>sum+event.duration,0),total);
+  for(const[index,event]of events.entries()){
+   assert.ok(event.duration>0&&event.start>=0&&event.start+event.duration<=total);
+   if(index)assert.equal(event.start,events[index-1].start+events[index-1].duration,'pitched notes, rests and ghosts form one continuous monophonic lane');
+   if(event.role==='ghost'){
+    assert.equal(event.pitch,null);assert.equal(event.note,'×');assert.equal(event.strong,false);assert.ok(event.velocity<db.bassPerformance.velocity.normal);
+    assert.ok(!Object.hasOwn(event,'fret'),'unpitched ghost notes do not advertise a fake fret or MIDI pitch');
+   }
+  }
+  if(!part.bass.enabled)continue;
+  const pitched=events.filter(event=>Number.isFinite(event.pitch));
+  for(const chord of section.phrase)assert.equal(pitched.find(note=>note.start===chord.bar*part.barTicks).pitch%12,chord.root);
+  for(const[index,note]of pitched.entries()){
+   const chord=section.phrase.find(chord=>note.start>=chord.bar*part.barTicks&&note.start<(chord.bar+chord.duration)*part.barTicks);
+   assert.equal(db.parts.bass.tuning.find(string=>string.string===note.string).midi+note.fret,note.pitch);
+   if(note.role==='approach'){
+    assert.equal(pitched[index+1].pitch,note.resolvesTo.pitch);
+    assert.equal(events[events.indexOf(note)+1].pitch,note.resolvesTo.pitch,'a ghost never interrupts an approach-note resolution');
+   }else assert.ok(chord.tones.includes(note.pitch%12));
+   if(['hammer','pull'].includes(note.technique)){
+    const previous=pitched[index-1];assert.equal(previous.string,note.string);assert.equal(previous.position,note.position);
+    assert.ok(Math.abs(previous.fret-note.fret)<=db.bassPerformance.legatoFrets);
+    assert.equal(previous.start+previous.duration,note.start,'legato notes stay connected');
+   }
+   if(note.technique==='pop')assert.ok(db.bassPerformance.popStrings.includes(note.string));
+  }
+ }
+ context.guide=slap;
+ const report={innerHTML:'',querySelector:()=>null},elements=new Map();
+ const element=id=>id==='report'?report:elements.get(id)??elements.set(id,{innerHTML:'',value:'',checked:false,dataset:{},setAttribute(){}}).get(id);
+ context.document={getElementById:element};
+ vm.runInContext('buildControls();writeConfig(guide.config)',context);
+ assert.ok(element('controls').innerHTML.includes('type="checkbox"'));assert.equal(element('field-introVocal').checked,true);
+ const roundtrip=JSON.parse(vm.runInContext('JSON.stringify(readConfig())',context));
+ assert.equal(roundtrip.introDrums,true);assert.equal(roundtrip.bassStyle,'slap');
+ vm.runInContext('renderGuide(guide);resultState.section=0;resultState.part="bass";renderGuide(guide,false)',context);
+ assert.ok(report.innerHTML.includes(db.bassPerformance.column));assert.ok(report.innerHTML.includes(db.bassPerformance.techniques.ghost.label));assert.ok(!report.innerHTML.includes('undefined'));
+ context.guide=quiet;vm.runInContext('renderGuide(guide);resultState.section=0;resultState.part="topline";renderGuide(guide,false)',context);
+ assert.ok(report.innerHTML.includes(db.partPolicy.offHelp));assert.ok(!report.innerHTML.includes('class="note-pattern"'));
+ assert.ok(api.toMarkdown(slap).includes(db.bassPerformance.techniques.slap.label));assert.ok(api.toMarkdown(slap).includes('×'));
+ assert.ok(!api.toMarkdown(quiet).includes('undefined'));
+ assert.equal(db.visualTheme.paper,'#f5f3ee');assert.equal(db.visualTheme.accent,'#d65537');assert.equal(db.visualTheme.green,'#607258');
 });
