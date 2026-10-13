@@ -116,9 +116,12 @@ test('shared harmony, vocal resolution, drum limbs, playable bass and guide expo
   context.document={getElementById:()=>report};context.guide=guide;
   vm.runInContext('renderGuide(guide)',context);
   assert.ok(report.innerHTML.includes('data-action="json"'));
-  assert.ok(report.innerHTML.includes('class="part-grid"'));
+  assert.ok(report.innerHTML.includes('class="result-tabs"'));
   assert.ok(!report.innerHTML.includes('undefined'));
-  assert.equal((report.innerHTML.match(/class="section"/g)||[]).length,guide.sections.length);
+  assert.equal((report.innerHTML.match(/id="result-section"/g)||[]).length,1);
+  context.guide=guide;
+  const printable=vm.runInContext('renderPrintableGuide(guide)',context);
+  assert.equal((printable.match(/class="section"/g)||[]).length,guide.sections.length);
  }
  // User-provided seed is inert text in HTML and remains available in structured export.
  const escaped={...defaults,config:{...defaults.config,seed:'<img src=x onerror=alert(1)>'}};
@@ -126,6 +129,48 @@ test('shared harmony, vocal resolution, drum limbs, playable bass and guide expo
  vm.runInContext('renderGuide(guide)',context);
  assert.ok(!report.innerHTML.includes('<img src=x'));
  assert.ok(report.innerHTML.includes('&lt;img'));
+});
+
+test('result workspace shows one section and part with readable timing, navigation and complete print output',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8'),context=vm.createContext({});
+ vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+ const api=context.MusicMaker,db=api.database;
+ const guide=api.generateGuide({...db.defaults,form:'custom',customForm:[['intro',2],['chorus',8],['outro',2]],seed:'readable-guide'});
+ const focused=[],report={innerHTML:'',querySelector:selector=>({focus:()=>focused.push(selector)})};
+ context.document={getElementById:()=>report};context.guide=guide;
+ vm.runInContext('currentGuide=guide;renderGuide(guide)',context);
+ const state=()=>JSON.parse(vm.runInContext('JSON.stringify(resultState)',context));
+ const press=(action,value)=>{context.click={target:{closest:()=>({dataset:{resultAction:action,resultValue:String(value)}})}};vm.runInContext('handleResultAction(click)',context);};
+ assert.deepEqual(state(),{section:1,part:'chords',bar:0});
+ assert.equal((report.innerHTML.match(/id="result-section"/g)||[]).length,1);
+ for(const step of db.resultUI.steps){assert.ok(report.innerHTML.includes('href="#'+step.target+'"'));assert.ok(report.innerHTML.includes('id="'+step.target+'"'));}
+ for(const tab of db.resultUI.tabs)assert.ok(report.innerHTML.includes('data-result-value="'+tab.id+'"'));
+ assert.ok(report.innerHTML.includes('class="chord-duration"'));assert.ok(!report.innerHTML.includes('class="part-grid"'));
+ for(const track of['drums','bass','topline']){
+  press('part',track);assert.equal(state().part,track);
+  assert.ok(report.innerHTML.includes('class="part-grid"'));
+  assert.ok(report.innerHTML.includes(track==='drums'?'class="drum-pattern"':'class="note-pattern"'));
+  assert.ok(report.innerHTML.includes(db.resultUI.start));assert.ok(report.innerHTML.includes(track==='drums'?db.resultUI.velocity:db.resultUI.length));
+  assert.ok(report.innerHTML.includes('aria-pressed="true"'));assert.ok(!report.innerHTML.includes('undefined'));
+ }
+ press('bar',7);assert.equal(state().bar,7);assert.ok(report.innerHTML.includes(db.resultUI.barTitle.replace('{bar}','8')));
+ press('section',2);assert.deepEqual(state(),{section:2,part:'topline',bar:0});
+ assert.ok(report.innerHTML.includes(db.resultUI.barTitle.replace('{bar}','1')));
+ press('bar',99);assert.equal(state().bar,0);press('section',99);assert.equal(state().section,2);
+ assert.ok(focused.length>0,'navigation restores keyboard focus after rendering');
+ const printable=vm.runInContext('renderPrintableGuide(guide)',context);
+ assert.equal((printable.match(/class="section"/g)||[]).length,guide.sections.length);
+ assert.equal((printable.match(/class="part-grid"/g)||[]).length,guide.sections.length);
+ assert.ok(printable.includes(guide.sections[1].phrase[0].voicing));assert.ok(printable.includes(guide.sections[1].parts.topline.notes[0].note));
+ context.sampleEvent={start:5,duration:3};context.samplePart={barTicks:12,displayTicks:2};
+ const compound=JSON.parse(vm.runInContext('JSON.stringify(noteTiming(sampleEvent,samplePart))',context));
+ assert.deepEqual(compound,{start:'3.5칸',length:'1.5칸'});
+ context.held=[{start:14,duration:4,note:'C4',pitch:60,role:'chord'}];
+ const carried=JSON.parse(vm.runInContext('JSON.stringify(eventsInBar(held,1,{barTicks:16}))',context))[0];
+ assert.equal(carried.start,16);assert.equal(carried.duration,2);assert.equal(carried.sourceStart,14);
+ context.guide={...guide,config:{...guide.config,seed:'<img src=x>'}};vm.runInContext('renderGuide(guide)',context);
+ assert.ok(!report.innerHTML.includes('<img src=x>'));assert.ok(report.innerHTML.includes('&lt;img src=x&gt;'));
+ assert.ok(!api.toMarkdown(guide).includes('undefined'));
 });
 
 test('hierarchical genres, editable song form, chord recipes and setting previews',()=>{
