@@ -405,3 +405,52 @@ test('theory interactions coordinate global form, real part candidates, orchestr
  assert.ok(api.toMarkdown(narrative).includes(db.interactionUI.title));assert.ok(api.toMarkdown(chamber).includes(db.interactionUI.channel));
  context.guide=chamber;const print=vm.runInContext('renderPrintableGuide(guide)',context);const response=chamber.sections.flatMap(section=>section.orchestration.counter.notes)[0];assert.ok(print.includes(response.note));
 });
+
+test('slash chords follow structural bass and selectable voicings mark the piano keys',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8'),context=vm.createContext({});
+ vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+ const api=context.MusicMaker,db=api.database;
+ context.fixture={phraseBars:2,parts:{barTicks:16,bass:{enabled:true,events:[{start:0,duration:16,pitch:43},{start:16,duration:16,pitch:48}]}},events:[
+  {symbol:'C',root:0,notes:[60,64,67],bar:0,duration:1},
+  {symbol:'Cmaj7',root:0,notes:[60,64,67,71],bar:1,duration:1}
+ ],orchestration:{tracks:[{role:'harmony',events:[{start:0,duration:16,pitches:[64,67,72]},{start:16,duration:16,pitches:[60,64,67,71]}]}]}};
+ vm.runInContext('updateChordNotation({key:DB.keys[0]},fixture)',context);
+ assert.equal(context.fixture.events[0].symbol,'C/G');assert.equal(context.fixture.events[0].bassName,'G2');
+ assert.equal(context.fixture.events[1].symbol,'Cmaj7','octave displacement does not create a slash chord');
+ assert.equal(context.fixture.events[0].voicing,'E4 · G4 · C5','displayed voicing follows the realized accompaniment');
+ vm.runInContext('updateChordNotation({key:DB.keys[0]},fixture)',context);
+ assert.equal(context.fixture.events[0].symbol,'C/G','notation remains stable when recalculated');
+ context.fixture.parts.bass.enabled=false;
+ vm.runInContext('updateChordNotation({key:DB.keys[0]},fixture)',context);
+ assert.equal(context.fixture.events[0].symbol,'C/E','a silent bass part uses the actual accompaniment bottom note');
+ assert.equal(vm.runInContext("chordSymbol({symbol:'D♭maj7',root:1,bass:44},byId('keys','Db'))",context),'D♭maj7/A♭');
+ context.fixture.phrase=context.fixture.events;context.fixture.tonality={pc:0};
+ const piano=vm.runInContext('renderChordVoicing(fixture,0)',context);
+ assert.match(piano,/class="piano-key piano-white key-chord key-bass" data-midi="64"/);
+ assert.match(piano,/class="piano-key piano-white key-chord" data-midi="67"/);
+ assert.match(piano,/class="piano-key piano-white key-chord" data-midi="72"/);
+ assert.match(piano,/class="piano-key piano-black" data-midi="66"/,'unselected black keys are not marked');
+ assert.ok(piano.includes(db.resultUI.chordTones));assert.ok(piano.includes(db.resultUI.bassTone));
+ const guide=api.generateGuide({...db.defaults,seed:'slash-keyboard',form:'custom',customForm:[['intro',2],['chorus',4]]});
+ for(const section of guide.sections)for(const chord of section.phrase){
+  const pitches=section.orchestration.tracks.filter(track=>track.role==='harmony').flatMap(track=>track.events.filter(event=>event.start>=chord.bar*section.parts.barTicks&&event.start<(chord.bar+chord.duration)*section.parts.barTicks).flatMap(event=>event.pitches??[]));
+  assert.deepEqual([...chord.voicingNotes],[...new Set(pitches.length?pitches:chord.notes)].sort((a,b)=>a-b));
+  assert.equal(chord.symbol.includes('/'),chord.bass%12!==chord.root);
+ }
+ const report={innerHTML:'',querySelector:()=>({focus(){}})};context.document={getElementById:()=>report};context.guide=guide;
+ vm.runInContext('currentGuide=guide;renderGuide(guide)',context);
+ assert.ok(report.innerHTML.includes('id="chord-voicings" hidden'));
+ const input={dataset:{resultAction:'voicings',resultValue:'toggle'},checked:true};context.event={target:{closest:()=>input}};
+ assert.equal(vm.runInContext('handleResultAction(event)',context),true);
+ assert.ok(!report.innerHTML.includes('id="chord-voicings" hidden'));assert.ok(report.innerHTML.includes('class="piano-keys"'));
+ const chordButton={dataset:{resultAction:'chord',resultValue:'1'}};context.event={target:{closest:()=>chordButton}};
+ vm.runInContext('handleResultAction(event)',context);assert.equal(vm.runInContext('resultState.chord',context),1);
+ assert.equal(vm.runInContext('resultState.showVoicings',context),true);
+ assert.ok(report.innerHTML.includes(`aria-label="${guide.sections[1].phrase[1].voicingNotes.map(pitch=>db.pitchNames.sharp[pitch%12]+(Math.floor(pitch/12)-1))[0]} · ${db.resultUI.chordTones}`));
+ input.checked=false;context.event={target:{closest:()=>input}};vm.runInContext('handleResultAction(event)',context);
+ assert.ok(report.innerHTML.includes('id="chord-voicings" hidden'));
+ const text=api.toMarkdown(guide);assert.ok(guide.sections[0].phrase.every(chord=>text.includes(chord.symbol)));
+ vm.runInContext('resultState.showVoicings=true',context);const printed=vm.runInContext('renderPrintableGuide(guide)',context);
+ assert.ok(printed.includes('class="piano-keys"'));assert.ok(printed.includes(db.resultUI.bassTone));
+ assert.equal(guide.config.showVoicings,undefined,'display preference does not alter the composition seed');
+});

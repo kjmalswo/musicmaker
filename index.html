@@ -19,6 +19,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}body{font-size:15px;line-hei
 
 .intro-parts{border:1px solid var(--line);border-radius:10px;padding:12px;margin:16px 0}.intro-parts legend{font-size:12px;font-weight:650;padding:0 5px}.part-check{display:flex;align-items:center;gap:8px;font-size:13px;margin:8px 0}.part-check input{width:18px;height:18px;min-height:0;padding:0;accent-color:var(--accent)}
 .input-details h3{font-size:13px;margin-top:20px}.input-details table{white-space:normal}.result-tabs small{font-size:10px;font-weight:400}.print-interaction p{font-size:10px}
+.chord-row button.chord{text-align:left;cursor:pointer}.chord-row .chord[aria-pressed="true"]{border-color:var(--chords);box-shadow:0 0 0 2px var(--chords)}.voicing-toggle{margin:18px 0 12px}.piano-voicing{border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0;background:var(--surface)}.piano-voicing h3{font-size:21px;margin:0}.piano-voicing h3 small{font-size:12px;color:var(--muted);font-weight:500}.piano-scroll{overflow-x:auto;padding:6px 0 12px}.piano-keys{position:relative;display:flex;height:158px;min-width:calc(var(--white-keys)*30px);border:1px solid var(--ink);border-radius:0 0 6px 6px;background:var(--ink)}.piano-key{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;padding-bottom:8px}.piano-white{flex:1;background:var(--surface);border-right:1px solid var(--ink);border-radius:0 0 4px 4px;color:var(--ink)}.piano-white:last-child{border-right:0}.piano-black{position:absolute;top:0;height:62%;z-index:2;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:0 0 4px 4px}.piano-key.key-chord{background:var(--chords);color:var(--colorInk)}.piano-key.key-bass{background:var(--bass);color:var(--colorInk)}.piano-key.key-chord.key-bass{background:linear-gradient(90deg,var(--chords) 50%,var(--bass) 50%)}.key-label{font-family:monospace;font-size:10px;font-weight:700;line-height:1.15}.key-marker{font-size:14px;line-height:1}.piano-legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px}.piano-legend span:before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}.chord-legend:before{background:var(--chords)}.bass-legend:before{background:var(--bass)}@media print{.piano-voicing{break-inside:avoid}.piano-keys{min-width:0;height:135px}.piano-scroll{overflow:visible}.key-label{font-size:8px}.key-marker{font-size:10px}}
 </style></head>
 <body>
 <header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">♮</span><span data-text="brand"></span></div><span class="topnote" data-text="topnote"></span><span class="badge"><span class="dot"></span><span data-text="localBadge"></span></span></header>
@@ -29,9 +30,10 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}body{font-size:15px;line-hei
 // ======================== GAME DATABASE ========================
 // All selectable content, musical policies, engine weights and UI copy live here.
 const GAME_DATABASE={
-version:'2.0.0',storage:{key:'musicmaker.settings.v1'},
+version:'2.0.1',storage:{key:'musicmaker.settings.v1'},
 visualTheme:{"paper":"#f5f3ee","surface":"#fffefa","ink":"#252820","muted":"#777970","line":"#ddded4","accent":"#d65537","accentDeep":"#252820","tint":"#f8e9e1","green":"#607258","chords":"#d65537","drums":"#607258","bass":"#252820","topline":"#d65537","cyan":"#f8e9e1","colorInk":"#fffefa","grid":"#f5f3ee","danger":"#af3029"},
-resultUI:{"title":"구간별 작곡 가이드","startKind":"chorus","sectionLabel":"작업할 구간","partLabel":"입력할 파트","barLabel":"확인할 마디","selected":"선택됨","steps":[{"title":"곡의 흐름","body":"송폼을 확인하고 구간을 고르세요.","target":"result-structure"},{"title":"구간 작업","body":"코드와 각 파트를 순서대로 입력하세요.","target":"result-section"},{"title":"DAW에 옮기기","body":"반복하고 연결 부분을 다듬으세요.","target":"result-daw"}],"tabs":[{"id":"chords","label":"코드","hint":"코드 블록을 순서대로 배치하세요.","color":"chords"},{"id":"drums","label":"드럼","hint":"색이 채워진 칸에 타격을 입력하세요.","color":"drums"},{"id":"bass","label":"베이스","hint":"음높이·시작·길이를 입력하고 킥과 맞추세요.","color":"bass"},{"id":"topline","label":"보컬","hint":"쉼을 포함해 입력하고 가사의 음절을 맞추세요.","color":"topline"}],"sectionColors":{"intro":"bass","verse":"chords","pre":"drums","chorus":"topline","bridge":"drums","outro":"bass","theme":"chords","development":"drums","climax":"topline","post":"topline","dancebreak":"drums"},"previous":"이전 구간","next":"다음 구간","range":"{start}–{end}마디","phrase":"{bars}마디 진행 × {repeats}회","chordDuration":"{duration}마디 유지","chordPosition":"{bar}마디","barTitle":"프레이즈 {bar}마디","absoluteBar":"곡의 {bar}마디부터 · 반복마다 같은 위치","keyboard":"건반에 입력할 음","pitch":"음높이","start":"시작","length":"길이","role":"역할","voice":"드럼","velocity":"세기","unit":"{value}박","eighthUnit":"{value}칸","timing":"1 = 첫 박 · 소수점은 박 안의 위치","compoundTiming":"1 = 첫 8분음표 · 0.5 = 16분음표 길이","noteExample":"예: {note} · {start}에 시작 · {length} 유지","carry":"앞 마디에서 이어짐","empty":"이 마디는 쉬세요.","rest":"쉼","visualTitle":"음표 위치와 길이","drumTitle":"드럼 타격 위치","hit":"{voice} · {start} · 세기 {velocity}","hitSymbol":"●","tableView":"타격 표로 보기","playingDetails":"연주 참고","voices":"건반 오른손","root":"코드 루트","details":"설계 요약","reference":"8마디 기준 진행","referenceHelp":"구간 작업은 선택한 송폼의 길이를 따릅니다.","repeatHelp":"위 프레이즈를 {repeats}번 반복해 {bars}마디를 채우세요.","printTitle":"작곡 가이드","saved":"재현 정보","pattern":"입력 패턴","tracks":"파트별 입력","timekeeper":"타임키퍼","total":"{count}구간 · {bars}마디","subdivisions":{"2":["","&"],"4":["","e","&","a"]}},
+chordNotation:{slash:"{chord}/{bass}"},
+resultUI:{"showVoicings":false,"voicingToggle":"보이싱 보기","voicingTitle":"코드 보이싱","voicingChoose":"코드를 누르면 건반에 표시됩니다.","chordTones":"코드음","bassTone":"베이스음","keyboardNote":"{note} · {roles}","noteMarker":"●","pianoLayout":{"whiteClasses":[0,2,4,5,7,9,11],"blackWidth":0.62,"minimumMidi":0,"maximumMidi":127},"voicingHelp":"낮은 음부터 표시합니다. 숫자는 옥타브입니다.","slashHelp":"슬래시 뒤 음은 코드 시작 시점의 베이스음입니다.","title":"구간별 작곡 가이드","startKind":"chorus","sectionLabel":"작업할 구간","partLabel":"입력할 파트","barLabel":"확인할 마디","selected":"선택됨","steps":[{"title":"곡의 흐름","body":"송폼을 확인하고 구간을 고르세요.","target":"result-structure"},{"title":"구간 작업","body":"코드와 각 파트를 순서대로 입력하세요.","target":"result-section"},{"title":"DAW에 옮기기","body":"반복하고 연결 부분을 다듬으세요.","target":"result-daw"}],"tabs":[{"id":"chords","label":"코드","hint":"코드 블록을 순서대로 배치하세요.","color":"chords"},{"id":"drums","label":"드럼","hint":"색이 채워진 칸에 타격을 입력하세요.","color":"drums"},{"id":"bass","label":"베이스","hint":"음높이·시작·길이를 입력하고 킥과 맞추세요.","color":"bass"},{"id":"topline","label":"보컬","hint":"쉼을 포함해 입력하고 가사의 음절을 맞추세요.","color":"topline"}],"sectionColors":{"intro":"bass","verse":"chords","pre":"drums","chorus":"topline","bridge":"drums","outro":"bass","theme":"chords","development":"drums","climax":"topline","post":"topline","dancebreak":"drums"},"previous":"이전 구간","next":"다음 구간","range":"{start}–{end}마디","phrase":"{bars}마디 진행 × {repeats}회","chordDuration":"{duration}마디 유지","chordPosition":"{bar}마디","barTitle":"프레이즈 {bar}마디","absoluteBar":"곡의 {bar}마디부터 · 반복마다 같은 위치","keyboard":"건반에 입력할 음","pitch":"음높이","start":"시작","length":"길이","role":"역할","voice":"드럼","velocity":"세기","unit":"{value}박","eighthUnit":"{value}칸","timing":"1 = 첫 박 · 소수점은 박 안의 위치","compoundTiming":"1 = 첫 8분음표 · 0.5 = 16분음표 길이","noteExample":"예: {note} · {start}에 시작 · {length} 유지","carry":"앞 마디에서 이어짐","empty":"이 마디는 쉬세요.","rest":"쉼","visualTitle":"음표 위치와 길이","drumTitle":"드럼 타격 위치","hit":"{voice} · {start} · 세기 {velocity}","hitSymbol":"●","tableView":"타격 표로 보기","playingDetails":"연주 참고","voices":"건반 오른손","root":"코드 루트","details":"설계 요약","reference":"8마디 기준 진행","referenceHelp":"구간 작업은 선택한 송폼의 길이를 따릅니다.","repeatHelp":"위 프레이즈를 {repeats}번 반복해 {bars}마디를 채우세요.","printTitle":"작곡 가이드","saved":"재현 정보","pattern":"입력 패턴","tracks":"파트별 입력","timekeeper":"타임키퍼","total":"{count}구간 · {bars}마디","subdivisions":{"2":["","&"],"4":["","e","&","a"]}},
 ui:{
  "brand": "musicmaker",
  "title": "musicmaker · 작곡 가이드",
@@ -91,7 +93,7 @@ ui:{
  "chord": "코드",
  "roman": "도수",
  "bass": "베이스",
- "voicing": "건반 음",
+ "voicing": "보이싱 음",
  "source": "화성 유형",
  "barRange": "마디",
  "arrangement": "사용할 악기",
@@ -1534,8 +1536,26 @@ function planDawTracks(section){
  });
  return{tracks,drums:[...new Set(section.parts.drums.events.map(hit=>hit.voice))].map(id=>({label:P.drumVoices[id].label,midi:K.midi.drumMap[id]})),help:IU.midiHelp};
 }
+function chordSymbol(chord,key){
+ const symbol=chord.harmonicSymbol??chord.symbol;
+ return Number.isFinite(chord.bass)&&pc(chord.bass)!==pc(chord.root)?fmt(DB.chordNotation.slash,{chord:symbol,bass:pitchName(chord.bass,key)}):symbol;
+}
+function updateChordNotation(ctx,section){
+ const part=section.parts,total=section.phraseBars*part.barTicks;
+ for(const chord of section.events){
+  const start=chord.bar*part.barTicks%total,end=start+chord.duration*part.barTicks;
+  const pitches=section.orchestration.tracks.filter(track=>track.role==='harmony').flatMap(track=>track.events.filter(event=>event.start>=start&&event.start<end).flatMap(event=>event.pitches??(Number.isFinite(event.pitch)?[event.pitch]:[])));
+  chord.voicingNotes=[...new Set(pitches.length?pitches:chord.notes)].sort((a,b)=>a-b);
+  chord.voicing=chord.voicingNotes.map(pitch=>pitchName(pitch,ctx.key,true)).join(U.noteSeparator);
+  const bass=part.bass.events.find(event=>Number.isFinite(event.pitch)&&event.start<=start&&event.start+event.duration>start);
+  chord.bass=part.bass.enabled?(bass?.pitch??chord.bass):chord.voicingNotes[0];
+  chord.bassName=Number.isFinite(chord.bass)?pitchName(chord.bass,ctx.key,true):PU.rest;
+  chord.harmonicSymbol??=chord.symbol;
+  chord.symbol=chordSymbol(chord,ctx.key);
+ }
+}
 function finalizeInteraction(ctx,section){
- section.orchestration=planOrchestration(ctx,section);section.acoustics=planAcoustics(ctx,section);section.performance=applyPerformance(ctx,section);section.dawTracks=planDawTracks(section);
+ section.orchestration=planOrchestration(ctx,section);updateChordNotation(ctx,section);section.acoustics=planAcoustics(ctx,section);section.performance=applyPerformance(ctx,section);section.dawTracks=planDawTracks(section);
  const metrics=section.interaction.metrics,counter=section.orchestration.counter;
  const family=DB.rhythmFamilies[ctx.drumProfile.family];metrics.clavePhaseErrors=0;
  if(family?.meter===ctx.meter.id&&section.parts.drums.enabled)for(let bar=0;bar<section.parts.bars;bar++){const phase=(bar+ctx.sectionIntent.startBar-E.numeric.unit)%family.period;for(const tick of family.clave[phase]??[])if(!section.parts.drums.events.some(hit=>hit.voice==='claves'&&hit.start===bar*section.parts.barTicks+tick))metrics.clavePhaseErrors++;}
@@ -1792,7 +1812,7 @@ function refreshFields(){
  renderSettingPreview(config);
 }
 
-let resultState={section:0,part:DB.resultUI.tabs[0].id,bar:0};
+let resultState={section:0,part:DB.resultUI.tabs[0].id,bar:0,showVoicings:DB.resultUI.showVoicings,chord:0};
 function resultButton(action,value,label,attributes=''){
  return`<button type="button" data-result-action="${action}" data-result-value="${value}" ${attributes}>${label}</button>`;
 }
@@ -1804,12 +1824,26 @@ function beatLabels(part){
 function noteTiming(event,part){
  return{start:timingUnit(event.start%part.barTicks/part.displayTicks+E.numeric.unit,part),length:timingUnit(event.duration/part.displayTicks,part)};
 }
-function renderChordCards(events){
+function renderChordCards(events,interactive=false){
  const ui=DB.resultUI;
- return`<div class="chord-row">${events.map(event=>`<div class="chord ${event.source}"><span class="chord-position">${escapeHtml(fmt(ui.chordPosition,{bar:event.bar+E.numeric.unit}))}</span><strong>${escapeHtml(event.symbol)}</strong><small>${escapeHtml(event.id)}</small><span class="chord-duration">${escapeHtml(fmt(ui.chordDuration,event))}</span></div>`).join('')}</div>`;
+ return`<div class="chord-row">${events.map((event,index)=>{const tag=interactive?'button':'div';return`<${tag} class="chord ${event.source}"${interactive?` type="button" data-result-action="chord" data-result-value="${index}" aria-controls="chord-voicings" aria-pressed="${resultState.showVoicings&&resultState.chord===index}"`:''}><span class="chord-position">${escapeHtml(fmt(ui.chordPosition,{bar:event.bar+E.numeric.unit}))}</span><strong>${escapeHtml(event.symbol)}</strong><small>${escapeHtml(event.id)}</small><span class="chord-duration">${escapeHtml(fmt(ui.chordDuration,event))}</span></${tag}>`;}).join('')}</div>`;
+}
+function renderChordVoicing(section,index=resultState.chord){
+ const ui=DB.resultUI,rule=ui.pianoLayout,chord=section.phrase[index]??section.phrase[0],key=DB.keys.find(key=>key.pc===section.tonality?.pc)??DB.keys[0];
+ const voices=(chord.voicingNotes??chord.notes).filter(Number.isFinite),bass=Number.isFinite(chord.bass)?chord.bass:null,pitches=[...voices,...(bass===null?[]:[bass])];
+ if(!pitches.length)return'';
+ const lower=Math.max(rule.minimumMidi,Math.floor(Math.min(...pitches)/E.numeric.octave)*E.numeric.octave),upper=Math.min(rule.maximumMidi,Math.ceil((Math.max(...pitches)+E.numeric.unit)/E.numeric.octave)*E.numeric.octave-E.numeric.unit);
+ const keys=Array.from({length:upper-lower+E.numeric.unit},(_,offset)=>lower+offset),whites=keys.filter(pitch=>rule.whiteClasses.includes(pc(pitch)));let whiteCount=0;
+ const keyboard=keys.map(pitch=>{
+  const white=rule.whiteClasses.includes(pc(pitch)),held=voices.includes(pitch),low=pitch===bass,roles=[held?ui.chordTones:null,low?ui.bassTone:null].filter(Boolean),name=pitchName(pitch,key,true);
+  const position=white?'':` style="left:${(whiteCount-rule.blackWidth/E.numeric.padding)/whites.length*E.numeric.percent}%;width:${rule.blackWidth/whites.length*E.numeric.percent}%"`;
+  if(white)whiteCount+=E.numeric.unit;
+  return`<span class="piano-key piano-${white?'white':'black'}${held?' key-chord':''}${low?' key-bass':''}" data-midi="${pitch}"${position} role="img" aria-label="${escapeHtml(roles.length?fmt(ui.keyboardNote,{note:name,roles:roles.join(U.listSeparator)}):name)}" title="${escapeHtml(name)}">${held||low?`<span class="key-marker">${escapeHtml(ui.noteMarker)}</span>`:''}<span class="key-label">${held||low||pc(pitch)===0?escapeHtml(name):''}</span></span>`;
+ }).join('');
+ return`<div class="piano-voicing"><div class="track-heading"><h3>${escapeHtml(chord.symbol)} <small>${escapeHtml(ui.voicingTitle)}</small></h3><span>${escapeHtml(fmt(ui.chordPosition,{bar:chord.bar+E.numeric.unit}))}</span></div><div class="piano-scroll"><div class="piano-keys" style="--white-keys:${whites.length}">${keyboard}</div></div><div class="piano-legend"><span class="chord-legend">${escapeHtml(ui.chordTones)} · ${escapeHtml(chord.voicing)}</span><span class="bass-legend">${escapeHtml(ui.bassTone)} · ${escapeHtml(chord.bassName)}</span></div><p class="timing-help">${escapeHtml(ui.voicingHelp)} ${escapeHtml(ui.slashHelp)}</p></div>`;
 }
 function renderChordTable(section){
- return`<div class="table-wrap"><table><thead><tr>${['barRange','chord','voicing','bass'].map(key=>`<th scope="col">${escapeHtml(key==='bass'?DB.resultUI.root:U[key])}</th>`).join('')}</tr></thead><tbody>${section.phrase.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td class="mono">${escapeHtml(event.bassName)}</td></tr>`).join('')}</tbody></table></div>`;
+ return`<div class="table-wrap"><table><thead><tr>${['barRange','chord','voicing','bass'].map(key=>`<th scope="col">${escapeHtml(U[key])}</th>`).join('')}</tr></thead><tbody>${section.phrase.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td class="mono">${escapeHtml(event.bassName)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function renderNotePattern(events,part){
  const ui=DB.resultUI,pitches=[...new Set(events.filter(event=>Number.isFinite(event.pitch)).map(event=>event.pitch))].sort((a,b)=>b-a);
@@ -1835,7 +1869,7 @@ function renderSectionWorkspace(guide){
  const ui=DB.resultUI,section=guide.sections[resultState.section],tab=ui.tabs.find(tab=>tab.id===resultState.part);
  const navigation=resultButton('section',section.index-E.numeric.unit,escapeHtml(ui.previous),section.index===0?'disabled':'')+resultButton('section',section.index+E.numeric.unit,escapeHtml(ui.next),section.index===guide.sections.length-E.numeric.unit?'disabled':'');
  const tabs=ui.tabs.map((item,index)=>resultButton('part',item.id,`<span>${index+E.numeric.unit}</span>${escapeHtml(item.id==='topline'&&section.parts.topline.leadFamily!=='voice'?IU.leadTab:item.label)}${section.enabled?.[item.id]===false?`<small>${escapeHtml(DB.partPolicy.offSummary)}</small>`:''}`,`aria-pressed="${item.id===resultState.part}" style="--track:var(--${item.color})"`)).join('');
- const content=tab.id==='chords'?`<div class="chord-workspace"><p class="instruction">${escapeHtml(tab.hint)} <strong>${escapeHtml(fmt(ui.phrase,{bars:section.phraseBars,repeats:section.repeats}))}</strong></p>${renderChordCards(section.phrase)}<div class="instrument-strip"><span>${escapeHtml(U.arrangement)}</span>${section.arrangement.instruments.map(item=>`<span class="instrument-chip">${escapeHtml(item.label)}</span>`).join('')}</div><details class="input-details"><summary>${escapeHtml(ui.keyboard)}</summary>${renderChordTable(section)}<p class="timing-help">${escapeHtml(U.octaveHint)}</p></details><div class="transition-note"><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div>`:renderPartPlans(section);
+ const content=tab.id==='chords'?`<div class="chord-workspace"><p class="instruction">${escapeHtml(tab.hint)} <strong>${escapeHtml(fmt(ui.phrase,{bars:section.phraseBars,repeats:section.repeats}))}</strong></p>${renderChordCards(section.phrase,true)}<div class="instrument-strip"><span>${escapeHtml(U.arrangement)}</span>${section.arrangement.instruments.map(item=>`<span class="instrument-chip">${escapeHtml(item.label)}</span>`).join('')}</div><label class="part-check voicing-toggle"><input type="checkbox" data-result-action="voicings" data-result-value="toggle" aria-controls="chord-voicings"${resultState.showVoicings?' checked':''}>${escapeHtml(ui.voicingToggle)}</label><div id="chord-voicings"${resultState.showVoicings?'':' hidden'}>${renderChordVoicing(section)}<p class="timing-help">${escapeHtml(ui.voicingChoose)}</p></div><div class="transition-note"><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div>`:renderPartPlans(section);
  return`<section class="panel section-workspace" id="result-section" aria-label="${escapeHtml(ui.sectionLabel)}"><div class="section-workspace-head"><div><span class="eyebrow">${escapeHtml(U.sectionsTitle)}</span><h2>${escapeHtml(section.label)} <span>${escapeHtml(fmt(ui.range,section))}${section.tonality?U.noteSeparator+escapeHtml(fmt(IU.tonality,{key:section.tonality.key,change:section.tonality.shift?IU.modulation:IU.sameKey})): ''}</span></h2></div><div class="section-paging">${navigation}</div></div><nav class="result-tabs" aria-label="${escapeHtml(ui.partLabel)}">${tabs}</nav><div class="section-task" aria-live="polite">${content}${renderInteractionPlan(section)}</div></section>`;
 }
 function renderInteractionPlan(section){
@@ -1861,7 +1895,7 @@ function interactionMarkdown(section){
 
 function renderGuide(guide,reset=true){
  const ui=DB.resultUI;
- if(reset)resultState={section:Math.max(0,guide.sections.findIndex(section=>section.kind===ui.startKind)),part:ui.tabs[0].id,bar:0};
+ if(reset)resultState={section:Math.max(0,guide.sections.findIndex(section=>section.kind===ui.startKind)),part:ui.tabs[0].id,bar:0,showVoicings:resultState.showVoicings,chord:0};
  const list=items=>`<ul class="guidance-list">${items.map(item=>`<li><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.body)}</p></li>`).join('')}</ul>`;
  const diagnostic=Object.entries(guide.diagnostics).map(([key,value])=>`<div><strong>${value}${['borrowed','applied','extension','swing'].includes(key)?U.percentage:''}</strong><small>${escapeHtml(U[key])}</small></div>`).join('');
  const steps=ui.steps.map((step,index)=>`<a class="result-step" href="#${step.target}"><span>${index+E.numeric.unit}</span><div><strong>${escapeHtml(step.title)}</strong><small>${escapeHtml(step.body)}</small></div></a>`).join('');
@@ -1872,9 +1906,11 @@ function renderGuide(guide,reset=true){
 function handleResultAction(event){
  const button=event.target.closest('[data-result-action]');if(!button||!currentGuide)return false;
  const action=button.dataset.resultAction,value=button.dataset.resultValue,section=currentGuide.sections[resultState.section];
+ if(action==='voicings')resultState.showVoicings=button.checked;
+ if(action==='chord'){const index=Number(value);if(!Number.isInteger(index)||!section.phrase[index])return true;resultState.chord=index;resultState.showVoicings=true;}
  if(action==='section'){
   const index=Number(value);if(!Number.isInteger(index)||!currentGuide.sections[index])return true;
-  resultState.section=index;resultState.bar=0;
+  resultState.section=index;resultState.bar=0;resultState.chord=0;
  }
  if(action==='part'){
   if(!DB.resultUI.tabs.some(tab=>tab.id===value))return true;resultState.part=value;
@@ -1888,7 +1924,7 @@ function handleResultAction(event){
 }
 function renderPrintableGuide(guide){
  if(!guide)return'';
- return`<h1>${escapeHtml(DB.resultUI.printTitle)}</h1><p>${escapeHtml(guide.summary.title)} · ${guide.config.bpm} ${escapeHtml(U.bpm)} · ${guide.bars} ${escapeHtml(U.bars)}</p>${guide.sections.map(section=>`<section class="section"><h2>${escapeHtml(section.label)} · ${escapeHtml(fmt(DB.resultUI.range,section))}</h2><p>${escapeHtml(fmt(U.phraseHint,section))}</p>${renderChordCards(section.phrase)}${renderChordTable(section)}${renderFullPartPlans(section)}<div class="print-interaction"><h3>${escapeHtml(IU.orchestration)}</h3>${section.orchestration?.tracks.filter(track=>['harmony','texture'].includes(track.role)).map(track=>`<p>${escapeHtml(track.label)} · ${escapeHtml(IU.roles[track.role])}</p>${track.events.filter(event=>event.notes||Number.isFinite(event.pitch)).map(event=>`<p>${Math.floor(event.start/section.parts.barTicks)+E.numeric.unit}${escapeHtml(U.bars)} · ${escapeHtml((event.notes??[event.note]).join(U.listSeparator))} · ${escapeHtml(noteTiming(event,section.parts).start)} · ${escapeHtml(noteTiming(event,section.parts).length)}</p>`).join('')}`).join('')??''}</div></section>`).join('')}<h2>${escapeHtml(U.dawTitle)}</h2><ol>${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol>`;
+ return`<h1>${escapeHtml(DB.resultUI.printTitle)}</h1><p>${escapeHtml(guide.summary.title)} · ${guide.config.bpm} ${escapeHtml(U.bpm)} · ${guide.bars} ${escapeHtml(U.bars)}</p>${guide.sections.map(section=>`<section class="section"><h2>${escapeHtml(section.label)} · ${escapeHtml(fmt(DB.resultUI.range,section))}</h2><p>${escapeHtml(fmt(U.phraseHint,section))}</p>${renderChordCards(section.phrase)}${renderChordTable(section)}${resultState.showVoicings?section.phrase.map((_,index)=>renderChordVoicing(section,index)).join(''):''}${renderFullPartPlans(section)}<div class="print-interaction"><h3>${escapeHtml(IU.orchestration)}</h3>${section.orchestration?.tracks.filter(track=>['harmony','texture'].includes(track.role)).map(track=>`<p>${escapeHtml(track.label)} · ${escapeHtml(IU.roles[track.role])}</p>${track.events.filter(event=>event.notes||Number.isFinite(event.pitch)).map(event=>`<p>${Math.floor(event.start/section.parts.barTicks)+E.numeric.unit}${escapeHtml(U.bars)} · ${escapeHtml((event.notes??[event.note]).join(U.listSeparator))} · ${escapeHtml(noteTiming(event,section.parts).start)} · ${escapeHtml(noteTiming(event,section.parts).length)}</p>`).join('')}`).join('')??''}</div></section>`).join('')}<h2>${escapeHtml(U.dawTitle)}</h2><ol>${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol>`;
 }
 
 
