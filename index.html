@@ -6,6 +6,7 @@
 :root{--paper:#f5f3ee;--surface:#fffefa;--ink:#252820;--muted:#777970;--line:#ddded4;--accent:#d65537;--tint:#f8e9e1;--green:#607258;--radius:16px}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Pretendard,"Noto Sans KR",system-ui,sans-serif;font-size:14px;line-height:1.65}button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--surface);padding:9px 14px}button:disabled{cursor:wait;opacity:.6}a{color:inherit}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button,input,select{border-radius:8px}button:hover{border-color:var(--ink)}input,select{width:100%;border:1px solid var(--line);background:var(--surface);padding:10px 11px;min-height:44px}input[type=range]{padding:0;accent-color:var(--accent);min-height:24px;cursor:pointer}h1,h2,h3,p{margin:0}h1{font-size:clamp(28px,3.6vw,46px);line-height:1.25;letter-spacing:-.055em;font-weight:650}h2{font-size:21px;letter-spacing:-.035em}h3{font-size:15px}small{font-size:12px}.muted{color:var(--muted)}.mono{font-family:Consolas,monospace;font-variant-numeric:tabular-nums}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--muted);font-weight:650}.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4%;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:750;letter-spacing:-.05em}.brand-icon{height:32px;width:32px;display:grid;place-items:center;background:var(--ink);border-radius:9px;color:var(--surface);font-size:22px}.topnote{font-size:12px;color:var(--muted)}.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:30px;padding:5px 11px;font-size:11px}.dot{width:6px;height:6px;background:var(--green);border-radius:50%}.workspace{max-width:1550px;margin:auto;display:grid;grid-template-columns:340px minmax(0,1fr);min-height:calc(100vh - 76px)}.sidebar{border-right:1px solid var(--line);padding:28px 25px}.sidebar-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.step{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:650;margin:25px 0 14px}.step span{width:24px;height:24px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:10px;color:var(--muted)}.field{display:block;margin-bottom:15px}.field-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;margin-bottom:7px}.field-help{display:block;margin-top:5px;color:var(--muted);font-size:11px;line-height:1.6}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.range-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}.range-head output{font-family:Consolas,monospace;color:var(--accent);font-size:12px}.range-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.range-field{margin:17px 0}.preset-row{display:flex;gap:6px;flex-wrap:wrap}.preset{font-size:11px;padding:6px 10px;border-radius:30px}.generate{width:100%;background:var(--ink);color:var(--surface);border-color:var(--ink);padding:13px;margin-top:20px;font-weight:650;display:flex;justify-content:space-between;align-items:center}.generate:hover{background:var(--accent);border-color:var(--accent)}.status{font-size:12px;margin-top:12px;min-height:20px;white-space:pre-line}.status[data-error=true]{color:#af3029}.advanced{margin:20px 0 0;border-top:1px solid var(--line);padding-top:14px}.advanced summary{font-size:12px;cursor:pointer;font-weight:600}.advanced .field{margin-top:15px}.main{padding:38px 4.5%;min-width:0}.intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}.intro p{margin-top:12px;max-width:580px;color:var(--muted);font-size:13px}.intro-mark{font-family:Georgia,serif;font-size:72px;line-height:1;color:var(--accent);font-style:italic;opacity:.75}.brief{display:flex;justify-content:space-between;gap:20px;padding:19px 22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);align-items:center;margin-bottom:24px}.brief h2{font-size:17px;margin-top:4px}.brief small{display:block;color:var(--muted);margin-top:4px}.brief-stats{display:flex;gap:22px;text-align:right}.stat strong{display:block;font-size:20px;font-weight:500;line-height:1.3}.stat span{font-size:10px;color:var(--muted)}.report-header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:28px 0 17px}.report-header h2{font-size:19px}.actions{display:flex;gap:6px;flex-wrap:wrap}.actions button{font-size:11px;padding:6px 10px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.tag{font-size:10px;border:1px solid var(--line);padding:3px 9px;border-radius:30px;background:var(--surface)}.tag.accent{border-color:#e9c4b4;color:var(--accent);background:var(--tint)}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}.panel-top{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:16px}.panel-top h3{font-size:14px}.panel-top small{color:var(--muted)}.timeline{display:flex;gap:4px;min-height:92px}.timeline-cell{min-width:0;display:flex;flex-direction:column;justify-content:flex-end;flex:var(--bars)}.timeline-bar{height:calc(var(--energy)*.64px + 8px);background:var(--green);border-radius:5px 5px 0 0;opacity:var(--opacity)}.timeline-label{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:6px}.timeline-number{font-family:Consolas,monospace;color:var(--muted);font-size:9px}.timeline-legend{margin-top:14px;font-size:11px;color:var(--muted)}.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.overview-grid .panel{margin:0}.guidance-list{margin:0;padding:0;list-style:none}.guidance-list li{padding:10px 0;border-top:1px solid var(--line);font-size:12px}.guidance-list li:first-child{border-top:0;padding-top:0}.guidance-list strong{display:block;margin-bottom:3px;font-size:12px}.guidance-list p{color:var(--muted)}.section{border:1px solid var(--line);border-radius:var(--radius);margin:12px 0;background:var(--surface);overflow:hidden}.section summary{padding:18px 20px;cursor:pointer;list-style:none;display:flex;align-items:center;gap:15px}.section summary::-webkit-details-marker{display:none}.section-index{font-family:Consolas,monospace;color:var(--accent);font-size:13px}.section-title{flex:1;font-weight:650}.section-title small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:2px}.section-meta{font-size:11px;color:var(--muted)}.section-arrow{font-size:18px;transition:transform .2s}.section[open] .section-arrow{transform:rotate(90deg)}.section-content{padding:0 20px 20px}.chord-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(85px,1fr));gap:7px;margin-bottom:14px}.chord{border:1px solid var(--line);border-radius:9px;padding:11px 8px;text-align:center;background:var(--paper)}.chord.borrowed,.chord.applied{background:var(--tint);border-color:#e9c4b4}.chord strong{display:block;font-size:16px;font-family:Consolas,monospace;letter-spacing:-.04em}.chord small{font-size:10px;color:var(--muted)}.section-note{font-size:12px;color:var(--muted);padding:11px 0}.section-info{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:13px}.section-info strong{font-size:11px;display:block;margin-bottom:4px}.section-info p{font-size:12px;color:var(--muted)}.table-wrap{overflow:auto;margin-top:15px;border-top:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:11px;white-space:nowrap}th{text-align:left;color:var(--muted);font-weight:500;padding:10px 8px;border-bottom:1px solid var(--line)}td{padding:10px 8px;border-bottom:1px solid var(--line)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}.trace{font-size:11px;color:var(--muted);margin-top:14px}.checklist{list-style:none;counter-reset:task;padding:0;margin:0}.checklist li{counter-increment:task;display:flex;gap:12px;padding:10px 0;font-size:12px;border-bottom:1px solid var(--line)}.checklist li:last-child{border:0}.checklist li:before{content:counter(task,decimal-leading-zero);color:var(--accent);font-family:Consolas,monospace;font-size:11px;padding-top:2px}.footnote{font-size:11px;line-height:1.8;color:var(--muted);margin:20px 0}.engine-details{margin-top:20px}.engine-details summary{cursor:pointer;font-size:12px;color:var(--muted)}.engine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.engine-grid div{border-top:1px solid var(--line);padding-top:10px}.engine-grid strong{display:block;font-family:Consolas,monospace;font-size:17px;font-weight:500}.engine-grid small{color:var(--muted);font-size:10px}.sources{font-size:11px;margin-top:12px}.sources a{margin-right:14px;text-underline-offset:3px}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}.pending{opacity:.65}[hidden]{display:none!important}footer{border-top:1px solid var(--line);padding:20px 4%;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}noscript{display:block;margin:24px}
 @media(min-width:1300px){.sidebar{padding:30px}.workspace{grid-template-columns:360px minmax(0,1fr)}}@media(max-width:1000px){.workspace{grid-template-columns:300px minmax(0,1fr)}.sidebar{padding:24px 18px}.main{padding:30px 24px}.overview-grid{grid-template-columns:1fr}.brief-stats{gap:12px}.intro-mark,.section-meta{display:none}}@media(max-width:720px){.topbar{height:64px;padding:0 20px}.topnote{display:none}.workspace{display:block}.sidebar{border:0;border-bottom:1px solid var(--line);padding:25px 20px}.main{padding:28px 20px}.intro{margin-bottom:22px}.intro p{font-size:12px}.brief{padding:16px;gap:12px;align-items:flex-start}.brief-stats{gap:14px}.stat strong{font-size:16px}.stat:last-child{display:none}.panel{padding:18px}.section summary{padding:16px}.section-content{padding:0 16px 16px}.section-info{grid-template-columns:1fr}.timeline-label{font-size:8px}.engine-grid{grid-template-columns:repeat(2,1fr)}.badge{font-size:10px}footer{padding:20px;gap:14px;flex-wrap:wrap}}
 @media print{body{background:white;font-size:11px}.topbar,.sidebar,.intro,.actions,.engine-details,footer,.status{display:none!important}.workspace{display:block}.main{padding:0}.panel,.section,.brief{break-inside:avoid;background:white}.section-content{display:block!important}.section-arrow{display:none}.overview-grid{grid-template-columns:1fr 1fr}.chord-row{grid-template-columns:repeat(4,1fr)}.section{margin:10px 0}.table-wrap{overflow:visible}table{white-space:normal}.footnote{font-size:9px}}
+.part-block{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}.part-block h3{margin-bottom:12px}.part-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.part-summary p{font-size:11px;color:var(--muted);margin-top:6px}.part-summary strong{font-size:12px}.part-grid td{vertical-align:top;white-space:normal;min-width:220px;max-width:420px}.part-grid td:first-child{min-width:55px}.part-event{display:block;margin:3px 0}.part-event small{font-size:9px;color:var(--muted)}.part-theory{margin-top:12px;font-size:11px;color:var(--muted)}.part-theory summary{cursor:pointer}.part-theory p{margin:8px 0}@media(max-width:1000px){.part-summary{grid-template-columns:1fr}}@media print{.part-grid td{min-width:0;max-width:none;font-size:9px}.part-theory{display:none}.part-summary{grid-template-columns:1fr 1fr 1fr}}
 </style></head>
 <body>
 <header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">♮</span><span data-text="brand"></span></div><span class="topnote" data-text="topnote"></span><span class="badge"><span class="dot"></span><span data-text="localBadge"></span></span></header>
@@ -16,21 +17,25 @@
 // ======================== GAME DATABASE ========================
 // All selectable content, musical policies, engine weights and UI copy live here.
 const GAME_DATABASE={
-version:'1.0.0',storage:{key:'musicmaker.settings.v1'},
+version:'1.1.0',storage:{key:'musicmaker.settings.v1'},
 ui:{
- brand:'musicmaker',title:'musicmaker — 나만의 작곡 설계',description:'장르, 분위기, 송폼과 음악적 취향을 조합해 코드·보이싱·편곡·DAW 작업 가이드를 설계하세요.',topnote:'YOUR IDEAS. A CLEARER START.',localBadge:'브라우저에서 계산',settings:'작곡 설정',reset:'초기화',generate:'나만의 가이드 설계하기',generating:'음악적 후보를 평가하고 있습니다…',heroEyebrow:'COMPOSITION WORKSPACE',hero:'막막한 시작을, 명확한 설계로.',heroDescription:'취향을 정하면, 음악적 연결을 계산합니다. 코드부터 편곡까지 DAW에서 직접 완성할 나만의 작곡 청사진.',footer:'musicmaker · 아이디어를 음악으로 이어주는 작곡 가이드',versionLabel:'COMPOSITION ENGINE / v1.0',steps:['출발점 정하기','음악적 색채 조절','곡의 구조 설계'],advanced:'세부 설정 · 진행과 재현 시드',presets:'빠른 출발',
+ brand:'musicmaker',title:'musicmaker — 나만의 작곡 설계',description:'장르, 분위기, 송폼과 음악적 취향을 조합해 코드·보이싱·편곡·DAW 작업 가이드를 설계하세요.',topnote:'YOUR IDEAS. A CLEARER START.',localBadge:'브라우저에서 계산',settings:'작곡 설정',reset:'초기화',generate:'나만의 가이드 설계하기',generating:'음악적 후보를 평가하고 있습니다…',heroEyebrow:'COMPOSITION WORKSPACE',hero:'막막한 시작을, 명확한 설계로.',heroDescription:'취향을 정하면, 음악적 연결을 계산합니다. 코드부터 편곡까지 DAW에서 직접 완성할 나만의 작곡 청사진.',footer:'musicmaker · 아이디어를 음악으로 이어주는 작곡 가이드',versionLabel:'COMPOSITION ENGINE / v1.1',steps:['출발점 정하기','음악적 색채 조절','곡의 구조 설계'],advanced:'세부 설정 · 진행과 재현 시드',presets:'빠른 출발',
  briefEyebrow:'YOUR COMPOSITION BRIEF',briefTitle:'{mood} {genre}',briefSubtitle:'{key} {mode} · {style} · {meter} · {form}',bpm:'BPM',bars:'마디',duration:'예상 길이',reportTitle:'작곡 청사진',copy:'가이드 복사',markdown:'Markdown',json:'JSON',print:'인쇄 / PDF',copied:'작곡 가이드를 클립보드에 복사했습니다.',copyFailed:'클립보드를 사용할 수 없어 Markdown 파일로 저장했습니다.',exported:'가이드 파일을 저장했습니다.',ready:'설정에 맞는 가이드를 설계했습니다. 시드 {seed}',changed:'설정이 바뀌었습니다. 다시 설계하면 반영됩니다.',restored:'이전 설정으로 설계했습니다.',sample:'현재 설정으로 계산한 첫 가이드입니다. 설정을 바꿔 나만의 방향을 잡아보세요.',genericError:'가이드 설계에 실패했습니다. 설정을 확인하고 다시 시도하세요.',dbError:'데이터베이스 연결을 확인하세요: {detail}',seedError:'시드는 1~64자의 영문, 숫자, 한글 또는 기호를 입력하세요.',progressionError:'현재 모드의 코드 2, 4, 8개를 쉼표 또는 공백으로 구분해 입력하세요. 가능한 코드: {tokens}',appliedError:'세컨더리 도미넌트 다음에는 해당 목표 코드를 배치하세요: {pairs}',noPath:'이 설정에서 해결 가능한 코드 연결을 찾지 못했습니다. 직접 입력한 진행을 확인하세요.',
  energyTitle:'송폼 & 에너지 흐름',energyHint:'막대 높이 = 편곡 에너지',energyLegend:'{bars}마디 · {seconds}초 · 반복 구간은 핵심 진행을 유지하며 질감을 확장합니다.',harmonyTitle:'화성 설계 방향',melodyTitle:'리듬 & 멜로디 출발점',sectionsTitle:'구간별 작곡 가이드',sectionSubtitle:'{start}–{end}마디 · 에너지 {energy}% · 목표 긴장도 {targetTension}%',phraseHint:'{phraseBars}마디 진행 × {repeats}회. 코드당 {hold}마디. {cadence}',chord:'코드',roman:'도수',bass:'베이스',voicing:'건반 상성부 (과학적 음높이)',source:'출처',barRange:'마디',arrangement:'악기 & 레이어',rhythm:'리듬 적용',melody:'멜로디 적용',transition:'다음 구간 연결',sectionTrace:'평가한 연결 {evaluations}개 · 채택 경로 점수 {score} · 상성부 이동 {motion}반음',
  dawTitle:'DAW에서 이렇게 시작하세요',methodTitle:'설계 근거 보기',methodDescription:'규칙 기반 휴리스틱 엔진입니다. 여러 화성 경로를 제한된 빔 탐색으로 비교하고 실제 음높이의 보이싱은 동적 계획법으로 고릅니다. 점수는 후보 간 내부 비교값이며 음악의 품질이나 정답을 보장하는 지표는 아닙니다.',evaluations:'평가한 코드 연결',borrowed:'차용화음 비율',applied:'세컨더리 도미넌트 비율',extension:'확장음 사용 비율',swing:'스윙 목표',orchestra:'오케스트라 레이어',seedTag:'시드 {seed}',versionTag:'엔진 v{version}',sourcesTitle:'음악 이론 참고',footnote:'오디오나 MIDI를 생성하지 않습니다. 제안된 보이싱은 건반과 편곡의 출발점입니다. 실제 연주·성부 진행과 음역은 선택한 악기에 맞춰 조정하세요. BPM은 6/8에서 점4분음표, 그 외에는 4분음표 기준입니다.',fixedNotice:'선택한 진행의 도수와 순서를 유지하고 확장음과 보이싱을 최적화합니다.',autoNotice:'기능 연결·긴장도 곡선·장르 성향·성부 이동·반복성을 함께 평가해 진행을 탐색합니다.',
- harmonicDirection:'화성 어휘',harmonicDirectionBody:'Jazzy {jazz}% → 확장음 목표 {extension}% · 차용화음 상한 {borrowBudget}% · 세컨더리 도미넌트 상한 {appliedBudget}%. 목표는 검색 가중치이며 실제 사용량은 구간과 종지에 따라 달라집니다.',voiceDirection:'보이싱 & 종지',voiceDirectionBody:'Classical {classical}% → 성부 이동·완전5도/8도 병행 억제와 기능적 종지의 가중치를 높입니다. 베이스와 4개 상성부를 분리해 입력하세요.',densityDirection:'반복과 대비',densityDirectionBody:'기본 코드 교체 주기 {hold}마디 · 반복 변형 {variation}%. 짧은 구간은 길이에 맞춰 교체 주기를 조정합니다. 같은 구간의 핵심 진행을 유지하며 후반부의 화성 색채와 악기 수를 조절합니다.',rhythmDirection:'그루브',rhythmDirectionBody:'{groove} · 스윙 비중 {swing}% · 음표 밀도 {density}%. {meterAdvice}',motifDirection:'모티프',motifDirectionBody:'{motif} {styleMelody}',blueDirection:'블루노트 & 텐션',blueLow:'선택한 모드의 음과 코드톤으로 시작하세요. 강박은 3도·5도에 두고 비화성음은 다음 코드톤으로 해결하세요.',blueHigh:'블루스 색채 비중 {blue}%. {blueNotes}를 짧은 경과음으로 쓰고 반음 위·아래의 코드톤에 해결하세요. 강박의 긴 지속음은 현재 코드의 구성음을 우선하세요.',orchestralLow:'리듬 섹션 중심의 편곡입니다. 긴 패드보다 악기 사이의 빈 공간을 먼저 확보하세요.',orchestralHigh:'현악은 코드톤을 긴 음으로 나누고 목관은 모티프를 응답하세요. 저음 현악과 베이스는 같은 역할을 중복하지 않도록 조절하세요.',instrumentsLine:'{instruments} · 권장 {tracks}트랙',rhythmLine:'{groove} / {pattern} · 밀도 {density}% · 강세 {accents}',melodyLine:'{scale} ({notes}). {contour} {motif} 각 코드의 강박에는 표의 3도 또는 7도에서 출발하세요.',lastTransition:'마지막 코드를 유지하며 상성부를 줄이고 잔향을 정리하세요.',transitionLine:'다음 {next}로 갈 때 {transition} 에너지 {energy}% → {nextEnergy}%로 레이어를 조절하세요.',cadenceResolved:'토닉으로 마무리해 조성을 확인합니다.',cadenceDominant:'도미넌트에 머물러 다음 구간을 기대하게 합니다.',cadenceOpen:'루프의 마지막 코드에서 첫 코드로 연결합니다.',
+ harmonicDirection:'화성 어휘',harmonicDirectionBody:'Jazzy {jazz}% → 확장 강도 목표 {extension}% · 차용화음 상한 {borrowBudget}% · 세컨더리 도미넌트 상한 {appliedBudget}%. 목표는 검색 가중치이며 실제 사용량은 구간과 종지에 따라 달라집니다.',voiceDirection:'보이싱 & 종지',voiceDirectionBody:'Classical {classical}% → 성부 이동·완전5도/8도 병행 억제와 기능적 종지의 가중치를 높입니다. 베이스와 4개 상성부를 분리해 입력하세요.',densityDirection:'반복과 대비',densityDirectionBody:'기본 코드 교체 주기 {hold}마디 · 반복 변형 {variation}%. 짧은 구간은 길이에 맞춰 교체 주기를 조정합니다. 같은 구간의 핵심 진행을 유지하며 후반부의 화성 색채와 악기 수를 조절합니다.',rhythmDirection:'그루브',rhythmDirectionBody:'{groove} · 스윙 비중 {swing}% · 음표 밀도 {density}%. {meterAdvice}',motifDirection:'모티프',motifDirectionBody:'{motif} {styleMelody}',blueDirection:'블루노트 & 텐션',blueLow:'선택한 모드의 음과 코드톤으로 시작하세요. 강박은 3도·5도에 두고 비화성음은 다음 코드톤으로 해결하세요.',blueHigh:'블루스 색채 비중 {blue}%. {blueNotes}를 짧은 경과음으로 쓰고 반음 위·아래의 코드톤에 해결하세요. 강박의 긴 지속음은 현재 코드의 구성음을 우선하세요.',orchestralLow:'리듬 섹션 중심의 편곡입니다. 긴 패드보다 악기 사이의 빈 공간을 먼저 확보하세요.',orchestralHigh:'현악은 코드톤을 긴 음으로 나누고 목관은 모티프를 응답하세요. 저음 현악과 베이스는 같은 역할을 중복하지 않도록 조절하세요.',instrumentsLine:'{instruments} · 권장 {tracks}트랙',rhythmLine:'{groove} / {pattern} · 밀도 {density}% · 강세 {accents}',melodyLine:'{scale} ({notes}). {contour} {motif} 각 코드의 강박에는 표의 3도 또는 7도에서 출발하세요.',lastTransition:'마지막 코드를 유지하며 상성부를 줄이고 잔향을 정리하세요.',transitionLine:'다음 {next}로 갈 때 {transition} 에너지 {energy}% → {nextEnergy}%로 레이어를 조절하세요.',cadenceResolved:'토닉으로 마무리해 조성을 확인합니다.',cadenceDominant:'도미넌트에 머물러 다음 구간을 기대하게 합니다.',cadenceOpen:'루프의 마지막 코드에서 첫 코드로 연결합니다.',
  dawSteps:['프로젝트를 {bpm} BPM, {meter}로 설정하고 총 {bars}마디의 구간 마커를 만드세요.','건반 트랙에 구간별 코드와 표의 상성부를 입력하세요. 표의 베이스 음은 별도 트랙에 두세요.','{groove} 그루브를 만들고 구간별 표의 길이에 맞춰 베이스를 바꾸세요.','{motif} 먼저 짧은 모티프 하나를 직접 작성하고 구간마다 변형하세요.','송폼의 에너지 높이에 맞춰 악기 레이어를 더하고 빼세요. 오케스트라 목표 {orchestra}레이어를 참고하세요.','진행을 반복해 듣고 비화성음 해결, 베이스와 킥의 충돌, 후렴의 대비를 직접 확인하세요.'],exportTitle:'musicmaker 작곡 가이드',exportConfig:'설정',exportHarmony:'화성 방향',exportMelody:'리듬 / 멜로디',exportSections:'구간',exportDaw:'DAW 작업 순서',exportMethod:'설계 근거',exportFile:'musicmaker',noteSeparator:' · ',listSeparator:', ',rangeSeparator:'–',percentage:'%',minuteFormat:'{minutes}:{seconds}',octaveHint:'C4 = MIDI 60',noscript:'이 작곡 가이드는 JavaScript를 사용하는 브라우저에서 실행됩니다.'
 },
 fields:[
  {id:'genre',type:'select',table:'genres',step:0,label:'장르'},{id:'mood',type:'select',table:'moods',step:0,label:'분위기'},{id:'style',type:'select',table:'styles',step:0,label:'스타일 / 연주 질감'},{id:'key',type:'select',table:'keys',step:0,label:'조성 중심음',pair:'tonality'},{id:'mode',type:'select',table:'modes',step:0,label:'모드',pair:'tonality'},{id:'bpm',type:'number',step:0,label:'템포 · BPM',min:40,max:220,increment:1,pair:'time'},{id:'meter',type:'select',table:'meters',step:0,label:'박자',pair:'time'},
  {id:'jazzy',type:'range',step:1,label:'Jazzy',help:'확장음, 블루노트, 차용화음과 세컨더리 도미넌트의 사용 성향',min:0,max:100,increment:1,ends:['담백한 화성','풍부한 화성']},{id:'classical',type:'range',step:1,label:'Classical',help:'오케스트라 레이어, 기능적 종지와 성부 진행의 비중',min:0,max:100,increment:1,ends:['리듬 섹션 중심','클래식 요소 중심']},{id:'energy',type:'range',step:1,label:'에너지',help:'악기 밀도, 리듬 강도와 구간별 대비',min:0,max:100,increment:1,ends:['차분하게','역동적으로']},{id:'complexity',type:'range',step:1,label:'화성 / 리듬 복잡도',help:'코드 교체 속도와 긴장도 곡선, 리듬 밀도',min:0,max:100,increment:1,ends:['간결하게','정교하게']},{id:'variation',type:'range',step:1,label:'반복 변형',help:'같은 구간이 다시 등장할 때 화성 색채와 레이어를 변형',min:0,max:100,increment:1,ends:['익숙한 반복','변주와 대비']},
  {id:'form',type:'select',table:'forms',step:2,label:'송폼'},{id:'progression',type:'select',table:'progressions',step:'advanced',label:'코드 진행 방향'},{id:'customProgression',type:'text',step:'advanced',label:'직접 입력할 진행',placeholder:'예: I, vi, IV, V',help:'현재 모드의 Roman numeral을 2, 4, 8개 입력하세요. 차용화음·세컨더리 도미넌트도 아래 목록에서 선택할 수 있습니다.',maxLength:120,when:{field:'progression',value:'custom'}},{id:'seed',type:'text',step:'advanced',label:'재현 시드',help:'같은 설정 + 같은 시드 = 같은 가이드. 다른 가능성을 탐색하려면 시드를 바꾸세요.',maxLength:64}
+ ,{id:'vocalRange',type:'select',table:'vocalRanges',step:'advanced',label:'보컬 음역 · 실제 가수에 맞게 선택'},
+ {id:'toplineNovelty',type:'range',step:1,label:'탑라인 개성 목표',help:'단순 스케일·등간격 아르페지오·한 음 반복을 억제하고, 모티프의 리듬과 윤곽에 변형을 줍니다.',min:0,max:100,increment:1,ends:['모티프를 익숙하게','모티프를 대담하게']},
+ {id:'bassMotion',type:'range',step:'advanced',label:'베이스 움직임',help:'코드톤 중심의 저음 지지에서, 킥 연동과 순차 접근이 있는 움직이는 라인까지',min:0,max:100,increment:1,ends:['길게 지지','연결하며 이동']},
+ {id:'drumDetail',type:'range',step:'advanced',label:'드럼 디테일',help:'백비트와 펄스를 유지하며 싱코페이션·고스트 노트·전환 필을 조절',min:0,max:100,increment:1,ends:['핵심 그루브','세밀한 전환']}
 ],
-defaults:{genre:'pop',mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea'},
+defaults:{genre:'pop',mood:'warm',style:'intimate',key:'C',mode:'major',bpm:96,meter:'4-4',jazzy:35,classical:20,energy:55,complexity:45,variation:35,form:'pop',progression:'auto',customProgression:'I, vi, IV, V',seed:'first-idea',vocalRange:'middle',toplineNovelty:90,bassMotion:55,drumDetail:50},
 presets:[{id:'late',label:'늦은 밤 R&B',values:{genre:'rnb',mood:'dreamy',style:'intimate',mode:'minor',bpm:78,jazzy:75,classical:10,energy:35,complexity:55,form:'pop',meter:'4-4',progression:'auto'}},{id:'film',label:'시네마틱',values:{genre:'cinematic',mood:'wistful',style:'orchestral',mode:'minor',bpm:72,jazzy:20,classical:90,energy:60,complexity:50,form:'cinematic',meter:'4-4',progression:'auto'}},{id:'indie',label:'인디 팝',values:{genre:'indie',mood:'bright',style:'organic',mode:'major',bpm:112,jazzy:25,classical:15,energy:65,complexity:35,form:'pop',meter:'4-4',progression:'auto'}}],
 keys:[{id:'C',label:'C',pc:0,flat:false},{id:'Db',label:'D♭',pc:1,flat:true},{id:'D',label:'D',pc:2,flat:false},{id:'Eb',label:'E♭',pc:3,flat:true},{id:'E',label:'E',pc:4,flat:false},{id:'F',label:'F',pc:5,flat:true},{id:'Gb',label:'G♭',pc:6,flat:true},{id:'G',label:'G',pc:7,flat:false},{id:'Ab',label:'A♭',pc:8,flat:true},{id:'A',label:'A',pc:9,flat:false},{id:'Bb',label:'B♭',pc:10,flat:true},{id:'B',label:'B',pc:11,flat:false}],
 pitchNames:{sharp:['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'],flat:['C','D♭','D','E♭','E','F','G♭','G','A♭','A','B♭','B']},
@@ -67,13 +72,57 @@ progressions:[{id:'auto',label:'엔진 추천 · 자유롭게 탐색'},{id:'pop'
 sectionTypes:{intro:{label:'Intro',energy:.3,tension:.18,closure:'open',density:.45},verse:{label:'Verse',energy:.58,tension:.35,closure:'open',density:.7},pre:{label:'Pre-chorus',energy:.75,tension:.62,closure:'D',density:.85},chorus:{label:'Chorus',energy:1,tension:.5,closure:'T',density:1},bridge:{label:'Bridge',energy:.68,tension:.73,closure:'D',density:.8},outro:{label:'Outro',energy:.27,tension:.17,closure:'T',density:.4},theme:{label:'Theme A',energy:.55,tension:.3,closure:'T',density:.65},development:{label:'Development',energy:.78,tension:.72,closure:'D',density:.85},climax:{label:'Climax',energy:1,tension:.65,closure:'T',density:1}},
 forms:[{id:'pop',label:'팝 · Verse / Chorus',sections:[['intro',4],['verse',16],['pre',8],['chorus',16],['verse',16],['pre',8],['chorus',16],['bridge',8],['chorus',16],['outro',4]]},{id:'compact',label:'컴팩트 · 짧은 곡',sections:[['intro',4],['verse',8],['chorus',8],['verse',8],['chorus',8],['outro',4]]},{id:'aaba',label:'AABA · 테마와 대비',sections:[['theme',8],['theme',8],['bridge',8],['theme',8]]},{id:'cinematic',label:'시네마틱 · 점진적 전개',sections:[['intro',8],['theme',16],['development',16],['climax',16],['outro',8]]}],
 instruments:[{id:'piano',label:'피아노',role:'harmony',base:.7,jazz:.35,classical:.5},{id:'rhodes',label:'일렉트릭 피아노',role:'harmony',base:.6,jazz:.8,classical:0},{id:'guitar',label:'어쿠스틱 기타',role:'harmony',base:.5,jazz:.15,classical:0},{id:'electricGuitar',label:'일렉트릭 기타',role:'harmony',base:.3,jazz:.1,classical:0},{id:'synth',label:'신스 패드',role:'harmony',base:.6,jazz:.2,classical:.15},{id:'electricBass',label:'일렉트릭 베이스',role:'bass',base:.8,jazz:.5,classical:0},{id:'upright',label:'콘트라베이스',role:'bass',base:.45,jazz:.9,classical:.5},{id:'drums',label:'드럼 / 전자 드럼',role:'rhythm',base:.8,jazz:.3,classical:0},{id:'brushes',label:'브러시 드럼',role:'rhythm',base:.3,jazz:1,classical:0},{id:'vocal',label:'보컬 / 주선율 악기',role:'melody',base:.8,jazz:.35,classical:.1},{id:'sax',label:'색소폰',role:'melody',base:.2,jazz:1,classical:0},{id:'leadSynth',label:'리드 신스',role:'melody',base:.3,jazz:.1,classical:0},{id:'strings',label:'현악 앙상블',role:'texture',base:.35,jazz:.15,classical:1},{id:'cello',label:'첼로',role:'texture',base:.3,jazz:.15,classical:.9},{id:'woodwinds',label:'목관 응답 선율',role:'texture',base:.25,jazz:.3,classical:.85},{id:'horns',label:'호른 / 브라스',role:'texture',base:.2,jazz:.35,classical:.85}],
-theoryReferences:[{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'}],
+theoryReferences:[{label:'Open Music Theory · Modal Mixture',url:'https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/'},{label:'Open Music Theory · Harmonic Functions',url:'https://open-musictheory.github.io/harmonicFunctions.html'},{label:'Open Music Theory · Embellishing Tones',url:'https://openmusictheory.github.io/embellishingTones.html'},{label:'Open Music Theory · Swing & Syncopation',url:'https://viva.pressbooks.pub/openmusictheory/chapter/swing-rhythms/'}],
+vocalRanges:[{id:'lower',label:'낮은 음역 · C3–E4',lower:48,upper:64,center:57},{id:'middle',label:'중간 음역 · G3–D5',lower:55,upper:74,center:64},{id:'higher',label:'높은 음역 · C4–G5',lower:60,upper:79,center:69}],
+partUI:{
+ title:'보컬 · 드럼 · 베이스 설계',topline:'보컬 탑라인',drums:'드럼 그루브',bass:'베이스 라인',rest:'쉼',position:'시작 / 길이',pitchRole:'음의 역할',lineBar:'프레이즈 내 마디',vocalColumn:'보컬 · 음높이@시작[길이]',drumColumn:'드럼 · 타격 위치',bassColumn:'베이스 · 음높이@시작[길이]',
+ unitHelp:'시작 위치와 길이는 4분음표 1박 기준입니다. 6/8은 8분음표 1칸 기준입니다. @ 뒤는 해당 마디 안의 시작 위치, [ ]는 길이입니다. 쉼도 입력하세요.',
+ planHelp:'아래 {bars}마디는 이 구간의 전체 화성 프레이즈에 맞춰 계산한 스케치입니다. {repeats}회 반복하되, 반복 후반은 모티프의 마지막 음과 드럼 필을 선택적으로 변형하세요.',
+ toplineSummary:'음역 {low}–{high} · {notes}개 음 · 비화성음 {ornaments}개 · 호흡 {breaths}곳',
+ motifSummary:'모티프 리듬 셀 {cell} · 상대 음정 윤곽(반음) {contour} · 변형 {transform}',
+ noveltySummary:'단순 음형 감점 {stock}회 · 사용 음정 {intervals}종 · 리듬 셀 {rhythms}종. 이는 내부 패턴 비교이며 기존 곡과의 비유사성을 보증하지 않습니다.',
+ melodyRules:'강박과 긴 음은 현재 코드의 구성음으로 지지합니다. 약박의 비화성음은 경과음·이웃음·반음 접근음으로만 허용하고 바로 다음 음에서 순차 해결합니다. 큰 도약 뒤에는 반대 방향 순차 진행을 두며, 두 마디마다 호흡을 확보합니다.',
+ drumSummary:'{kit} · 타임키퍼 {timekeeper} · 킥 {kicks}회 · 백비트 {snares}회 · 필 {fills}회',
+ drumRules:'박자의 강세와 백비트를 골격으로 만들고, 코드 변화와 보컬의 여백을 기준으로 킥을 평가합니다. 필은 구간 끝에서 타임키퍼를 대체하며, 같은 위치에서 두 손과 두 발을 초과하는 타격은 제외합니다.',
+ bassSummary:'코드 변화의 루트 지지 · 킥 일치 {lock}% · 순차 접근 {approaches}개 · {low}–{high}',
+ bassRules:'코드 변화 시작은 루트, 다른 강박은 루트·5도로 지지합니다. 약박은 코드톤을 연결하고, 반음 접근은 다음 루트로 실제 해결될 때만 허용합니다. 4현 베이스의 음역과 운지 이동도 함께 평가합니다.',
+ swing:'세 파트 공통 스윙 비율 {ratio}%. 표는 스트레이트 위치로 표기하며 DAW에서 같은 스윙을 적용하세요.',
+ beat:'박',eighth:'8분음표 칸',hand:'손',foot:'발',fingering:'{string}번줄 {fret}프렛',velocity:'세기 {velocity}',theoryTitle:'공통 음악 이론 제약',
+ theoryRules:['화성: 조성·차용·세컨더리 도미넌트의 출처와 해결 목표를 공유합니다.','보컬: 강박의 코드톤, 비화성음의 순차 해결, 모티프 재현·변형, 호흡과 도약 회복을 사용합니다.','드럼: 강세 계층·백비트·싱코페이션·종지 전환과 실제 손발 배치를 사용합니다.','베이스: 루트·5도 지지, 코드톤 연결, 다음 루트의 반음 접근, 킥과의 결합을 사용합니다.'],
+ method:'화성은 기능·긴장도·성부 진행을 평가하는 빔 탐색, 탑라인과 베이스는 음역·리듬·해결·모티프 제약을 포함한 경로 탐색, 드럼은 박자·코드 변화·보컬 여백에 따른 타격 배치 계산을 사용합니다. 세부 가중치는 작곡을 위한 휴리스틱입니다. 이론적 제약과 내부 패턴 비교를 지켜도 음악의 완성도와 절대적 독창성을 자동 보증할 수는 없습니다.',
+ noMelody:'현재 화성과 음역에서 탑라인 제약을 만족하는 경로가 없습니다. 음역 또는 진행을 조정하세요.',noBass:'현재 진행에서 연주 가능한 베이스 경로가 없습니다. 진행 또는 베이스 움직임을 조정하세요.',
+ roles:{chord:'코드톤',passing:'경과음 → 순차 해결',neighbor:'이웃음 → 원음 복귀',approach:'반음 접근 → 코드톤 해결',root:'루트 지지',fifth:'5도 지지',rest:'호흡 / 쉼'},
+ transforms:{statement:'모티프 제시',sequence:'화성에 맞춘 이행',inversion:'윤곽 반전',displacement:'리듬 위치 이동',fragment:'후반 축약과 해결'},
+ dawSteps:['보컬 표의 음높이·위치·길이와 쉼을 입력한 뒤, 가사의 강세에 맞춰 음절을 나누세요.','드럼 표의 타격 위치와 세기를 입력하고 베이스를 같은 그루브로 배치하세요.','비화성음의 바로 다음 해결음과 반복 경계의 연결을 들어 확인하고, 실제 보컬의 편한 음역으로 조정하세요.']
+},
+parts:{
+ ticksPerQuarter:4,phraseBars:2,breathTicks:2,beamWidth:32,seedKeys:{topline:'topline',drums:'drums',bass:'bass',motif:'motif'},
+ meters:{
+  '4-4':{barTicks:16,pulseTicks:4,strong:[0,8],backbeat:[4,12],timeGrid:[0,2,4,6,8,10,12,14],vocalCells:[[2,4,7,10],[0,3,6,10],[2,5,8,12],[0,4,7,11],[1,4,9,12],[0,6,9,12]],displayTicks:4},
+  '3-4':{barTicks:12,pulseTicks:4,strong:[0],backbeat:[4,8],timeGrid:[0,2,4,6,8,10],vocalCells:[[2,4,7],[0,3,6],[1,4,8],[0,5,8],[2,6,9],[0,4,7]],displayTicks:4},
+  '6-8':{barTicks:12,pulseTicks:6,strong:[0,6],backbeat:[6],timeGrid:[0,2,4,6,8,10],vocalCells:[[2,6,8],[0,4,8],[2,4,6],[0,2,8],[4,6,8]],displayTicks:2}
+ },
+ motifGrammar:{length:4,intervals:[-5,-4,-3,-2,-1,0,1,2,3,4,5],maxLeaps:1,minKinds:3,minTurns:2,maxDisplacement:5},
+ stockPatterns:[[2,2,1,2],[-2,-2,-1,-2],[0,0,0,0],[4,3,5,-5],[3,4,5,-5]],
+ vocal:{minTicks:2,maxSyllablesPerSecond:6,maxLeap:7,step:2,leapThreshold:4,maxLeapsPerPhrase:1,maxDirectionRun:3,centerLift:4,minHeldTicks:4,approachJazz:.45,noveltyWeight:2.4,stepWeight:.18,contourWeight:.3,registerWeight:.08,guideToneWeight:.7,motifWeight:.6,stockWeight:3,runWeight:1.1,rootPenalty:.3,restChanceWeight:.25,cellTransformPeriod:4,displacementTicks:1,peakPhase:.65,peakLift:3,rhythmChoices:3,strictNovelty:.75,ornamentWeight:.6,breathSeconds:.25},
+ drumVoices:{kick:{label:'킥',limb:'foot',limbId:'right-foot'},snare:{label:'스네어',limb:'hand'},closedHat:{label:'닫힌 하이햇',limb:'hand'},ride:{label:'라이드',limb:'hand'},lowTom:{label:'로우 탐',limb:'hand'},midTom:{label:'미드 탐',limb:'hand'},crash:{label:'크래시',limb:'hand'},brush:{label:'브러시 스네어',limb:'hand'},orchestralBass:{label:'콘서트 베이스드럼',limb:'hand'},cymbal:{label:'서스펜디드 심벌',limb:'hand'}},
+ drumKits:[
+  {id:'acoustic',label:'어쿠스틱 드럼',genres:{pop:1,indie:1,rock:1.5,rnb:.6},classical:0,jazz:.1,kick:'kick',snare:'snare',time:'closedHat',fill:['lowTom','midTom']},
+  {id:'electronic',label:'전자 킥 / 스네어 / 하이햇',genres:{electronic:1.6,lofi:1.2,rnb:1},classical:0,jazz:.1,kick:'kick',snare:'snare',time:'closedHat',fill:['snare','lowTom']},
+  {id:'brush',label:'재즈 드럼 / 브러시',genres:{jazz:1.2,lofi:.6},classical:0,jazz:.8,kick:'kick',snare:'brush',time:'ride',fill:['brush','midTom']},
+  {id:'orchestral',label:'오케스트라 퍼커션',genres:{cinematic:.8},classical:1.4,jazz:0,kick:'orchestralBass',snare:'lowTom',time:'cymbal',fill:['orchestralBass','midTom']}
+ ],
+ drums:{hands:2,feet:2,baseKicks:1,extraKicks:3,strongWeight:2.4,chordWeight:2.8,syncWeight:1.2,vocalSpaceWeight:.9,backbeatPenalty:.8,ghostThreshold:.55,fillThreshold:.4,maxHandHitsPerSecond:12,accentVelocity:102,normalVelocity:77,ghostVelocity:38,velocityFloor:.6,velocityEnergy:.4,orchestralTimeStride:2,timeDensityThreshold:.7,swingStraight:.5,swingMaximum:.66},
+ bass:{lower:28,upper:52,center:36,voicingSeparation:5,maxLeap:7,step:2,leapThreshold:4,maxLeapsPerBar:1,walkThreshold:.7,approachThreshold:.35,fastTempo:140,minTicks:2,maxNotesPerSecond:7,frets:9,window:4,stringChangeWeight:.15,positionWeight:.3,motionWeight:.18,rootWeight:1.6,fifthWeight:.8,kickWeight:.6,registerWeight:.05,vocalCollisionWeight:.7,approachWeight:.8,grooveSubdivisionWeight:.5,consonances:[0,3,4,5,7,8,9],tuning:[{string:4,midi:28},{string:3,midi:33},{string:2,midi:38},{string:1,midi:43}]},
+ harmonicIntervals:{third:[3,4],seventh:[10,11],fifth:7,leadingTone:4,dominantSeventh:10},
+ colors:{borrowedScale:'parallel'},display:{decimals:2,restSymbol:'—',at:'@',lengthOpen:'[',lengthClose:']',eventSeparator:' · '}
+},
 engine:{
  numeric:{unit:1,percent:100,octave:12,midiOctaveOffset:1,secondsPerMinute:60,padding:2},seed:{offset:2166136261,prime:16777619,step:1831565813,shiftA:15,shiftB:7,shiftC:14,mix:61,denominator:4294967296},limits:{beamWidth:28,minPattern:4,maxPattern:8,customLengths:[2,4,8],seedMax:64},blend:{energyUser:.6,energyGenre:.2,energyMood:.2,complexUser:.65,complexGenre:.35,extensionGenre:.65,extensionComplex:.35,tensionMood:.35,tensionSection:.45,tensionComplex:.2},harmonicRhythm:{fastThreshold:.72,slowThreshold:.3,fastTempo:150,slowTempo:70,fastHold:.5,normalHold:1,slowHold:2},chromatic:{borrowMax:.32,appliedMax:.25,extensionSlack:.13,blueMax:.5},weights:{function:1.4,tension:3.4,genre:1.1,root:.25,voice:.07,classicalVoice:.09,parallel:.7,classicalParallel:2.2,repeat:1.9,run:3.5,color:1.2,cadence:2.7,novelty:.8,extension:1.8,borrow:1.2,applied:1.3,diversity:.35,jitter:.8,motif:2.2,brightness:.4,startTonic:1},functionTransitions:{T:{T:.2,P:1,D:.55},P:{T:.1,P:.25,D:1.2},D:{T:1.35,P:-.6,D:-.35}},rootMotion:{0:-.3,1:.65,2:.5,3:.3,4:.15,5:.9,6:-.1},tensionCurve:{start:-.12,middle:.08,end:-.16,frequency:Math.PI,repeatLift:.035},voicing:{lower:48,upper:84,bassBase:36,center:64,octaveShifts:[-1,0,1],centerWeight:.045,perfectIntervals:[0,7],upperStepPenalty:.15,largeLeap:7},density:{style:.5,energy:.35,complexity:.15,sparse:.35,dense:.7},swing:{genre:.7,style:.3,base:.5},orchestra:{max:4,styleBase:.65,styleWeight:.35,threshold:.08},arrangement:{roles:['harmony','bass','rhythm','melody'],genre:1,style:.5,jazz:.6,classical:.6,base:.2,jitter:.1,textureEnergy:.7,repeatTracks:1,extraTracks:3},thresholds:{blue:.35,classicalRhythm:.6,borrowNeighborPenalty:.8,repeatLock:.5},timing:{renderYield:24},export:{markdownExtension:'.md',jsonExtension:'.json',markdownMime:'text/markdown;charset=utf-8',jsonMime:'application/json;charset=utf-8',revokeDelay:1000},validation:{customSplit:'[\\s,→–-]+',seedPattern:'^[\\s\\S]{1,64}$'},display:{scoreDigits:2,diagramBase:.5,diagramEnergy:.5}
 }
 };
 // ====================== END GAME DATABASE ======================
-const DB=GAME_DATABASE,E=DB.engine,U=DB.ui;
+const DB=GAME_DATABASE,E=DB.engine,U=DB.ui,P=DB.parts,PU=DB.partUI;
 const byId=(table,id)=>DB[table].find(item=>item.id===id);
 const clamp=(value,min=0,max=E.numeric.unit)=>Math.min(max,Math.max(min,value));
 const percent=value=>Math.round(value*E.numeric.percent);
@@ -274,10 +323,279 @@ function makeSection(ctx,definition,index,occurrences,motifs,random,candidates,p
  const cadence=ctx.forced||type.closure==='open'?U.cadenceOpen:type.closure==='T'?U.cadenceResolved:U.cadenceDominant;
  const events=fullPath.map((chord,eventIndex)=>{
   const notes=voicings.notes[eventIndex],bass=E.voicing.bassBase+chord.root;
-  return{id:chord.id,symbol:chord.symbol,source:chord.source,fn:chord.fn,level:chord.level,tension:chord.tension,target:chord.target??null,root:chord.root,tones:chord.tones.map(interval=>pc(chord.root+interval)),notes,bass,voicing:notes.map(note=>pitchName(note,ctx.key,true)).join(U.noteSeparator),bassName:pitchName(bass,ctx.key,true),bar:eventIndex*hold,duration:hold};
+  return{id:chord.id,symbol:chord.symbol,source:chord.source,fn:chord.fn,quality:chord.quality,intervals:chord.tones,level:chord.level,tension:chord.tension,target:chord.target??null,root:chord.root,tones:chord.tones.map(interval=>pc(chord.root+interval)),notes,bass,voicing:notes.map(note=>pitchName(note,ctx.key,true)).join(U.noteSeparator),bassName:pitchName(bass,ctx.key,true),bar:eventIndex*hold,duration:hold};
  });
  const notes=ctx.mode.scale.map(interval=>pitchName(ctx.key.pc+interval,ctx.key)).join(U.listSeparator);
  return{kind,label,index,bars,hold,repeats,phraseBars:length*hold,patternLength:length,occurrence,energy:percent(energy),density:percent(density),targetTension:percent(average(search.path.map((_,i)=>targetTension(ctx,type,i,length,occurrence)))),events,phrase:events.slice(0,length),cadence,arrangement,rhythm:fmt(U.rhythmLine,{groove:ctx.genre.groove,pattern,density:percent(density),accents:ctx.meter.accents}),melody:fmt(U.melodyLine,{scale:ctx.mode.scaleLabel,notes,contour:ctx.mood.contour,motif:ctx.style.motif}),evaluations:search.evaluations,score:Number(search.score.toFixed(E.display.scoreDigits)),motion:voicings.motion,lastVoice:voicings.last};
+}
+
+// All three line planners use the SAME harmonic events and metrical coordinates.
+function chordAtTick(section,tick,grid){
+ const total=section.phraseBars*grid.barTicks,position=((tick%total)+total)%total;
+ return section.phrase.find(chord=>position>=chord.bar*grid.barTicks&&position<(chord.bar+chord.duration)*grid.barTicks)||section.phrase.at(-1);
+}
+function lineRandom(ctx,section,key){return seededRandom([ctx.config.seed,P.seedKeys[key],section.kind,section.occurrence].join('|'));}
+function minLineTicks(ctx,maximum,minimum){return Math.max(minimum,Math.ceil(ctx.config.bpm*ctx.meter.pulseQuarters*P.ticksPerQuarter/(E.numeric.secondsPerMinute*maximum)));}
+function pitchesInRange(classes,lower,upper){return Array.from({length:upper-lower+E.numeric.unit},(_,index)=>index+lower).filter(note=>classes.includes(pc(note)));}
+function isStrongTick(tick,grid){return grid.strong.includes(tick%grid.barTicks);}
+function phraseIntervals(notes){return notes.slice(E.numeric.unit).map((note,index)=>note.pitch-notes[index].pitch);}
+function stockMatches(intervals){return P.stockPatterns.reduce((count,pattern)=>count+(intervals.length>=pattern.length&&pattern.every((value,index)=>intervals[intervals.length-pattern.length+index]===value)?E.numeric.unit:0),0);}
+
+function vocalRhythm(ctx,section,grid,motif){
+ const minimum=minLineTicks(ctx,P.vocal.maxSyllablesPerSecond,P.vocal.minTicks),breathTicks=Math.max(P.breathTicks,Math.ceil(ctx.config.bpm*ctx.meter.pulseQuarters*P.ticksPerQuarter*P.vocal.breathSeconds/E.numeric.secondsPerMinute)),rhythm=[],cells=[];
+ for(let bar=0;bar<section.phraseBars;bar++){
+  const phase=bar%P.vocal.cellTransformPeriod;
+  const cell=grid.vocalCells[motif.cell];
+  const shift=phase===P.vocal.cellTransformPeriod-E.numeric.unit&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock?P.vocal.displacementTicks:0;
+  let points=cell.map(point=>point+shift).filter(point=>point<grid.barTicks);
+  if(phase===P.vocal.cellTransformPeriod-E.numeric.unit)points=points.slice(0,-E.numeric.unit);
+  // An offbeat entry is a phrase decision, not an arbitrary timing jitter.
+  if(bar===0&&points[0]===0&&ctx.config.toplineNovelty/E.numeric.percent>E.thresholds.repeatLock)points=points.slice(E.numeric.unit);
+  const phraseEnd=(bar+E.numeric.unit)%P.phraseBars===0||bar===section.phraseBars-E.numeric.unit;
+  const end=grid.barTicks-(phraseEnd?breathTicks:0);
+  points=points.filter((point,index,array)=>point+minimum<=end&&(index===0||point-array[index-E.numeric.unit]>=minimum));
+  points=points.filter(point=>{
+   const chord=chordAtTick(section,bar*grid.barTicks+point,grid),boundary=(chord.bar+chord.duration)*grid.barTicks;
+   return boundary-(bar*grid.barTicks+point)>=minimum;
+  });
+  if(!points.length)points=[0];
+  cells.push(points.join(','));
+  for(const[index,point]of points.entries()){
+   const start=bar*grid.barTicks+point,chord=chordAtTick(section,start,grid),boundary=(chord.bar+chord.duration)*grid.barTicks;
+   const duration=Math.min((points[index+E.numeric.unit]??end)-point,boundary-start);
+   rhythm.push({start,duration,bar,chord,strong:isStrongTick(start,grid),anchor:isStrongTick(start,grid)||duration>=P.vocal.minHeldTicks||index===points.length-E.numeric.unit,cellIndex:index,phase});
+  }
+ }
+ return{rhythm,cells,breathTicks};
+}
+
+function vocalScale(ctx,chord){
+ const mode=chord.source==='borrowed'?DB.modes.find(mode=>mode.id!==ctx.mode.id):ctx.mode;
+ return [...new Set([...mode.scale.map(interval=>pc(interval+ctx.key.pc)),...chord.tones])];
+}
+
+function tendencyResolves(before,pitch,chord){
+ if(!before||before.chordId===chord.id||before.fn!=='D')return true;
+ const degree=pc(before.pitch-before.root),leading=degree===P.harmonicIntervals.leadingTone||(before.quality==='diminished'&&degree===0);
+ if(leading&&chord.tones.includes(pc(before.pitch+E.numeric.unit))&&pitch!==before.pitch+E.numeric.unit)return false;
+ if(degree===P.harmonicIntervals.dominantSeventh){
+  const downward=chord.tones.filter(tone=>[E.numeric.unit,P.vocal.step].includes(pc(before.pitch-tone)));
+  if(downward.length&&(!downward.includes(pc(pitch))||pitch>=before.pitch||Math.abs(pitch-before.pitch)>P.vocal.step))return false;
+ }
+ return true;
+}
+function searchTopline(ctx,section,grid,motif,previousLine=null){
+ const range=byId('vocalRanges',ctx.config.vocalRange),{rhythm,cells,breathTicks}=vocalRhythm(ctx,section,grid,motif),novelty=ctx.config.toplineNovelty/E.numeric.percent;
+ let beam=[{score:0,notes:[],intervals:[],pending:null,leaps:0,phrase:0,run:0,direction:0,stock:0}];
+ let evaluations=0;
+ for(const[index,event]of rhythm.entries()){
+  const nextEvent=rhythm[index+E.numeric.unit],scale=vocalScale(ctx,event.chord),phrase=Math.floor(event.bar/P.phraseBars);
+  const weakClasses=[...scale];
+  if(ctx.jazz>=P.vocal.approachJazz)for(const tone of event.chord.tones)weakClasses.push(pc(tone-E.numeric.unit),pc(tone+E.numeric.unit));
+  const candidates=pitchesInRange(event.anchor?event.chord.tones:[...new Set(weakClasses)],range.lower,range.upper),next=[];
+  for(const state of beam)for(const pitch of candidates){
+   const previous=state.notes.at(-1)??previousLine,interval=previous?pitch-previous.pitch:0,chordTone=event.chord.tones.includes(pc(pitch));
+   if(previous&&Math.abs(interval)>P.vocal.maxLeap)continue;
+   const beforeInterval=state.intervals.at(-1)??0;
+   if(previous&&Math.abs(beforeInterval)>P.vocal.leapThreshold&&(Math.abs(interval)>P.vocal.step||Math.sign(interval)!==-Math.sign(beforeInterval)))continue;
+   const leaps=(phrase===state.phrase?state.leaps:0)+(Math.abs(interval)>P.vocal.leapThreshold?E.numeric.unit:0);
+   if(leaps>P.vocal.maxLeapsPerPhrase)continue;
+   // Unaccented non-chord tones must be entered by step and resolve immediately.
+   let resolvedRole=null;
+   if(state.pending){
+    if(!chordTone||Math.abs(interval)>P.vocal.step||interval===0)continue;
+    const approached=pitch-state.pending.fromPitch;
+    if(state.pending.chromatic){if(Math.abs(interval)!==E.numeric.unit)continue;resolvedRole='approach';}
+    else if(pitch===state.pending.fromPitch)resolvedRole='neighbor';
+    else if(Math.sign(interval)===Math.sign(state.pending.pitch-state.pending.fromPitch)&&Math.abs(approached)<=P.vocal.step+P.vocal.step)resolvedRole='passing';
+    else continue;
+   }
+   let pending=null;
+   if(!chordTone){
+    if(event.anchor||!state.notes.length||!previous||state.pending||previous.role!=='chord'||Math.abs(interval)>P.vocal.step||interval===0||!nextEvent||event.start+event.duration!==nextEvent.start)continue;
+    const chromatic=!scale.includes(pc(pitch));
+    if(chromatic&&Math.abs(interval)!==E.numeric.unit)continue;
+    const resolutions=pitchesInRange(nextEvent.chord.tones,range.lower,range.upper).filter(target=>Math.abs(target-pitch)<=P.vocal.step&&target!==pitch);
+    if(!resolutions.length)continue;
+    pending={pitch,fromPitch:previous.pitch,chromatic};
+   }
+   if(!tendencyResolves(previous,pitch,event.chord))continue;
+   if(index===rhythm.length-E.numeric.unit&&section.repeats>E.numeric.unit){
+    const first=state.notes[0];
+    if(first&&(!tendencyResolves({pitch,root:event.chord.root,chordId:event.chord.id,quality:event.chord.quality,fn:event.chord.fn},first.pitch,rhythm[0].chord)||Math.abs(first.pitch-pitch)>P.vocal.maxLeap))continue;
+   }
+   // Permit a phrase leap only when its stepwise recovery is possible at the next onset.
+   if(Math.abs(interval)>P.vocal.leapThreshold&&nextEvent){
+    const classes=nextEvent.anchor?nextEvent.chord.tones:vocalScale(ctx,nextEvent.chord);
+    if(!pitchesInRange(classes,range.lower,range.upper).some(target=>Math.abs(target-pitch)<=P.vocal.step&&Math.sign(target-pitch)===-Math.sign(interval)))continue;
+   }
+   evaluations++;
+   const direction=Math.sign(interval),run=direction!==0&&direction===state.direction?state.run+E.numeric.unit:0;
+   const intervals=previous?[...state.intervals,interval]:[],stock=stockMatches(intervals);
+   if(novelty>=P.vocal.strictNovelty&&stock>0)continue;
+   const desired=motif.contour[(index-E.numeric.unit+motif.contour.length)%motif.contour.length]*(event.phase===P.phraseBars?-E.numeric.unit:E.numeric.unit);
+   const phase=event.start/(section.phraseBars*grid.barTicks);
+   const center=range.center+section.energy/E.numeric.percent*P.vocal.centerLift+Math.sin(phase*E.tensionCurve.frequency)*P.vocal.peakLift;
+   let score=state.score-Math.abs(pitch-center)*P.vocal.registerWeight-Math.abs(interval)*P.vocal.stepWeight;
+   if(pending)score+=P.vocal.ornamentWeight*novelty*ctx.complexityTarget;
+   if(previous)score-=Math.abs(interval-desired)*P.vocal.contourWeight*(E.numeric.unit+novelty);
+   if(previous&&!state.intervals.includes(interval))score+=novelty*P.vocal.noveltyWeight;
+   score-=stock*P.vocal.stockWeight*(E.numeric.unit+novelty)+Math.max(0,run-P.vocal.maxDirectionRun)*P.vocal.runWeight*(E.numeric.unit+novelty);
+   const degree=pc(pitch-event.chord.root);
+   if(event.anchor&&[...P.harmonicIntervals.third,...P.harmonicIntervals.seventh].includes(degree))score+=P.vocal.guideToneWeight;
+   if(degree===0)score-=P.vocal.rootPenalty*novelty;
+   const notes=state.notes.map(note=>({...note}));
+   if(resolvedRole){notes.at(-1).role=resolvedRole;notes.at(-1).resolvesTo={pitch,start:event.start};}
+   notes.push({start:event.start,duration:event.duration,pitch,note:pitchName(pitch,ctx.key,true),role:'chord',chordId:event.chord.id,root:event.chord.root,fn:event.chord.fn,quality:event.chord.quality,strong:event.strong,anchor:event.anchor});
+   next.push({score,notes,intervals,pending,leaps,phrase,run,direction,stock:state.stock+stock});
+  }
+  if(!next.length)throw new Error(PU.noMelody);
+  // Keep paths with different endings; one local motif must not consume the entire beam.
+  const signatures=new Set();
+  beam=next.sort((a,b)=>b.score-a.score).filter(state=>{const key=[state.notes.at(-1).pitch,state.pending?.pitch??'',state.intervals.slice(-P.phraseBars).join(',')].join('|');if(signatures.has(key))return false;signatures.add(key);return true;}).slice(0,P.beamWidth);
+ }
+ const selected=beam.filter(state=>!state.pending).sort((a,b)=>b.score-a.score)[0];
+ if(!selected)throw new Error(PU.noMelody);
+ const events=[],total=section.phraseBars*grid.barTicks;
+ let cursor=0;
+ for(const note of selected.notes){if(note.start>cursor)events.push({start:cursor,duration:note.start-cursor,pitch:null,note:PU.rest,role:'rest'});events.push(note);cursor=note.start+note.duration;}
+ if(cursor<total)events.push({start:cursor,duration:total-cursor,pitch:null,note:PU.rest,role:'rest'});
+ return{events,notes:selected.notes,evaluations,score:Number(selected.score.toFixed(E.display.scoreDigits)),stock:selected.stock,intervalKinds:new Set(selected.intervals).size,rhythmKinds:new Set(cells).size,breathTicks,breaths:events.filter(event=>event.pitch===null&&event.duration>=breathTicks).length,range:{low:pitchName(Math.min(...selected.notes.map(note=>note.pitch)),ctx.key,true),high:pitchName(Math.max(...selected.notes.map(note=>note.pitch)),ctx.key,true)},motif:{cell:cells[0],contour:motif.contour.join(U.listSeparator),transform:PU.transforms.sequence+U.noteSeparator+PU.transforms.inversion+U.noteSeparator+PU.transforms.fragment}};
+}
+
+function planDrums(ctx,section,grid,topline){
+ const detail=ctx.config.drumDetail/E.numeric.percent,density=section.density/E.numeric.percent;
+ const kit=DB.parts.drumKits.map(kit=>({...kit,score:(kit.genres[ctx.genre.id]??0)+kit.classical*ctx.classical+kit.jazz*ctx.jazz})).sort((a,b)=>b.score-a.score)[0];
+ const minGap=minLineTicks(ctx,P.drums.maxHandHitsPerSecond,E.numeric.unit),events=[];
+ let fills=0;
+ const velocity=(accent,ghost=false)=>Math.round((ghost?P.drums.ghostVelocity:accent?P.drums.accentVelocity:P.drums.normalVelocity)*(P.drums.velocityFloor+section.energy/E.numeric.percent*P.drums.velocityEnergy));
+ const add=(voice,start,kind,accent,priority)=>events.push({voice,start,duration:E.numeric.unit,kind,velocity:velocity(accent,kind==='ghost'),priority,limb:P.drumVoices[voice].limb,limbId:P.drumVoices[voice].limbId??null});
+ for(let bar=0;bar<section.phraseBars;bar++){
+  const offset=bar*grid.barTicks;
+  const changes=section.phrase.filter(chord=>chord.bar*grid.barTicks>=offset&&chord.bar*grid.barTicks<offset+grid.barTicks).map(chord=>chord.bar*grid.barTicks-offset);
+  const mandatory=[...new Set([0,...changes])];
+  const candidates=grid.timeGrid.map(tick=>{
+   const vocalStart=topline.notes.some(note=>Math.abs(note.start-offset-tick)<minGap);
+   return{tick,score:(grid.strong.includes(tick)?P.drums.strongWeight:0)+(changes.includes(tick)?P.drums.chordWeight:0)+(tick%grid.pulseTicks!==0?detail*P.drums.syncWeight:0)+(!vocalStart?P.drums.vocalSpaceWeight:0)-(grid.backbeat.includes(tick)?P.drums.backbeatPenalty:0)};
+  }).filter(candidate=>!mandatory.includes(candidate.tick)).sort((a,b)=>b.score-a.score);
+  const count=Math.max(mandatory.length,P.drums.baseKicks+Math.round((section.energy/E.numeric.percent+density*detail)*P.drums.extraKicks/E.numeric.padding));
+  const kicks=[...mandatory,...candidates.slice(0,Math.max(0,count-mandatory.length)).map(candidate=>candidate.tick)].sort((a,b)=>a-b);
+  for(const tick of kicks)add(kit.kick,offset+tick,'kick',grid.strong.includes(tick),P.drums.chordWeight);
+  for(const tick of grid.backbeat)add(kit.snare,offset+tick,'backbeat',true,P.drums.strongWeight);
+  const timeGrid=kit.id==='orchestral'?grid.strong:density<P.drums.timeDensityThreshold?grid.timeGrid.filter(tick=>tick%grid.pulseTicks===0):grid.timeGrid;
+  for(const tick of timeGrid)add(kit.time,offset+tick,'time',grid.strong.includes(tick),E.numeric.unit);
+  if(detail>P.drums.ghostThreshold&&bar%P.phraseBars===P.phraseBars-E.numeric.unit){
+   const tick=grid.backbeat.at(-1)-minGap;
+   if(tick>=0&&!topline.notes.some(note=>note.start===offset+tick))add(kit.snare,offset+tick,'ghost',false,E.swing.base);
+  }
+  if(bar===section.phraseBars-E.numeric.unit&&detail>P.drums.fillThreshold){
+   const begin=grid.barTicks-grid.pulseTicks;
+   for(let index=events.length-E.numeric.unit;index>=0;index--)if(events[index].start>=offset+begin&&events[index].kind==='time')events.splice(index,E.numeric.unit);
+   let index=0;
+   for(let tick=begin;tick<grid.barTicks;tick+=Math.max(minGap,P.vocal.minTicks))add(kit.fill[index++%kit.fill.length],offset+tick,'fill',tick===begin,E.numeric.unit);
+   fills++;
+  }
+ }
+ // Reject extra hand/foot hits and same-instrument doubles; no impossible kit layer survives.
+ const scheduled=[];
+ for(const event of events.sort((a,b)=>a.start-b.start||b.priority-a.priority)){
+  const simultaneous=scheduled.filter(hit=>hit.start===event.start);
+  if(simultaneous.some(hit=>hit.voice===event.voice))continue;
+  if(simultaneous.filter(hit=>hit.limb===event.limb).length>=(event.limb==='hand'?P.drums.hands:P.drums.feet))continue;
+  if(event.limbId&&simultaneous.some(hit=>hit.limbId===event.limbId))continue;
+  if(scheduled.some(hit=>hit.voice===event.voice&&event.start-hit.start<minGap))continue;
+  scheduled.push(event);
+ }
+ return{events:scheduled,kit:kit.label,timekeeper:P.drumVoices[kit.time].label,kicks:scheduled.filter(event=>event.kind==='kick').length,snares:scheduled.filter(event=>event.kind==='backbeat').length,fills,swingRatio:percent(P.drums.swingStraight+(P.drums.swingMaximum-P.drums.swingStraight)*ctx.swing)};
+}
+
+function bassFingerings(pitch){return P.bass.tuning.map(string=>({string:string.string,fret:pitch-string.midi})).filter(option=>option.fret>=0&&option.fret<=P.bass.frets);}
+function searchBass(ctx,section,grid,drums,topline){
+ const motion=ctx.config.bassMotion/E.numeric.percent,minimum=minLineTicks(ctx,P.bass.maxNotesPerSecond,P.bass.minTicks),total=section.phraseBars*grid.barTicks;
+ const onsets=new Set(drums.events.filter(event=>event.kind==='kick').map(event=>event.start));
+ for(const chord of section.phrase)onsets.add(chord.bar*grid.barTicks);
+ if(motion>P.bass.walkThreshold)for(let start=0;start<total;start+=grid.pulseTicks)onsets.add(start);
+ if(motion>P.bass.approachThreshold)for(const chord of section.phrase){const tick=chord.bar*grid.barTicks;if(tick>=minimum)onsets.add(tick-minimum);}
+ const roots=new Set(section.phrase.map(chord=>chord.bar*grid.barTicks)),points=[];
+ for(const point of [...onsets].sort((a,b)=>a-b)){
+  if(!roots.has(point)&&point+minimum>total)continue;
+  if(!roots.has(point)&&[...roots].some(root=>root>point&&root-point<minimum))continue;
+  if(!points.length||point-points.at(-1)>=minimum)points.push(point);
+  else if(roots.has(point)){if(!roots.has(points.at(-1)))points.pop();points.push(point);}
+ }
+ let beam=[{notes:[],score:0,pending:null,position:0,leaps:0,bar:0}],evaluations=0;
+ for(const[index,start]of points.entries()){
+  const chord=chordAtTick(section,start,grid),duration=(points[index+E.numeric.unit]??total)-start,nextStart=points[index+E.numeric.unit],nextChord=nextStart!==undefined?chordAtTick(section,nextStart,grid):null;
+  const change=section.phrase.some(event=>event.bar*grid.barTicks===start),strong=isStrongTick(start,grid),bar=Math.floor(start/grid.barTicks),kick=drums.events.some(event=>event.kind==='kick'&&event.start===start);
+  const upper=Math.min(P.bass.upper,Math.min(...chord.notes)-P.bass.voicingSeparation);
+  const rootClass=[chord.root],fifth=pc(chord.root+P.harmonicIntervals.fifth),strongClasses=chord.tones.includes(fifth)?[chord.root,fifth]:[chord.root];
+  const classes=change?rootClass:strong?strongClasses:[...chord.tones];
+  const canApproach=!strong&&!change&&nextChord&&nextChord.id!==chord.id&&duration<=grid.pulseTicks&&motion>P.bass.approachThreshold;
+  if(canApproach)classes.push(pc(nextChord.root-E.numeric.unit),pc(nextChord.root+E.numeric.unit));
+  const candidates=pitchesInRange([...new Set(classes)],P.bass.lower,upper),next=[];
+  for(const state of beam)for(const pitch of candidates)for(const finger of bassFingerings(pitch)){
+   const previous=state.notes.at(-1),interval=previous?pitch-previous.pitch:0,chordTone=chord.tones.includes(pc(pitch)),leaps=(bar===state.bar?state.leaps:0)+(Math.abs(interval)>P.bass.leapThreshold?E.numeric.unit:0);
+   if(Math.abs(interval)>P.bass.maxLeap||leaps>P.bass.maxLeapsPerBar)continue;
+   if(state.pending&&(pitch!==state.pending.target||Math.abs(interval)!==E.numeric.unit))continue;
+   if(!chordTone&&!canApproach)continue;
+   let pending=null;
+   if(!chordTone){const target=pitchesInRange([nextChord.root],P.bass.lower,P.bass.upper).find(target=>Math.abs(target-pitch)===E.numeric.unit);if(target===undefined)continue;pending={target};}
+   const fits=finger.fret===0||(finger.fret>=state.position&&finger.fret<state.position+P.bass.window);
+   const shift=!fits;
+   if(shift&&previous&&start%grid.barTicks!==0&&(ctx.config.bpm>P.bass.fastTempo||previous.duration<grid.pulseTicks))continue;
+   const position=shift?Math.max(0,finger.fret-P.bass.window+E.numeric.unit):state.position;
+   evaluations++;
+   let score=state.score-Math.abs(interval)*P.bass.motionWeight-Math.abs(pitch-P.bass.center)*P.bass.registerWeight-Math.abs(position-state.position)*P.bass.positionWeight;
+   if(previous&&finger.string!==previous.string)score-=P.bass.stringChangeWeight;
+   if(pc(pitch)===chord.root)score+=P.bass.rootWeight*(E.numeric.unit-motion+E.swing.base);
+   if(pc(pitch)===fifth)score+=P.bass.fifthWeight*motion;
+   if(kick)score+=P.bass.kickWeight;
+   if(pending)score+=P.bass.approachWeight*motion;
+   const vocal=topline.notes.find(note=>note.start<=start&&note.start+note.duration>start);
+   if(vocal&&!P.bass.consonances.includes(pc(vocal.pitch-pitch)))score-=P.bass.vocalCollisionWeight*(E.numeric.unit-ctx.jazz);
+   const notes=state.notes.map(note=>({...note}));
+   if(state.pending){notes.at(-1).resolvesTo={pitch,start};}
+   notes.push({start,duration,pitch,note:pitchName(pitch,ctx.key,true),chordId:chord.id,role:pending?'approach':pc(pitch)===chord.root?'root':pc(pitch)===fifth?'fifth':'chord',strong,change,kick,...finger,position});
+   next.push({notes,score,pending,position,leaps,bar});
+  }
+  if(!next.length)throw new Error(PU.noBass);
+  const endings=new Set();
+  beam=next.sort((a,b)=>b.score-a.score).filter(state=>{const note=state.notes.at(-1),key=[note.pitch,note.string,state.position,state.pending?.target??''].join('|');if(endings.has(key))return false;endings.add(key);return true;}).slice(0,P.beamWidth);
+ }
+ const selected=beam.filter(state=>!state.pending).sort((a,b)=>b.score-a.score)[0];
+ if(!selected)throw new Error(PU.noBass);
+ const kickEvents=drums.events.filter(event=>event.kind==='kick');
+ return{events:selected.notes,evaluations,score:Number(selected.score.toFixed(E.display.scoreDigits)),lock:kickEvents.length?percent(kickEvents.filter(kick=>selected.notes.some(note=>note.start===kick.start)).length/kickEvents.length):0,approaches:selected.notes.filter(note=>note.role==='approach').length,range:{low:pitchName(Math.min(...selected.notes.map(note=>note.pitch)),ctx.key,true),high:pitchName(Math.max(...selected.notes.map(note=>note.pitch)),ctx.key,true)}};
+}
+
+function createMotif(grid,random){
+ const candidates=[],grammar=P.motifGrammar;
+ function extend(contour){
+  if(contour.length===grammar.length){
+   const signs=contour.filter(interval=>interval!==0).map(Math.sign),turns=signs.slice(E.numeric.unit).filter((direction,index)=>direction!==signs[index]).length;
+   if(new Set(contour).size>=grammar.minKinds&&turns>=grammar.minTurns&&Math.abs(sum(contour))<=grammar.maxDisplacement)candidates.push(contour);
+   return;
+  }
+  for(const interval of grammar.intervals){
+   if(Math.abs(interval)>P.vocal.leapThreshold&&contour.filter(value=>Math.abs(value)>P.vocal.leapThreshold).length>=grammar.maxLeaps)continue;
+   const before=contour.at(-1);
+   if(Math.abs(before??0)>P.vocal.leapThreshold&&(Math.abs(interval)>P.vocal.step||Math.sign(interval)!==-Math.sign(before)))continue;
+   extend([...contour,interval]);
+  }
+ }
+ extend([]);
+ return{cell:Math.floor(random()*grid.vocalCells.length),contour:candidates[Math.floor(random()*candidates.length)]};
+}
+function buildPartPlans(ctx,sections){
+ const grid=P.meters[ctx.meter.id],motifs={};
+ let previousLine=null;
+ for(const section of sections){
+  const random=lineRandom(ctx,section,'motif');
+  if(!motifs[section.kind])motifs[section.kind]=createMotif(grid,random);
+  const topline=searchTopline(ctx,section,grid,motifs[section.kind],previousLine),drums=planDrums(ctx,section,grid,topline),bass=searchBass(ctx,section,grid,drums,topline);
+  previousLine=topline.notes.at(-1);
+  section.parts={bars:section.phraseBars,barTicks:grid.barTicks,displayTicks:grid.displayTicks,topline,drums,bass};
+ }
 }
 
 function generateGuide(input){
@@ -292,16 +610,17 @@ function generateGuide(input){
   const next=sections[index+E.numeric.unit];
   section.transition=next?fmt(U.transitionLine,{next:next.label,transition:ctx.style.transition,energy:section.energy,nextEnergy:next.energy}):U.lastTransition;
  }
+ buildPartPlans(ctx,sections);
  const bars=sum(sections.map(section=>section.bars)),seconds=Math.round(bars*ctx.meter.quarters/ctx.meter.pulseQuarters*E.numeric.secondsPerMinute/config.bpm),events=sections.flatMap(section=>section.events);
  const diagnostics={evaluations:sum(sections.map(section=>section.evaluations)),borrowed:percent(events.filter(event=>event.source==='borrowed').length/events.length),applied:percent(events.filter(event=>event.source==='applied').length/events.length),extension:percent(events.filter(event=>event.level>0).length/events.length),swing:percent(ctx.swing),orchestra:ctx.orchestra};
  const harmony=[{title:U.harmonicDirection,body:fmt(U.harmonicDirectionBody,{jazz:config.jazzy,extension:percent(ctx.extensionTarget),borrowBudget:percent(ctx.borrowRate),appliedBudget:percent(ctx.appliedRate)})},{title:U.voiceDirection,body:fmt(U.voiceDirectionBody,{classical:config.classical})},{title:U.densityDirection,body:fmt(U.densityDirectionBody,{hold:ctx.hold,variation:config.variation})}];
  const melody=[{title:U.rhythmDirection,body:fmt(U.rhythmDirectionBody,{groove:ctx.genre.groove,swing:percent(ctx.swing),density:percent(ctx.style.density*E.density.style+ctx.energy*E.density.energy+ctx.complexityTarget*E.density.complexity),meterAdvice:ctx.meter.advice})},{title:U.motifDirection,body:fmt(U.motifDirectionBody,{motif:ctx.style.motif,styleMelody:ctx.style.melody})},{title:U.blueDirection,body:ctx.jazz>E.thresholds.blue?fmt(U.blueHigh,{blue:percent(ctx.jazz*E.chromatic.blueMax),blueNotes:`${ctx.mode.blueLabel} (${ctx.mode.blue.map(interval=>pitchName(ctx.key.pc+interval,ctx.key)).join(U.listSeparator)})`}):U.blueLow}];
- const daw=U.dawSteps.map(template=>fmt(template,{bpm:config.bpm,meter:ctx.meter.label,bars,groove:ctx.genre.groove,hold:ctx.hold,motif:ctx.style.motif,orchestra:ctx.orchestra}));
+ const daw=[...U.dawSteps.map(template=>fmt(template,{bpm:config.bpm,meter:ctx.meter.label,bars,groove:ctx.genre.groove,hold:ctx.hold,motif:ctx.style.motif,orchestra:ctx.orchestra})),...PU.dawSteps];
  return{version:DB.version,config,bars,seconds,sections,diagnostics,harmony,melody,daw,summary:{title:fmt(U.briefTitle,{mood:ctx.mood.label,genre:ctx.genre.label}),subtitle:fmt(U.briefSubtitle,{key:ctx.key.label,mode:ctx.mode.label,style:ctx.style.label,meter:ctx.meter.label,form:form.label}),notice:ctx.forced?U.fixedNotice:U.autoNotice,orchestral:ctx.orchestra?U.orchestralHigh:U.orchestralLow}};
 }
 
 function validateDatabase(){
- for(const table of['fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments']){
+ for(const table of['fields','genres','moods','styles','meters','keys','modes','forms','progressions','instruments','vocalRanges']){
   const ids=DB[table].map(entry=>entry.id);if(new Set(ids).size!==ids.length)throw error('dbError',{detail:table});
  }
  for(const field of DB.fields)if(field.type==='select'&&!byId(field.table,DB.defaults[field.id]))throw error('dbError',{detail:field.id});
@@ -313,17 +632,51 @@ function validateDatabase(){
   for(const progression of DB.progressions)if(progression.modes&&(!progression.modes[mode.id]||progression.modes[mode.id].some(id=>!chords.some(chord=>chord.id===id))))throw error('dbError',{detail:progression.id});
  }
  for(const role of E.arrangement.roles)if(!DB.instruments.some(item=>item.role===role))throw error('dbError',{detail:role});
+ for(const meter of DB.meters)if(!P.meters[meter.id]||P.meters[meter.id].barTicks!==meter.quarters*P.ticksPerQuarter)throw error('dbError',{detail:meter.id});
+ for(const kit of P.drumKits)for(const voice of[kit.kick,kit.snare,kit.time,...kit.fill])if(!P.drumVoices[voice])throw error('dbError',{detail:voice});
+ for(const range of DB.vocalRanges)if(range.lower>=range.upper||range.center<range.lower||range.center>range.upper)throw error('dbError',{detail:range.id});
  return true;
 }
 
 function formatDuration(seconds){return fmt(U.minuteFormat,{minutes:Math.floor(seconds/E.numeric.secondsPerMinute),seconds:String(seconds%E.numeric.secondsPerMinute).padStart(E.numeric.padding,'0')});}
 function eventRange(section,event){const start=section.start+event.bar,end=start+event.duration;return event.duration>=E.numeric.unit?`${start}${event.duration>E.numeric.unit?U.rangeSeparator+(end-E.numeric.unit):''}`:`${start}${U.rangeSeparator}${end}`;}
+function partFacts(section){
+ const part=section.parts,top=part.topline,drums=part.drums,bass=part.bass;
+ return{
+  top:fmt(PU.toplineSummary,{...top.range,notes:top.notes.length,ornaments:top.notes.filter(note=>note.role!=='chord').length,breaths:top.breaths}),
+  motif:fmt(PU.motifSummary,{...top.motif,cell:top.motif.cell.split(',').map(value=>Number(value)/part.displayTicks+E.numeric.unit).join(U.listSeparator)}),
+  novelty:fmt(PU.noveltySummary,{stock:top.stock,intervals:top.intervalKinds,rhythms:top.rhythmKinds}),
+  drums:fmt(PU.drumSummary,drums),bass:fmt(PU.bassSummary,{...bass,...bass.range}),swing:fmt(PU.swing,{ratio:drums.swingRatio})
+ };
+}
+function eventsInBar(events,bar,part){
+ const start=bar*part.barTicks,end=start+part.barTicks;
+ return events.filter(event=>event.start<end&&event.start+event.duration>start).map(event=>({...event,start:Math.max(start,event.start),duration:Math.min(end,event.start+event.duration)-Math.max(start,event.start)}));
+}
+function formatPartEvent(event,part,drum=false){
+ const offset=event.start%part.barTicks,position=Number((offset/part.displayTicks+E.numeric.unit).toFixed(P.display.decimals)),duration=Number((event.duration/part.displayTicks).toFixed(P.display.decimals));
+ if(drum)return`${P.drumVoices[event.voice].label}${P.display.at}${position} (${fmt(PU.velocity,event)})`;
+ return`${event.note}${P.display.at}${position}${P.display.lengthOpen}${duration}${P.display.lengthClose} · ${PU.roles[event.role]}${event.fret!==undefined?U.noteSeparator+fmt(PU.fingering,event):''}`;
+}
+function renderPartPlans(section){
+ const part=section.parts,facts=partFacts(section);
+ const rows=Array.from({length:part.bars},(_,bar)=>{
+  const cells=[part.topline.events,part.drums.events,part.bass.events].map((events,index)=>`<td>${eventsInBar(events,bar,part).map(event=>`<span class="part-event">${escapeHtml(formatPartEvent(event,part,index===E.numeric.unit))}</span>`).join('')}</td>`).join('');
+  return`<tr><td class="mono">${bar+E.numeric.unit}</td>${cells}</tr>`;
+ }).join('');
+ return`<div class="part-block"><h3>${escapeHtml(PU.title)}</h3><p class="trace">${escapeHtml(fmt(PU.planHelp,{bars:part.bars,repeats:section.repeats}))}</p><div class="part-summary"><div><strong>${escapeHtml(PU.topline)}</strong><p>${escapeHtml(facts.top)}</p><p>${escapeHtml(facts.motif)}</p><p>${escapeHtml(facts.novelty)}</p></div><div><strong>${escapeHtml(PU.drums)}</strong><p>${escapeHtml(facts.drums)}</p><p>${escapeHtml(facts.swing)}</p></div><div><strong>${escapeHtml(PU.bass)}</strong><p>${escapeHtml(facts.bass)}</p></div></div><p class="trace">${escapeHtml(PU.unitHelp)}</p><div class="table-wrap"><table class="part-grid"><caption class="sr-only">${escapeHtml(section.label+' '+PU.title)}</caption><thead><tr>${[PU.lineBar,PU.vocalColumn,PU.drumColumn,PU.bassColumn].map(label=>`<th scope="col">${escapeHtml(label)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div><details class="part-theory"><summary>${escapeHtml(PU.theoryTitle)}</summary>${[PU.melodyRules,PU.drumRules,PU.bassRules].map(rule=>`<p>${escapeHtml(rule)}</p>`).join('')}</details></div>`;
+}
+function partMarkdown(section){
+ const part=section.parts,facts=partFacts(section);
+ const rows=Array.from({length:part.bars},(_,bar)=>`| ${bar+E.numeric.unit} | ${[part.topline.events,part.drums.events,part.bass.events].map((events,index)=>eventsInBar(events,bar,part).map(event=>formatPartEvent(event,part,index===E.numeric.unit)).join(P.display.eventSeparator)).join(' | ')} |`);
+ return`#### ${PU.title}\n\n${fmt(PU.planHelp,{bars:part.bars,repeats:section.repeats})}\n\n${PU.unitHelp}\n\n- ${PU.topline}: ${facts.top}\n- ${facts.motif}\n- ${facts.novelty}\n- ${PU.drums}: ${facts.drums}\n- ${facts.swing}\n- ${PU.bass}: ${facts.bass}\n\n| ${PU.lineBar} | ${PU.vocalColumn} | ${PU.drumColumn} | ${PU.bassColumn} |\n| --- | --- | --- | --- |\n${rows.join('\n')}\n\n${[PU.melodyRules,PU.drumRules,PU.bassRules].map(rule=>`- ${rule}`).join('\n')}`;
+}
 function toMarkdown(guide){
  const rows=guide.sections.map(section=>{
   const table=section.events.map(event=>`| ${eventRange(section,event)} | ${event.symbol} | ${event.id} | ${event.bassName} | ${event.voicing} | ${DB.sources[event.source]} |`).join('\n');
-  return`### ${section.label} (${section.start}${U.rangeSeparator}${section.end} ${U.bars})\n\n${fmt(U.phraseHint,section)}\n\n| ${U.barRange} | ${U.chord} | ${U.roman} | ${U.bass} | ${U.voicing} | ${U.source} |\n| --- | --- | --- | --- | --- | --- |\n${table}\n\n- ${U.arrangement}: ${section.arrangement.instruments.map(item=>item.label).join(U.listSeparator)}\n- ${U.rhythm}: ${section.rhythm}\n- ${U.melody}: ${section.melody}\n- ${U.transition}: ${section.transition}`;
+  return`### ${section.label} (${section.start}${U.rangeSeparator}${section.end} ${U.bars})\n\n${fmt(U.phraseHint,section)}\n\n| ${U.barRange} | ${U.chord} | ${U.roman} | ${U.bass} | ${U.voicing} | ${U.source} |\n| --- | --- | --- | --- | --- | --- |\n${table}\n\n- ${U.arrangement}: ${section.arrangement.instruments.map(item=>item.label).join(U.listSeparator)}\n- ${U.rhythm}: ${section.rhythm}\n- ${U.melody}: ${section.melody}\n- ${U.transition}: ${section.transition}\n\n${partMarkdown(section)}`;
  });
- return`# ${U.exportTitle}\n\n${guide.summary.title}\n\n${guide.summary.subtitle} · ${guide.config.bpm} ${U.bpm} · ${guide.bars} ${U.bars} · ${formatDuration(guide.seconds)}\n\n${fmt(U.seedTag,{seed:guide.config.seed})} · ${fmt(U.versionTag,{version:guide.version})}\n\n## ${U.exportConfig}\n\n${DB.fields.filter(field=>field.id!=='customProgression'||guide.config.progression==='custom').map(field=>`- ${field.label}: ${field.type==='select'?byId(field.table,guide.config[field.id]).label:guide.config[field.id]}`).join('\n')}\n\n## ${U.exportHarmony}\n\n${guide.harmony.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n${guide.summary.notice}\n\n## ${U.exportMelody}\n\n${guide.melody.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n## ${U.exportSections}\n\n${rows.join('\n\n')}\n\n## ${U.exportDaw}\n\n${guide.daw.map((step,index)=>`${index+E.numeric.unit}. ${step}`).join('\n')}\n\n## ${U.exportMethod}\n\n${U.methodDescription}\n\n${Object.entries(guide.diagnostics).map(([key,value])=>`- ${U[key]}: ${value}`).join('\n')}\n\n${U.footnote}\n\n${DB.theoryReferences.map(source=>`[${source.label}](${source.url})`).join('\n')}`;
+ return`# ${U.exportTitle}\n\n${guide.summary.title}\n\n${guide.summary.subtitle} · ${guide.config.bpm} ${U.bpm} · ${guide.bars} ${U.bars} · ${formatDuration(guide.seconds)}\n\n${fmt(U.seedTag,{seed:guide.config.seed})} · ${fmt(U.versionTag,{version:guide.version})}\n\n## ${U.exportConfig}\n\n${DB.fields.filter(field=>field.id!=='customProgression'||guide.config.progression==='custom').map(field=>`- ${field.label}: ${field.type==='select'?byId(field.table,guide.config[field.id]).label:guide.config[field.id]}`).join('\n')}\n\n## ${U.exportHarmony}\n\n${guide.harmony.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n${guide.summary.notice}\n\n## ${U.exportMelody}\n\n${guide.melody.map(item=>`**${item.title}**: ${item.body}`).join('\n\n')}\n\n## ${U.exportSections}\n\n${rows.join('\n\n')}\n\n## ${U.exportDaw}\n\n${guide.daw.map((step,index)=>`${index+E.numeric.unit}. ${step}`).join('\n')}\n\n## ${U.exportMethod}\n\n${PU.method}\n\n${PU.theoryRules.map(rule=>`- ${rule}`).join('\n')}\n\n${Object.entries(guide.diagnostics).map(([key,value])=>`- ${U[key]}: ${value}`).join('\n')}\n\n${U.footnote}\n\n${DB.theoryReferences.map(source=>`[${source.label}](${source.url})`).join('\n')}`;
 }
 // Public boundary for the focused, dependency-free engine check.
 globalThis.MusicMaker={database:DB,normalizeConfig,generateGuide,toMarkdown,validateDatabase};
@@ -360,8 +713,8 @@ function refreshFields(){
 function renderGuide(guide){
  const list=items=>`<ul class="guidance-list">${items.map(item=>`<li><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.body)}</p></li>`).join('')}</ul>`;
  const diagnostic=Object.entries(guide.diagnostics).map(([key,value])=>`<div><strong>${value}${['borrowed','applied','extension','swing'].includes(key)?U.percentage:''}</strong><small>${escapeHtml(U[key])}</small></div>`).join('');
- const sections=guide.sections.map(section=>`<details class="section"${section.index===0?' open':''}><summary><span class="section-index">${String(section.index+E.numeric.unit).padStart(E.numeric.padding,'0')}</span><span class="section-title">${escapeHtml(section.label)}<small>${escapeHtml(fmt(U.sectionSubtitle,section))}</small></span><span class="section-meta">${section.bars} ${escapeHtml(U.bars)}</span><span class="section-arrow" aria-hidden="true">›</span></summary><div class="section-content"><div class="chord-row">${section.phrase.map(event=>`<div class="chord ${event.source}"><strong>${escapeHtml(event.symbol)}</strong><small>${escapeHtml(event.id)} · ${escapeHtml(DB.functions[event.fn])}</small></div>`).join('')}</div><p class="section-note">${escapeHtml(fmt(U.phraseHint,section))}</p><div class="section-info"><div><strong>${escapeHtml(U.arrangement)}</strong><p>${escapeHtml(fmt(U.instrumentsLine,{instruments:section.arrangement.instruments.map(item=>item.label).join(U.listSeparator),tracks:section.arrangement.tracks}))}</p></div><div><strong>${escapeHtml(U.rhythm)}</strong><p>${escapeHtml(section.rhythm)}</p></div><div><strong>${escapeHtml(U.melody)}</strong><p>${escapeHtml(section.melody)}</p></div><div><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div><div class="table-wrap"><table><caption class="sr-only">${escapeHtml(section.label+' '+U.voicing)}</caption><thead><tr>${['barRange','chord','roman','bass','voicing','source'].map(key=>`<th scope="col">${escapeHtml(U[key])}</th>`).join('')}</tr></thead><tbody>${section.events.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td>${escapeHtml(event.id)}</td><td class="mono">${escapeHtml(event.bassName)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td>${escapeHtml(DB.sources[event.source])}</td></tr>`).join('')}</tbody></table></div><p class="trace">${escapeHtml(fmt(U.sectionTrace,section))} · ${escapeHtml(U.octaveHint)}</p></div></details>`).join('');
- document.getElementById('report').innerHTML=`<section class="brief"><div><div class="eyebrow">${escapeHtml(U.briefEyebrow)}</div><h2>${escapeHtml(guide.summary.title)}</h2><small>${escapeHtml(guide.summary.subtitle)}</small></div><div class="brief-stats"><div class="stat"><strong class="mono">${guide.config.bpm}</strong><span>${escapeHtml(U.bpm)}</span></div><div class="stat"><strong class="mono">${formatDuration(guide.seconds)}</strong><span>${escapeHtml(U.duration)}</span></div><div class="stat"><strong class="mono">${guide.bars}</strong><span>${escapeHtml(U.bars)}</span></div></div></section><div class="report-header"><div><h2>${escapeHtml(U.reportTitle)}</h2><div class="tags"><span class="tag accent">${escapeHtml(fmt(U.seedTag,{seed:guide.config.seed}))}</span><span class="tag">${escapeHtml(fmt(U.versionTag,{version:guide.version}))}</span></div></div><div class="actions">${['copy','markdown','json','print'].map(action=>`<button type="button" data-action="${action}">${escapeHtml(U[action])}</button>`).join('')}</div></div><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.energyTitle)}</h3><small>${escapeHtml(U.energyHint)}</small></div><div class="timeline">${guide.sections.map(section=>`<div class="timeline-cell" style="--bars:${section.bars};--energy:${section.energy};--opacity:${E.display.diagramBase+section.energy/E.numeric.percent*E.display.diagramEnergy}" title="${escapeHtml(fmt(U.sectionSubtitle,section))}"><div class="timeline-bar"></div><div class="timeline-label">${escapeHtml(section.label)}</div><div class="timeline-number">${section.start}${U.rangeSeparator}${section.end}</div></div>`).join('')}</div><p class="timeline-legend">${escapeHtml(fmt(U.energyLegend,{bars:guide.bars,seconds:guide.seconds}))}</p></section><div class="overview-grid"><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.harmonyTitle)}</h3></div>${list(guide.harmony)}<p class="trace">${escapeHtml(guide.summary.notice)}</p></section><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.melodyTitle)}</h3></div>${list(guide.melody)}</section></div><div class="report-header"><h2>${escapeHtml(U.sectionsTitle)}</h2></div>${sections}<section class="panel"><div class="panel-top"><h3>${escapeHtml(U.dawTitle)}</h3></div><ol class="checklist">${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol><p class="trace">${escapeHtml(guide.summary.orchestral)}</p></section><details class="engine-details"><summary>${escapeHtml(U.methodTitle)}</summary><p class="trace">${escapeHtml(U.methodDescription)}</p><div class="engine-grid">${diagnostic}</div><div class="sources"><span>${escapeHtml(U.sourcesTitle)} · </span>${DB.theoryReferences.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`).join('')}</div></details><p class="footnote">${escapeHtml(U.footnote)}</p>`;
+ const sections=guide.sections.map(section=>`<details class="section"${section.index===0?' open':''}><summary><span class="section-index">${String(section.index+E.numeric.unit).padStart(E.numeric.padding,'0')}</span><span class="section-title">${escapeHtml(section.label)}<small>${escapeHtml(fmt(U.sectionSubtitle,section))}</small></span><span class="section-meta">${section.bars} ${escapeHtml(U.bars)}</span><span class="section-arrow" aria-hidden="true">›</span></summary><div class="section-content"><div class="chord-row">${section.phrase.map(event=>`<div class="chord ${event.source}"><strong>${escapeHtml(event.symbol)}</strong><small>${escapeHtml(event.id)} · ${escapeHtml(DB.functions[event.fn])}</small></div>`).join('')}</div><p class="section-note">${escapeHtml(fmt(U.phraseHint,section))}</p><div class="section-info"><div><strong>${escapeHtml(U.arrangement)}</strong><p>${escapeHtml(fmt(U.instrumentsLine,{instruments:section.arrangement.instruments.map(item=>item.label).join(U.listSeparator),tracks:section.arrangement.tracks}))}</p></div><div><strong>${escapeHtml(U.rhythm)}</strong><p>${escapeHtml(section.rhythm)}</p></div><div><strong>${escapeHtml(U.melody)}</strong><p>${escapeHtml(section.melody)}</p></div><div><strong>${escapeHtml(U.transition)}</strong><p>${escapeHtml(section.transition)}</p></div></div>${renderPartPlans(section)}<div class="table-wrap"><table><caption class="sr-only">${escapeHtml(section.label+' '+U.voicing)}</caption><thead><tr>${['barRange','chord','roman','bass','voicing','source'].map(key=>`<th scope="col">${escapeHtml(U[key])}</th>`).join('')}</tr></thead><tbody>${section.events.map(event=>`<tr><td class="mono">${eventRange(section,event)}</td><td class="mono">${escapeHtml(event.symbol)}</td><td>${escapeHtml(event.id)}</td><td class="mono">${escapeHtml(event.bassName)}</td><td class="mono">${escapeHtml(event.voicing)}</td><td>${escapeHtml(DB.sources[event.source])}</td></tr>`).join('')}</tbody></table></div><p class="trace">${escapeHtml(fmt(U.sectionTrace,section))} · ${escapeHtml(U.octaveHint)}</p></div></details>`).join('');
+ document.getElementById('report').innerHTML=`<section class="brief"><div><div class="eyebrow">${escapeHtml(U.briefEyebrow)}</div><h2>${escapeHtml(guide.summary.title)}</h2><small>${escapeHtml(guide.summary.subtitle)}</small></div><div class="brief-stats"><div class="stat"><strong class="mono">${guide.config.bpm}</strong><span>${escapeHtml(U.bpm)}</span></div><div class="stat"><strong class="mono">${formatDuration(guide.seconds)}</strong><span>${escapeHtml(U.duration)}</span></div><div class="stat"><strong class="mono">${guide.bars}</strong><span>${escapeHtml(U.bars)}</span></div></div></section><div class="report-header"><div><h2>${escapeHtml(U.reportTitle)}</h2><div class="tags"><span class="tag accent">${escapeHtml(fmt(U.seedTag,{seed:guide.config.seed}))}</span><span class="tag">${escapeHtml(fmt(U.versionTag,{version:guide.version}))}</span></div></div><div class="actions">${['copy','markdown','json','print'].map(action=>`<button type="button" data-action="${action}">${escapeHtml(U[action])}</button>`).join('')}</div></div><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.energyTitle)}</h3><small>${escapeHtml(U.energyHint)}</small></div><div class="timeline">${guide.sections.map(section=>`<div class="timeline-cell" style="--bars:${section.bars};--energy:${section.energy};--opacity:${E.display.diagramBase+section.energy/E.numeric.percent*E.display.diagramEnergy}" title="${escapeHtml(fmt(U.sectionSubtitle,section))}"><div class="timeline-bar"></div><div class="timeline-label">${escapeHtml(section.label)}</div><div class="timeline-number">${section.start}${U.rangeSeparator}${section.end}</div></div>`).join('')}</div><p class="timeline-legend">${escapeHtml(fmt(U.energyLegend,{bars:guide.bars,seconds:guide.seconds}))}</p></section><div class="overview-grid"><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.harmonyTitle)}</h3></div>${list(guide.harmony)}<p class="trace">${escapeHtml(guide.summary.notice)}</p></section><section class="panel"><div class="panel-top"><h3>${escapeHtml(U.melodyTitle)}</h3></div>${list(guide.melody)}</section></div><div class="report-header"><h2>${escapeHtml(U.sectionsTitle)}</h2></div>${sections}<section class="panel"><div class="panel-top"><h3>${escapeHtml(U.dawTitle)}</h3></div><ol class="checklist">${guide.daw.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol><p class="trace">${escapeHtml(guide.summary.orchestral)}</p></section><details class="engine-details"><summary>${escapeHtml(U.methodTitle)}</summary><p class="trace">${escapeHtml(PU.method)}</p><div class="engine-grid">${diagnostic}</div><div class="sources"><span>${escapeHtml(U.sourcesTitle)} · </span>${DB.theoryReferences.map(source=>`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`).join('')}</div></details><p class="footnote">${escapeHtml(U.footnote)}</p>`;
 }
 
 function setStatus(message,isError=false){const status=document.getElementById('status');status.textContent=message;status.dataset.error=String(isError);}
