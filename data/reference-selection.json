@@ -1,0 +1,602 @@
+[
+  {
+    "artist": "girls-generation",
+    "song": "gee",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "genie",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "into-the-new-world",
+    "group": "jrock",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "oh",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "lion-heart",
+    "group": "pop",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "i-got-a-boy",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "catch-me-if-you-can",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "run-devil-run",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "bad-boy",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "time-slip",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "one-of-these-nights",
+    "group": "ballad",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "russian-roulette",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "ice-cream-cake",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "rookie",
+    "group": "pop",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "oh-boy",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "cool-world",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "run",
+    "group": "rock",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "i-need-u",
+    "group": "pop",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "dna",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "spring-time",
+    "group": "ballad",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "butterfly",
+    "group": "ballad",
+    "region": "KR"
+  },
+  {
+    "artist": "bts",
+    "song": "sinncerity-that-couldnt-be-delivered",
+    "group": "ballad",
+    "region": "KR"
+  },
+  {
+    "artist": "iu",
+    "song": "red-shoes",
+    "group": "jazz",
+    "region": "KR"
+  },
+  {
+    "artist": "iu",
+    "song": "you-and-i",
+    "group": "pop",
+    "region": "KR"
+  },
+  {
+    "artist": "taeyeon",
+    "song": "i",
+    "group": "rock",
+    "region": "KR"
+  },
+  {
+    "artist": "bigbang",
+    "song": "loser",
+    "group": "ballad",
+    "region": "KR"
+  },
+  {
+    "artist": "bigbang",
+    "song": "bae-bae",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "taeyang",
+    "song": "wedding-dress",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "blackpink",
+    "song": "whistle",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "blackpink",
+    "song": "as-if-its-your-last",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "fx",
+    "song": "4-walls",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "fx",
+    "song": "glitter",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "gfriend",
+    "song": "me-gustas-tu",
+    "group": "jrock",
+    "region": "KR"
+  },
+  {
+    "artist": "gfriend",
+    "song": "fingertip",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "gfriend",
+    "song": "sunrise",
+    "group": "jrock",
+    "region": "KR"
+  },
+  {
+    "artist": "exo",
+    "song": "love-me-right",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "exo",
+    "song": "call-me-baby",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "sistar",
+    "song": "alone",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "sistar",
+    "song": "give-it-to-me",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "sistar",
+    "song": "i-like-that",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "miss-a",
+    "song": "only-you",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "miss-a",
+    "song": "good-bye-baby",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "miss-a",
+    "song": "love-song",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "itzy",
+    "song": "wannabe",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "itzy",
+    "song": "dalla-dalla",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "psy",
+    "song": "gangnam-style",
+    "group": "dance",
+    "region": "KR"
+  },
+  {
+    "artist": "mamamoo",
+    "song": "hometown",
+    "group": "rnb",
+    "region": "KR"
+  },
+  {
+    "artist": "dreamcatcher",
+    "song": "good-night",
+    "group": "rock",
+    "region": "KR"
+  },
+  {
+    "artist": "dreamcatcher",
+    "song": "fly-high",
+    "group": "rock",
+    "region": "KR"
+  },
+  {
+    "artist": "dreamcatcher",
+    "song": "you-and-i",
+    "group": "rock",
+    "region": "KR"
+  },
+  {
+    "artist": "adele",
+    "song": "someone-like-you",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "adele",
+    "song": "hello",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "adele",
+    "song": "rolling-in-the-deep",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "whitney-houston",
+    "song": "i-will-always-love-you",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "whitney-houston",
+    "song": "i-wanna-dance-with-somebody",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "celine-dion",
+    "song": "my-heart-will-go-on",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "elton-john",
+    "song": "your-song",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "john-lennon",
+    "song": "imagine",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "the-beatles",
+    "song": "let-it-be",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "the-beatles",
+    "song": "hey-jude",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "elvis-presley",
+    "song": "cant-help-falling-in-love",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "billy-joel",
+    "song": "just-the-way-you-are",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "bruno-mars",
+    "song": "when-i-was-your-man",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "ed-sheeran",
+    "song": "thinking-out-loud",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "ed-sheeran",
+    "song": "perfect",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "sam-smith",
+    "song": "stay-with-me",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "radiohead",
+    "song": "creep",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "queen",
+    "song": "bohemian-rhapsody",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "queen",
+    "song": "dont-stop-me-now",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "eagles",
+    "song": "hotel-california",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "nirvana",
+    "song": "smells-like-teen-spirit",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "oasis",
+    "song": "dont-look-back-in-anger",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "bon-jovi",
+    "song": "living-on-a-prayer",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "michael-jackson",
+    "song": "billie-jean",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "michael-jackson",
+    "song": "beat-it",
+    "group": "rock",
+    "region": "INTL"
+  },
+  {
+    "artist": "prince",
+    "song": "purple-rain",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "stevie-wonder",
+    "song": "superstition",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "stevie-wonder",
+    "song": "isnt-she-lovely",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "grover-washington-jr-and-bill-withers",
+    "song": "just-the-two-of-us",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "earth-wind-and-fire",
+    "song": "september",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "marvin-gaye",
+    "song": "whats-going-on",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "al-green",
+    "song": "lets-stay-together",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "bruno-mars",
+    "song": "uptown-funk",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "bruno-mars",
+    "song": "treasure",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "pharrell-williams",
+    "song": "happy",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "daft-punk",
+    "song": "get-lucky",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "dua-lipa",
+    "song": "dont-start-now",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "shake-it-off",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "blank-space",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "katy-perry",
+    "song": "firework",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "katy-perry",
+    "song": "teenage-dream",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "lady-gaga",
+    "song": "bad-romance",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "lady-gaga",
+    "song": "poker-face",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "abba",
+    "song": "dancing-queen",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "madonna",
+    "song": "like-a-prayer",
+    "group": "pop",
+    "region": "INTL"
+  },
+  {
+    "artist": "britney-spears",
+    "song": "toxic",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "beyonce",
+    "song": "crazy-in-love-ft-jay-z",
+    "group": "rnb",
+    "region": "INTL"
+  },
+  {
+    "artist": "beyonce",
+    "song": "halo",
+    "group": "ballad",
+    "region": "INTL"
+  },
+  {
+    "artist": "justin-timberlake",
+    "song": "cant-stop-the-feeling",
+    "group": "dance",
+    "region": "INTL"
+  },
+  {
+    "artist": "charlie-puth",
+    "song": "attention",
+    "group": "rnb",
+    "region": "INTL"
+  }
+]
