@@ -1,0 +1,633 @@
+{
+  "asOf": "2026-10-14",
+  "source": "POP909 (Wang, Chen et al., ISMIR 2020)",
+  "sourceUrl": "https://github.com/music-x-lab/POP909-Dataset",
+  "paper": "https://arxiv.org/abs/2008.07142",
+  "license": "MIT; source MIDI copyrights remain with their holders",
+  "sample": "32 deterministic, equally spaced IDs: 001 + 28*k, k=0..31. One main arrangement version per ID.",
+  "scope": "Joint symbolic melody/piano timing and register statistics. Automatic phrase segmentation; no lyric or emotion labels, no listening study, no claim to represent every genre.",
+  "songCount": 32,
+  "melodyNotes": 10526,
+  "accompanimentNotes": 34713,
+  "aggregate": {
+    "phraseBeats": 6.79986,
+    "phrasePeakPosition": 0.27029,
+    "breathBeats": 2.01754,
+    "heldNoteRatio": 0.07282,
+    "sharedAttackRatio": 0.37669,
+    "registerSeparation": 13,
+    "crossHarmonyRatio": 0.122,
+    "heldAccompanimentDensityRatio": 0.9319
+  },
+  "songs": [
+    {
+      "id": "001",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/001",
+      "midiSha256": "a93079efb82bdf1e27e75951b7eb454509efb130f0bc0e936257df5c73aabcb0",
+      "chordSha256": "3a2a062ac30441ee98618e6ed83ee9282b741bcf2923b42f5a78bb06058e2bc3",
+      "melodyNotes": 264,
+      "accompanimentNotes": 985,
+      "phrases": 26,
+      "metrics": {
+        "phraseBeats": 3.98125,
+        "phrasePeakPosition": 0.30049,
+        "breathBeats": 1.01875,
+        "heldNoteRatio": 0.04545,
+        "sharedAttackRatio": 0.33731,
+        "registerSeparation": 8,
+        "crossHarmonyRatio": 0.14394,
+        "heldAccompanimentDensityRatio": 1.07407
+      }
+    },
+    {
+      "id": "029",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/029",
+      "midiSha256": "657b40eba5d1775aad82dde847df2e02da6ceb1ff2e2f805e256fd8a83fc21bd",
+      "chordSha256": "c8d6a2586419df3221d0a0b503d196ac0f3f402fb0732aa77f272ed3c31fe983",
+      "melodyNotes": 267,
+      "accompanimentNotes": 957,
+      "phrases": 33,
+      "metrics": {
+        "phraseBeats": 5.33333,
+        "phrasePeakPosition": 0.25593,
+        "breathBeats": 0.71667,
+        "heldNoteRatio": 0.08989,
+        "sharedAttackRatio": 0.2875,
+        "registerSeparation": 17,
+        "crossHarmonyRatio": 0.23221,
+        "heldAccompanimentDensityRatio": 1.04481
+      }
+    },
+    {
+      "id": "057",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/057",
+      "midiSha256": "42adff3a78c8b051bc5e5b854e2cb0c79197cdf6e5d65bef69b4bc67ba547a23",
+      "chordSha256": "262b0fa1a101854672d004e8cec9e5e6c229c79b4b4c01284c86eddf896fcb3c",
+      "melodyNotes": 441,
+      "accompanimentNotes": 739,
+      "phrases": 7,
+      "metrics": {
+        "phraseBeats": 4.55417,
+        "phrasePeakPosition": 0.22586,
+        "breathBeats": 0.51875,
+        "heldNoteRatio": 0.02268,
+        "sharedAttackRatio": 0.53682,
+        "registerSeparation": 21,
+        "crossHarmonyRatio": 0.04762,
+        "heldAccompanimentDensityRatio": 0.82069
+      }
+    },
+    {
+      "id": "085",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/085",
+      "midiSha256": "2f92e181c6f37bf8fbc2e9afa8b7c95b88f5ce12873f4fa0b24037a422e51e1f",
+      "chordSha256": "11997fdc40cd2a99d1a55a4541245cc02ee0e247633e726a1a76696173c59caf",
+      "melodyNotes": 309,
+      "accompanimentNotes": 1247,
+      "phrases": 40,
+      "metrics": {
+        "phraseBeats": 6.81875,
+        "phrasePeakPosition": 0.33742,
+        "breathBeats": 0.89167,
+        "heldNoteRatio": 0.13269,
+        "sharedAttackRatio": 0.33166,
+        "registerSeparation": 19,
+        "crossHarmonyRatio": 0.23625,
+        "heldAccompanimentDensityRatio": 1.04121
+      }
+    },
+    {
+      "id": "113",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/113",
+      "midiSha256": "588187935fe69bb67fd6c0a0858bee0edba340bed18926e979d0f96bc038b04d",
+      "chordSha256": "d31771d10349891d8507c3ae733ee55bd60009366d8b1a4cadbc2515406fed96",
+      "melodyNotes": 300,
+      "accompanimentNotes": 1545,
+      "phrases": 14,
+      "metrics": {
+        "phraseBeats": 5.75417,
+        "phrasePeakPosition": 0.192,
+        "breathBeats": 0.775,
+        "heldNoteRatio": 0.08,
+        "sharedAttackRatio": 0.3557,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.14333,
+        "heldAccompanimentDensityRatio": 0.6213
+      }
+    },
+    {
+      "id": "141",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/141",
+      "midiSha256": "b43fde1d6cf51475ba62e4e3c091b1229bb503620a366e461024166c492c43a6",
+      "chordSha256": "bc47d6fb3026a1d46821f306dad379ddd3d49f2ee6c86c1708ab255c8c0f088b",
+      "melodyNotes": 176,
+      "accompanimentNotes": 1184,
+      "phrases": 0,
+      "metrics": {
+        "phraseBeats": null,
+        "phrasePeakPosition": null,
+        "breathBeats": 33.8375,
+        "heldNoteRatio": 0.24432,
+        "sharedAttackRatio": 0.22958,
+        "registerSeparation": 7,
+        "crossHarmonyRatio": 0.23864,
+        "heldAccompanimentDensityRatio": 0.9852
+      }
+    },
+    {
+      "id": "169",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/169",
+      "midiSha256": "0668bf5aad166bfdbe6f078fcd53aaffef99baa554712e4abb86e2394b943e47",
+      "chordSha256": "6a476afae9c9444264f91b1a3b812da4886b65883462c62c6ef5a024e1606071",
+      "melodyNotes": 254,
+      "accompanimentNotes": 207,
+      "phrases": 7,
+      "metrics": {
+        "phraseBeats": 8.98958,
+        "phrasePeakPosition": 0.05094,
+        "breathBeats": 0.82917,
+        "heldNoteRatio": 0.01969,
+        "sharedAttackRatio": 0.48276,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.01575,
+        "heldAccompanimentDensityRatio": 1.2
+      }
+    },
+    {
+      "id": "197",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/197",
+      "midiSha256": "14649ccbc87407f1625f20ec0bab8a6c7ac4f9d78a6f0405bee7be82fbcf8fd3",
+      "chordSha256": "26de22286382c2c9e910f00a3954b484c9bad71c07dd33ad16ede25326b7c25e",
+      "melodyNotes": 530,
+      "accompanimentNotes": 1512,
+      "phrases": 30,
+      "metrics": {
+        "phraseBeats": 7.3125,
+        "phrasePeakPosition": 0.18503,
+        "breathBeats": 0.69375,
+        "heldNoteRatio": 0.05094,
+        "sharedAttackRatio": 0.50258,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.2,
+        "heldAccompanimentDensityRatio": 0.91193
+      }
+    },
+    {
+      "id": "225",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/225",
+      "midiSha256": "09cbd80c76c75725f4edaf03955a7449c4398e75ee98ab8e9cd1361ce710cedf",
+      "chordSha256": "cd1cbf5b98a6fc44b45448ff74bd16e381323ed1e0fed4e13801d47b170c412f",
+      "melodyNotes": 355,
+      "accompanimentNotes": 1283,
+      "phrases": 2,
+      "metrics": {
+        "phraseBeats": 11.99167,
+        "phrasePeakPosition": 0,
+        "breathBeats": 4.00833,
+        "heldNoteRatio": 0.07324,
+        "sharedAttackRatio": 0.44205,
+        "registerSeparation": 14,
+        "crossHarmonyRatio": 0.09014,
+        "heldAccompanimentDensityRatio": 0.90291
+      }
+    },
+    {
+      "id": "253",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/253",
+      "midiSha256": "fdf9ac4f7e1cd358c50b5947e939f5d79225d4fa595a75cc0bbe8f49f24ae801",
+      "chordSha256": "9ba07181e473886ba4ccbf210ad87ccb925384b48627bfd49e482fd244cd5500",
+      "melodyNotes": 390,
+      "accompanimentNotes": 1531,
+      "phrases": 0,
+      "metrics": {
+        "phraseBeats": null,
+        "phrasePeakPosition": null,
+        "breathBeats": null,
+        "heldNoteRatio": 0.0359,
+        "sharedAttackRatio": 0.39939,
+        "registerSeparation": 10,
+        "crossHarmonyRatio": 0.12051,
+        "heldAccompanimentDensityRatio": 0.89844
+      }
+    },
+    {
+      "id": "281",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/281",
+      "midiSha256": "b8ebc126e3c8e8c2a63e92d8cbb71509af16d813c1735449bd3dc963676d952d",
+      "chordSha256": "c95c065f0e1568021306278033c62e5b11b35988f9553461032c036a5f2ad759",
+      "melodyNotes": 338,
+      "accompanimentNotes": 681,
+      "phrases": 30,
+      "metrics": {
+        "phraseBeats": 2.58958,
+        "phrasePeakPosition": 0.18369,
+        "breathBeats": 1.85,
+        "heldNoteRatio": 0,
+        "sharedAttackRatio": 0.45892,
+        "registerSeparation": 10,
+        "crossHarmonyRatio": 0.00888,
+        "heldAccompanimentDensityRatio": 0
+      }
+    },
+    {
+      "id": "309",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/309",
+      "midiSha256": "11bb8b326c531a02ca9eac5754a01f087598d58dde8e9caf5ac011254608cbb9",
+      "chordSha256": "28f269d51304a6057f5b94b6d37b367b8525707ff0fbe535b0a905995147bfa5",
+      "melodyNotes": 381,
+      "accompanimentNotes": 1076,
+      "phrases": 8,
+      "metrics": {
+        "phraseBeats": 10.55417,
+        "phrasePeakPosition": 0.22219,
+        "breathBeats": 1.01458,
+        "heldNoteRatio": 0.07874,
+        "sharedAttackRatio": 0.4075,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.12073,
+        "heldAccompanimentDensityRatio": 0.95268
+      }
+    },
+    {
+      "id": "337",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/337",
+      "midiSha256": "fde73920cffa4d9df6ecaa4e88de75cb9aab72a2733053234086dd5b2ef2e603",
+      "chordSha256": "eaf9ce54440ef4ed5ce7cb9e7ee1f45f83f6b5a7b3de2e7a411439e4f983aedb",
+      "melodyNotes": 264,
+      "accompanimentNotes": 723,
+      "phrases": 2,
+      "metrics": {
+        "phraseBeats": 10,
+        "phrasePeakPosition": 0.9,
+        "breathBeats": 0.5,
+        "heldNoteRatio": 0.10606,
+        "sharedAttackRatio": 0.47551,
+        "registerSeparation": 8,
+        "crossHarmonyRatio": 0.26136,
+        "heldAccompanimentDensityRatio": 1.13168
+      }
+    },
+    {
+      "id": "365",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/365",
+      "midiSha256": "449108ea4c42ddb9560531e8076b8e456a99b33d3896793bac3b34096a9c128a",
+      "chordSha256": "66cab43f74b7e8e2dca8a01c86e191d385c7bb6f2c4898c56a9c0a567a9a949e",
+      "melodyNotes": 500,
+      "accompanimentNotes": 860,
+      "phrases": 24,
+      "metrics": {
+        "phraseBeats": 3.82917,
+        "phrasePeakPosition": 0.41047,
+        "breathBeats": 0.60417,
+        "heldNoteRatio": 0.008,
+        "sharedAttackRatio": 0.57143,
+        "registerSeparation": 17,
+        "crossHarmonyRatio": 0.028,
+        "heldAccompanimentDensityRatio": 0.62219
+      }
+    },
+    {
+      "id": "393",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/393",
+      "midiSha256": "c78313f7d1343da93d7d391219887c49e66e432f58db8521c7e6fc295047bf03",
+      "chordSha256": "d98059af5dca8aa7548387cbfa3ca3fde97bc2ecfd2faa87c63f26affdd32b39",
+      "melodyNotes": 354,
+      "accompanimentNotes": 1359,
+      "phrases": 27,
+      "metrics": {
+        "phraseBeats": 3.36458,
+        "phrasePeakPosition": 0.32861,
+        "breathBeats": 0.63542,
+        "heldNoteRatio": 0.03107,
+        "sharedAttackRatio": 0.26677,
+        "registerSeparation": 10,
+        "crossHarmonyRatio": 0.06497,
+        "heldAccompanimentDensityRatio": 0.76555
+      }
+    },
+    {
+      "id": "421",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/421",
+      "midiSha256": "1450bfa1d2017e647730b31443e8c6192ced85a95ed992be0dfb91ff3e3c406b",
+      "chordSha256": "ee09a55a2e00abae64725793d68d148ae9a21a3890b33b578acede1125ecfe50",
+      "melodyNotes": 294,
+      "accompanimentNotes": 1275,
+      "phrases": 20,
+      "metrics": {
+        "phraseBeats": 7.07917,
+        "phrasePeakPosition": 0.30563,
+        "breathBeats": 0.92083,
+        "heldNoteRatio": 0.05782,
+        "sharedAttackRatio": 0.38292,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.12925,
+        "heldAccompanimentDensityRatio": 0.96389
+      }
+    },
+    {
+      "id": "449",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/449",
+      "midiSha256": "9bc276793447b1481553a24fff2450e19f12f2fd911bf52c56e6333bda9793d5",
+      "chordSha256": "f7f5ba263e8e4b73996cae3e9aa57682deebc21c144c118b9179e4ec798870f6",
+      "melodyNotes": 379,
+      "accompanimentNotes": 1269,
+      "phrases": 48,
+      "metrics": {
+        "phraseBeats": 3.4625,
+        "phrasePeakPosition": 0.36673,
+        "breathBeats": 0.73125,
+        "heldNoteRatio": 0.07388,
+        "sharedAttackRatio": 0.30973,
+        "registerSeparation": 15,
+        "crossHarmonyRatio": 0.27177,
+        "heldAccompanimentDensityRatio": 1.04262
+      }
+    },
+    {
+      "id": "477",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/477",
+      "midiSha256": "63ce42592a53ff65852268da7bb396a75da0dc6613ff8e274e965ee18fd1483d",
+      "chordSha256": "584ad8d06fbb5b5b76688e5efbfbdcd5594353bd8bed7e57c71fb2d858c510df",
+      "melodyNotes": 385,
+      "accompanimentNotes": 1288,
+      "phrases": 49,
+      "metrics": {
+        "phraseBeats": 4.47917,
+        "phrasePeakPosition": 0.31076,
+        "breathBeats": 0.61458,
+        "heldNoteRatio": 0.04935,
+        "sharedAttackRatio": 0.32616,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.00779,
+        "heldAccompanimentDensityRatio": 0.83012
+      }
+    },
+    {
+      "id": "505",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/505",
+      "midiSha256": "7f10a6f6174dae0b5661efb60a4721db73252a0c50e84cfd6db43e68f8251813",
+      "chordSha256": "97d3a4f2f41d9450e1a449499ec0718c6de8a8c64a6a390dcf51b7a182e62587",
+      "melodyNotes": 237,
+      "accompanimentNotes": 1055,
+      "phrases": 3,
+      "metrics": {
+        "phraseBeats": 8.42708,
+        "phrasePeakPosition": 0.08468,
+        "breathBeats": 0.6125,
+        "heldNoteRatio": 0.08861,
+        "sharedAttackRatio": 0.30491,
+        "registerSeparation": 17,
+        "crossHarmonyRatio": 0.04219,
+        "heldAccompanimentDensityRatio": 0.96862
+      }
+    },
+    {
+      "id": "533",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/533",
+      "midiSha256": "838334c92570dd99a18038cefae015387b4f86b3a858c4426e7b6ac0c5211ca4",
+      "chordSha256": "f206e62f9c8e5ccd8328a4374d1f748110bdd07ffadd9ed5227737eae49981ca",
+      "melodyNotes": 539,
+      "accompanimentNotes": 1214,
+      "phrases": 3,
+      "metrics": {
+        "phraseBeats": 6.06458,
+        "phrasePeakPosition": 0.07589,
+        "breathBeats": 0.51667,
+        "heldNoteRatio": 0.01299,
+        "sharedAttackRatio": 0.58232,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.04638,
+        "heldAccompanimentDensityRatio": 0.85939
+      }
+    },
+    {
+      "id": "561",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/561",
+      "midiSha256": "618ed3e35f6e3a2b936831960aab157e29e514f2715e527a17cd8a0333739fae",
+      "chordSha256": "572909c69f5ae8f1d48c8f59f4f43adee40efbf11a189b7d590c2b07122cc924",
+      "melodyNotes": 349,
+      "accompanimentNotes": 1420,
+      "phrases": 19,
+      "metrics": {
+        "phraseBeats": 11.72292,
+        "phrasePeakPosition": 0.35378,
+        "breathBeats": 1.4,
+        "heldNoteRatio": 0.03725,
+        "sharedAttackRatio": 0.26599,
+        "registerSeparation": 9,
+        "crossHarmonyRatio": 0.13754,
+        "heldAccompanimentDensityRatio": 1.0222
+      }
+    },
+    {
+      "id": "589",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/589",
+      "midiSha256": "754fb2529809021a7caa511c6034e30f9c1f63a1d05981d23daba42505d6383d",
+      "chordSha256": "e844a4cebd50a533fdd939d24c16e63b208831883843e02a3dc3b7f749baac5f",
+      "melodyNotes": 287,
+      "accompanimentNotes": 843,
+      "phrases": 36,
+      "metrics": {
+        "phraseBeats": 3.31875,
+        "phrasePeakPosition": 0.20827,
+        "breathBeats": 0.70833,
+        "heldNoteRatio": 0.05575,
+        "sharedAttackRatio": 0.42222,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0,
+        "heldAccompanimentDensityRatio": 0.94638
+      }
+    },
+    {
+      "id": "617",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/617",
+      "midiSha256": "95752258c87ec9341e204dd8d3fb97cc6f20ad7a312f6a50629ea26cd6a176d9",
+      "chordSha256": "443d1b1b70a3799f125c04684b9a64d3f26409266c325ecb4be47b295260e3fd",
+      "melodyNotes": 251,
+      "accompanimentNotes": 773,
+      "phrases": 32,
+      "metrics": {
+        "phraseBeats": 5.42917,
+        "phrasePeakPosition": 0.26608,
+        "breathBeats": 1,
+        "heldNoteRatio": 0.06375,
+        "sharedAttackRatio": 0.33893,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.06773,
+        "heldAccompanimentDensityRatio": 1.12963
+      }
+    },
+    {
+      "id": "645",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/645",
+      "midiSha256": "687c0916df75bf6e3c4656e42c50f5d5c62604e1d006e51ca245cfa3ad0ab399",
+      "chordSha256": "35ca3a54756e6a10e9691b3af0bc27489ac71b9facb574d86e29478e46303a2b",
+      "melodyNotes": 238,
+      "accompanimentNotes": 1220,
+      "phrases": 24,
+      "metrics": {
+        "phraseBeats": 6.87708,
+        "phrasePeakPosition": 0.14478,
+        "breathBeats": 1.12708,
+        "heldNoteRatio": 0.05042,
+        "sharedAttackRatio": 0.22927,
+        "registerSeparation": 20,
+        "crossHarmonyRatio": 0.12605,
+        "heldAccompanimentDensityRatio": 1.008
+      }
+    },
+    {
+      "id": "673",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/673",
+      "midiSha256": "4852fdee7bbf9e50096f986e187d6614707af2b921397668d6b21504ba801a4d",
+      "chordSha256": "7ef0b9e8b09f4b1ee15d1a3be77b12cc831e01da5516f9d6b92cf8833858af04",
+      "melodyNotes": 274,
+      "accompanimentNotes": 875,
+      "phrases": 20,
+      "metrics": {
+        "phraseBeats": 7.14375,
+        "phrasePeakPosition": 0.26029,
+        "breathBeats": 0.78958,
+        "heldNoteRatio": 0.13139,
+        "sharedAttackRatio": 0.44235,
+        "registerSeparation": 7,
+        "crossHarmonyRatio": 0.17518,
+        "heldAccompanimentDensityRatio": 1.17333
+      }
+    },
+    {
+      "id": "701",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/701",
+      "midiSha256": "0e469aab63f3d1a70d6f50cae7e6e4228a7f99611f4a44341459c4f42adef7a4",
+      "chordSha256": "e21a0fb7b327c9404c60f9c1ac96d3edfffebea4613432e766deb0acae13bbe6",
+      "melodyNotes": 181,
+      "accompanimentNotes": 677,
+      "phrases": 16,
+      "metrics": {
+        "phraseBeats": 7.63542,
+        "phrasePeakPosition": 0.42908,
+        "breathBeats": 0.82083,
+        "heldNoteRatio": 0.10497,
+        "sharedAttackRatio": 0.25982,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.1989,
+        "heldAccompanimentDensityRatio": 0.96966
+      }
+    },
+    {
+      "id": "729",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/729",
+      "midiSha256": "ffc7ddbf2fae3dac2adf61ed558e774c20e449e277e7faddcd96501bd5f3f639",
+      "chordSha256": "7df95f87f047d6e90e038af2755ab2d1fec9ab40fc317c56b51fa1f55d17117d",
+      "melodyNotes": 291,
+      "accompanimentNotes": 881,
+      "phrases": 36,
+      "metrics": {
+        "phraseBeats": 5.93333,
+        "phrasePeakPosition": 0.08807,
+        "breathBeats": 1.28125,
+        "heldNoteRatio": 0.08935,
+        "sharedAttackRatio": 0.28291,
+        "registerSeparation": 12,
+        "crossHarmonyRatio": 0.09278,
+        "heldAccompanimentDensityRatio": 0.85221
+      }
+    },
+    {
+      "id": "757",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/757",
+      "midiSha256": "e04a74026d64f54a32bd63c14b07b7fbe58fe4551936ed942c6e56dbce02d0cb",
+      "chordSha256": "970ef67caa891156c6d1b0ef0147ffc1918ad8483005a53c498786ca4329a2ee",
+      "melodyNotes": 298,
+      "accompanimentNotes": 891,
+      "phrases": 27,
+      "metrics": {
+        "phraseBeats": 6.45417,
+        "phrasePeakPosition": 0.42706,
+        "breathBeats": 1.07083,
+        "heldNoteRatio": 0.04698,
+        "sharedAttackRatio": 0.33683,
+        "registerSeparation": 7,
+        "crossHarmonyRatio": 0.06376,
+        "heldAccompanimentDensityRatio": 0.88747
+      }
+    },
+    {
+      "id": "785",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/785",
+      "midiSha256": "26cdf0b674abe70c8d90885ee830984b8cf60246c4ca94dde702e20e7bcc817c",
+      "chordSha256": "e57dffb5ae349e6d5439e04b11cfcfd5f7cad7555ff977b9efb51e77ae7225d4",
+      "melodyNotes": 372,
+      "accompanimentNotes": 1617,
+      "phrases": 0,
+      "metrics": {
+        "phraseBeats": null,
+        "phrasePeakPosition": null,
+        "breathBeats": 0.5,
+        "heldNoteRatio": 0.16935,
+        "sharedAttackRatio": 0.36954,
+        "registerSeparation": 19,
+        "crossHarmonyRatio": 0.24194,
+        "heldAccompanimentDensityRatio": 1.1899
+      }
+    },
+    {
+      "id": "813",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/813",
+      "midiSha256": "d31bf78d61d97873a71de5f5c15d9cc392e4408d98d558b8cb1732696e0dc55f",
+      "chordSha256": "4fe8a13b50f48ee7972264392cc2c8cc3f70b8f87986f4ef126dd01e11464fb3",
+      "melodyNotes": 298,
+      "accompanimentNotes": 1000,
+      "phrases": 22,
+      "metrics": {
+        "phraseBeats": 9.27917,
+        "phrasePeakPosition": 0.3465,
+        "breathBeats": 1.10208,
+        "heldNoteRatio": 0.08725,
+        "sharedAttackRatio": 0.27489,
+        "registerSeparation": 19,
+        "crossHarmonyRatio": 0.16107,
+        "heldAccompanimentDensityRatio": 1.15712
+      }
+    },
+    {
+      "id": "841",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/841",
+      "midiSha256": "02fe5c671e1b458ba30424e8bac74d8eb63213293ac0f5fceb8d0e09175ad63a",
+      "chordSha256": "d4e333f9898cfbd0eb29d7192f6d0ca632735bb298bcd7f83496bfd4122d8634",
+      "melodyNotes": 442,
+      "accompanimentNotes": 1498,
+      "phrases": 40,
+      "metrics": {
+        "phraseBeats": 7.31667,
+        "phrasePeakPosition": 0.28562,
+        "breathBeats": 0.68333,
+        "heldNoteRatio": 0.04299,
+        "sharedAttackRatio": 0.55733,
+        "registerSeparation": 21,
+        "crossHarmonyRatio": 0.02262,
+        "heldAccompanimentDensityRatio": 0.85219
+      }
+    },
+    {
+      "id": "869",
+      "url": "https://github.com/music-x-lab/POP909-Dataset/tree/master/POP909/869",
+      "midiSha256": "c4eadaeb1e7e0414742b7e76285205ca4ec5e76b1829bd059e96895896625ff6",
+      "chordSha256": "7167b736cbb5f5c51cf3e20fec92069669c00369bdc79a83001eea05107e5c6c",
+      "melodyNotes": 288,
+      "accompanimentNotes": 1028,
+      "phrases": 19,
+      "metrics": {
+        "phraseBeats": 11.5,
+        "phrasePeakPosition": 0.29254,
+        "breathBeats": 0.77083,
+        "heldNoteRatio": 0.14931,
+        "sharedAttackRatio": 0.28258,
+        "registerSeparation": 9,
+        "crossHarmonyRatio": 0.16667,
+        "heldAccompanimentDensityRatio": 0.99534
+      }
+    }
+  ],
+  "sourceCommit": "d83e6edba6872a704f5d3b8b32f5cb540088dae6"
+}
