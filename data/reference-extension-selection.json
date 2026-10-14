@@ -1,0 +1,1010 @@
+[
+  {
+    "artist": "mariya-takeuchi",
+    "song": "plastic-love",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1984,
+    "role": "general"
+  },
+  {
+    "artist": "mariya-takeuchi",
+    "song": "september",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1979,
+    "role": "general"
+  },
+  {
+    "artist": "tatsuro-yamashita",
+    "song": "ride-on-time",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1980,
+    "role": "general"
+  },
+  {
+    "artist": "tatsuro-yamashita",
+    "song": "sparkle",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1982,
+    "role": "general"
+  },
+  {
+    "artist": "tatsuro-yamashita",
+    "song": "amaku-kiken-na-kaori",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1982,
+    "role": "general"
+  },
+  {
+    "artist": "tatsuro-yamashita",
+    "song": "doyoubi-no-koibito",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1985,
+    "role": "general"
+  },
+  {
+    "artist": "tatsuro-yamashita",
+    "song": "merry-go-round",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1983,
+    "role": "general"
+  },
+  {
+    "artist": "junko-yagami",
+    "song": "mizu-iro-no-ame",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1978,
+    "role": "general"
+  },
+  {
+    "artist": "junko-yagami",
+    "song": "tasogare-no-bay-city",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1983,
+    "role": "general"
+  },
+  {
+    "artist": "junko-yagami",
+    "song": "1984",
+    "cohort": "city-pop",
+    "country": "JP",
+    "year": 1984,
+    "role": "general"
+  },
+  {
+    "artist": "dolly-parton",
+    "song": "jolene",
+    "cohort": "country",
+    "country": "US",
+    "year": 1973,
+    "role": "general"
+  },
+  {
+    "artist": "dolly-parton",
+    "song": "i-will-always-love-you",
+    "cohort": "country",
+    "country": "US",
+    "year": 1974,
+    "role": "general"
+  },
+  {
+    "artist": "johnny-cash",
+    "song": "i-walk-the-line",
+    "cohort": "country",
+    "country": "US",
+    "year": 1956,
+    "role": "general"
+  },
+  {
+    "artist": "johnny-cash",
+    "song": "ring-of-fire",
+    "cohort": "country",
+    "country": "US",
+    "year": 1963,
+    "role": "general"
+  },
+  {
+    "artist": "johnny-cash",
+    "song": "hurt",
+    "cohort": "country",
+    "country": "US",
+    "year": 2002,
+    "role": "general"
+  },
+  {
+    "artist": "willie-nelson",
+    "song": "blue-eyes-cryin",
+    "cohort": "country",
+    "country": "US",
+    "year": 1975,
+    "role": "general"
+  },
+  {
+    "artist": "willie-nelson",
+    "song": "you-were-always-on-my-mind",
+    "cohort": "country",
+    "country": "US",
+    "year": 1982,
+    "role": "general"
+  },
+  {
+    "artist": "john-denver",
+    "song": "take-me-home-country-roads",
+    "cohort": "country",
+    "country": "US",
+    "year": 1971,
+    "role": "general"
+  },
+  {
+    "artist": "john-denver",
+    "song": "annies-song",
+    "cohort": "country",
+    "country": "US",
+    "year": 1974,
+    "role": "general"
+  },
+  {
+    "artist": "kenny-rogers",
+    "song": "the-gambler",
+    "cohort": "country",
+    "country": "US",
+    "year": 1978,
+    "role": "general"
+  },
+  {
+    "artist": "shania-twain",
+    "song": "youre-still-the-one",
+    "cohort": "country",
+    "country": "US",
+    "year": 1998,
+    "role": "general"
+  },
+  {
+    "artist": "shania-twain",
+    "song": "man-i-feel-like-a-woman",
+    "cohort": "country",
+    "country": "US",
+    "year": 1999,
+    "role": "general"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "love-story",
+    "cohort": "country",
+    "country": "US",
+    "year": 2008,
+    "role": "general"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "you-belong-with-me",
+    "cohort": "country",
+    "country": "US",
+    "year": 2008,
+    "role": "general"
+  },
+  {
+    "artist": "carrie-underwood",
+    "song": "before-he-cheats",
+    "cohort": "country",
+    "country": "US",
+    "year": 2006,
+    "role": "general"
+  },
+  {
+    "artist": "lady-antebellum",
+    "song": "need-you-now",
+    "cohort": "country",
+    "country": "US",
+    "year": 2009,
+    "role": "general"
+  },
+  {
+    "artist": "tim-mcgraw",
+    "song": "live-like-you-were-dying",
+    "cohort": "country",
+    "country": "US",
+    "year": 2004,
+    "role": "general"
+  },
+  {
+    "artist": "faith-hill",
+    "song": "breathe",
+    "cohort": "country",
+    "country": "US",
+    "year": 1999,
+    "role": "general"
+  },
+  {
+    "artist": "kacey-musgraves",
+    "song": "rainbow",
+    "cohort": "country",
+    "country": "US",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "dixie-chicks",
+    "song": "landslide",
+    "cohort": "country",
+    "country": "US",
+    "year": 2002,
+    "role": "general"
+  },
+  {
+    "artist": "ed-sheeran",
+    "song": "shape-of-you",
+    "cohort": "billboard-2010s",
+    "country": "UK",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "rihanna",
+    "song": "diamonds",
+    "cohort": "billboard-2010s",
+    "country": "BB",
+    "year": 2012,
+    "role": "general"
+  },
+  {
+    "artist": "maroon-5",
+    "song": "moves-like-jagger",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "maroon-5",
+    "song": "sugar",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "maroon-5",
+    "song": "one-more-night",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2012,
+    "role": "general"
+  },
+  {
+    "artist": "the-weeknd",
+    "song": "cant-feel-my-face",
+    "cohort": "billboard-2010s",
+    "country": "CA",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "the-weeknd",
+    "song": "starboy",
+    "cohort": "billboard-2010s",
+    "country": "CA",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "lorde",
+    "song": "royals",
+    "cohort": "billboard-2010s",
+    "country": "NZ",
+    "year": 2013,
+    "role": "general"
+  },
+  {
+    "artist": "sia",
+    "song": "chandelier",
+    "cohort": "billboard-2010s",
+    "country": "AU",
+    "year": 2014,
+    "role": "general"
+  },
+  {
+    "artist": "sia",
+    "song": "cheap-thrills",
+    "cohort": "billboard-2010s",
+    "country": "AU",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "ellie-goulding",
+    "song": "love-me-like-you-do",
+    "cohort": "billboard-2010s",
+    "country": "UK",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "carly-rae-jepsen",
+    "song": "call-me-maybe",
+    "cohort": "billboard-2010s",
+    "country": "CA",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "justin-bieber",
+    "song": "sorry",
+    "cohort": "billboard-2010s",
+    "country": "CA",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "justin-bieber",
+    "song": "love-yourself",
+    "cohort": "billboard-2010s",
+    "country": "CA",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "imagine-dragons",
+    "song": "radioactive",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2012,
+    "role": "general"
+  },
+  {
+    "artist": "fun",
+    "song": "we-are-young",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "katy-perry",
+    "song": "dark-horse",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2013,
+    "role": "general"
+  },
+  {
+    "artist": "katy-perry",
+    "song": "roar",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2013,
+    "role": "general"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "style",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2014,
+    "role": "general"
+  },
+  {
+    "artist": "taylor-swift",
+    "song": "wildest-dreams",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2014,
+    "role": "general"
+  },
+  {
+    "artist": "adele",
+    "song": "set-fire-to-the-rain",
+    "cohort": "billboard-2010s",
+    "country": "UK",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "ariana-grande",
+    "song": "thank-u-next",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "cheer-up",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "tt",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "likey",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "fancy",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2019,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "feel-special",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2019,
+    "role": "general"
+  },
+  {
+    "artist": "shinee",
+    "song": "view",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "red-flavor",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "psycho",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2019,
+    "role": "general"
+  },
+  {
+    "artist": "red-velvet",
+    "song": "peek-a-boo",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "bts",
+    "song": "fake-love",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "blackpink",
+    "song": "ddu-du-ddu-du",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "blackpink",
+    "song": "playing-with-fire",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "fujii-kaze",
+    "song": "shinunoga-e-wa",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2020,
+    "role": "general"
+  },
+  {
+    "artist": "fujii-kaze",
+    "song": "kirari",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2021,
+    "role": "general"
+  },
+  {
+    "artist": "eve",
+    "song": "kaikai-kitan",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2020,
+    "role": "general"
+  },
+  {
+    "artist": "kenshi-yonezu",
+    "song": "kick-back",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2022,
+    "role": "general"
+  },
+  {
+    "artist": "yoasobi",
+    "song": "just-a-little-more",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2021,
+    "role": "general"
+  },
+  {
+    "artist": "yoasobi",
+    "song": "on-the-stage",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2021,
+    "role": "general"
+  },
+  {
+    "artist": "official-hige-dandism",
+    "song": "same-blue",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2024,
+    "role": "general"
+  },
+  {
+    "artistStyle": "charlie-puth",
+    "artist": "charlie-puth",
+    "song": "attention",
+    "year": 2017,
+    "role": "artist",
+    "artistId": "charlie-puth"
+  },
+  {
+    "artistStyle": "charlie-puth",
+    "artist": "charlie-puth",
+    "song": "one-call-away",
+    "year": 2015,
+    "role": "artist",
+    "artistId": "charlie-puth"
+  },
+  {
+    "artistStyle": "charlie-puth",
+    "artist": "charlie-puth-ft-selena-gomez",
+    "song": "we-dont-talk-anymore",
+    "year": 2016,
+    "role": "artist",
+    "artistId": "charlie-puth"
+  },
+  {
+    "artistStyle": "kenshi-yonezu",
+    "artist": "kenshi-yonezu",
+    "song": "lemon",
+    "year": 2018,
+    "role": "artist",
+    "artistId": "kenshi-yonezu"
+  },
+  {
+    "artistStyle": "kenshi-yonezu",
+    "artist": "kenshi-yonezu",
+    "song": "loser",
+    "year": 2016,
+    "role": "artist",
+    "artistId": "kenshi-yonezu"
+  },
+  {
+    "artistStyle": "kenshi-yonezu",
+    "artist": "kenshi-yonezu",
+    "song": "peace-sign---boku-no-hero-academia-op-2",
+    "year": 2017,
+    "role": "artist",
+    "artistId": "kenshi-yonezu"
+  },
+  {
+    "artistStyle": "higedan",
+    "artist": "official-hige-dandism",
+    "song": "pretender",
+    "year": 2019,
+    "role": "artist",
+    "artistId": "higedan"
+  },
+  {
+    "artistStyle": "higedan",
+    "artist": "official-hige-dandism",
+    "song": "i-love",
+    "year": 2020,
+    "role": "artist",
+    "artistId": "higedan"
+  },
+  {
+    "artistStyle": "higedan",
+    "artist": "official-hige-dandism",
+    "song": "laughter",
+    "year": 2020,
+    "role": "artist",
+    "artistId": "higedan"
+  },
+  {
+    "artistStyle": "mrs-green-apple",
+    "artist": "mrs.-green-apple",
+    "song": "inferno",
+    "year": 2019,
+    "role": "artist",
+    "artistId": "mrs-green-apple"
+  },
+  {
+    "artistStyle": "bruno-mars",
+    "artist": "bruno-mars",
+    "song": "treasure",
+    "year": 2013,
+    "role": "artist",
+    "artistId": "bruno-mars"
+  },
+  {
+    "artistStyle": "bruno-mars",
+    "artist": "bruno-mars",
+    "song": "24k-magic",
+    "year": 2016,
+    "role": "artist",
+    "artistId": "bruno-mars"
+  },
+  {
+    "artistStyle": "bruno-mars",
+    "artist": "bruno-mars",
+    "song": "locked-out-of-heaven",
+    "year": 2012,
+    "role": "artist",
+    "artistId": "bruno-mars"
+  },
+  {
+    "artistStyle": "king-gnu",
+    "artist": "king-gnu",
+    "song": "boy",
+    "year": 2021,
+    "role": "artist",
+    "artistId": "king-gnu"
+  },
+  {
+    "artistStyle": "king-gnu",
+    "artist": "king-gnu",
+    "song": "sakayume",
+    "year": 2021,
+    "role": "artist",
+    "artistId": "king-gnu"
+  },
+  {
+    "artistStyle": "king-gnu",
+    "artist": "king-gnu",
+    "song": "ame-sansan",
+    "year": 2022,
+    "role": "artist",
+    "artistId": "king-gnu"
+  },
+  {
+    "artistStyle": "yoasobi",
+    "artist": "yoasobi",
+    "song": "racing-into-the-night",
+    "year": 2019,
+    "role": "artist",
+    "artistId": "yoasobi"
+  },
+  {
+    "artistStyle": "yoasobi",
+    "artist": "yoasobi",
+    "song": "gunjou",
+    "year": 2020,
+    "role": "artist",
+    "artistId": "yoasobi"
+  },
+  {
+    "artistStyle": "yoasobi",
+    "artist": "yoasobi",
+    "song": "idol",
+    "year": 2023,
+    "role": "artist",
+    "artistId": "yoasobi"
+  },
+  {
+    "artist": "rihanna-feat-calvin-harris",
+    "song": "we-found-love",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "miley-cyrus",
+    "song": "nothing-breaks-like-a-heart",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "the-chainsmokers",
+    "song": "closer-ft-halsey",
+    "cohort": "billboard-2010s",
+    "country": "US",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "girls-generation",
+    "song": "paparazzi",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2012,
+    "role": "general"
+  },
+  {
+    "artist": "apink",
+    "song": "promise-u",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "apink",
+    "song": "only-one",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "boa",
+    "song": "who-are-you",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "4minute",
+    "song": "hate",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "mamamoo",
+    "song": "1cm-pride",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2016,
+    "role": "general"
+  },
+  {
+    "artist": "kara",
+    "song": "cupid",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2015,
+    "role": "general"
+  },
+  {
+    "artist": "hyuna",
+    "song": "bubble-pop",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "brown-eyed-girls",
+    "song": "sixth-sense",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2011,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "heart-shaker",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "what-is-love",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "yes-or-yes",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2018,
+    "role": "general"
+  },
+  {
+    "artist": "twice",
+    "song": "signal",
+    "cohort": "kpop-2010s",
+    "country": "KR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "yorushika",
+    "song": "thoughtcrime",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2020,
+    "role": "general"
+  },
+  {
+    "artist": "creepy-nuts",
+    "song": "bling-bang-bang-born",
+    "cohort": "jpop-2020s",
+    "country": "JP",
+    "year": 2024,
+    "role": "general"
+  },
+  {
+    "artist": "abba",
+    "song": "mamma-mia",
+    "cohort": "era-pop",
+    "country": "SE",
+    "year": 1975,
+    "role": "general"
+  },
+  {
+    "artist": "abba",
+    "song": "the-winner-takes-it-all",
+    "cohort": "era-pop",
+    "country": "SE",
+    "year": 1980,
+    "role": "general"
+  },
+  {
+    "artist": "the-beatles",
+    "song": "blackbird",
+    "cohort": "era-pop",
+    "country": "UK",
+    "year": 1968,
+    "role": "general"
+  },
+  {
+    "artist": "michael-jackson",
+    "song": "human-nature",
+    "cohort": "era-pop",
+    "country": "US",
+    "year": 1982,
+    "role": "general"
+  },
+  {
+    "artist": "marvin-gaye",
+    "song": "lets-get-it-on",
+    "cohort": "era-pop",
+    "country": "US",
+    "year": 1973,
+    "role": "general"
+  },
+  {
+    "artist": "luis-fonsi",
+    "song": "despacito",
+    "cohort": "era-pop",
+    "country": "PR",
+    "year": 2017,
+    "role": "general"
+  },
+  {
+    "artist": "queen",
+    "song": "under-pressure",
+    "cohort": "era-pop",
+    "country": "UK",
+    "year": 1981,
+    "role": "general"
+  },
+  {
+    "artist": "david-bowie",
+    "song": "space-oddity",
+    "cohort": "era-pop",
+    "country": "UK",
+    "year": 1969,
+    "role": "general"
+  },
+  {
+    "artist": "daft-punk",
+    "song": "digital-love",
+    "cohort": "era-pop",
+    "country": "FR",
+    "year": 2001,
+    "role": "general"
+  },
+  {
+    "artist": "edith-piaf",
+    "song": "la-vie-en-rose",
+    "cohort": "era-pop",
+    "country": "FR",
+    "year": 1946,
+    "role": "general"
+  },
+  {
+    "artist": "nirvana",
+    "song": "lithium",
+    "cohort": "era-pop",
+    "country": "US",
+    "year": 1991,
+    "role": "general"
+  },
+  {
+    "artist": "mrs.-green-apple",
+    "song": "ao-to-natsu",
+    "title": "青と夏 / Ao to Natsu",
+    "artistId": "mrs-green-apple",
+    "role": "artist",
+    "country": "JP",
+    "year": 2018,
+    "sourceType": "songsterr-public-score",
+    "vocalFile": "mrs-ao-vocal.part",
+    "harmonyFile": "mrs-ao-harmony.part",
+    "url": "https://www.songsterr.com/a/wsa/mrs-green-apple-ao-to-natsu-tab-s693653"
+  },
+  {
+    "artist": "mrs.-green-apple",
+    "song": "lilac",
+    "title": "ライラック / Lilac",
+    "artistId": "mrs-green-apple",
+    "role": "artist",
+    "country": "JP",
+    "year": 2024,
+    "sourceType": "songsterr-public-score",
+    "vocalFile": "mrs-lilac-vocal.part",
+    "harmonyFile": "mrs-lilac-harmony.part",
+    "url": "https://www.songsterr.com/a/wsa/mrs-green-apple-lilac-tab-s728827"
+  },
+  {
+    "artist": "bill-evans",
+    "song": "autumn-leaves-take-1",
+    "artistId": "bill-evans",
+    "role": "artist",
+    "country": "US",
+    "year": 1960,
+    "sourceType": "jtd-automatic-piano",
+    "recording": "evansb-autumnleavestake1-lafarosmotianp-1960-5b72f569"
+  },
+  {
+    "artist": "bill-evans",
+    "song": "waltz-for-debby",
+    "artistId": "bill-evans",
+    "role": "artist",
+    "country": "US",
+    "year": 1969,
+    "sourceType": "jtd-automatic-piano",
+    "recording": "evansb-waltzfordebby-gomezemorellm-1969-94e978bc"
+  },
+  {
+    "artist": "bill-evans",
+    "song": "you-must-believe-in-spring",
+    "artistId": "bill-evans",
+    "role": "artist",
+    "country": "US",
+    "year": 1977,
+    "sourceType": "jtd-automatic-piano",
+    "recording": "evansb-youmustbelieveinspring-gomezezigmunde-1977-38bff03e"
+  }
+]
