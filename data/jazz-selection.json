@@ -1,0 +1,1137 @@
+{
+  "asOf": "2026-10-14",
+  "songs": [
+    {
+      "id": "king_porter_stomp",
+      "group": "early-piano",
+      "title": "King Porter Stomp",
+      "artist": "Jelly Roll Morton",
+      "sourceType": "jaah",
+      "file": "king_porter_stomp.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/king_porter_stomp.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "dinah_fats_waller",
+      "group": "early-piano",
+      "title": "Dinah",
+      "artist": "Fats Waller and His Rhythm",
+      "sourceType": "jaah",
+      "file": "dinah_fats_waller.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/dinah_fats_waller.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 286,
+        "title": "Dinah",
+        "performer": "Lionel Hampton",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "maple_leaf_rag(hyman)",
+      "group": "early-piano",
+      "title": "Maple Leaf Rag",
+      "artist": "Dick Hyman",
+      "sourceType": "jaah",
+      "file": "maple_leaf_rag(hyman).json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/maple_leaf_rag(hyman).json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "weather_bird",
+      "group": "early-piano",
+      "title": "Weather Bird",
+      "artist": "Louis Armstrong; Earl Hines",
+      "sourceType": "jaah",
+      "file": "weather_bird.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/weather_bird.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "black_bottom_stomp",
+      "group": "traditional",
+      "title": "Black Bottom Stomp",
+      "artist": "Jelly Roll Morton's Red Hot Peppers",
+      "sourceType": "jaah",
+      "file": "black_bottom_stomp.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/black_bottom_stomp.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "dead_man_blues",
+      "group": "traditional",
+      "title": "Dead Man Blues",
+      "artist": "Jelly Roll Morton's Red Hot Peppers",
+      "sourceType": "jaah",
+      "file": "dead_man_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/dead_man_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "dippermouth_blues",
+      "group": "traditional",
+      "title": "Dippermouth Blues",
+      "artist": "King Oliver's Creole Jazz Band",
+      "sourceType": "jaah",
+      "file": "dippermouth_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/dippermouth_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "livery_stable_blues",
+      "group": "traditional",
+      "title": "Livery Stable Blues",
+      "artist": "Original Dixieland Jazz Band",
+      "sourceType": "jaah",
+      "file": "livery_stable_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/livery_stable_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "west_end_blues",
+      "group": "traditional",
+      "title": "West End Blues",
+      "artist": "Louis Armstrong and His Hot Five",
+      "sourceType": "jaah",
+      "file": "west_end_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/west_end_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "body_and_soul(hawkins)",
+      "group": "swing",
+      "title": "Body and Soul",
+      "artist": "Coleman Hawkins and His Orchestra",
+      "sourceType": "jaah",
+      "file": "body_and_soul(hawkins).json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/body_and_soul(hawkins).json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 85,
+        "title": "Body and Soul",
+        "performer": "Chu Berry",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "breakfast_feud",
+      "group": "swing",
+      "title": "Breakfast Feud (composite) (feat. Charlie Christian)",
+      "artist": "The Benny Goodman Sextet",
+      "sourceType": "jaah",
+      "file": "breakfast_feud.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/breakfast_feud.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "minor_swing",
+      "group": "swing",
+      "title": "Minor Swing",
+      "artist": "Quintette du Hot Club de France",
+      "sourceType": "jaah",
+      "file": "minor_swing.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/minor_swing.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "i_cant_believe_you_are_in_love_with_me",
+      "group": "swing",
+      "title": "I Can't Believe That You're in Love With Me",
+      "artist": "The Chocolate Dandies",
+      "sourceType": "jaah",
+      "file": "i_cant_believe_you_are_in_love_with_me.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/i_cant_believe_you_are_in_love_with_me.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "i_found_a_new_baby",
+      "group": "swing",
+      "title": "I Found a New Baby (feat. Charlie Christian & Count Basie)",
+      "artist": "The Benny Goodman Sextet",
+      "sourceType": "jaah",
+      "file": "i_found_a_new_baby.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/i_found_a_new_baby.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "i_got_rhythm",
+      "group": "swing",
+      "title": "I Got Rhythm",
+      "artist": "Don Byas; Slam Stewart",
+      "sourceType": "jaah",
+      "file": "i_got_rhythm.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/i_got_rhythm.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 130,
+        "title": "I Got Rhythm",
+        "performer": "Dickie Wells",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "thats_a_serious_thing",
+      "group": "swing",
+      "title": "That's a Serious Thing",
+      "artist": "Eddie Condon's Hot Shots",
+      "sourceType": "jaah",
+      "file": "thats_a_serious_thing.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/thats_a_serious_thing.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "lester_leaps_in",
+      "group": "swing",
+      "title": "Lester Leaps In",
+      "artist": "Count Basie and the Kansas City 7",
+      "sourceType": "jaah",
+      "file": "lester_leaps_in.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/lester_leaps_in.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 283,
+        "title": "Lester Leaps In",
+        "performer": "Lester Young",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "black_and_tan_fantasy",
+      "group": "big-band",
+      "title": "Black and Tan Fantasy",
+      "artist": "Duke Ellington and His Orchestra",
+      "sourceType": "jaah",
+      "file": "black_and_tan_fantasy.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/black_and_tan_fantasy.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "concerto_for_cootie",
+      "group": "big-band",
+      "title": "Concerto for Cootie",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "concerto_for_cootie.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/concerto_for_cootie.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "cotton_tail",
+      "group": "big-band",
+      "title": "Cotton Tail",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "cotton_tail.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/cotton_tail.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 360,
+        "title": "Cotton Tail",
+        "performer": "Phil Woods",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "doggin_around",
+      "group": "big-band",
+      "title": "Doggin' Around",
+      "artist": "Count Basie & His Orchestra",
+      "sourceType": "jaah",
+      "file": "doggin_around.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/doggin_around.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "east_st_louis",
+      "group": "big-band",
+      "title": "East St. Louis Toodle-Oo",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "east_st_louis.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/east_st_louis.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "for_dancers_only",
+      "group": "big-band",
+      "title": "For Dancers Only",
+      "artist": "Jimmie Lunceford and His Orchestra",
+      "sourceType": "jaah",
+      "file": "for_dancers_only.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/for_dancers_only.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "four_brothers",
+      "group": "big-band",
+      "title": "Four Brothers",
+      "artist": "Woody Herman and His Orchestra",
+      "sourceType": "jaah",
+      "file": "four_brothers.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/four_brothers.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "harlem_congo",
+      "group": "big-band",
+      "title": "Harlem Congo",
+      "artist": "Chick Webb and His Orchestra",
+      "sourceType": "jaah",
+      "file": "harlem_congo.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/harlem_congo.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "moten_swing",
+      "group": "big-band",
+      "title": "Moten Swing",
+      "artist": "Bennie Moten and his Kansas City Orchestra",
+      "sourceType": "jaah",
+      "file": "moten_swing.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/moten_swing.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "one_oclock_jump",
+      "group": "big-band",
+      "title": "One O'Clock Jump",
+      "artist": "Count Basie and His Orchestra",
+      "sourceType": "jaah",
+      "file": "one_oclock_jump.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/one_oclock_jump.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "organ_grinders_swing",
+      "group": "big-band",
+      "title": "Organ Grinder's Swing",
+      "artist": "Jimmie Lunceford and His Orchestra",
+      "sourceType": "jaah",
+      "file": "organ_grinders_swing.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/organ_grinders_swing.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "the_stampede",
+      "group": "big-band",
+      "title": "The Stampede",
+      "artist": "Fletcher Henderson and His Orchestra",
+      "sourceType": "jaah",
+      "file": "the_stampede.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/the_stampede.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "wrappin_it_up",
+      "group": "big-band",
+      "title": "Wrappin' It Up",
+      "artist": "Fletcher Henderson and His Orchestra",
+      "sourceType": "jaah",
+      "file": "wrappin_it_up.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/wrappin_it_up.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "ko-ko(ellington)",
+      "group": "big-band",
+      "title": "Ko-Ko",
+      "artist": "Duke Ellington and His Famous Orchestra",
+      "sourceType": "jaah",
+      "file": "ko-ko(ellington).json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/ko-ko(ellington).json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 59,
+        "title": "Ko-Ko",
+        "performer": "Charlie Parker",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "bags_groove",
+      "group": "blues",
+      "title": "Bags' Groove",
+      "artist": "Thelonious Monk",
+      "sourceType": "jaah",
+      "file": "bags_groove.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/bags_groove.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 329,
+        "title": "Bag's Groove",
+        "performer": "Milt Jackson",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "blue_7",
+      "group": "blues",
+      "title": "Blue 7",
+      "artist": "Sonny Rollins",
+      "sourceType": "jaah",
+      "file": "blue_7.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/blue_7.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "blues_for_alice",
+      "group": "blues",
+      "title": "Blues for Alice",
+      "artist": "Charlie Parker",
+      "sourceType": "jaah",
+      "file": "blues_for_alice.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/blues_for_alice.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 53,
+        "title": "Blues for Alice",
+        "performer": "Charlie Parker",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "black_water_blues",
+      "group": "blues",
+      "title": "Black Water Blues",
+      "artist": "Bessie Smith; James P. Johnson",
+      "sourceType": "jaah",
+      "file": "black_water_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/black_water_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "honky_tonk_train",
+      "group": "blues",
+      "title": "Honky Tonk Train Blues",
+      "artist": "Meade \"Lux\" Lewis",
+      "sourceType": "jaah",
+      "file": "honky_tonk_train.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/honky_tonk_train.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "parkers_mood",
+      "group": "blues",
+      "title": "Parker's Mood",
+      "artist": "Charlie Parker All-Stars",
+      "sourceType": "jaah",
+      "file": "parkers_mood.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/parkers_mood.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "st_louis_blues",
+      "group": "blues",
+      "title": "St. Louis Blues",
+      "artist": "Bessie Smith; Louis Armstrong",
+      "sourceType": "jaah",
+      "file": "st_louis_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/st_louis_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 369,
+        "title": "St. Louis Blues",
+        "performer": "Roy Eldridge",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "west_coast_blues",
+      "group": "blues",
+      "title": "West Coast Blues (abridged)",
+      "artist": "Wes Montgomery",
+      "sourceType": "jaah",
+      "file": "west_coast_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/west_coast_blues.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "crazeology",
+      "group": "bebop",
+      "title": "Crazeology (take 4)",
+      "artist": "Charlie Parker",
+      "sourceType": "jaah",
+      "file": "crazeology.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/crazeology.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "dexter_rides_again",
+      "group": "bebop",
+      "title": "Dexter Rides Again",
+      "artist": "Dexter Gordon",
+      "sourceType": "jaah",
+      "file": "dexter_rides_again.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/dexter_rides_again.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "embraceable_you",
+      "group": "bebop",
+      "title": "Embraceable You",
+      "artist": "Charlie Parker Quintet",
+      "sourceType": "jaah",
+      "file": "embraceable_you.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/embraceable_you.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 56,
+        "title": "Embraceable You",
+        "performer": "Charlie Parker",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "evidence",
+      "group": "bebop",
+      "title": "Evidence",
+      "artist": "Thelonious Monk",
+      "sourceType": "jaah",
+      "file": "evidence.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/evidence.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "indiana",
+      "group": "bebop",
+      "title": "Indiana",
+      "artist": "Bud Powell",
+      "sourceType": "jaah",
+      "file": "indiana.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/indiana.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "lady_bird",
+      "group": "bebop",
+      "title": "Lady Bird",
+      "artist": "Tadd Dameron Sextet",
+      "sourceType": "jaah",
+      "file": "lady_bird.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/lady_bird.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 179,
+        "title": "Lady Bird",
+        "performer": "Hank Mobley",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "night_in_tunisia",
+      "group": "bebop",
+      "title": "Night in Tunisia",
+      "artist": "Bud Powell Trio",
+      "sourceType": "jaah",
+      "file": "night_in_tunisia.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/night_in_tunisia.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "shaw_nuff",
+      "group": "bebop",
+      "title": "Shaw 'Nuff",
+      "artist": "Dizzy Gillespie & His All Stars",
+      "sourceType": "jaah",
+      "file": "shaw_nuff.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/shaw_nuff.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "daahoud",
+      "group": "hard-bop",
+      "title": "Daahoud",
+      "artist": "The Clifford Brown–Max Roach Quintet",
+      "sourceType": "jaah",
+      "file": "daahoud.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/daahoud.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 88,
+        "title": "Daahoud",
+        "performer": "Clifford Brown",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "misterioso",
+      "group": "hard-bop",
+      "title": "Misterioso",
+      "artist": "Thelonious Monk Quartet",
+      "sourceType": "jaah",
+      "file": "misterioso.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/misterioso.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "moanin",
+      "group": "hard-bop",
+      "title": "Moanin’",
+      "artist": "Art Blakey & The Jazz Messengers",
+      "sourceType": "jaah",
+      "file": "moanin.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/moanin.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "one_by_one",
+      "group": "hard-bop",
+      "title": "One by One",
+      "artist": "Art Blakey & The Jazz Messengers",
+      "sourceType": "jaah",
+      "file": "one_by_one.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/one_by_one.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "the_preacher",
+      "group": "hard-bop",
+      "title": "The Preacher",
+      "artist": "Horace Silver; The Jazz Messengers",
+      "sourceType": "jaah",
+      "file": "the_preacher.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/the_preacher.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "work_song",
+      "group": "hard-bop",
+      "title": "Work Song",
+      "artist": "Cannonball Adderley",
+      "sourceType": "jaah",
+      "file": "work_song.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/work_song.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 51,
+        "title": "Work Song",
+        "performer": "Cannonball Adderley",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "boplicity",
+      "group": "cool",
+      "title": "Boplicity",
+      "artist": "Miles Davis Nonet",
+      "sourceType": "jaah",
+      "file": "boplicity.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/boplicity.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "django",
+      "group": "cool",
+      "title": "Django",
+      "artist": "The Modern Jazz Quartet",
+      "sourceType": "jaah",
+      "file": "django.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/django.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "haig_and_haig",
+      "group": "cool",
+      "title": "Haig & Haig",
+      "artist": "Clark Terry-Bob Brookmeyer Quintet",
+      "sourceType": "jaah",
+      "file": "haig_and_haig.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/haig_and_haig.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "walkin_shoes",
+      "group": "cool",
+      "title": "Walkin' Shoes",
+      "artist": "The Gerry Mulligan Quartet; Chet Baker",
+      "sourceType": "jaah",
+      "file": "walkin_shoes.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/walkin_shoes.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "september_in_the_rain",
+      "group": "cool",
+      "title": "September in the Rain",
+      "artist": "The George Shearing Quintet",
+      "sourceType": "jaah",
+      "file": "september_in_the_rain.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/september_in_the_rain.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "subconscious_lee",
+      "group": "cool",
+      "title": "Subconscious Lee",
+      "artist": "Lennie Tristano",
+      "sourceType": "jaah",
+      "file": "subconscious_lee.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/subconscious_lee.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "my_favorite_things",
+      "group": "modal",
+      "title": "My Favorite Things, Part 1 (Single Version)",
+      "artist": "John Coltrane Quartet",
+      "sourceType": "jaah",
+      "file": "my_favorite_things.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/my_favorite_things.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 227,
+        "title": "My Favorite Things",
+        "performer": "John Coltrane",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "giant_steps",
+      "group": "post-bop",
+      "title": "Giant Steps",
+      "artist": "John Coltrane",
+      "sourceType": "jaah",
+      "file": "giant_steps.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/giant_steps.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 222,
+        "title": "Giant Steps",
+        "performer": "John Coltrane",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "airegin",
+      "group": "latin",
+      "title": "Airegin",
+      "artist": "Tito Puente",
+      "sourceType": "jaah",
+      "file": "airegin.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/airegin.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 310,
+        "title": "Airegin",
+        "performer": "Miles Davis",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "girl_from_ipanema",
+      "group": "latin",
+      "title": "The Girl From Ipanema",
+      "artist": "Stan Getz; João Gilberto; Antonio Carlos Jobim",
+      "sourceType": "jaah",
+      "file": "girl_from_ipanema.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/girl_from_ipanema.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "manteca",
+      "group": "latin",
+      "title": "Manteca",
+      "artist": "Dizzy Gillespie and His Orchestra",
+      "sourceType": "jaah",
+      "file": "manteca.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/manteca.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "st_thomas",
+      "group": "latin",
+      "title": "St. Thomas",
+      "artist": "Sonny Rollins",
+      "sourceType": "jaah",
+      "file": "st_thomas.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/st_thomas.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 385,
+        "title": "St. Thomas",
+        "performer": "Sonny Rollins",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "all_alone",
+      "group": "vocal-ballad",
+      "title": "All Alone",
+      "artist": "Sarah Vaughan",
+      "sourceType": "jaah",
+      "file": "all_alone.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/all_alone.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "he_s_funny_that_way",
+      "group": "vocal-ballad",
+      "title": "He's Funny That Way",
+      "artist": "Billie Holiday",
+      "sourceType": "jaah",
+      "file": "he_s_funny_that_way.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/he_s_funny_that_way.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "mean_to_me",
+      "group": "vocal-ballad",
+      "title": "Mean to Me",
+      "artist": "Billie Holiday; Teddy Wilson and His Orchestra",
+      "sourceType": "jaah",
+      "file": "mean_to_me.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/mean_to_me.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 271,
+        "title": "Mean to Me",
+        "performer": "Lee Konitz",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "these_foolish_things",
+      "group": "vocal-ballad",
+      "title": "These Foolish Things",
+      "artist": "Billie Holiday",
+      "sourceType": "jaah",
+      "file": "these_foolish_things.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/these_foolish_things.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation"
+    },
+    {
+      "id": "you_d_be_so_nice_to_come_home_to",
+      "group": "vocal-ballad",
+      "title": "You'd Be So Nice to Come Home To",
+      "artist": "Ella Fitzgerald",
+      "sourceType": "jaah",
+      "file": "you_d_be_so_nice_to_come_home_to.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/you_d_be_so_nice_to_come_home_to.json",
+      "classification": "Curated recording-style tag; overlap between styles is retained as a limitation",
+      "melodyReference": {
+        "melid": 77,
+        "title": "You'd Be So Nice to Come Home to",
+        "performer": "Chet Baker",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "wjazzd-323",
+      "group": "modal",
+      "title": "So What",
+      "artist": "Miles Davis",
+      "sourceType": "wjazzd",
+      "melid": 323,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Curated modal-composition tag; database style POSTBOP"
+    },
+    {
+      "id": "wjazzd-166",
+      "group": "modal",
+      "title": "Dolphin Dance",
+      "artist": "Freddie Hubbard",
+      "sourceType": "wjazzd",
+      "melid": 166,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Curated modal-composition tag; database style POSTBOP"
+    },
+    {
+      "id": "wjazzd-168",
+      "group": "modal",
+      "title": "Maiden Voyage",
+      "artist": "Freddie Hubbard",
+      "sourceType": "wjazzd",
+      "melid": 168,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Curated modal-composition tag; database style POSTBOP"
+    },
+    {
+      "id": "wjazzd-224",
+      "group": "modal",
+      "title": "Impressions",
+      "artist": "John Coltrane",
+      "sourceType": "wjazzd",
+      "melid": 224,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Curated modal-composition tag; database style POSTBOP"
+    },
+    {
+      "id": "wjazzd-431",
+      "group": "modal",
+      "title": "Footprints",
+      "artist": "Wayne Shorter",
+      "sourceType": "wjazzd",
+      "melid": 431,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Curated modal-composition tag; database style POSTBOP"
+    },
+    {
+      "id": "wjazzd-311",
+      "group": "fusion",
+      "title": "Bitches Brew",
+      "artist": "Miles Davis",
+      "sourceType": "wjazzd",
+      "melid": 311,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-318",
+      "group": "fusion",
+      "title": "Miles Runs the Voodoo Down",
+      "artist": "Miles Davis",
+      "sourceType": "wjazzd",
+      "melid": 318,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-36",
+      "group": "fusion",
+      "title": "Second Sight",
+      "artist": "Bob Berg",
+      "sourceType": "wjazzd",
+      "melid": 36,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-79",
+      "group": "fusion",
+      "title": "Arjuna",
+      "artist": "Chris Potter",
+      "sourceType": "wjazzd",
+      "melid": 79,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-83",
+      "group": "fusion",
+      "title": "Rumples",
+      "artist": "Chris Potter",
+      "sourceType": "wjazzd",
+      "melid": 83,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-84",
+      "group": "fusion",
+      "title": "Togo",
+      "artist": "Chris Potter",
+      "sourceType": "wjazzd",
+      "melid": 84,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-403",
+      "group": "fusion",
+      "title": "Cross-Fade",
+      "artist": "Steve Coleman",
+      "sourceType": "wjazzd",
+      "melid": 403,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style FUSION"
+    },
+    {
+      "id": "wjazzd-218",
+      "group": "hard-bop",
+      "title": "Blue Train",
+      "artist": "John Coltrane",
+      "sourceType": "wjazzd",
+      "melid": 218,
+      "url": "https://jazzomat.hfm-weimar.de/dbformat/dboverview.html",
+      "classification": "Database style HARDBOP"
+    },
+    {
+      "id": "hooktheory-ZbgOKGNQgnY",
+      "group": "acid",
+      "title": "Space Cowboy",
+      "artist": "jamiroquai",
+      "sourceType": "hooktheory",
+      "excerptId": "ZbgOKGNQgnY",
+      "url": "https://www.hooktheory.com/theorytab/view/jamiroquai/space-cowboy",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-RPxeBKOAob_",
+      "group": "acid",
+      "title": "Virtual Insanity",
+      "artist": "jamiroquai",
+      "sourceType": "hooktheory",
+      "excerptId": "RPxeBKOAob_",
+      "url": "https://www.hooktheory.com/theorytab/view/jamiroquai/virtual-insanity",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-AnLga--ZgYp",
+      "group": "acid",
+      "title": "Half the Man",
+      "artist": "jamiroquai",
+      "sourceType": "hooktheory",
+      "excerptId": "AnLga--ZgYp",
+      "url": "https://www.hooktheory.com/theorytab/view/jamiroquai/half-the-man",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-zngRpbpaoJj",
+      "group": "acid",
+      "title": "Seven Days in Sunny June",
+      "artist": "jamiroquai",
+      "sourceType": "hooktheory",
+      "excerptId": "zngRpbpaoJj",
+      "url": "https://www.hooktheory.com/theorytab/view/jamiroquai/seven-days-in-sunny-june",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-ZbgOqaLponY",
+      "group": "acid",
+      "title": "Cosmic Girl",
+      "artist": "jamiroquai",
+      "sourceType": "hooktheory",
+      "excerptId": "ZbgOqaLponY",
+      "url": "https://www.hooktheory.com/theorytab/view/jamiroquai/cosmic-girl",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-DpgvllVdoad",
+      "group": "acid",
+      "title": "Jump 'n' Move",
+      "artist": "the-brand-new-heavies",
+      "sourceType": "hooktheory",
+      "excerptId": "DpgvllVdoad",
+      "url": "https://www.hooktheory.com/theorytab/view/the-brand-new-heavies/jump-n-move",
+      "classification": "Curated acid jazz / jazz-funk / disco crossover recording tag"
+    },
+    {
+      "id": "hooktheory-kygz_OEbxKB",
+      "group": "fusion",
+      "title": "Spain",
+      "artist": "chick-corea-and-return-to-forever",
+      "sourceType": "hooktheory",
+      "excerptId": "kygz_OEbxKB",
+      "url": "https://www.hooktheory.com/theorytab/view/chick-corea-and-return-to-forever/spain",
+      "classification": "Curated Latin fusion recording tag"
+    },
+    {
+      "id": "blue_serge",
+      "group": "big-band",
+      "title": "Blue Serge",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "blue_serge.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/blue_serge.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "diminuendo_and_crescendo_in_blue",
+      "group": "big-band",
+      "title": "Diminuendo in Blue and Crescendo in Blue",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "diminuendo_and_crescendo_in_blue.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/diminuendo_and_crescendo_in_blue.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "in_a_mellotone",
+      "group": "big-band",
+      "title": "In a Mellotone",
+      "artist": "Duke Ellington & His Orchestra",
+      "sourceType": "jaah",
+      "file": "in_a_mellotone.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/in_a_mellotone.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "isfahan",
+      "group": "big-band",
+      "title": "Isfahan",
+      "artist": "Duke Ellington and His Orchestra",
+      "sourceType": "jaah",
+      "file": "isfahan.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/isfahan.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "four_or_five_times",
+      "group": "traditional",
+      "title": "Four or Five Times",
+      "artist": "Jimmie Noone's Apex Club Orchestra",
+      "sourceType": "jaah",
+      "file": "four_or_five_times.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/four_or_five_times.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "hotter_than_that",
+      "group": "traditional",
+      "title": "Hotter Than That",
+      "artist": "Louis Armstrong and His Hot Five",
+      "sourceType": "jaah",
+      "file": "hotter_than_that.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/hotter_than_that.json",
+      "classification": "Curated recording-style tag; styles can overlap",
+      "melodyReference": {
+        "melid": 237,
+        "title": "Hotter than That",
+        "performer": "Johnny Dodds",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "singin_the_blues",
+      "group": "traditional",
+      "title": "Singin' the Blues (Til My Daddy Comes Home)",
+      "artist": "Frankie Trumbauer and His Orchestra",
+      "sourceType": "jaah",
+      "file": "singin_the_blues.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/singin_the_blues.json",
+      "classification": "Curated recording-style tag; styles can overlap",
+      "melodyReference": {
+        "melid": 30,
+        "title": "Singin the Blues",
+        "performer": "Bix Beiderbecke",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "sweethearts_on_parade",
+      "group": "swing",
+      "title": "Sweethearts on Parade",
+      "artist": "Louis Armstrong & His Orchestra",
+      "sourceType": "jaah",
+      "file": "sweethearts_on_parade.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/sweethearts_on_parade.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    },
+    {
+      "id": "blues_in_the_closet",
+      "group": "blues",
+      "title": "Blues in the Closet",
+      "artist": "Stan Getz; J.J. Johnson",
+      "sourceType": "jaah",
+      "file": "blues_in_the_closet.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/blues_in_the_closet.json",
+      "classification": "Curated recording-style tag; styles can overlap",
+      "melodyReference": {
+        "melid": 191,
+        "title": "Blues in the Closet",
+        "performer": "J.J. Johnson",
+        "relation": "same composition; independent performance"
+      }
+    },
+    {
+      "id": "tricroism",
+      "group": "hard-bop",
+      "title": "Tricroism",
+      "artist": "Lucky Thompson Trio",
+      "sourceType": "jaah",
+      "file": "tricroism.json",
+      "url": "https://github.com/MTG/JAAH/blob/master/annotations/tricroism.json",
+      "classification": "Curated recording-style tag; styles can overlap"
+    }
+  ]
+}
